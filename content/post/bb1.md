@@ -92,7 +92,7 @@ NASM Win32 버전(환경변수 PATH에 디렉토리 경로 추가 필요), Rawwr
 
 정상적으로 동작한다면 아래와 같은 그림이 나옵니다.
 
-![Fig](/static/img11.png "bb1_1.png")
+![Fig](/img11.jpg "bb1_1.jpg")
 
 # 1. boot.txt 프로그램 소스의 해설
 

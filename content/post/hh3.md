@@ -7,4 +7,4 @@ categories: ["hardware hacking"]
 author: "Jaejin Jang"
 ---
 
-![Fig](/img1.png "img1.png")
+![Fig](/img1.jpg "img1.jpg")

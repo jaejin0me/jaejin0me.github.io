@@ -15,6 +15,6 @@ ActiveX뿐만 아니라 COM 객체는 모두 확인할 수 있습니다.
 $type = [Type]::GetTypeFromCLSID("8E974B5A-A286-37DA-94F8-5872C500EB0E")$obj = [Activator]::CreateInstance($type)$obj | get-member
 ```
 
-![Fig](/static/ps1_1.png "ps1_1.png")
+![Fig](/ps1_1.jpg "ps1_1.jpg")
 
 참고[MSDN](https://msdn.microsoft.com/en-us/library/ms952644.aspxhttp://hyunmini.tistory.com/105https://www.vistax64.com/powershell/60455-can-i-use-uuid-new-object-comobject.html)

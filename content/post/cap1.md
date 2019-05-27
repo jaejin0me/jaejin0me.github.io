@@ -8,6 +8,6 @@ author: "Jaejin Jang"
 ---
 
 노즐을 대체할 레이저 장착용 모듈 도면과 실물
-![Fig](/static/cap1_1.png "cap1_1.png")
+![Fig](/cap1_1.jpg "cap1_1.jpg")
 
-![Fig](/static/cap1_2.png "cap1_1.png")
+![Fig](/cap1_2.jpg "cap1_1.jpg")

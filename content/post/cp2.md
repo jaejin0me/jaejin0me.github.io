@@ -27,7 +27,7 @@ ActiveX와 IE와의 역사IE 3.0에서부터 HTML에서 Object 태그를 이용�
 사용자들이 무조건적으로 "예" 만을 누르고, 관리자 권한을 제한하는 기능을 꺼버리면서 계속해서 문제가 되었다.
 윈도우 10에 와서는 IE를 버리고 새로운 웹브라우저 Edge를 만들면서 ActiveX문제를 해결하고 있다.현재 ActiveX는 마이크로소프트에서 버린 기술이라고 할 수 있다.
 
-![Fig](/static/cp2_1.png "HTML에서, ActiveX를 사용한 예")
+![Fig](/cp2_1.jpg "HTML에서, ActiveX를 사용한 예")
 
 참고<br>
 https://ko.wikipedia.org/wiki/%EC%95%A1%ED%8B%B0%EB%B8%8CX <br>

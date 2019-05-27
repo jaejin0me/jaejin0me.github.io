@@ -13,15 +13,15 @@ author: "Jaejin Jang"
 
 빨간색으로 된 IC가 공격 타켓입니다.
 
-![Fig](/static/img2.png "img2.png")
+![Fig](/img2.jpg "img2.jpg")
 
-![Fig](/static/img3.png "img3.png")
+![Fig](/img3.jpg "img3.jpg")
 
-![Fig](/static/img4.png "img4.png")
+![Fig](/img4.jpg "img4.jpg")
 
-![Fig](/static/img5.png "img5.png")
+![Fig](/img5.jpg "img5.jpg")
 
-![Fig](/static/img6.png "img6.png")
+![Fig](/img6.jpg "img6.jpg")
 
-![Fig](/static/img7.png "img7.png")
+![Fig](/img7.jpg "img7.jpg")
 

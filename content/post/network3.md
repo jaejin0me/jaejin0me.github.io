@@ -11,7 +11,7 @@ author: "Jaejin Jang"
 
 ## 1.8 네트워크 융합
 
-![Fig](/static/network3_1.png "비즈니스 기업 주도의 네트워크 융합")
+![Fig](/network3_1.jpg "비즈니스 기업 주도의 네트워크 융합")
 
 * 전화와 정보 기술의 통합을 의미
 * 애플리케이션 융합
@@ -47,5 +47,5 @@ author: "Jaejin Jang"
  * 작업 그룹성과 개선
  * 기업 프로세스 개선
 
- ![Fig](/static/network3_2.png "통합 커뮤니케이션의 구성 요소")
+ ![Fig](/network3_2.jpg "통합 커뮤니케이션의 구성 요소")
 

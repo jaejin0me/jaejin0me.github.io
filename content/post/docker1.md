@@ -15,7 +15,7 @@ author: "Jaejin Jang"
 * 개선하기 위해 KVM(Kernel-based Virtual Machine)과 반가상화(Paravirtualization) 방식의 Xen이 등장한다. 이 방식은 게스트 OS가 필요하긴 하지만 전체 OS를 가상화 하는  
  방식이 아니였기 때문에 호스트형 가상화 방식에 비해 성능이 향상 되었다. OpenStack, AWS, Rackspace 같은 클라우드 서비스에서 가상 컴퓨팅기술의 기반이 되었다.
 
-![Fig](/static/docker1_1.png "docker1_1.png")
+![Fig](/docker1_1.jpg "docker1_1.jpg")
 
 * OS 가상화 방법(전가상화, 반가상화)에 상관없이 어쨋든 성능문제가 생기기 때문에 이를 개선하기 위해 프로세스를 격리하는 방식이 등장한다.
 * 컨테이너는 그 방식중 리눅스에서의 방식이다.
