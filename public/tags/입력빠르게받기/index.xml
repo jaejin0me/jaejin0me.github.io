@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>입력빠르게받기 on Jaejin&#39;s blog</title>
+    <link>https://jaejin0me.github.io/tags/%EC%9E%85%EB%A0%A5%EB%B9%A0%EB%A5%B4%EA%B2%8C%EB%B0%9B%EA%B8%B0/</link>
+    <description>Recent content in 입력빠르게받기 on Jaejin&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Jaejin Jang</copyright>
+    <lastBuildDate>Fri, 26 Jan 2018 12:20:42 +0900</lastBuildDate>
+    
+	<atom:link href="https://jaejin0me.github.io/tags/%EC%9E%85%EB%A0%A5%EB%B9%A0%EB%A5%B4%EA%B2%8C%EB%B0%9B%EA%B8%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>자바에서 입력 빠르게 받기</title>
+      <link>https://jaejin0me.github.io/post/algo59/</link>
+      <pubDate>Fri, 26 Jan 2018 12:20:42 +0900</pubDate>
+      
+      <guid>https://jaejin0me.github.io/post/algo59/</guid>
+      <description>Scanner는 성능이 떨어지기 때문에 입력이 많은 경우 문제가 생깁니다. BufferedReader와 StringTokenizer를 이용해 입력받</description>
+    </item>
+    
+  </channel>
+</rss>

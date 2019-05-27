@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>암호경진대회 on Jaejin&#39;s blog</title>
+    <link>https://jaejin0me.github.io/tags/%EC%95%94%ED%98%B8%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/</link>
+    <description>Recent content in 암호경진대회 on Jaejin&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Jaejin Jang</copyright>
+    <lastBuildDate>Mon, 29 Jan 2018 01:37:56 +0900</lastBuildDate>
+    
+	<atom:link href="https://jaejin0me.github.io/tags/%EC%95%94%ED%98%B8%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2017 암호경진대회 2번</title>
+      <link>https://jaejin0me.github.io/post/crypto6/</link>
+      <pubDate>Mon, 29 Jan 2018 01:37:56 +0900</pubDate>
+      
+      <guid>https://jaejin0me.github.io/post/crypto6/</guid>
+      <description>원본과 동일한 서명값을 만들어 내는 메시지를 구하는 문제입니다. 48bit의 해쉬함수가 사용되는데 함수를 분석해보면 16bit의 값만을 갖는 걸을 알 수 있습니</description>
+    </item>
+    
+    <item>
+      <title>2017 암호경진대호 3번</title>
+      <link>https://jaejin0me.github.io/post/crypto3/</link>
+      <pubDate>Sat, 23 Dec 2017 01:37:56 +0900</pubDate>
+      
+      <guid>https://jaejin0me.github.io/post/crypto3/</guid>
+      <description>부채널 분석 문제인데요. 사전지식이 없는 쪽이라 마지막에 풀었는데 시간이 좀더 있었으면 했는데 아쉽네요. 푸신분 코드좀 주세용 matlab 코딩 실력이 좋았더라면..ㅜ 풀</description>
+    </item>
+    
+    <item>
+      <title>2017 암호경진대회 1번</title>
+      <link>https://jaejin0me.github.io/post/crypto1/</link>
+      <pubDate>Sat, 23 Dec 2017 01:37:56 +0900</pubDate>
+      
+      <guid>https://jaejin0me.github.io/post/crypto1/</guid>
+      <description>알파벳으로 구성된 평문을 2개의 값으로 shift하는 key table로 암호화한 암호문이 주어졌을때 평문을 찾는 문제입니다. 소문제 1번은 경우 암호문길이가 길</description>
+    </item>
+    
+    <item>
+      <title>2017 암호경진대회 4번</title>
+      <link>https://jaejin0me.github.io/post/crypto4/</link>
+      <pubDate>Sat, 23 Dec 2017 01:37:56 +0900</pubDate>
+      
+      <guid>https://jaejin0me.github.io/post/crypto4/</guid>
+      <description>가장 쉽게 풀었죠. 30분도 안걸렸던거 같네요. 프로그램을 통해서 암호문의 유효성이 검증되는데요, 역공학을 통해서 암호문을 쉽게 찾을 수 있습니다. 답안 : Snow White</description>
+    </item>
+    
+    <item>
+      <title>2017 암호경진대회 5번</title>
+      <link>https://jaejin0me.github.io/post/crypto5/</link>
+      <pubDate>Sat, 23 Dec 2017 01:37:56 +0900</pubDate>
+      
+      <guid>https://jaejin0me.github.io/post/crypto5/</guid>
+      <description>jpeg 포렌식인데요. 암호화된 부분은 찾았지만 복호화 하지 못했네요 ㅜ 푸신 분 있으면 좀 알려주세용 풀이: 제공되는 파일을 살펴 본 결과 만든 날짜와 수정한 날짜의 값이 이</description>
+    </item>
+    
+    <item>
+      <title>암호경진대회 결과</title>
+      <link>https://jaejin0me.github.io/post/crypto2/</link>
+      <pubDate>Sat, 23 Dec 2017 01:37:56 +0900</pubDate>
+      
+      <guid>https://jaejin0me.github.io/post/crypto2/</guid>
+      <description>1달 동안 암호경진대회 문제를 풀어서 냈는데.. 입상하지 못했네요. 5문제 중에서 3.5문제를 풀어서 그래도 입상권인줄 알았는데.. 아쉽습니다. 그리고 수상</description>
+    </item>
+    
+  </channel>
+</rss>

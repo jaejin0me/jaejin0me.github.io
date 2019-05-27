@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>책뿌수기 - 현대 네트워크 기초 이론 1-1 - Jaejin&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Jaejin Jang" /><meta name="description" content="공부목적으로 정리합니다. 내용이 많아서 남은 부분은 다음 포스팅에.. * Ch1. 현대 네트워킹의 요소 1.1 네트워크 생태계 궁극적으로 사용자는 애플리케이션과 콘텐츠에" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.6 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://jaejin0me.github.io/post/network2/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="책뿌수기 - 현대 네트워크 기초 이론 1-1" />
+<meta property="og:description" content="공부목적으로 정리합니다. 내용이 많아서 남은 부분은 다음 포스팅에.. * Ch1. 현대 네트워킹의 요소 1.1 네트워크 생태계 궁극적으로 사용자는 애플리케이션과 콘텐츠에" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jaejin0me.github.io/post/network2/" />
+<meta property="article:published_time" content="2018-12-26T00:05:56&#43;09:00"/>
+<meta property="article:modified_time" content="2018-12-26T00:05:56&#43;09:00"/>
+
+<meta itemprop="name" content="책뿌수기 - 현대 네트워크 기초 이론 1-1">
+<meta itemprop="description" content="공부목적으로 정리합니다. 내용이 많아서 남은 부분은 다음 포스팅에.. * Ch1. 현대 네트워킹의 요소 1.1 네트워크 생태계 궁극적으로 사용자는 애플리케이션과 콘텐츠에">
+
+
+<meta itemprop="datePublished" content="2018-12-26T00:05:56&#43;09:00" />
+<meta itemprop="dateModified" content="2018-12-26T00:05:56&#43;09:00" />
+<meta itemprop="wordCount" content="2974">
+
+
+
+<meta itemprop="keywords" content="network," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="책뿌수기 - 현대 네트워크 기초 이론 1-1"/>
+<meta name="twitter:description" content="공부목적으로 정리합니다. 내용이 많아서 남은 부분은 다음 포스팅에.. * Ch1. 현대 네트워킹의 요소 1.1 네트워크 생태계 궁극적으로 사용자는 애플리케이션과 콘텐츠에"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Jaejin&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Jaejin&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">책뿌수기 - 현대 네트워크 기초 이론 1-1</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-12-26 </span>
+        <div class="post-category">
+            <a href="/categories/network/"> network </a>
+            </div>
+          <span class="more-meta"> 2974 words </span>
+          <span class="more-meta"> 6 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#ch1-현대-네트워킹의-요소">Ch1. 현대 네트워킹의 요소</a>
+<ul>
+<li><a href="#1-1-네트워크-생태계">1.1 네트워크 생태계</a></li>
+<li><a href="#1-2-네트워크-아키텍처-사례">1.2 네트워크 아키텍처 사례</a>
+<ul>
+<li><a href="#글로벌-네트워크-아키텍처">글로벌 네트워크 아키텍처</a></li>
+<li><a href="#일반적인-계층-구모-모듈화-설계의-좋은-예">일반적인 계층 구모(모듈화 설계의 좋은 예)</a></li>
+</ul></li>
+<li><a href="#1-3-이더넷">1.3 이더넷</a>
+<ul>
+<li><a href="#1-이더넷-애플리케이션">1) 이더넷 애플리케이션</a></li>
+<li><a href="#10mbps-1gbps">10Mbps -&gt; 1Gbps</a></li>
+<li><a href="#1gbps-10gbps">1Gbps -&gt; 10Gbps</a></li>
+<li><a href="#10gbps-100gbps">10Gbps -&gt; 100Gbps</a></li>
+</ul></li>
+<li><a href="#1-4-와이파이">1.4 와이파이</a></li>
+<li><a href="#1-5-4g-5g-이동통신-셀룰러-기술">1.5 4G/5G 이동통신(셀룰러 기술)</a></li>
+<li><a href="#1-6-클라우드-컴퓨팅-인터넷으로-연결된-인프라스트럭처">1.6 클라우드 컴퓨팅(인터넷으로 연결된 인프라스트럭처)</a>
+<ul>
+<li><a href="#1-클라우드-컴퓨티의-이점">1) 클라우드 컴퓨티의 이점</a></li>
+<li><a href="#클라우드-네트워킹">클라우드 네트워킹</a></li>
+<li><a href="#클라우드-스토리지">클라우드 스토리지</a></li>
+</ul></li>
+<li><a href="#1-7-사물인터넷">1.7 사물인터넷</a>
+<ul>
+<li><a href="#1-기술진화">1) 기술진화</a></li>
+<li><a href="#2-사물인터넷-계층">2) 사물인터넷 계층</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<ul>
+<li>공부목적으로 정리합니다. 내용이 많아서 남은 부분은 다음 포스팅에..  *</li>
+</ul>
+
+<h1 id="ch1-현대-네트워킹의-요소">Ch1. 현대 네트워킹의 요소</h1>
+
+<h2 id="1-1-네트워크-생태계">1.1 네트워크 생태계</h2>
+
+<p><img src="/static/network2_1.png" alt="Fig" title="네트워크 생태계" /></p>
+
+<ul>
+<li>궁극적으로 사용자는 애플리케이션과 콘텐츠에 접근하기 위해 네트워크 장비를 사용한다.</li>
+
+<li><p>사용자가 관심있는 3가지</p>
+
+<ul>
+<li>애플리케이션 공급자 : 사용자 플랫폼에서 실행되는 애플리케이션이나 앱 제공(ex. 앱 스토어)</li>
+<li>애플리케이션 서비스 공급자 : 사용자가 실행하는 소프트웨어의 서버나 호스트 역할(웹, 이메일, DB 서버등, 최근에는 클라우드 컴퓨팅 사업자)</li>
+<li>콘텐츠 공급자 : 사용자의 장비에서 소비될 데이터 (음악, 동영상과 같은 지적 재산)</li>
+</ul></li>
+
+<li><p>주목할 만한 네트워크 기술</p>
+
+<ul>
+<li>데이터 센터 네트워킹 : 대규모 기업 데이터 센터와 클라우드 사업자 데이터 센터는 복잡하게 연결된 수 많은 서버들로 구성돼 있다.<br />
+일반적으로 데이터 트래픽의 80%는<br />
+데이터 센터 내부 트래픽이고, 20%만이 외부 네트워크를 통해 사용자에게 전달된다.</li>
+<li>IoT or 포그 네트워킹 : IoT가 주고 받는 기계사이의 방대한 트래픽</li>
+</ul></li>
+</ul>
+
+<h2 id="1-2-네트워크-아키텍처-사례">1.2 네트워크 아키텍처 사례</h2>
+
+<p><img src="/static/network2_2.png" alt="Fig" title="글로벌 네트워크 아키텍처" /></p>
+
+<h3 id="글로벌-네트워크-아키텍처">글로벌 네트워크 아키텍처</h3>
+
+<ul>
+<li>전 세계적 규모의 기업 네트워크, 또는 인터넷의 한 부분</li>
+<li>중심부에는 IP 백본 또는 코어 네트워크가 위치 한다.
+
+<ul>
+<li>백본은 코어 라우터라고 하는 수 많은 광케이블로 연결된 고성능 라우터들이다.</li>
+<li>광회선은 대게 파장 분할 다중화(WDM, Wavelength Division Multiplexing) 기술을 사용한다.</li>
+</ul></li>
+<li>IP 백본 주변에는 외부 네트워크와 사용자로 연결되는 라우터가 있다. (에지 라우터 edge router, 접선 라우터)</li>
+<li>에지 라우터는 기업 네트워크에서 라우터와 스위치들을 IP 백본이나 고속 WAN등의 외부 리소스에 연결하기 위해 사용된다.</li>
+<li>코어라우터와 에지 라우터의 용량 요구사항은 2020년까지 에지 라우터는 광회선 당 200~400Gbps, 코어 라우터는 400G ~ 1Tbps</li>
+<li>에지 라우터에 연결되는 고속 WAN 스위치로 IP 기반읜 MPLS가 일반적으로 사용되는 스위치 프로토콜</li>
+<li>기업 내 장비들은 방화벽 기능이 있는 라우터를 통해 IP백본 또는 인터넷에 연결되는데, 이는 방화벽을 구현하는 흔한 방법이다.</li>
+<li>중소기업은 이더넷 LAN을 사용한다. 인터넷에 접속하는 라우터는 케이블, DSL(Digital Subsriber Line : 지역 전화망을 통해 디지털 데이터 전송 기술) 연결, 고속의 전용선을 사용한다.</li>
+<li>개별 가정은 ISP(Internet Service Provider)에 DSL 모뎀, 케이블 모뎀, 무선 연결을 통해 연결한다.</li>
+<li>모바일 장치는 셀룰러 네트워크를 통해 인터넷에 연결한다.</li>
+<li>셀룰러 네트워크는 광회선과 같은 고속 연결로 인터넷에 연결된다.</li>
+</ul>
+
+<h3 id="일반적인-계층-구모-모듈화-설계의-좋은-예">일반적인 계층 구모(모듈화 설계의 좋은 예)</h3>
+
+<p><img src="/static/network2_3.png" alt="Fig" title="일반적인 네트워크 구조" /></p>
+
+<ul>
+<li>기업의 네트워크 설비는 액세스-분배-코어 3계층 구조로 설계된다.</li>
+<li>액세스 네트워크(Access Network)
+
+<ul>
+<li>최종 사용자와 가까우며, LAN 또는 캠퍼스 규모의 네트워크이다.</li>
+<li>LAN 스위치(이더넷 스위치, L3 스위치)와 IP 라우터로 구성된다</li>
+<li>데스크탑, 노트북, 모바일 장치와 같은 사용자 장비가 연결된다.</li>
+</ul></li>
+<li>분배 네트워크(distribution Network)
+
+<ul>
+<li>로컬 장비들은 하나 이상의 액세스 라우터를 통해 다음 계층인 분배 네트워크로 연결된다.</li>
+<li>이 연결은 인터넷이나 기타 공중망, 사설망 통신 설비를 지난다</li>
+<li>액세스 라우터 들은 액세스 네트워크의 에지 라우터처럼 동작한다</li>
+<li>액세스 네트워크 간의 연결과 코어 네트워크로의 연결을 제공한다</li>
+<li>분배 네트워크의 에지 라우터는 액세스 네트워크의 에지 라우터에 연결되어 피어링(peering, 서로를 인식하게 설정된 라우터간의 라우팅과 연결 정보 및 트래픽 정보 교환 과정)</li>
+<li>코어 네트워크로의 트래픽을 모아 코어 네트워크의 과도한 피어링을 방지한다</li>
+<li>분배 네트워크가 있기 때문에 크오 네트워크의 에지 라우터가 피어링할 라우터 수가 제한되고 메모리, CPU, 전송 용량을 절약하는 효과가 있다.</li>
+<li>여러 액세스 네트워크에서 공동으로 사용하는 서버 (DB 서버, 네트워크 관리 서버)를 직접연결하는데 사용된다.</li>
+</ul></li>
+<li>코어 네트워크, 백본 네트워크
+
+<ul>
+<li>분배 네트워크들을 연결하고 외부 네트워크로의 액세스를 제공한다.</li>
+<li>초고성능 라우터, 대용량 전송 회선, 중복성과 용량을 위해 클러스터링된 다수의 라우터</li>
+<li>고성능 대용량 서버 시스템(대규모 DB 서버, 사설 클라우드)에 접속될 수 있다.</li>
+</ul></li>
+<li>모듈화 설계의 좋은 예이다</li>
+</ul>
+
+<h2 id="1-3-이더넷">1.3 이더넷</h2>
+
+<h3 id="1-이더넷-애플리케이션">1) 이더넷 애플리케이션</h3>
+
+<ul>
+<li><p>대표적인 유선 네트워크 기술</p></li>
+
+<li><p>가정 내 이더넷</p>
+
+<ul>
+<li>이더넷은 가정내에서 로컬 네트워크를 구성하는 용도로 오랫동안 사용돼 왔다. 하지만 와이파이의 등장으로 의존성을 크게 줄어들었다.</li>
+<li>전력선 통신 PLC(Power Line Carrier) 이더넷 전원 장치(Power over ethernet)은 이더넷의 활용성을 크게 넓혀주었다.</li>
+</ul></li>
+
+<li><p>사무실 내 이더넷</p>
+
+<ul>
+<li>일반적인 사무실 환경에서 대부분의 트래픽은 모바일 장치를 지원하기 위해 와이파이로 전송된다.</li>
+<li>그럼에도 이더넷은 고속으로 다수의 장치를 지원하고, 간섭받지도 않고, 도정치 어렵기 때문에 많이 사용된다.</li>
+</ul></li>
+
+<li><p>기업 내 이더넷</p>
+
+<ul>
+<li>이더넷의 탁원할 장점은 동일한 프로토콜과 QoS, 보안 표준을 유지하면서 거리와 데이터 속도 측면에서 네트워크 확장이 가능하다는 것이다.</li>
+<li>멀리 떨어진 기업 내 캠퍼스도 쉽게 확장 가능하다.</li>
+</ul></li>
+</ul>
+
+<p><img src="/static/network2_4.png" alt="Fig" title="기업 LAN의 인터넷 구성도" /></p>
+
+<ul>
+<li>데이터 센터 이더넷
+
+<ul>
+<li>대량의 데이터를 처리하기 위해 매우 높은 전송속도가 필요한 환경이다.</li>
+<li>최근에는 이더넷으로 100Gbps가 가능해지고 400Gbps의 실현이 멀지 않게 되자 기업 네트워크 전체를 이더넷으로 구성하는 방법도 가능하게 됐다.</li>
+<li>이더넷으로 데이터 센터 네트워크 구축할 때 2가지가 고려된다. co-located 서버와 스토리지 사이의 네트워크 인프라 스트럭처를 구축에 고속 이더넷 광케이블과 스위치가 사용된다. 여러 서버 모듈이 단일 섀시에 수용된 블레이드 서버에는 백플레인(구리 점퍼 케이블로 아주 짧은 거리에서 100Gbps 까지 전송) 이더넷을 적용한다.</li>
+</ul></li>
+</ul>
+
+<p><img src="/static/network2_5.png" alt="Fig" title="블레이드 서버 구성도" /></p>
+
+<ul>
+<li>광역 네트워킹 이더넷(유망한 기술)
+
+<ul>
+<li>이더넷은 T1 전용선, 동기식 디지털 계층 SDH(Synchronous Digital Hierarchy), 비동기 전송 방식 ATM(Asynchronous Transper Mode) 등의 광역 액세스 기술을 대체하고 있다.</li>
+<li>광역액세스로 연결되는 기업 네트워크와 자연스럽게 연결되며, 속도 측면에서 훨씬 다양한 선택을 제공한다.</li>
+</ul></li>
+</ul>
+
+<h3 id="10mbps-1gbps">10Mbps -&gt; 1Gbps</h3>
+
+<ul>
+<li>중앙 집중식 서버, 파워 작업 그룹, 고속로컬 백본</li>
+</ul>
+
+<h3 id="1gbps-10gbps">1Gbps -&gt; 10Gbps</h3>
+
+<ul>
+<li>네트워크 연결 개수의 증가, 단말 연결 속도의 증가, 많은 대역폭이 필요한 애플리케이션 증가, 웹 호스팅/애플리케이션 호스팅 트래픽의 증가</li>
+</ul>
+
+<h3 id="10gbps-100gbps">10Gbps -&gt; 100Gbps</h3>
+
+<ul>
+<li>데이터 센터/인터넷 미디어 고급자, 매트로 비디오/서비스 공급자, 기업 LAN, 인터넷 연동 노드/ISP 코어 라우팅</li>
+</ul>
+
+<h2 id="1-4-와이파이">1.4 와이파이</h2>
+
+<h2 id="1-5-4g-5g-이동통신-셀룰러-기술">1.5 4G/5G 이동통신(셀룰러 기술)</h2>
+
+<ul>
+<li>1세대
+
+<ul>
+<li>아날로그 채널, 10kbps</li>
+</ul></li>
+<li>2세대
+
+<ul>
+<li>디지털 트래픽 채널</li>
+<li>암호화</li>
+<li>오류 검출 및 정정</li>
+<li>채널 액세스</li>
+</ul></li>
+<li>3세대
+
+<ul>
+<li>대역폭 : 5Mhz 이상의 대역폭(수신측 다중 경로 성능 향상)</li>
+<li>데이터 속도 : 144kbps, 384kbps</li>
+<li>멀티레이드 : 다수의 고정 데이터 속도 논리 채널을 사용자에게 제공하는 것 의미</li>
+</ul></li>
+<li>4세대
+
+<ul>
+<li>ALL-IP 패킷 기반 네트워크</li>
+<li>빨리 움직일 때는 100Mbps ~ 천천히 움직일 때는 1Gbps 지원</li>
+<li>더 많은 동시 사용자 지원을 위한 네트워크 자원 동적 공유</li>
+<li>smooth 핸드오버</li>
+<li>높은 Qos 지원</li>
+</ul></li>
+<li>5세대
+
+<ul>
+<li>4G에서 이미 네트워크 효율성은 diminishing returns 지점에 도달했다</li>
+<li>대신 Qos 수요를 만족시키지 위해 동적 우선순위, 적응적 네트워크 재구성 등의 구축에 초점이 맞춰져 있다.</li>
+</ul></li>
+</ul>
+
+<h2 id="1-6-클라우드-컴퓨팅-인터넷으로-연결된-인프라스트럭처">1.6 클라우드 컴퓨팅(인터넷으로 연결된 인프라스트럭처)</h2>
+
+<p><img src="/static/network2_6.png" alt="Fig" title="클라우드 컴퓨팅 구성도" /></p>
+
+<ul>
+<li>광대역 네트워크 액세스 : thin ~ thich client 까지. 표준 네트워크 기술 기반으 기능 제공</li>
+<li>빠른 탄력성 : 수요에 따른 탄력적 자원 할당</li>
+<li>측정 서비스</li>
+<li>주문형 셀프 서비스</li>
+<li>리소스 풀링(pooling)</li>
+</ul>
+
+<h3 id="1-클라우드-컴퓨티의-이점">1) 클라우드 컴퓨티의 이점</h3>
+
+<ul>
+<li>전문가에 의한 네트워크 및 보안 관리 서비스를 제공</li>
+</ul>
+
+<h3 id="클라우드-네트워킹">클라우드 네트워킹</h3>
+
+<ul>
+<li>클라우드를 액세스 하기 위해 필요한 네트워크 기능의 집합</li>
+</ul>
+
+<h3 id="클라우드-스토리지">클라우드 스토리지</h3>
+
+<h2 id="1-7-사물인터넷">1.7 사물인터넷</h2>
+
+<h3 id="1-기술진화">1) 기술진화</h3>
+
+<ul>
+<li>장비측면에서 인터넷에서 사물인터넷까지의 기술진화
+
+<ul>
+<li>1. 정보기술(IT) : PC, 서버, 라우터, 방화벽 등, 기업의 IT인력이 구매하는 장치</li>
+<li>2. 운영기술(OT) : 의료기기, SCADA, 키오스트 등, 비IT회사에서 만들고 OT 인력들이 구매</li>
+<li>3. 개인화 기술 : 소비자가 구입하는 IT장비</li>
+<li>4. 센서/액츄에이터 기술 : 일반 소비자, IT, OT, 인력이 구입하고 더 큰 시스템의 일부를 구성하는 단일 목적의 장비</li>
+</ul></li>
+</ul>
+
+<h3 id="2-사물인터넷-계층">2) 사물인터넷 계층</h3>
+
+<ul>
+<li>센서와 액츄에이터
+
+<ul>
+<li>연결성</li>
+<li>용량</li>
+<li>스토리지</li>
+<li>데이터 분석</li>
+</ul></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Jaejin Jang</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2018-12-26
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">Jaejin Jang</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/network/">network</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/db20/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">책뿌수기 - SQL 레벨업-1</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/docker1/">
+            <span class="next-text nav-default">도커란???</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:jaejin0me@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://ko-kr.facebook.com/people/%EC%9E%A5%EC%9E%AC%EC%A7%84/100005230447628" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="https://www.linkedin.com/in/jaejin0me" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/jaejin0me" class="iconfont icon-github" title="github"></a>
+  <a href="https://jaejin0me.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Jaejin Jang</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-111561979-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>
