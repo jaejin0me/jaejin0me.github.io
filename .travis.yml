@@ -3,7 +3,8 @@ go:
   - master # go 언어의 마지막 버전
 
 install:
-  - sudo snaps install hugo
+  - wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.55.6/hugo_0.55.6_Linux-64bit.deb
+  - sudo dpkg -i /tmp/hugo.deb
 
 script:
   - hugo # hugo 커맨드를 실행하여 정적 웹사이트를 빌드
