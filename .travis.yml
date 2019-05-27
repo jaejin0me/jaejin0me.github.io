@@ -3,7 +3,7 @@ go:
   - master # go 언어의 마지막 버전
 
 install:
-  - go get github.com/gohugoio/hugo
+  - go get github.com/magefile/mage
 
 script:
   - hugo # hugo 커맨드를 실행하여 정적 웹사이트를 빌드
