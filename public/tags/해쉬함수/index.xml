@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>해쉬함수 on Jaejin&#39;s blog</title>
+    <link>https://jaejin0me.github.io/tags/%ED%95%B4%EC%89%AC%ED%95%A8%EC%88%98/</link>
+    <description>Recent content in 해쉬함수 on Jaejin&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Jaejin Jang</copyright>
+    <lastBuildDate>Mon, 29 Jan 2018 01:37:56 +0900</lastBuildDate>
+    
+	<atom:link href="https://jaejin0me.github.io/tags/%ED%95%B4%EC%89%AC%ED%95%A8%EC%88%98/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2017 암호경진대회 2번</title>
+      <link>https://jaejin0me.github.io/post/crypto6/</link>
+      <pubDate>Mon, 29 Jan 2018 01:37:56 +0900</pubDate>
+      
+      <guid>https://jaejin0me.github.io/post/crypto6/</guid>
+      <description>원본과 동일한 서명값을 만들어 내는 메시지를 구하는 문제입니다. 48bit의 해쉬함수가 사용되는데 함수를 분석해보면 16bit의 값만을 갖는 걸을 알 수 있습니</description>
+    </item>
+    
+  </channel>
+</rss>

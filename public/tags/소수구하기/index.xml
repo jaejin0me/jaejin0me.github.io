@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>소수구하기 on Jaejin&#39;s blog</title>
+    <link>https://jaejin0me.github.io/tags/%EC%86%8C%EC%88%98%EA%B5%AC%ED%95%98%EA%B8%B0/</link>
+    <description>Recent content in 소수구하기 on Jaejin&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Jaejin Jang</copyright>
+    <lastBuildDate>Fri, 26 Jan 2018 12:20:42 +0800</lastBuildDate>
+    
+	<atom:link href="https://jaejin0me.github.io/tags/%EC%86%8C%EC%88%98%EA%B5%AC%ED%95%98%EA%B8%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>백준알고리즘 1929번 - 소수 구하기</title>
+      <link>https://jaejin0me.github.io/post/algo57/</link>
+      <pubDate>Fri, 26 Jan 2018 12:20:42 +0800</pubDate>
+      
+      <guid>https://jaejin0me.github.io/post/algo57/</guid>
+      <description>주어진 두 정수 범위내의 소수를 구하는 문제입니다. 에라토스테네스의 체 라는 것을 사용해 구합니다. 개념적으로 주의해야 할 것은 소수 판별하는 것과 다릅니다. 에라</description>
+    </item>
+    
+  </channel>
+</rss>
