@@ -14,10 +14,10 @@
     
     <item>
       <title>자바에서 입력 빠르게 받기</title>
-      <link>https://jaejin0me.github.io/post/algo59/</link>
+      <link>https://jaejin0me.github.io/post/posts59/</link>
       <pubDate>Fri, 26 Jan 2018 12:20:42 +0900</pubDate>
       
-      <guid>https://jaejin0me.github.io/post/algo59/</guid>
+      <guid>https://jaejin0me.github.io/post/posts59/</guid>
       <description>Scanner는 성능이 떨어지기 때문에 입력이 많은 경우 문제가 생깁니다. BufferedReader와 StringTokenizer를 이용해 입력받</description>
     </item>
     

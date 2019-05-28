@@ -14,10 +14,10 @@
     
     <item>
       <title>한 번씩 헷갈리는 어셈블리어</title>
-      <link>https://jaejin0me.github.io/post/se3/</link>
+      <link>https://jaejin0me.github.io/post/posts171/</link>
       <pubDate>Mon, 25 Dec 2017 12:47:56 +0800</pubDate>
       
-      <guid>https://jaejin0me.github.io/post/se3/</guid>
+      <guid>https://jaejin0me.github.io/post/posts171/</guid>
       <description>제가 참고할 목적으로, 한번씩 헷갈리는 명령어들 위주로 정리합니다. 계속 보완할 예정이에요. mov : 좌변에 우변의 값을 대입 lea : 좌변(레지스터만가능)에 우변의</description>
     </item>
     

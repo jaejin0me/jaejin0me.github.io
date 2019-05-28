@@ -14,46 +14,46 @@
     
     <item>
       <title>백준알고리즘 5651번 - 완전 중요한 간선</title>
-      <link>https://jaejin0me.github.io/post/algo63/</link>
+      <link>https://jaejin0me.github.io/post/posts63/</link>
       <pubDate>Sun, 11 Feb 2018 12:20:42 +0900</pubDate>
       
-      <guid>https://jaejin0me.github.io/post/algo63/</guid>
+      <guid>https://jaejin0me.github.io/post/posts63/</guid>
       <description>중요한 간선을 찾는 코드에서 prev2[next2.to] 가 되어있어야 하는데 prev2[curr2]로 되어 있는 것을 발견하지 못해 푸는데 오래 걸린 문제이다. 중요한 간선의 여부는 최대</description>
     </item>
     
     <item>
       <title>백준알고리즘 11495번 - 격자 0 만들기</title>
-      <link>https://jaejin0me.github.io/post/algo62/</link>
+      <link>https://jaejin0me.github.io/post/posts62/</link>
       <pubDate>Sun, 04 Feb 2018 12:20:42 +0900</pubDate>
       
-      <guid>https://jaejin0me.github.io/post/algo62/</guid>
+      <guid>https://jaejin0me.github.io/post/posts62/</guid>
       <description>시간초과가 계속해서 나는 것은 최적화 하면서 근근이 풀긴했는데, 속도가 많이 느리다. 자바로 풀 사람들 중에서 꼴등임 ㅎ 다른 정답자들의 풀이를 보니, 나는 에드몬드</description>
     </item>
     
     <item>
       <title>백준알고리즘 2316번 - 도시 왕복하기</title>
-      <link>https://jaejin0me.github.io/post/algo61/</link>
+      <link>https://jaejin0me.github.io/post/posts61/</link>
       <pubDate>Tue, 30 Jan 2018 12:20:42 +0900</pubDate>
       
-      <guid>https://jaejin0me.github.io/post/algo61/</guid>
+      <guid>https://jaejin0me.github.io/post/posts61/</guid>
       <description>어제 못 풀고 오늘에서야 푼 문제 정점을 1번만 지나는 조건을 만족하기 위해 정점을 분할하고 분할된 정점사이에 용량의 1의 간선을 추가해야 한다. 주의해야 할 것은 입력</description>
     </item>
     
     <item>
       <title>백준알고리즘 2188번 - 축사배정</title>
-      <link>https://jaejin0me.github.io/post/algo60/</link>
+      <link>https://jaejin0me.github.io/post/posts60/</link>
       <pubDate>Sun, 28 Jan 2018 12:20:42 +0900</pubDate>
       
-      <guid>https://jaejin0me.github.io/post/algo60/</guid>
+      <guid>https://jaejin0me.github.io/post/posts60/</guid>
       <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70</description>
     </item>
     
     <item>
       <title>백준알고리즘 6086번, 최대 유량</title>
-      <link>https://jaejin0me.github.io/post/algo10/</link>
+      <link>https://jaejin0me.github.io/post/posts10/</link>
       <pubDate>Thu, 04 Jan 2018 18:00:42 +0900</pubDate>
       
-      <guid>https://jaejin0me.github.io/post/algo10/</guid>
+      <guid>https://jaejin0me.github.io/post/posts10/</guid>
       <description>드디어 네트워크플로우 처음에 목표한 알고리즘이 MCMF까지였기 때문에, 곧 결과에 쫓기듯 공부할 필요는 없을꺼같다. 배울 알고리즘이 참 많지만 사실 그런알고리</description>
     </item>
     

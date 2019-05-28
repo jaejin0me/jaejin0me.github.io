@@ -14,10 +14,10 @@
     
     <item>
       <title>windbg 사용법 정리</title>
-      <link>https://jaejin0me.github.io/post/se2/</link>
+      <link>https://jaejin0me.github.io/post/posts170/</link>
       <pubDate>Mon, 25 Dec 2017 12:47:56 +0800</pubDate>
       
-      <guid>https://jaejin0me.github.io/post/se2/</guid>
+      <guid>https://jaejin0me.github.io/post/posts170/</guid>
       <description>제가 참고할 용도로 작성하고, 계속 추가해 나갈 예정입니다. 로드되지 않은 심볼에 breakpoint 설정 특정 모듈이 로드되기 전에 모듈 내부에 bp를 걸고싶을때 사용 bu xxx!print+0x1f3 // xxx</description>
     </item>
     

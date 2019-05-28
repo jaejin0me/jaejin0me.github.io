@@ -14,10 +14,10 @@
     
     <item>
       <title>파이썬의 subprocess 모듈을 이용해 COM 메소드 확인하기</title>
-      <link>https://jaejin0me.github.io/post/py1/</link>
+      <link>https://jaejin0me.github.io/post/posts167/</link>
       <pubDate>Mon, 25 Dec 2017 12:47:56 +0800</pubDate>
       
-      <guid>https://jaejin0me.github.io/post/py1/</guid>
+      <guid>https://jaejin0me.github.io/post/posts167/</guid>
       <description>참고 파워쉘을 이용해 COM의 메소드를 확인할 수 있습니다. 파이썬에서 subprocess 모듈을 이용해서 파워쉘을 실행시키고 결과를 얻어오는 코드입니다. 1 2 3 4 5 6 7 8 import</description>
     </item>
     

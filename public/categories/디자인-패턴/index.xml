@@ -14,10 +14,10 @@
     
     <item>
       <title>디자인 패턴 - 싱글턴 패턴</title>
-      <link>https://jaejin0me.github.io/post/dp1/</link>
+      <link>https://jaejin0me.github.io/post/posts111/</link>
       <pubDate>Mon, 01 Jan 2018 11:31:42 +0900</pubDate>
       
-      <guid>https://jaejin0me.github.io/post/dp1/</guid>
+      <guid>https://jaejin0me.github.io/post/posts111/</guid>
       <description>싱글턴 패턴 인스턴스가 하나 만들어지고 어디서든지 인스턴스에 접근하기 위한 패턴 간단히 인스턴스에 접근하기 위한 get메소드, 기본적인 생성자, 인스턴스 멤버</description>
     </item>
     

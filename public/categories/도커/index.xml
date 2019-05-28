@@ -14,10 +14,10 @@
     
     <item>
       <title>도커란???</title>
-      <link>https://jaejin0me.github.io/post/docker1/</link>
+      <link>https://jaejin0me.github.io/post/posts110/</link>
       <pubDate>Sun, 09 Dec 2018 00:15:15 +0900</pubDate>
       
-      <guid>https://jaejin0me.github.io/post/docker1/</guid>
+      <guid>https://jaejin0me.github.io/post/posts110/</guid>
       <description>초보를 위한 도커 안내서 - 도커란 무엇인가? 를 보고 간추린 내용 입니다. 도커 : 컨테이너 기반의 오픈소스 가상화 플랫폼 컨테이너 : 격리된 공간에서 프로세스가 동작</description>
     </item>
     

@@ -14,10 +14,10 @@
     
     <item>
       <title>2017 암호경진대회 1번</title>
-      <link>https://jaejin0me.github.io/post/crypto1/</link>
+      <link>https://jaejin0me.github.io/post/posts71/</link>
       <pubDate>Sat, 23 Dec 2017 01:37:56 +0900</pubDate>
       
-      <guid>https://jaejin0me.github.io/post/crypto1/</guid>
+      <guid>https://jaejin0me.github.io/post/posts71/</guid>
       <description>알파벳으로 구성된 평문을 2개의 값으로 shift하는 key table로 암호화한 암호문이 주어졌을때 평문을 찾는 문제입니다. 소문제 1번은 경우 암호문길이가 길</description>
     </item>
     

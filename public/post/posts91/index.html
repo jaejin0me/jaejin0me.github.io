@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>책뿌수기 - 기초가 든든한 데이터 베이스 1 - Jaejin&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Jaejin Jang" /><meta name="description" content="인용하는 그림은 다양한 곳에서 가져왔음을 밝힙니다 Ch 1. DB 시스템 Section 1. DB 1.1 데이터와 데이터 베이스 개념 DB = 필요한 데이터를 모아 놓은 것 1.2 데이터와 정보 데이터 : 관" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.6 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://jaejin0me.github.io/post/posts91/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="책뿌수기 - 기초가 든든한 데이터 베이스 1" />
+<meta property="og:description" content="인용하는 그림은 다양한 곳에서 가져왔음을 밝힙니다 Ch 1. DB 시스템 Section 1. DB 1.1 데이터와 데이터 베이스 개념 DB = 필요한 데이터를 모아 놓은 것 1.2 데이터와 정보 데이터 : 관" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jaejin0me.github.io/post/posts91/" />
+<meta property="article:published_time" content="2018-11-26T00:07:56&#43;09:00"/>
+<meta property="article:modified_time" content="2018-11-26T00:07:56&#43;09:00"/>
+
+<meta itemprop="name" content="책뿌수기 - 기초가 든든한 데이터 베이스 1">
+<meta itemprop="description" content="인용하는 그림은 다양한 곳에서 가져왔음을 밝힙니다 Ch 1. DB 시스템 Section 1. DB 1.1 데이터와 데이터 베이스 개념 DB = 필요한 데이터를 모아 놓은 것 1.2 데이터와 정보 데이터 : 관">
+
+
+<meta itemprop="datePublished" content="2018-11-26T00:07:56&#43;09:00" />
+<meta itemprop="dateModified" content="2018-11-26T00:07:56&#43;09:00" />
+<meta itemprop="wordCount" content="1416">
+
+
+
+<meta itemprop="keywords" content="database," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="책뿌수기 - 기초가 든든한 데이터 베이스 1"/>
+<meta name="twitter:description" content="인용하는 그림은 다양한 곳에서 가져왔음을 밝힙니다 Ch 1. DB 시스템 Section 1. DB 1.1 데이터와 데이터 베이스 개념 DB = 필요한 데이터를 모아 놓은 것 1.2 데이터와 정보 데이터 : 관"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Jaejin&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Jaejin&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">책뿌수기 - 기초가 든든한 데이터 베이스 1</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-11-26 </span>
+        <div class="post-category">
+            <a href="/categories/database/"> database </a>
+            </div>
+          <span class="more-meta"> 1416 words </span>
+          <span class="more-meta"> 3 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#ch-1-db-시스템">Ch 1. DB 시스템</a>
+<ul>
+<li><a href="#section-1-db">Section 1. DB</a></li>
+<li><a href="#section-2-dbms">Section 2. DBMS</a></li>
+<li><a href="#section-3-db-시스템">Section 3. DB 시스템</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p><em>인용하는 그림은 다양한 곳에서 가져왔음을 밝힙니다</em></p>
+
+<h1 id="ch-1-db-시스템">Ch 1. DB 시스템</h1>
+
+<h2 id="section-1-db">Section 1. DB</h2>
+
+<p>1.1 데이터와 데이터 베이스 개념</p>
+
+<ul>
+<li>DB = 필요한 데이터를 모아 놓은 것</li>
+</ul>
+
+<p>1.2 데이터와 정보</p>
+
+<ul>
+<li>데이터 : 관찰하거나 측정하여 기술하는 가공되지 않은 사실이나 값</li>
+<li>정보 : 의미 있고 쓸모 있는 내용으로 가공한 데이터</li>
+</ul>
+
+<p>1.3 DB의 정의와 특징</p>
+
+<ul>
+<li>DB : 특정 조직에서 여러 명의 사용자 또는 응용 시스템들이 공유하고 동시에 접근하여 사용할 수 있도록 구조적으로 저장한 운영 데이터의 집합
+
+<ul>
+<li>공유 데이터(shared data)</li>
+<li>통합된 데이터 : 중복을 최소화 하는 것이 중요하다.</li>
+<li>저장된 데이터(stored data)</li>
+<li>운영 데이터(operational data)</li>
+</ul></li>
+<li>DB 특징
+
+<ul>
+<li>실시간 처리 : 쿼리에 실시간으로 응답</li>
+<li>continuous evolution : 데이터 유지를 위해</li>
+<li>concurrent sharing</li>
+<li>content reference</li>
+</ul></li>
+</ul>
+
+<h2 id="section-2-dbms">Section 2. DBMS</h2>
+
+<p>2.1 DBMS 개념</p>
+
+<p>2.2 DBMS의 등장배경</p>
+
+<ul>
+<li>파일 시스템을 사용하여 데이터를 처리하는 응용 프로그램은, 각 응용 프로그램마다 파일에 접근, 관리, 유지하는 방법이 다르다.
+<img src="/posts91_1.jpg" alt="Fig" title="posts91_1.jpg" /></li>
+<li>파일 시스템은 OS가 설치될 때 게본적으로 설치되기 때문에 추가 비용이 발생하지 않지만, 데이터 종속정(dependency)와 중복성(redundency)문제가 있다.</li>
+<li>데이터 종속성
+
+<ul>
+<li>데이터와 응용 프로그램 간의 상호 의존 관계</li>
+<li>데이터의 구성 방법이나 구성 형식, 접근 방법을 변경하면 응용프로긂도 함께 변경되어야 한다.(컴파일 필요)</li>
+</ul></li>
+<li>데이터 중복성</li>
+</ul>
+
+<p>2.3 DBMS의 정의 및 장단점</p>
+
+<ul>
+<li>사용자 또는 응용프로그램 사이에 위치하여 데이터베이스를 공유할 수 있도록 관리해 주는 소프트웨어
+
+<ol>
+<li>데이터 중복 최소화</li>
+<li>데이터 sharing</li>
+<li>data consistency</li>
+<li>data integrity</li>
+<li>data security</li>
+</ol></li>
+<li>항상 DBMS의 사용이 최선은 아니다. 고려해서 선택하면 됨.</li>
+</ul>
+
+<p>2.4 DBMS의 종류</p>
+
+<ul>
+<li>네트워크 DBMS : 그래프 기반 모델. 1960 초반</li>
+</ul>
+
+<p><img src="/posts91_2.jpg" alt="Fig" title="posts91_2.jpg" /></p>
+
+<ul>
+<li>레코드 변경이 용이하지 않다. 레코드의 간의 관계를 알아야만 문제없이 변경 가능.</li>
+<li>계층 DBMS : 트리 구조. 1960 후반</li>
+</ul>
+
+<p><img src="/posts91_3.jpg" alt="Fig" title="posts91_3.jpg" /></p>
+
+<ul>
+<li>데이터 접근 방법을 미리 정희해야 하고, DB가 생성 될때 각각의 관계가 명시적으로 정의 되어야하는 단점</li>
+<li>레코드들이 연결되어 있어 구조 변경이 어렵다</li>
+<li>관계 DBMS. 1970 년도
+
+<ul>
+<li>테이블 기반의 관계 모델. 사용자는 자신이 원하는 거만 명시하고 데이터가 어디이 있는지, 어떻게 접근해야 하는지 고려하지 않아도 된다.</li>
+</ul></li>
+</ul>
+
+<h2 id="section-3-db-시스템">Section 3. DB 시스템</h2>
+
+<p>3.1 DB 시스템의 구성 요소</p>
+
+<p><img src="/posts91_4.jpg" alt="Fig" title="posts91_4.jpg" /></p>
+
+<ul>
+<li>사용자
+
+<ul>
+<li>1. 일반 사용자</li>
+<li>2. 응용 프로그래머</li>
+<li>3. 데이터베이스 관리자</li>
+</ul></li>
+<li>데이터 언어
+
+<ul>
+<li>1. 정의어 : CREATE, ALTER, DROP</li>
+<li>2. 조작어 : INSERT, UPDATE, DELETE</li>
+<li>3. 제어어 : GRANT(권한 추가), REVOKE(권한 회수)</li>
+</ul></li>
+<li>DBMS : Oracle, mssql server, my sql server</li>
+<li>DB
+
+<ul>
+<li>저장 DB</li>
+<li>DB 저장 : 데이터 개체에 대한 정의와 명세, meta data</li>
+</ul></li>
+</ul>
+
+<p>3.2 3단계 데이터베이스 시스템 구조와 데이터 독립성</p>
+
+<ul>
+<li>DB의 다음의 3단계로 DB를 기술하고 이들 간의 관계를 정립하여 관리</li>
+<li>3단계 DB 관리
+
+<ul>
+<li>external level : 개별 사용자의 입장에서 데이터를 이용하는 견해</li>
+<li>conceptual level : 조직의 입장에서 보는 개인의 모든 견해. 종합된 조직 전체의 견해</li>
+<li>internal level : 물리적 저장 장치의 입장에서 보는 저장장치의 견해</li>
+</ul></li>
+<li>데이터 구조와 그 제약조건에 대한 명세를 기술한 것으로 컴파일되어 데이터 사전에 저장된 것을 스키마(schema) 라고 한다.</li>
+<li>3단계 스키마
+
+<ul>
+<li>external schema : 개별 사용자 입장에서 DB 구조를 기술한 것. 개별 사용자를 위한 여러 형태의 외부 스키마 존재</li>
+<li>conceptual schemal : 조직 전체의 입장에서 통합된 DB를 기술한 것. 하나의 개념 스키마만 존재. schema 라고도 부름</li>
+<li>internal schema : 저장장치 입장에서 전체 데이터베이스가 저장되는 방법을 명세한 것. 하나의 내부 스키마만 존재</li>
+</ul></li>
+<li>스키마 사이에 있는 대등관계 사상</li>
+<li>3 단계 간의 사상
+
+<ul>
+<li>외부/개념 사상 : 논리적 구조(개념 스키마)를 변경하더라도 응용 프로그램에 영향을 주지 않아서 논리적 데이터 독립성 제공</li>
+<li>개념 내부 사상 : 물리적 구조(내부 스키마)를 변경하더라도 응용 프로그램과 논리적 구조에 영향을 주지 않아 물리적 데이터의 독립성 제공</li>
+<li>내부/장치 사상 : 내부 스키마와 물리적인 장치 간의 대응 관계를 정의한 것</li>
+</ul></li>
+</ul>
+
+<p><img src="/posts91_5.jpg" alt="Fig" title="posts91_5.jpg" /></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Jaejin Jang</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2018-11-26
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">Jaejin Jang</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/database/">database</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/posts64/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">백준알고리즘 1546번 - 평균</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/posts127/">
+            <span class="next-text nav-default">인터럽트와 예외 - 2</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:jaejin0me@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://ko-kr.facebook.com/people/%EC%9E%A5%EC%9E%AC%EC%A7%84/100005230447628" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="https://www.linkedin.com/in/jaejin0me" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/jaejin0me" class="iconfont icon-github" title="github"></a>
+  <a href="https://jaejin0me.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Jaejin Jang</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-111561979-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

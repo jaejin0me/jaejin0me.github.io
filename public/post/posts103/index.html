@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>책뿌수기 - SQL 레벨업-2 - Jaejin&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Jaejin Jang" /><meta name="description" content="인용하는 그림은 다양한 곳에서 가져왔음을 밝힙니다 1. SQL 기초 ch 6. SELECT 구문 1) SELECT 구와 FROM 구 SELECT 1 처럼 상수를 선택하는 경우 FROM이 필요없다. )2) WHERE 구 WHERE 구의 조건이 많" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.6 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://jaejin0me.github.io/post/posts103/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="책뿌수기 - SQL 레벨업-2" />
+<meta property="og:description" content="인용하는 그림은 다양한 곳에서 가져왔음을 밝힙니다 1. SQL 기초 ch 6. SELECT 구문 1) SELECT 구와 FROM 구 SELECT 1 처럼 상수를 선택하는 경우 FROM이 필요없다. )2) WHERE 구 WHERE 구의 조건이 많" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jaejin0me.github.io/post/posts103/" />
+<meta property="article:published_time" content="2019-01-20T22:20:56&#43;09:00"/>
+<meta property="article:modified_time" content="2019-01-20T22:20:56&#43;09:00"/>
+
+<meta itemprop="name" content="책뿌수기 - SQL 레벨업-2">
+<meta itemprop="description" content="인용하는 그림은 다양한 곳에서 가져왔음을 밝힙니다 1. SQL 기초 ch 6. SELECT 구문 1) SELECT 구와 FROM 구 SELECT 1 처럼 상수를 선택하는 경우 FROM이 필요없다. )2) WHERE 구 WHERE 구의 조건이 많">
+
+
+<meta itemprop="datePublished" content="2019-01-20T22:20:56&#43;09:00" />
+<meta itemprop="dateModified" content="2019-01-20T22:20:56&#43;09:00" />
+<meta itemprop="wordCount" content="480">
+
+
+
+<meta itemprop="keywords" content="sql 튜닝," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="책뿌수기 - SQL 레벨업-2"/>
+<meta name="twitter:description" content="인용하는 그림은 다양한 곳에서 가져왔음을 밝힙니다 1. SQL 기초 ch 6. SELECT 구문 1) SELECT 구와 FROM 구 SELECT 1 처럼 상수를 선택하는 경우 FROM이 필요없다. )2) WHERE 구 WHERE 구의 조건이 많"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Jaejin&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Jaejin&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">책뿌수기 - SQL 레벨업-2</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-01-20 </span>
+        <div class="post-category">
+            <a href="/categories/sql-%ED%8A%9C%EB%8B%9D/"> sql 튜닝 </a>
+            </div>
+          <span class="more-meta"> 480 words </span>
+          <span class="more-meta"> 1 min read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#1-sql-기초">1. SQL 기초</a>
+<ul>
+<li><a href="#ch-6-select-구문">ch 6. SELECT 구문</a>
+<ul>
+<li><a href="#1-select-구와-from-구">1) SELECT 구와 FROM 구</a></li>
+<li><a href="#2-where-구">)2) WHERE 구</a></li>
+<li><a href="#3-group-by-구">3) GROUP BY 구</a></li>
+<li><a href="#4-having">4) HAVING</a></li>
+<li><a href="#5-order-by">5) ORDER BY</a></li>
+<li><a href="#6-뷰와-서브쿼리">6) 뷰와 서브쿼리</a></li>
+</ul></li>
+<li><a href="#ch-7-조건-분기-집합-연산-윈도우-함수-갱신">ch 7. 조건 분기, 집합 연산, 윈도우 함수, 갱신</a>
+<ul>
+<li><a href="#1-sql과-조건-분기">1) SQL과 조건 분기</a></li>
+<li><a href="#2-sql의-집합-연산">2) SQL의 집합 연산</a></li>
+<li><a href="#3-윈도우-함수">3) 윈도우 함수</a></li>
+<li><a href="#4-트랜잭션과-갱신">4) 트랜잭션과 갱신</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p><em>인용하는 그림은 다양한 곳에서 가져왔음을 밝힙니다</em></p>
+
+<h1 id="1-sql-기초">1. SQL 기초</h1>
+
+<h2 id="ch-6-select-구문">ch 6. SELECT 구문</h2>
+
+<h3 id="1-select-구와-from-구">1) SELECT 구와 FROM 구</h3>
+
+<ul>
+<li>SELECT 1 처럼 상수를 선택하는 경우 FROM이 필요없다.</li>
+</ul>
+
+<h3 id="2-where-구">)2) WHERE 구</h3>
+
+<ul>
+<li>WHERE 구의 조건이 많을 경우 IN 으로 대체</li>
+<li>SELECT 구문은 테이블을 반환하는 읽기 전용 함수 이다.</li>
+</ul>
+
+<h3 id="3-group-by-구">3) GROUP BY 구</h3>
+
+<ul>
+<li>일부 DBMS에서는 지원하지 않음</li>
+</ul>
+
+<h3 id="4-having">4) HAVING</h3>
+
+<ul>
+<li>GROUP BY에 조건을 걸때</li>
+<li>WHERE가 레코드에 조건을 거는 것이라면, HAVING은 집합에 조건을 거는 것</li>
+</ul>
+
+<h3 id="5-order-by">5) ORDER BY</h3>
+
+<h3 id="6-뷰와-서브쿼리">6) 뷰와 서브쿼리</h3>
+
+<ul>
+<li>자주 사용하는 SELECT 구문을 DB에 저장 = 뷰(view)</li>
+<li>뷰는 내부에 데이터러 보유하지 않음(SELECT 구문을 저장할 뿐)</li>
+<li>서브쿼리의 실행과 동일하다</li>
+<li>WHERE 조건에 서브쿼리를 거면 조건이 바뀌어도 문제없음(조건을 하나하나 하드코딩하는 번거로움을 없앨수있다)</li>
+</ul>
+
+<h2 id="ch-7-조건-분기-집합-연산-윈도우-함수-갱신">ch 7. 조건 분기, 집합 연산, 윈도우 함수, 갱신</h2>
+
+<h3 id="1-sql과-조건-분기">1) SQL과 조건 분기</h3>
+
+<ul>
+<li>SQL의 조건 분기는 CASE식을 통해 한다.</li>
+<li>SQL의 조건 분기는 특정한 값을 리턴하는 것이 특징이다.</li>
+<li>CASE는 식이기 때문에 활용성이 높은 것이 강점이다.</li>
+</ul>
+
+<h3 id="2-sql의-집합-연산">2) SQL의 집합 연산</h3>
+
+<ul>
+<li>UNION : 합집합(기본적으로 중복을 제거)</li>
+<li>INTERSECT : 교집합</li>
+<li>EXCEPT : 차집합</li>
+</ul>
+
+<h3 id="3-윈도우-함수">3) 윈도우 함수</h3>
+
+<ul>
+<li>집약 기능이 없는 GROUP BY 구</li>
+<li>PARTITION BY</li>
+<li>SELECT 구에만 사용됨</li>
+<li>윈도우 전용함수로 RANK, ROW_NUMBER가 있다.</li>
+</ul>
+
+<h3 id="4-트랜잭션과-갱신">4) 트랜잭션과 갱신</h3>
+
+<ul>
+<li>INSERT, UPDATE, DELETE</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Jaejin Jang</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-01-20
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">Jaejin Jang</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/sql-%ED%8A%9C%EB%8B%9D/">sql 튜닝</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/posts104/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">책뿌수기 - SQL 레벨업 3</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/posts132/">
+            <span class="next-text nav-default">책뿌수기 - 현대 네트워크 기초 이론 1-2</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:jaejin0me@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://ko-kr.facebook.com/people/%EC%9E%A5%EC%9E%AC%EC%A7%84/100005230447628" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="https://www.linkedin.com/in/jaejin0me" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/jaejin0me" class="iconfont icon-github" title="github"></a>
+  <a href="https://jaejin0me.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Jaejin Jang</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-111561979-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -14,19 +14,19 @@
     
     <item>
       <title>백준알고리즘 2747번 - 피보나치 수</title>
-      <link>https://jaejin0me.github.io/post/algo54/</link>
+      <link>https://jaejin0me.github.io/post/posts54/</link>
       <pubDate>Fri, 26 Jan 2018 12:20:42 +0800</pubDate>
       
-      <guid>https://jaejin0me.github.io/post/algo54/</guid>
+      <guid>https://jaejin0me.github.io/post/posts54/</guid>
       <description>피보나치 수를 구하는 가장 기초적인 알고리즘입니다. $$ F_n = F_{n-1} + F_{n-2} (n&amp;gt;=2) $$ 점화식을 그대로 구현하여 재귀적으로 풀어내면 됩니다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15</description>
     </item>
     
     <item>
       <title>백준알고리즘 2748번 - 피보나치 수 2</title>
-      <link>https://jaejin0me.github.io/post/algo55/</link>
+      <link>https://jaejin0me.github.io/post/posts55/</link>
       <pubDate>Fri, 26 Jan 2018 12:20:42 +0800</pubDate>
       
-      <guid>https://jaejin0me.github.io/post/algo55/</guid>
+      <guid>https://jaejin0me.github.io/post/posts55/</guid>
       <description>피보나치 수 두번째 입니다. DP로 푸는 문제입니다. 점화식으로 풀때는 Top-down 방식이지만 DP로 풀때는 Bottom-up 방식입니다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</description>
     </item>
     

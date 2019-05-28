@@ -14,10 +14,10 @@
     
     <item>
       <title>CLSID를 이용한 COM 메서드 확인</title>
-      <link>https://jaejin0me.github.io/post/ps1/</link>
+      <link>https://jaejin0me.github.io/post/posts166/</link>
       <pubDate>Mon, 25 Dec 2017 12:47:56 +0800</pubDate>
       
-      <guid>https://jaejin0me.github.io/post/ps1/</guid>
+      <guid>https://jaejin0me.github.io/post/posts166/</guid>
       <description>HTML에서는 ActiveX(COM)를 부를 때 CLSID를 사용합니다.웹 페이지상에서 소스 보기를 이용해서 CLSID를 볼 수 있기 때문에, 구해진 CL</description>
     </item>
     
