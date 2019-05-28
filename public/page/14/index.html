@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jaejin0me.github.io/" />
 
-<meta property="og:updated_time" content="2019-05-28T21:59:55&#43;09:00"/>
+<meta property="og:updated_time" content="2019-05-28T23:49:45&#43;09:00"/>
 
 <meta itemprop="name" content="Jaejin&#39;s blog">
 <meta itemprop="description" content="Jaejin Jang&#39;s blog">
@@ -117,6 +117,29 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/posts125/">자바 Set, Map</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-12-23 </span>
+      <div class="post-category">
+          <a href="/categories/java/"> java </a>
+          </div>
+        <span class="more-meta"> 85 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      1.Set 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 HashSet&lt;Integer&gt; abc = new HashSet&lt;Integer&gt;(); abc.add(1); abc.add(2); abc.add(3); Iterator it = abc.iterator(); Integer temp = 0; while(it.hasNext()) { temp = (Integer) it.next(); System.out.println(temp); } for(Integer item : abc) { System.out.println(item); } 2.Map 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 HashMap&lt;String,Integer&gt; abc = new HashMap&lt;String,Integer&gt;(); abc.put(&#34;a&#34;, 0);
+    </div>
+    <div class="read-more">
+      <a href="/post/posts125/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/posts122/">자바 쓰레드 관련 정리</a></h1>
@@ -320,29 +343,6 @@
     </div>
     <div class="read-more">
       <a href="/post/posts140/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/posts48/">프로그래머스 - 2 x n 타일링</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017-12-23 </span>
-      <div class="post-category">
-          <a href="/categories/algorithm/"> algorithm </a>
-          </div>
-        <span class="more-meta"> 110 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      주의해야 할것은 오버플로우! 나머지 연산이 포인트 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 public class TryHelloWorld { static long[] dp = new long[10000]; public int tiling(int n) { dp[0] = 1; dp[1] = 2; for(int i=2;i&lt;n;i++) { dp[i] = (dp[i-2]*2)+(dp[i-1]-dp[i-2]); if(dp[i]&gt;99999)
-    </div>
-    <div class="read-more">
-      <a href="/post/posts48/" class="read-more-link">Read more..</a>
     </div>
   </div>
 </article>

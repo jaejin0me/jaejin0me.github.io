@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Jaejin Jang</copyright>
-    <lastBuildDate>Tue, 05 Mar 2019 00:32:42 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 28 May 2019 21:59:55 +0900</lastBuildDate>
     
 	<atom:link href="https://jaejin0me.github.io/tags/%EC%9D%BC%EA%B8%B0%EC%9E%A5/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>블로그 리뉴얼 사항</title>
+      <link>https://jaejin0me.github.io/post/posts180/</link>
+      <pubDate>Tue, 28 May 2019 21:59:55 +0900</pubDate>
+      
+      <guid>https://jaejin0me.github.io/post/posts180/</guid>
+      <description>겉으로 보기에 바뀐것은 없어 보이지만 내부적으로 몇가지를 수정했습니다. 1. 빌드 및 deploy 자동화 현재까지 블로그에 새로운 글을 올리기 위한 과정을 다음과 같았습니다.</description>
+    </item>
     
     <item>
       <title>오랜만의 근황~ 19년 3월</title>

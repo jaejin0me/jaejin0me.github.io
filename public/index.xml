@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Jaejin Jang</copyright>
-    <lastBuildDate>Tue, 28 May 2019 21:59:55 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 28 May 2019 23:49:45 +0900</lastBuildDate>
     
 	<atom:link href="https://jaejin0me.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,15 @@
       
       <guid>https://jaejin0me.github.io/about/</guid>
       <description>Jaejin Jang Education BSc in Electronics Engineering from KNU MEng in Electronics Engineering from KNU Links Email jaejin0me@gmail.com Blog jaejin0me.github.io Github github.com/jaejin0me Linkedin linkedin.com/in/jaejin0me Google Scholar scholar.google.co.kr/jaejin0me Data Sharing Google Drive SlideShare slideshare.net/jaejinjang Interests Current Software Development(C/C++) Performance Optimization Old Computer Security (Hardware Hacking, Network Security) Internet of Things Publications Conferences [1] Jae J. Jang, Jaekun Moon, Im Y. Jung, A Personalized Access Control Based on IoT, IEEE Pacific Rim</description>
+    </item>
+    
+    <item>
+      <title>책뿌수기 - SQL 레벨업 8</title>
+      <link>https://jaejin0me.github.io/post/posts181/</link>
+      <pubDate>Tue, 28 May 2019 23:49:45 +0900</pubDate>
+      
+      <guid>https://jaejin0me.github.io/post/posts181/</guid>
+      <description>8장. SQL의 순서 - 깨어나는 절차 지향 sql은 관계 모델의 이론에 기초하고 있기 때문에 순번을 다루기 위한 기능이 없다. 하지만 레코드에 순번을 붙여 처리하는 경</description>
     </item>
     
     <item>

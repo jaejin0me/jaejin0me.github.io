@@ -1,8 +1,8 @@
 ---
 title: "블로그 리뉴얼 사항"
 date: 2019-05-28T21:59:55+09:00
-tags: []
-categories: []
+tags: ["일기장"]
+categories: ["일기장"]
 author: "Jaejin Jang"
 mathjax: true
 ---
