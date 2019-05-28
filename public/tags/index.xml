@@ -7,26 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Jaejin Jang</copyright>
-    <lastBuildDate>Tue, 28 May 2019 23:49:45 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 29 May 2019 04:11:17 +0900</lastBuildDate>
     
 	<atom:link href="https://jaejin0me.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>sql 튜닝</title>
-      <link>https://jaejin0me.github.io/tags/sql-%ED%8A%9C%EB%8B%9D/</link>
-      <pubDate>Tue, 28 May 2019 23:49:45 +0900</pubDate>
+      <title>일기장</title>
+      <link>https://jaejin0me.github.io/tags/%EC%9D%BC%EA%B8%B0%EC%9E%A5/</link>
+      <pubDate>Wed, 29 May 2019 04:11:17 +0900</pubDate>
       
-      <guid>https://jaejin0me.github.io/tags/sql-%ED%8A%9C%EB%8B%9D/</guid>
+      <guid>https://jaejin0me.github.io/tags/%EC%9D%BC%EA%B8%B0%EC%9E%A5/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>일기장</title>
-      <link>https://jaejin0me.github.io/tags/%EC%9D%BC%EA%B8%B0%EC%9E%A5/</link>
-      <pubDate>Tue, 28 May 2019 21:59:55 +0900</pubDate>
+      <title>sql 튜닝</title>
+      <link>https://jaejin0me.github.io/tags/sql-%ED%8A%9C%EB%8B%9D/</link>
+      <pubDate>Wed, 29 May 2019 01:39:17 +0900</pubDate>
       
-      <guid>https://jaejin0me.github.io/tags/%EC%9D%BC%EA%B8%B0%EC%9E%A5/</guid>
+      <guid>https://jaejin0me.github.io/tags/sql-%ED%8A%9C%EB%8B%9D/</guid>
       <description></description>
     </item>
     

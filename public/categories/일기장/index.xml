@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Jaejin Jang</copyright>
-    <lastBuildDate>Tue, 28 May 2019 21:59:55 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 29 May 2019 04:11:17 +0900</lastBuildDate>
     
 	<atom:link href="https://jaejin0me.github.io/categories/%EC%9D%BC%EA%B8%B0%EC%9E%A5/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>으아 피곤해</title>
+      <link>https://jaejin0me.github.io/post/posts183/</link>
+      <pubDate>Wed, 29 May 2019 04:11:17 +0900</pubDate>
+      
+      <guid>https://jaejin0me.github.io/post/posts183/</guid>
+      <description>오늘안에 sql 튜닝 포스팅 모두 끝내고 싶어서 버티면서 작업하다 보니 벌써 4시가 넘었네요.. ㅋㅋ 내일 출근인데 후 얼른 자야지 굿밤~</description>
+    </item>
     
     <item>
       <title>블로그 리뉴얼 사항</title>

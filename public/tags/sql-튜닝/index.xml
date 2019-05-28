@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Jaejin Jang</copyright>
-    <lastBuildDate>Tue, 28 May 2019 23:49:45 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 29 May 2019 01:39:17 +0900</lastBuildDate>
     
 	<atom:link href="https://jaejin0me.github.io/tags/sql-%ED%8A%9C%EB%8B%9D/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>책뿌수기 - SQL 레벨업 9</title>
+      <link>https://jaejin0me.github.io/post/posts182/</link>
+      <pubDate>Wed, 29 May 2019 01:39:17 +0900</pubDate>
+      
+      <guid>https://jaejin0me.github.io/post/posts182/</guid>
+      <description>9장. 갱신과 데이터 모델 - 망치와 못 26강. 갱신을 효율적으로 갱신을 효율적으로 수행하는 SQL을 케이스 스터디 1. NULL 채우기 1 2 3 4 5 6 7 8 9 UPDATE OmitTbl SET val = (SELECT</description>
+    </item>
     
     <item>
       <title>책뿌수기 - SQL 레벨업 8</title>
