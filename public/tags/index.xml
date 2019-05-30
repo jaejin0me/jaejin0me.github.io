@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Jaejin Jang</copyright>
-    <lastBuildDate>Wed, 29 May 2019 04:11:17 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 May 2019 22:57:22 +0900</lastBuildDate>
     
 	<atom:link href="https://jaejin0me.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>유폰</title>
+      <link>https://jaejin0me.github.io/tags/%EC%9C%A0%ED%8F%B0/</link>
+      <pubDate>Thu, 30 May 2019 22:57:22 +0900</pubDate>
+      
+      <guid>https://jaejin0me.github.io/tags/%EC%9C%A0%ED%8F%B0/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>일기장</title>
