@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Jaejin Jang</copyright>
-    <lastBuildDate>Fri, 31 May 2019 22:14:52 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 06 Jun 2019 15:39:15 +0900</lastBuildDate>
     
 	<atom:link href="https://jaejin0me.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,24 @@
       
       <guid>https://jaejin0me.github.io/about/</guid>
       <description>Jaejin Jang Education BSc in Electronics Engineering from KNU MEng in Electronics Engineering from KNU Links Email jaejin0me@gmail.com Blog jaejin0me.github.io Github github.com/jaejin0me Linkedin linkedin.com/in/jaejin0me Google Scholar scholar.google.co.kr/jaejin0me Data Sharing Google Drive SlideShare slideshare.net/jaejinjang Interests Current Software Development(C/C++) Performance Optimization Old Computer Security (Hardware Hacking, Network Security) Internet of Things Publications Conferences [1] Jae J. Jang, Jaekun Moon, Im Y. Jung, A Personalized Access Control Based on IoT, IEEE Pacific Rim</description>
+    </item>
+    
+    <item>
+      <title>ftss patch for apache 2.4</title>
+      <link>https://jaejin0me.github.io/post/posts187/</link>
+      <pubDate>Thu, 06 Jun 2019 15:39:15 +0900</pubDate>
+      
+      <guid>https://jaejin0me.github.io/post/posts187/</guid>
+      <description>ftss 라는 아파치 웹 서버를 모니터링하는 명령어를 사용하고 있습니다. mod_status 같은 모듈과는 다르게 웹서버 접속없이 쉘에서 바로 확인할 수 있어서 웹서버 부하시에 활용되는데</description>
+    </item>
+    
+    <item>
+      <title>벌써 6월이네요</title>
+      <link>https://jaejin0me.github.io/post/posts186/</link>
+      <pubDate>Wed, 05 Jun 2019 01:21:24 +0900</pubDate>
+      
+      <guid>https://jaejin0me.github.io/post/posts186/</guid>
+      <description>날씨도 많이 더워지고, 시간이 정말 빠르네요. 6월달의 목표는 드론 오프소스인 px4에서 이슈를 하나해서 PR요청하는 것 정보처리기사 준비, 간단하게 준비해도</description>
     </item>
     
     <item>

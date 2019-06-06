@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Jaejin Jang</copyright>
-    <lastBuildDate>Wed, 29 May 2019 04:11:17 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 05 Jun 2019 01:21:24 +0900</lastBuildDate>
     
 	<atom:link href="https://jaejin0me.github.io/categories/%EC%9D%BC%EA%B8%B0%EC%9E%A5/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>벌써 6월이네요</title>
+      <link>https://jaejin0me.github.io/post/posts186/</link>
+      <pubDate>Wed, 05 Jun 2019 01:21:24 +0900</pubDate>
+      
+      <guid>https://jaejin0me.github.io/post/posts186/</guid>
+      <description>날씨도 많이 더워지고, 시간이 정말 빠르네요. 6월달의 목표는 드론 오프소스인 px4에서 이슈를 하나해서 PR요청하는 것 정보처리기사 준비, 간단하게 준비해도</description>
+    </item>
     
     <item>
       <title>으아 피곤해</title>
