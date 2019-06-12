@@ -13,7 +13,7 @@ mathjax: true
 
 ~~최근에 아파치를 2.4로 업그레이드하면서 ftss 명령어를 수행하면 아래의 에러메시지가 떴는데~~
 
-~~ftss가 더이상 업데이트가 안되고 있어서 수정을 했습니다.
+~~ftss가 더이상 업데이트가 안되고 있어서 수정을 했습니다.~~
 
 ```
 ftss: Wrong scoreboard size.
@@ -44,6 +44,8 @@ ftss: Wrong scoreboard size.
 답장이 왔는데.. 내용은 이미 패치가 있다는 이야기네요 ㅎㅎ
 
 공식 저장소(아마도 아파치)에 접근 권한이 이제 없어서, 다른 저장소에서 유지하고 있다고 하네요.
+
+링크는 이거 입니다 [http://download.savannah.nongnu.org/releases/fabletech-server-status-for-ap/](http://download.savannah.nongnu.org/releases/fabletech-server-status-for-ap/)
 
 구글에서 대강 검색해봤을때 없는줄알았더니 이렇게 숨어있을줄이야..
 
