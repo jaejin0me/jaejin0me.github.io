@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>셀프코드리뷰 on Jaejin&#39;s blog</title>
+    <link>https://jaejin0me.github.io/tags/%EC%85%80%ED%94%84%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0/</link>
+    <description>Recent content in 셀프코드리뷰 on Jaejin&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Jaejin Jang</copyright>
+    <lastBuildDate>Fri, 21 Jun 2019 00:34:51 +0900</lastBuildDate>
+    
+	<atom:link href="https://jaejin0me.github.io/tags/%EC%85%80%ED%94%84%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>셀프 코드리뷰 - 06월 21일</title>
+      <link>https://jaejin0me.github.io/post/posts188/</link>
+      <pubDate>Fri, 21 Jun 2019 00:34:51 +0900</pubDate>
+      
+      <guid>https://jaejin0me.github.io/post/posts188/</guid>
+      <description>요즘에 코드를 보며 왜? 를 생각하고 이유를 알아가는 재미가 붙었습니다. 주기적으로 팀내 코드리뷰를 받기는 하지만, 스스로 고찰해보고자 생각 나는게 있을때 간단하</description>
+    </item>
+    
+  </channel>
+</rss>

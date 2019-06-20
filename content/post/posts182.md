@@ -1,5 +1,5 @@
 ---
-title: "책뿌수기 - SQL 레벨업 9"
+title: "책뿌숴짐 - SQL 레벨업 9"
 date: 2019-05-29T01:39:17+09:00
 tags: ["sql 튜닝"]
 categories: ["sql 튜닝"]
