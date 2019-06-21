@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Jaejin Jang</copyright>
-    <lastBuildDate>Fri, 21 Jun 2019 00:34:51 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 21 Jun 2019 20:17:51 +0900</lastBuildDate>
     
 	<atom:link href="https://jaejin0me.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>셀프 코드리뷰 - 06월 22일</title>
+      <link>https://jaejin0me.github.io/post/posts189/</link>
+      <pubDate>Fri, 21 Jun 2019 20:17:51 +0900</pubDate>
+      
+      <guid>https://jaejin0me.github.io/post/posts189/</guid>
+      <description>1. 생성자 안에서 처리 할껄! 생성자안에서 처리했으면 다 커버하는건데, 파라미터로 받게 처리해서 클래스만들때마다 옵션읽어야 하는 나쁜 코드! 2. grep 안해본것 grep 해</description>
+    </item>
     
     <item>
       <title>셀프 코드리뷰 - 06월 21일</title>
