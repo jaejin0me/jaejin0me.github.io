@@ -10,25 +10,82 @@
   
   <url>
     <loc>https://jaejin0me.github.io/categories/</loc>
-    <lastmod>2019-06-21T20:17:51+09:00</lastmod>
+    <lastmod>2019-07-20T19:29:52+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaejin0me.github.io/</loc>
-    <lastmod>2019-06-21T20:17:51+09:00</lastmod>
+    <lastmod>2019-07-20T19:29:52+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaejin0me.github.io/post/</loc>
-    <lastmod>2019-06-21T20:17:51+09:00</lastmod>
+    <lastmod>2019-07-20T19:29:52+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaejin0me.github.io/tags/</loc>
-    <lastmod>2019-06-21T20:17:51+09:00</lastmod>
+    <lastmod>2019-07-20T19:29:52+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaejin0me.github.io/categories/%EC%9C%A0%ED%8F%B0/</loc>
+    <lastmod>2019-07-20T19:29:52+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaejin0me.github.io/tags/%EC%9C%A0%ED%8F%B0/</loc>
+    <lastmod>2019-07-20T19:29:52+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaejin0me.github.io/post/posts192/</loc>
+    <lastmod>2019-07-20T19:29:52+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaejin0me.github.io/post/posts191/</loc>
+    <lastmod>2019-06-30T23:49:26+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaejin0me.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</loc>
+    <lastmod>2019-06-30T23:49:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaejin0me.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</loc>
+    <lastmod>2019-06-30T23:49:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaejin0me.github.io/post/posts190/</loc>
+    <lastmod>2019-06-30T23:44:15+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaejin0me.github.io/categories/%EC%9D%BC%EA%B8%B0%EC%9E%A5/</loc>
+    <lastmod>2019-06-30T23:44:15+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaejin0me.github.io/tags/%EC%9D%BC%EA%B8%B0%EC%9E%A5/</loc>
+    <lastmod>2019-06-30T23:44:15+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -41,12 +98,6 @@
   
   <url>
     <loc>https://jaejin0me.github.io/tags/%EC%85%80%ED%94%84%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0/</loc>
-    <lastmod>2019-06-21T20:17:51+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jaejin0me.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</loc>
     <lastmod>2019-06-21T20:17:51+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -94,30 +145,6 @@
     <lastmod>2019-06-05T01:21:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://jaejin0me.github.io/categories/%EC%9D%BC%EA%B8%B0%EC%9E%A5/</loc>
-    <lastmod>2019-06-05T01:21:24+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jaejin0me.github.io/tags/%EC%9D%BC%EA%B8%B0%EC%9E%A5/</loc>
-    <lastmod>2019-06-05T01:21:24+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jaejin0me.github.io/categories/%EC%9C%A0%ED%8F%B0/</loc>
-    <lastmod>2019-05-31T22:14:52+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jaejin0me.github.io/tags/%EC%9C%A0%ED%8F%B0/</loc>
-    <lastmod>2019-05-31T22:14:52+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

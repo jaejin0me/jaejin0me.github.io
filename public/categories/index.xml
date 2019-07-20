@@ -7,17 +7,35 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Jaejin Jang</copyright>
-    <lastBuildDate>Fri, 21 Jun 2019 20:17:51 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jul 2019 19:29:52 +0900</lastBuildDate>
     
 	<atom:link href="https://jaejin0me.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>유폰</title>
+      <link>https://jaejin0me.github.io/categories/%EC%9C%A0%ED%8F%B0/</link>
+      <pubDate>Sat, 20 Jul 2019 19:29:52 +0900</pubDate>
+      
+      <guid>https://jaejin0me.github.io/categories/%EC%9C%A0%ED%8F%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>프로그래밍</title>
       <link>https://jaejin0me.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</link>
-      <pubDate>Fri, 21 Jun 2019 20:17:51 +0900</pubDate>
+      <pubDate>Sun, 30 Jun 2019 23:49:26 +0900</pubDate>
       
       <guid>https://jaejin0me.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>일기장</title>
+      <link>https://jaejin0me.github.io/categories/%EC%9D%BC%EA%B8%B0%EC%9E%A5/</link>
+      <pubDate>Sun, 30 Jun 2019 23:44:15 +0900</pubDate>
+      
+      <guid>https://jaejin0me.github.io/categories/%EC%9D%BC%EA%B8%B0%EC%9E%A5/</guid>
       <description></description>
     </item>
     
@@ -36,24 +54,6 @@
       <pubDate>Thu, 06 Jun 2019 15:39:15 +0900</pubDate>
       
       <guid>https://jaejin0me.github.io/categories/ftss/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>일기장</title>
-      <link>https://jaejin0me.github.io/categories/%EC%9D%BC%EA%B8%B0%EC%9E%A5/</link>
-      <pubDate>Wed, 05 Jun 2019 01:21:24 +0900</pubDate>
-      
-      <guid>https://jaejin0me.github.io/categories/%EC%9D%BC%EA%B8%B0%EC%9E%A5/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>유폰</title>
-      <link>https://jaejin0me.github.io/categories/%EC%9C%A0%ED%8F%B0/</link>
-      <pubDate>Fri, 31 May 2019 22:14:52 +0900</pubDate>
-      
-      <guid>https://jaejin0me.github.io/categories/%EC%9C%A0%ED%8F%B0/</guid>
       <description></description>
     </item>
     
