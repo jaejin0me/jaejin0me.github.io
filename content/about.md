@@ -11,6 +11,13 @@ mathjax: false
 ---
 # **Jaejin Jang**
 
+## Work Experience
+### [Korea Testing Laboratory](https://www.ktl.re.kr), Software Engineer (2020.10 ~ )  
+* Certiplanner(Mobile Device Testing & Certification Solution) Development, Full-stack  
+
+### [Genians](https://www.genians.com), Software Engineer (2018.03 ~ 2020.09)  
+* Genian NAC(Network Access Control) Development, Engine  
+
 ## Education
 BSc in Electronics Engineering from [KNU](http://knu.ac.kr)<br>
 MEng in Electronics Engineering from [KNU](http://knu.ac.kr)
@@ -27,19 +34,6 @@ MEng in Electronics Engineering from [KNU](http://knu.ac.kr)
 | Data Sharing   | [Google Drive](https://drive.google.com/drive/folders/1HijwUAF0P9XVF5niuFISoiDWFS5NHZpt?usp=sharing) |
 | SlideShare     | [slideshare.net/jaejinjang](https://www.slideshare.net/jaejinjang) |
 
-
-
-## Interests
-
-### Current
-* Software Development(C/C++)
-* Performance Optimization
-
-### Old
-* Computer Security (Hardware Hacking, Network Security)
-* Internet of Things
-
-
 <hr>
 ## Publications
 ### Conferences
@@ -55,34 +49,4 @@ MEng in Electronics Engineering from [KNU](http://knu.ac.kr)
 <hr>
 ## Research Experience
 ### Information Technology Convergence Security Lab @ KNU (2015.03 ~ 2017.02)
-* _Zigbee기반의 홈 게이트웨이 취약점 분석_::(2016.02 ~ 2016.11)(27% a/r)::
-
-<hr>
-## Campus Activities
-### Leader, Capstone Design Group : 3D printer @ KNU (2014.02 ~ 2014.12)
-### Leader, 3D printer founding Group @ KNU (2014.03 ~ 2014.08)
-### Leader, Book Discussion Club @ KNU (2014.03 ~ 2014.06)
-### Member of Public Relationship Team, 미담장학회 @ KNU (2013.06 ~ 2013.12)
-### President, FOURSEASON(a skateboard club) @ PKNU (2012.06 ~ 2012.12)
-
-
-
-
-
-<hr>
-## Personal Projects
-### Software Developments
-* [Notthing](https://github.com/jaejin0me/Notthing), Program that search files and directories by filename instantly for Windows
-* [clsid_spider](https://github.com/jaejin0me/clsid_spider), Program that search CLSID of ActiveX in website throughtout googling
-* [ActiveXfuzzer](https://github.com/jaejin0me/ActiveXfuzzer), In progress
-* [NeuralNetworkStudy](https://github.com/jaejin0me/NeuralNetwork), study
-
-<hr>
-## Honors & Awards
-### Programming
-* 2017 찾아라 프로그래밍 마에스터::**Finalist**
-
-<hr>
-## Skills
-* Programming languages: C, C++/MFC, C#/Winforms, Python/wxPython(wxGlade), Java, Go, SQL
-* Languages: English(business communication possible), Korean - Native
+* _Vulnerability Analysis of Zigbee-based IoT Gateway_::(2016.02 ~ 2016.11)(27% a/r)::
