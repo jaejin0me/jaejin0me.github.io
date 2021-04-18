@@ -69,7 +69,7 @@ import 'package:flutter/material.dart';
 class ChangeTextByButton extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    print('createState()');
+    print('createState()'); // 여기 출력!
     return _ChangeTextByButton();
   }
 }
@@ -80,17 +80,17 @@ class _ChangeTextByButton extends State<ChangeTextByButton> {
   @override
   void initState() {
     super.initState();
-    print('initState()');
+    print('initState()'); // 여기 출력!
   }
 
   void didChangeDependencies() {
     super.didChangeDependencies();
-    print('didChangeDependencies()');
+    print('didChangeDependencies()'); // 여기 출력!
   }
 
   @override
   Widget build(BuildContext context) {
-    print('build');
+    print('build');  // 여기 출력!
     return MaterialApp(
       title: 'ChangeTextByButton',
       theme: ThemeData(

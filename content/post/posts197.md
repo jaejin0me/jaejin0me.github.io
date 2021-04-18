@@ -120,7 +120,10 @@ class _ChangeTextByButton extends State<ChangeTextByButton> {
   var swVal = false;
   var str = 'Jaejin Jang off';
   @override
-  Widget build(BuildContext cColumn
+  Widget build(BuildContext context) {
+	return MaterialApp(
+      title: 'ChangeTextByButton',
+      theme: ThemeData(
           primaryColor: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity),
       darkTheme: ThemeData.light(),
