@@ -19,7 +19,7 @@ mathjax: false
 * Genian NAC(Network Access Control) Development, Engine  
 
 ## Education
-BSc in Electronics Engineering from [KNU](http://knu.ac.kr)<br>
+BSc in Electronics Engineering from [KNU](http://knu.ac.kr)  
 MEng in Electronics Engineering from [KNU](http://knu.ac.kr)
 
 
@@ -36,8 +36,8 @@ MEng in Electronics Engineering from [KNU](http://knu.ac.kr)
 
 ## Publications
 ### Journals
-* [5]  **[SCIE IF:3.228] Jaejin Jang**, Im Y. Jung, Jong Hyuk Park, _An effective handling of secure data stream in IoT_, Applied Soft Computing, 2017. [[PDF]](http://www.sciencedirect.com/science/article/pii/S1568494617302739)
-* [6]  **[SCIE IF:1.133] Jaejin Jang**, and Im Y. Jung, _Sustainable and Practical Firmware Upgrade for Wireless Access Point Using Password-Based Authentication_, Sustainability, 2016.[[PDF]](http://www.mdpi.com/2071-1050/8/9/876)
+* [1]  **[SCIE IF:3.228] Jaejin Jang**, Im Y. Jung, Jong Hyuk Park, _An effective handling of secure data stream in IoT_, Applied Soft Computing, 2017. [[PDF]](http://www.sciencedirect.com/science/article/pii/S1568494617302739)
+* [2]  **[SCIE IF:1.133] Jaejin Jang**, and Im Y. Jung, _Sustainable and Practical Firmware Upgrade for Wireless Access Point Using Password-Based Authentication_, Sustainability, 2016.[[PDF]](http://www.mdpi.com/2071-1050/8/9/876)
 
 ## Research Experience
 ### Information Technology Convergence Security Lab @ KNU (2015.03 ~ 2017.02)
