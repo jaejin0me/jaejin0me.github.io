@@ -38,6 +38,7 @@ MEng in Electronics Engineering from [KNU](http://knu.ac.kr)
 ## Publications
 ### Conferences
 * [1]  **Jae J. Jang**, Jaekun Moon, Im Y. Jung, _A Personalized Access Control Based on IoT_, IEEE Pacific Rim International Symposium on Dependable Computing 2015
+* [1]  **Jae J. Jang**, Jaekun Moon, Im Y. Jung, _A Personalized Access Control Based on IoT_, IEEE Pacific Rim International Symposium on Dependable Computing 2015
 * [2]  **Jae J. Jang**, Jinseong Kim, Im Y. Jung, _A Check and Alert Service based on IoT_, IEEE Conference on Technologies for Sustainability, 2015
 * [3]  **Jae-Jin Jang**, Im Y. Jung, _An Access Control Resitant to Shoulder-surfing_, IEEE International Conference on Intelligence and Security Informatics, 2015
 * [4]  **Jae J. Jang**, Cheol Hong Kim, Eung Jung Lee, Im Y. Jung, _A Pedestrian Speed Detection based on Static Background at Crosswalk_, Hong Kong International Conference on Engineering and Applied Science, 2014
