@@ -9,7 +9,9 @@ weight: 50
 comment: false
 mathjax: false
 ---
+
 # **Jaejin Jang**
+![Me](/me.jpg "Me")
 
 ## Work Experience
 ### [Korea Testing Laboratory](https://www.ktl.re.kr), Software Engineer (2020.10 ~ )  
