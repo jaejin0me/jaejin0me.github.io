@@ -1,0 +1,351 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>몰입! 자바스크립트 - 29장 자바스크립트 활용 - Jaejin's blog</title><meta name=renderer content="webkit"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv=cache-control content="no-transform"><meta http-equiv=cache-control content="no-siteapp"><meta name=theme-color content="#f8f5ec"><meta name=msapplication-navbutton-color content="#f8f5ec"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="#f8f5ec"><meta name=author content="Jaejin Jang"><meta name=description content="이력 2022.03.25 5절까지 포스팅 2022.03.26 7절 제외하고 11절까지 포스팅 ​모든 내용을 상세히 담으려 하지 않았습니다. 제가 모르는 부분이나, &amp;ldquo;이런 것도 있었어?"><meta name=keywords content="Hugo,theme,even"><meta name=generator content="Hugo 0.99.1 with theme even"><link rel=canonical href=https://jaejin0me.github.io/post/20220325/><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/manifest.json><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link href=/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin=anonymous><meta property="og:title" content="몰입! 자바스크립트 - 29장 자바스크립트 활용"><meta property="og:description" content="이력 2022.03.25 5절까지 포스팅 2022.03.26 7절 제외하고 11절까지 포스팅 ​모든 내용을 상세히 담으려 하지 않았습니다. 제가 모르는 부분이나, &ldquo;이런 것도 있었어?"><meta property="og:type" content="article"><meta property="og:url" content="https://jaejin0me.github.io/post/20220325/"><meta property="article:section" content="post"><meta property="article:published_time" content="2022-03-25T17:20:52+09:00"><meta property="article:modified_time" content="2022-03-25T17:20:52+09:00"><meta itemprop=name content="몰입! 자바스크립트 - 29장 자바스크립트 활용"><meta itemprop=description content="이력 2022.03.25 5절까지 포스팅 2022.03.26 7절 제외하고 11절까지 포스팅 ​모든 내용을 상세히 담으려 하지 않았습니다. 제가 모르는 부분이나, &ldquo;이런 것도 있었어?"><meta itemprop=datePublished content="2022-03-25T17:20:52+09:00"><meta itemprop=dateModified content="2022-03-25T17:20:52+09:00"><meta itemprop=wordCount content="2273"><meta itemprop=keywords content="javascript,"><meta name=twitter:card content="summary"><meta name=twitter:title content="몰입! 자바스크립트 - 29장 자바스크립트 활용"><meta name=twitter:description content="이력 2022.03.25 5절까지 포스팅 2022.03.26 7절 제외하고 11절까지 포스팅 ​모든 내용을 상세히 담으려 하지 않았습니다. 제가 모르는 부분이나, &ldquo;이런 것도 있었어?"><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script><![endif]--></head><body><div id=mobile-navbar class=mobile-navbar><div class=mobile-header-logo><a href=/ class=logo>Jaejin's blog</a></div><div class=mobile-navbar-icon><span></span>
+<span></span>
+<span></span></div></div><nav id=mobile-menu class="mobile-menu slideout-menu"><ul class=mobile-menu-list><a href=/><li class=mobile-menu-item>Home</li></a><a href=/post/><li class=mobile-menu-item>Archives</li></a><a href=/tags/><li class=mobile-menu-item>Tags</li></a><a href=/categories/><li class=mobile-menu-item>Categories</li></a><a href=/about/><li class=mobile-menu-item>About</li></a></ul></nav><div class=container id=mobile-panel><header id=header class=header><div class=logo-wrapper><a href=/ class=logo>Jaejin's blog</a></div><nav class=site-navbar><ul id=menu class=menu><li class=menu-item><a class=menu-item-link href=/>Home</a></li><li class=menu-item><a class=menu-item-link href=/post/>Archives</a></li><li class=menu-item><a class=menu-item-link href=/tags/>Tags</a></li><li class=menu-item><a class=menu-item-link href=/categories/>Categories</a></li><li class=menu-item><a class=menu-item-link href=/about/>About</a></li></ul></nav></header><main id=main class=main><div class=content-wrapper><div id=content class=content><article class=post><header class=post-header><h1 class=post-title>몰입! 자바스크립트 - 29장 자바스크립트 활용</h1><div class=post-meta><span class=post-time>2022-03-25</span><div class=post-category><a href=/categories/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/>자바스크립트</a></div><span class=more-meta>2273 words</span>
+<span class=more-meta>5 mins read</span></div></header><div class=post-toc id=post-toc><h2 class=post-toc-title>Contents</h2><div class="post-toc-content always-active"><nav id=TableOfContents><ul><li><a href=#291-재귀-함수>29.1 재귀 함수</a></li><li><a href=#292-오브젝트-프로퍼티-이동>29.2 오브젝트 프로퍼티 이동</a></li><li><a href=#293-json과-재귀함수>29.3 JSON과 재귀함수</a></li><li><a href=#294-함수-즉시-실행>29.4 함수 즉시 실행</a></li><li><a href=#295-클로저와-자바스크립트-엔진-처리>29.5 클로저와 자바스크립트 엔진 처리</a></li><li><a href=#296-클로저와-무명함수>29.6 클로저와 무명함수</a></li><li><a href=#297-클로저와-인스턴스>29.7 클로저와 인스턴스</a></li><li><a href=#298-메소드-체인>29.8 메소드 체인</a></li><li><a href=#299-사용자-정의-이벤트>29.9 사용자 정의 이벤트</a></li><li><a href=#2910-html5-템플릿>29.10 HTML5 템플릿</a></li><li><a href=#2911-자바스크립트-템플릿>29.11 자바스크립트 템플릿</a></li></ul></nav></div></div><div class=post-content><p>이력</p><ul><li>2022.03.25 5절까지 포스팅</li><li>2022.03.26 7절 제외하고 11절까지 포스팅</li></ul><p><em>​모든 내용을 상세히 담으려 하지 않았습니다.<br>제가 모르는 부분이나, &ldquo;이런 것도 있었어?&rdquo; 하는 부분, 중요하다고 생각되는 부분,<br>다시 한번 되새기고 싶은 부분만 기록했습니다.<br>와.. 드디어 마지막 장이네요. 긴 여정이 끝났습니다. 고생한 나 자신에게 박수~!<br>읽어주셔서 감사합니다.</em></p><h2 id=291-재귀-함수>29.1 재귀 함수</h2><h2 id=292-오브젝트-프로퍼티-이동>29.2 오브젝트 프로퍼티 이동</h2><ul><li>아래의 코드는 할당한 오브젝트를 참조하기 때문에 값이 연동됩니다.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>var soccer = {member: 11};
+</span></span><span class=line><span class=cl>var sports = soccer;
+</span></span><span class=line><span class=cl>sports.member = 789;
+</span></span><span class=line><span class=cl>js.log(soccer.member);
+</span></span><span class=line><span class=cl>// 789
+</span></span></code></pre></td></tr></table></div></div><ul><li>값의 연동을 원하지 않을 때는 오브젝트가 아닌 프로퍼티 단위로 할당해야 한다.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>var sports = {member: 11};
+</span></span><span class=line><span class=cl>var dup = {};
+</span></span><span class=line><span class=cl>for (var name in sports) {
+</span></span><span class=line><span class=cl>  dup{name] = sports[name]
+</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl>dup.member = &#39;abc&#39;;
+</span></span><span class=line><span class=cl>js.log(sports.member);
+</span></span><span class=line><span class=cl>// 11
+</span></span></code></pre></td></tr></table></div></div><h2 id=293-json과-재귀함수>29.3 JSON과 재귀함수</h2><ul><li>재귀 함수를 이용해 복잡한 오브젝트를 프로퍼티 단위로 간단하게 복사할 수 있습니다.
+​</li></ul><h2 id=294-함수-즉시-실행>29.4 함수 즉시 실행</h2><ul><li>함수는 호출해야 실행되지만 즉시 실행 시키는 형태가 있습니다. 익명 함수라고 부릅니다.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>var value = function() {
+</span></span><span class=line><span class=cl>  return 123;
+</span></span><span class=line><span class=cl>}();
+</span></span><span class=line><span class=cl>js.log(&#39;자동 실행: &#39; + value);
+</span></span><span class=line><span class=cl>// 123
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>value = (function() {
+</span></span><span class=line><span class=cl>  return 456;
+</span></span><span class=line><span class=cl>}());
+</span></span><span class=line><span class=cl>js.log(value);
+</span></span><span class=line><span class=cl>// 456
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>(function() {
+</span></span><span class=line><span class=cl>  js.log(&#39;abc&#39;);
+</span></span><span class=line><span class=cl>}());
+</span></span><span class=line><span class=cl>// abc
+</span></span><span class=line><span class=cl>// 소괄호는 그룹핑 연산자입니다. 그룹핑 연산자의 소괄호 안의 표현식을 평가하고 평가 결과를 반환합니다.
+</span></span><span class=line><span class=cl>// 소괄호가 없으면 함수 이름이 없으므로 함수 선언문도 아니고, 변수에 할당하고 있지도 않으므로 함수
+</span></span><span class=line><span class=cl>// 표현식이 아니라 에러가 발생합니다.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>(function(param) {
+</span></span><span class=line><span class=cl>  js.log(param);
+</span></span><span class=line><span class=cl>  js.log(arguments[0]);
+</span></span><span class=line><span class=cl>}(789));
+</span></span><span class=line><span class=cl>// 789
+</span></span><span class=line><span class=cl>// 789
+</span></span></code></pre></td></tr></table></div></div><ul><li>표현식과 표현식의 결과는 메모리에 저장되지 않습니다.
+​</li></ul><h2 id=295-클로저와-자바스크립트-엔진-처리>29.5 클로저와 자바스크립트 엔진 처리</h2><ul><li>클로저는 js의 특징 기능을 지칭한 것입니다. 특정 기능이란 함수를 생성할 때 Function 오브젝트의 [[Scope]]에 렉시컬 환경을 설정하고 함수가 호출되었을 때 [[Scope]]에 설정된 프로퍼티를 사용하는 것입니다.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>LE: {
+</span></span><span class=line><span class=cl>  ER: {
+</span></span><span class=line><span class=cl>    DER: xxx,
+</span></span><span class=line><span class=cl>    OER: yyy,
+</span></span><span class=line><span class=cl>  },
+</span></span><span class=line><span class=cl>  OLER: [[Scope]]에 설정된 프로퍼티를 참조합니다.
+</span></span><span class=line><span class=cl>}
+</span></span></code></pre></td></tr></table></div></div><ul><li>[[Scope]]에 설정된 프로퍼티는 1단계 밖의 함수와 변수입니다.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>function sports() {
+</span></span><span class=line><span class=cl>  var value = 100;
+</span></span><span class=line><span class=cl>  function setValue(param) {
+</span></span><span class=line><span class=cl>    value = param;
+</span></span><span class=line><span class=cl>  };
+</span></span><span class=line><span class=cl>  var getValue = function(param) {
+</span></span><span class=line><span class=cl>    value = value = param;
+</span></span><span class=line><span class=cl>    return value;
+</span></span><span class=line><span class=cl>  }
+</span></span><span class=line><span class=cl>  return getValue;
+</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl>var getObject = sports();
+</span></span><span class=line><span class=cl>debugger;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>js.log(getObject(123));
+</span></span><span class=line><span class=cl>js.log(getObject(77));
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>// 223
+</span></span><span class=line><span class=cl>// 300
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>실행 준비 단계
+</span></span><span class=line><span class=cl>1. EC를 생성합니다.
+</span></span><span class=line><span class=cl>2. 파라미터 값을 갖고 EC안으로 이동합니다.
+</span></span><span class=line><span class=cl>  - 파라미터 값: 호출한 함수가 속한 오브젝트, 함수 코드, 호출한 함수의 파라미터 값
+</span></span><span class=line><span class=cl>3. 세 개의 컴포넌트를 생성합니다.
+</span></span><span class=line><span class=cl>4. 파라미터로 받은 호출한 함수가 속한 오브젝트의 프로퍼티를 TBC에 설정합니다.
+</span></span><span class=line><span class=cl>5. LE를 생성합니다.
+</span></span><span class=line><span class=cl>6. 호출한 함수의 오브젝트의 [[Scope]]를 OLER에 설정합니다.
+</span></span><span class=line><span class=cl>7. LE를 LEC와 VEC에 설정합니다.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>초기화 및 실행 단계
+</span></span><span class=line><span class=cl>1. 파라미터 값을 매핑하고 결과를 DER에 설정합니다.
+</span></span><span class=line><span class=cl>2. 함수 선언문을 Function 오브젝트로 생성합니다.
+</span></span><span class=line><span class=cl>3. 함수 코드의 처음으로 올라가 변수를 초기화하여 DER에 바인딩합니다.
+</span></span><span class=line><span class=cl>4. 함수 코드의 처음으로 올라가 js 코드를 실행합니다.
+</span></span><span class=line><span class=cl>5. DER의 value 프로퍼티에 100을 설정합니다.
+</span></span><span class=line><span class=cl>6. getValue Function 오브젝트를 생성합니다.
+</span></span><span class=line><span class=cl>7. getValue Function 오브젝트를 반환합니다.
+</span></span></code></pre></td></tr></table></div></div><p><img src=/20220325_1.png alt=fig.1 title=fig.1></p><ul><li>멈춘 시점에 getValue 함수 안을 해석하지 않았으므로 getValue 함수에서 value 변수 사용 여부를 알 수 없습니다. 표시하려면 value와 setValue 함수를 모두 표시해야 합니다.</li><li>개발자 도구에서 Closure를 표시할 때 getValue의 [[Scope]]와 getValue 함수안의 코드를 분석하여 표시한 것으로 생각됩니다. getValue 안에 setValue 함수를 호출하면 Closure 안에 setValue도 표시됩니다.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>getObject 함수 실행
+</span></span><span class=line><span class=cl>1. EC를 생성합니다.
+</span></span><span class=line><span class=cl>2. getObject 함수의 [[Scope]]에 설정된 프로퍼티를 OLER에 설정합니다.
+</span></span><span class=line><span class=cl>  - value와 setValue 함수를 사용할 수 있게 됩니다.
+</span></span><span class=line><span class=cl>3. 파라미터 값을 매핑하고 결과를 DER에 설정합니다.
+</span></span><span class=line><span class=cl>4. 함수 안의 코드를 실행합니다
+</span></span></code></pre></td></tr></table></div></div><ul><li>호출된 함수의 파라미터 이름도 클로저로 사용하 수 있습니다.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>function sports(one) {
+</span></span><span class=line><span class=cl>  var value = 50;
+</span></span><span class=line><span class=cl>  var getValue = function(two) {
+</span></span><span class=line><span class=cl>    value = value + one + two;
+</span></span><span class=line><span class=cl>    return value;
+</span></span><span class=line><span class=cl>  }
+</span></span><span class=line><span class=cl>  return getValue;
+</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl>var getObject = sports(10);
+</span></span><span class=line><span class=cl>console.log(getObject(20));
+</span></span><span class=line><span class=cl>// 80
+</span></span></code></pre></td></tr></table></div></div><h2 id=296-클로저와-무명함수>29.6 클로저와 무명함수</h2><ul><li>앞 절 예제에서 sports 함수 안에서 getValue 함수를 반환하여 함수로 사용하므로 sports 함수는 의미가 없으며 Function 오브젝트로 저장할 필요가 없습니다. 이때 익명함수를 사용하면 효율적입니다.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>var getObject = (function() {
+</span></span><span class=line><span class=cl>  var value = 100;
+</span></span><span class=line><span class=cl>  var getValue = function(param) {
+</span></span><span class=line><span class=cl>    value = value + param;
+</span></span><span class=line><span class=cl>    return value;
+</span></span><span class=line><span class=cl>  }
+</span></span><span class=line><span class=cl>  return getValue;
+</span></span><span class=line><span class=cl>}());
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>console.log(getObject(123));
+</span></span><span class=line><span class=cl>// 100
+</span></span></code></pre></td></tr></table></div></div><ul><li>(function(){}()) 형태는 function을 표현식으로 처리하므로 메모리에 남지 않아 다시 호출할 수 없습니다. 하지만 return getValue; 문장으로 함수를 반환하여 변수에 저장하면 getValue 함수를 호출할 수 있으며 Function 오브젝트의 [[Scope]]에 설정된 value 변수값을 사용할 수 있습니다.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>var sales = (function(){
+</span></span><span class=line><span class=cl>  var value = 100;
+</span></span><span class=line><span class=cl>  function setValue(param){
+</span></span><span class=line><span class=cl>    value = value + param;
+</span></span><span class=line><span class=cl>  }
+</span></span><span class=line><span class=cl>  var getValue = function(){
+</span></span><span class=line><span class=cl>    return value;
+</span></span><span class=line><span class=cl>  }
+</span></span><span class=line><span class=cl>  return {
+</span></span><span class=line><span class=cl>    setValue: setValue,
+</span></span><span class=line><span class=cl>    getValue: getValue,
+</span></span><span class=line><span class=cl>    getAverage: function(param){
+</span></span><span class=line><span class=cl>      return value / param;
+</span></span><span class=line><span class=cl>    }
+</span></span><span class=line><span class=cl>  }
+</span></span><span class=line><span class=cl>}());
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>sales.setValue(260);
+</span></span><span class=line><span class=cl>console.log(sales.getValue());
+</span></span><span class=line><span class=cl>console.log(sales.getAverage(30));
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>// 360
+</span></span><span class=line><span class=cl>// 12
+</span></span></code></pre></td></tr></table></div></div><ul><li>변수는 외부에서 직접 접근하거나 this로 접근할 수 없으므로 함수를 호출하여 접근해야 합니다. 이를 통해 정보를 보호할 수 있으며 숨길 수 있습니다. 브라우저 개발자 도구에서는 볼 수 있습니다. 웹에서 정보의 숨김과 보호는 의미가 크지 않으며 정보가 노출된다는 전제하에 개발해야 합니다.</li></ul><h2 id=297-클로저와-인스턴스>29.7 클로저와 인스턴스</h2><h2 id=298-메소드-체인>29.8 메소드 체인</h2><ul><li>메소드 체인은 시나리오(Use case)의 흐름대로 처리할 수 있는 방법을 제공한다.</li></ul><h2 id=299-사용자-정의-이벤트>29.9 사용자 정의 이벤트</h2><h2 id=2910-html5-템플릿>29.10 HTML5 템플릿</h2><ul><li>HTML의 엘리먼트 대신에 자바스크립트로 템플릿으 만들어 사용할 수 있습니다.</li></ul><h2 id=2911-자바스크립트-템플릿>29.11 자바스크립트 템플릿</h2><ul><li>js로 다양한 형태의 템플릿을 만들어 사용할 수 있습니다.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>var data = [
+</span></span><span class=line><span class=cl>  {&#39;textClass&#39;: &#39;dataClass&#39;, text: &#39;text-1&#39;},
+</span></span><span class=line><span class=cl>  {&#39;textClass&#39;: &#39;dataClass&#39;, text: &#39;text-2&#39;},
+</span></span><span class=line><span class=cl>  {&#39;textClass&#39;: &#39;dataClass&#39;, text: &#39;text-3&#39;}
+</span></span><span class=line><span class=cl>]
+</span></span><span class=line><span class=cl>var template = function(format) {
+</span></span><span class=line><span class=cl>  this.template = format;
+</span></span><span class=line><span class=cl>};
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>template.prototype = {
+</span></span><span class=line><span class=cl>  template: /\{([\w-]+)?\}/g,
+</span></span><span class=line><span class=cl>  match: function(data){
+</span></span><span class=line><span class=cl>    return this.template.replace(this.templateExp, function(src, key) {
+</span></span><span class=line><span class=cl>      return data[key];
+</span></span><span class=line><span class=cl>    });
+</span></span><span class=line><span class=cl>  }
+</span></span><span class=line><span class=cl>};
+</span></span><span class=line><span class=cl>var templateObj = new template(&#39;&lt;div class=&#34;{textClass}&#34;&gt;{text}&lt;/div&gt;&#39;);
+</span></span><span class=line><span class=cl>var markupList = [];
+</span></span><span class=line><span class=cl>data.forEach(function(obj){
+</span></span><span class=line><span class=cl>  markupList.push(templateObj.match(obj));
+</span></span><span class=line><span class=cl>}, this);
+</span></span><span class=line><span class=cl>document.getElementById(&#39;first&#39;).innerHTML = markupList.join(&#39;&#39;);
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>시나리오
+</span></span><span class=line><span class=cl>1. new template()로 템플릿 인스턴스를 생성합니다.
+</span></span><span class=line><span class=cl>2. data에 작성된 데이터를 하나씩 읽어가면서 템플릿에 적용합니다.
+</span></span><span class=line><span class=cl>3. div#first 엘리먼트를 생성하고 innerHtml 속성에 배열의 문자열을 연결하여 설정합니다.
+</span></span></code></pre></td></tr></table></div></div></div><div class=post-copyright><p class=copyright-item><span class=item-title>Author</span>
+<span class=item-content>Jaejin Jang</span></p><p class=copyright-item><span class=item-title>LastMod</span>
+<span class=item-content>2022-03-25</span></p><p class=copyright-item><span class=item-title>License</span>
+<span class=item-content>Jaejin Jang</span></p></div><footer class=post-footer><div class=post-tags><a href=/tags/javascript/>javascript</a></div><nav class=post-nav><a class=prev href=/post/20220521/><i class="iconfont icon-left"></i>
+<span class="prev-text nav-default">서피스 고3 우분투에서 LTE 잡기</span>
+<span class="prev-text nav-mobile">Prev</span></a>
+<a class=next href=/post/20220322/><span class="next-text nav-default">몰입! 자바스크립트 - 28장 자바스크립트 객체 지향 프로그래밍</span>
+<span class="next-text nav-mobile">Next</span>
+<i class="iconfont icon-right"></i></a></nav></footer></article></div></div></main><footer id=footer class=footer><div class=social-links><a href=mailto:jaejin0me@gmail.com class="iconfont icon-email" title=email></a>
+<a href=https://ko-kr.facebook.com/people/%EC%9E%A5%EC%9E%AC%EC%A7%84/100005230447628 class="iconfont icon-facebook" title=facebook></a>
+<a href=https://www.linkedin.com/in/jaejin0me class="iconfont icon-linkedin" title=linkedin></a>
+<a href=https://github.com/jaejin0me class="iconfont icon-github" title=github></a>
+<a href=https://jaejin0me.github.io/index.xml type=application/rss+xml class="iconfont icon-rss" title=rss></a></div><div class=copyright><span class=power-by>Powered by <a class=hexo-link href=https://gohugo.io>Hugo</a></span>
+<span class=division>|</span>
+<span class=theme-info>Theme -
+<a class=theme-link href=https://github.com/olOwOlo/hugo-theme-even>Even</a></span>
+<span class=copyright-year>&copy;
+2017 -
+2022<span class=heart><i class="iconfont icon-heart"></i></span><span>Jaejin Jang</span></span></div></footer><div class=back-to-top id=back-to-top><i class="iconfont icon-up"></i></div></div><script src=https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin=anonymous></script>
+<script type=text/javascript src=/js/main.min.64437849d125a2d603b3e71d6de5225d641a32d17168a58106e0b61852079683.js></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-111561979-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script></body></html>
