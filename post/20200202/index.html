@@ -1,0 +1,228 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>파이썬으로 쿠팡 파트너스 API 활용하기 - 3 네이버 블로그 API로 글올리기 - Jaejin's blog</title><meta name=renderer content="webkit"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv=cache-control content="no-transform"><meta http-equiv=cache-control content="no-siteapp"><meta name=theme-color content="#f8f5ec"><meta name=msapplication-navbutton-color content="#f8f5ec"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="#f8f5ec"><meta name=author content="Jaejin Jang"><meta name=description content="이력 2020.02.02 포스팅 안녕하세요. 많이 늦었죠? ㅎㅎ, 쓰기가 너무 귀찮아요..ㅋㅋ 사실 요즘에는 쿠팡 상품도 안올리고 있어요. 귀찬쓰.. 아무튼 오늘도 시작하겠습니"><meta name=keywords content="Hugo,theme,even"><meta name=generator content="Hugo 0.99.1 with theme even"><link rel=canonical href=https://jaejin0me.github.io/post/20200202/><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/manifest.json><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link href=/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin=anonymous><meta property="og:title" content="파이썬으로 쿠팡 파트너스 API 활용하기 - 3 네이버 블로그 API로 글올리기"><meta property="og:description" content="이력 2020.02.02 포스팅 안녕하세요. 많이 늦었죠? ㅎㅎ, 쓰기가 너무 귀찮아요..ㅋㅋ 사실 요즘에는 쿠팡 상품도 안올리고 있어요. 귀찬쓰.. 아무튼 오늘도 시작하겠습니"><meta property="og:type" content="article"><meta property="og:url" content="https://jaejin0me.github.io/post/20200202/"><meta property="article:section" content="post"><meta property="article:published_time" content="2020-02-02T07:12:52+09:00"><meta property="article:modified_time" content="2020-02-02T07:12:52+09:00"><meta itemprop=name content="파이썬으로 쿠팡 파트너스 API 활용하기 - 3 네이버 블로그 API로 글올리기"><meta itemprop=description content="이력 2020.02.02 포스팅 안녕하세요. 많이 늦었죠? ㅎㅎ, 쓰기가 너무 귀찮아요..ㅋㅋ 사실 요즘에는 쿠팡 상품도 안올리고 있어요. 귀찬쓰.. 아무튼 오늘도 시작하겠습니"><meta itemprop=datePublished content="2020-02-02T07:12:52+09:00"><meta itemprop=dateModified content="2020-02-02T07:12:52+09:00"><meta itemprop=wordCount content="1763"><meta itemprop=keywords content="python,쿠팡파트너스,coupangpartners,"><meta name=twitter:card content="summary"><meta name=twitter:title content="파이썬으로 쿠팡 파트너스 API 활용하기 - 3 네이버 블로그 API로 글올리기"><meta name=twitter:description content="이력 2020.02.02 포스팅 안녕하세요. 많이 늦었죠? ㅎㅎ, 쓰기가 너무 귀찮아요..ㅋㅋ 사실 요즘에는 쿠팡 상품도 안올리고 있어요. 귀찬쓰.. 아무튼 오늘도 시작하겠습니"><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script><![endif]--></head><body><div id=mobile-navbar class=mobile-navbar><div class=mobile-header-logo><a href=/ class=logo>Jaejin's blog</a></div><div class=mobile-navbar-icon><span></span>
+<span></span>
+<span></span></div></div><nav id=mobile-menu class="mobile-menu slideout-menu"><ul class=mobile-menu-list><a href=/><li class=mobile-menu-item>Home</li></a><a href=/post/><li class=mobile-menu-item>Archives</li></a><a href=/tags/><li class=mobile-menu-item>Tags</li></a><a href=/categories/><li class=mobile-menu-item>Categories</li></a><a href=/about/><li class=mobile-menu-item>About</li></a></ul></nav><div class=container id=mobile-panel><header id=header class=header><div class=logo-wrapper><a href=/ class=logo>Jaejin's blog</a></div><nav class=site-navbar><ul id=menu class=menu><li class=menu-item><a class=menu-item-link href=/>Home</a></li><li class=menu-item><a class=menu-item-link href=/post/>Archives</a></li><li class=menu-item><a class=menu-item-link href=/tags/>Tags</a></li><li class=menu-item><a class=menu-item-link href=/categories/>Categories</a></li><li class=menu-item><a class=menu-item-link href=/about/>About</a></li></ul></nav></header><main id=main class=main><div class=content-wrapper><div id=content class=content><article class=post><header class=post-header><h1 class=post-title>파이썬으로 쿠팡 파트너스 API 활용하기 - 3 네이버 블로그 API로 글올리기</h1><div class=post-meta><span class=post-time>2020-02-02</span><div class=post-category><a href=/categories/python/>python</a></div><span class=more-meta>1763 words</span>
+<span class=more-meta>4 mins read</span></div></header><div class=post-toc id=post-toc><h2 class=post-toc-title>Contents</h2><div class="post-toc-content always-active"><nav id=TableOfContents><ul><li><a href=#1-네이버-블로그-api-신청---애플리케이션-등록>1. 네이버 블로그 API 신청 ( = 애플리케이션 등록)</a></li><li><a href=#2-api-정보-확인-하기-client-id-client-secret-확인>2. API 정보 확인 하기 (Client ID, Client Secret 확인)</a></li><li><a href=#3-파이썬으로-블로그-api-활용해-글-올리기>3. 파이썬으로 블로그 API 활용해 글 올리기</a><ul><li><a href=#코드의-흐름>코드의 흐름</a></li></ul></li></ul></nav></div></div><div class=post-content><p>이력</p><ul><li>2020.02.02 포스팅</li></ul><p><em>안녕하세요.<br>많이 늦었죠? ㅎㅎ, 쓰기가 너무 귀찮아요..ㅋㅋ<br>사실 요즘에는 쿠팡 상품도 안올리고 있어요. 귀찬쓰..<br>아무튼 오늘도 시작하겠습니다. 과정이 길게 느껴질수도 있는데,<br>어렵지는 않아요. 하나하나 따라 하시면 금방하실 수 있어요.</em></p><h1 id=이번-포스트에서-설명할-내용>이번 포스트에서 설명할 내용</h1><ul><li>네이버 블로그 API 이용해서 글 올리기</li></ul><h1 id=네이버-블로그-api-글쓰기-절차>네이버 블로그 API 글쓰기 절차</h1><ul><li><ol><li>네이버 블로그 API 신청 ( = 애플리케이션 등록)</li></ol></li><li><ol start=2><li>API 정보 확인 하기 (Client ID, Client Secret 확인)</li></ol></li><li><ol start=3><li>파이썬으로 블로그 API 활용해 글 올리기</li></ol></li></ul><h2 id=1-네이버-블로그-api-신청---애플리케이션-등록>1. 네이버 블로그 API 신청 ( = 애플리케이션 등록)</h2><ul><li>API를 사용하려면 우선 API 사용신청을 해야 겠죠? 아래의 링크를 타고 들어가서 오픈 API 이용신청을 누르세요.</li><li>링크 : <a href=https://developers.naver.com/products/blog/>https://developers.naver.com/products/blog/</a>
+<img src=/20200202_2.png alt=신청누르기 title=신청누르기></li><li>그러면 이제 신청화면이 나옵니다. 이름은 원하는대로 설정하시면 됩니다. 사용 API는 수정하실께 없어요.</li><li>이미 우리가 사용할 네아로, 블로그가 설정되어 있으니까요. 로그인 오픈 API 서비스 환경은 PC 웹을 선택하시면 됩니다.
+<img src=/20200202_1.png alt="API 신청 설정하기" title="API 신청 설정하기"></li><li>PC 웹을 선택 하시면 서비스 URL, 네이버아이디로로그인 CallBack URL을 설정하는 메뉴가 나옵니다.</li><li>우리가 실질적으로 사용할 URL은 네아로(네이버아이디로로그인) CallBack URL 이에요. 설정은 아래의 그림과 같이 하시면 됩니다.
+<img src=/20200202_3.png alt="URL 설정하기" title="URL 설정하기"></li><li>간단하게 설명을 드리면, 우리가 어떤 URL로 접속을 했을때 서비스를 받을 수 있는지 설정을 한거에요.</li><li>서비스 URL은 어차피 사용을 안하기 때문에 채우기만 했습니다. 중요한 것은 네아로 CallBackURL 입니다.</li><li>우리가 네아로 API를 호출하면, API 호출을 하기 위한 값(토큰)을 받게 되는데요.</li><li>그 토큰을 저기에 적은 &ldquo;http://localhost:8080/&rdquo; 로 받겠다는 의미입니다. localhost는 본인의 컴퓨터의 주소, 8080은 포트를 말합니다.</li><li>우리는 각자 본인의 PC로 개발을 하고 있으니까, 본인 PC의 8080 포트로 받도록 설정을 합것입니다.</li><li>8080에 큰 의미는 없습니다^^(일반적으로 많이 쓰이는 포트이긴한데, 그것까지 아실 정도면 이 글을 안보셔도 될 분들이실꺼 같아요..ㅎ)</li></ul><p>이렇게 설정을 하고 신청을 하시면 블로그 API를 사용하기 위한 신청은 끝났습니다.</p><h2 id=2-api-정보-확인-하기-client-id-client-secret-확인>2. API 정보 확인 하기 (Client ID, Client Secret 확인)</h2><ul><li>겁내 쉽습니다. 그냥 들어가서 확인하시면 되요.</li><li>API 등록(애플리케이션 등록)을 하셨으면 &ldquo;내 애플리케이션&rdquo; 목록에서 등록하신 애플리케이션을 확인하실 수 있습니다.</li><li>만약에 &ldquo;Test"라는 이름으로 등록했다면 아래의 그림과 같이 나오겠죠? 저기서 Client ID, Client Secret을 확인하시면 됩니다.</li><li>쿠팡 API랑 비슷하죠 ㅎㅎ?. 사실 API사용은 다 똑같아요. 각자 본인의 스타일대로 만드는게 아니라, 항상 일정한 표준에 맞게 만들어집니다.</li><li>그래야 쓰기가 쉽고, 사람들도 많이 써서 활용도 많이 되고 하죠 ㅎㅎ
+<img src=/20200202_4.png alt="API 정보확인" title="API 정보확인"></li></ul><h2 id=3-파이썬으로-블로그-api-활용해-글-올리기>3. 파이썬으로 블로그 API 활용해 글 올리기</h2><ul><li>API를 활용하기 위한 정보도 알았겠다. 이제 사용하기만 하면됩니다. 코딩 Time~</li><li>저는 간단하게 사용하는 방법만 알려드릴껀데요. 여러가지 사용방법은 아래의 블로그 API 명세를 보시면 확인할 수 있습니다.</li><li>블로그 API 명세 : <a href=https://developers.naver.com/docs/blog/post/>https://developers.naver.com/docs/blog/post/</a></li></ul><h3 id=코드의-흐름>코드의 흐름</h3><ul><li>a. 네아로 API를 호출해 블로그 API 호출을 위한 토큰을 얻는다.</li><li>b. a에서 받은 토큰으로 블로그 API를 호출한다.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span><span class=lnt>60
+</span><span class=lnt>61
+</span><span class=lnt>62
+</span><span class=lnt>63
+</span><span class=lnt>64
+</span><span class=lnt>65
+</span><span class=lnt>66
+</span><span class=lnt>67
+</span><span class=lnt>68
+</span><span class=lnt>69
+</span><span class=lnt>70
+</span><span class=lnt>71
+</span><span class=lnt>72
+</span><span class=lnt>73
+</span><span class=lnt>74
+</span><span class=lnt>75
+</span><span class=lnt>76
+</span><span class=lnt>77
+</span><span class=lnt>78
+</span><span class=lnt>79
+</span><span class=lnt>80
+</span><span class=lnt>81
+</span><span class=lnt>82
+</span><span class=lnt>83
+</span><span class=lnt>84
+</span><span class=lnt>85
+</span><span class=lnt>86
+</span><span class=lnt>87
+</span><span class=lnt>88
+</span><span class=lnt>89
+</span><span class=lnt>90
+</span><span class=lnt>91
+</span><span class=lnt>92
+</span><span class=lnt>93
+</span><span class=lnt>94
+</span><span class=lnt>95
+</span><span class=lnt>96
+</span><span class=lnt>97
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># coding: utf-8</span>
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>sys</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>os</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>urllib.request</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>requests</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>json</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>re</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>selenium</span> <span class=kn>import</span> <span class=n>webdriver</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>urllib.parse</span> <span class=kn>import</span> <span class=n>urlencode</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>__author__</span> <span class=o>=</span> <span class=s2>&#34;Jaejin Jang&lt;jaejin_me@naver.com&gt;&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>naverMgr</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>	<span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=o>**</span><span class=n>kwargs</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>		<span class=bp>self</span><span class=o>.</span><span class=n>options</span> <span class=o>=</span> <span class=n>webdriver</span><span class=o>.</span><span class=n>ChromeOptions</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>		<span class=bp>self</span><span class=o>.</span><span class=n>options</span><span class=o>.</span><span class=n>add_argument</span><span class=p>(</span><span class=s1>&#39;headless&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=bp>self</span><span class=o>.</span><span class=n>options</span><span class=o>.</span><span class=n>add_argument</span><span class=p>(</span><span class=s2>&#34;user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=bp>self</span><span class=o>.</span><span class=n>webdriverpath</span> <span class=o>=</span> <span class=n>os</span><span class=o>.</span><span class=n>getcwd</span><span class=p>()</span> <span class=o>+</span> <span class=sa>r</span><span class=s2>&#34;\chromedriver.exe&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=k>def</span> <span class=nf>get_logintoken</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=nb>id</span><span class=p>,</span> <span class=n>pw</span><span class=p>,</span> <span class=n>cid</span><span class=p>,</span> <span class=n>csec</span><span class=p>,</span> <span class=n>cburl</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>		<span class=n>driver</span> <span class=o>=</span> <span class=n>webdriver</span><span class=o>.</span><span class=n>Chrome</span><span class=p>(</span><span class=bp>self</span><span class=o>.</span><span class=n>webdriverpath</span><span class=p>,</span> <span class=n>options</span><span class=o>=</span><span class=bp>self</span><span class=o>.</span><span class=n>options</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=n>driver</span><span class=o>.</span><span class=n>implicitly_wait</span><span class=p>(</span><span class=mi>5</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>		<span class=n>driver</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=s1>&#39;https://nid.naver.com/nidlogin.login&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=n>driver</span><span class=o>.</span><span class=n>execute_script</span><span class=p>(</span><span class=s2>&#34;document.getElementsByName(&#39;id&#39;)[0].value=</span><span class=se>\&#39;</span><span class=s2>&#34;</span><span class=o>+</span> <span class=nb>id</span> <span class=o>+</span> <span class=s2>&#34;</span><span class=se>\&#39;</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=n>driver</span><span class=o>.</span><span class=n>execute_script</span><span class=p>(</span><span class=s2>&#34;document.getElementsByName(&#39;pw&#39;)[0].value=</span><span class=se>\&#39;</span><span class=s2>&#34;</span><span class=o>+</span> <span class=n>pw</span> <span class=o>+</span> <span class=s2>&#34;</span><span class=se>\&#39;</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=n>driver</span><span class=o>.</span><span class=n>find_element_by_xpath</span><span class=p>(</span><span class=s1>&#39;//*[@id=&#34;label_login_chk&#34;]&#39;</span><span class=p>)</span><span class=o>.</span><span class=n>click</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>		<span class=n>driver</span><span class=o>.</span><span class=n>find_element_by_xpath</span><span class=p>(</span><span class=s1>&#39;//*[@id=&#34;frmNIDLogin&#34;]/fieldset/input&#39;</span><span class=p>)</span><span class=o>.</span><span class=n>click</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>		<span class=n>driver</span><span class=o>.</span><span class=n>implicitly_wait</span><span class=p>(</span><span class=mi>10</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		
+</span></span><span class=line><span class=cl>		<span class=n>state</span> <span class=o>=</span> <span class=s2>&#34;TEST&#34;</span> <span class=c1>#아무거나 상관없음</span>
+</span></span><span class=line><span class=cl>		<span class=n>req_url</span> <span class=o>=</span> <span class=s1>&#39;https://nid.naver.com/oauth2.0/authorize?response_type=code&amp;client_id=</span><span class=si>%s</span><span class=s1>&amp;redirect_uri=</span><span class=si>%s</span><span class=s1>&amp;state=</span><span class=si>%s</span><span class=s1>&#39;</span> <span class=o>%</span> <span class=p>(</span><span class=n>cid</span><span class=p>,</span> <span class=n>cburl</span><span class=p>,</span> <span class=n>state</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=n>response</span> <span class=o>=</span> <span class=n>requests</span><span class=o>.</span><span class=n>request</span><span class=p>(</span><span class=n>method</span><span class=o>=</span><span class=s1>&#39;GET&#39;</span><span class=p>,</span> <span class=n>url</span><span class=o>=</span><span class=n>req_url</span><span class=p>,</span> <span class=n>headers</span><span class=o>=</span><span class=p>{</span> <span class=s2>&#34;Content-Type&#34;</span><span class=p>:</span> <span class=s2>&#34;application/json;charset=UTF-8&#34;</span> <span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>		<span class=n>driver</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=n>req_url</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=n>driver</span><span class=o>.</span><span class=n>implicitly_wait</span><span class=p>(</span><span class=mi>5</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>		<span class=c1># 첫 실행시 블로그글쓰기 권한 체크위해를 위한 코드</span>
+</span></span><span class=line><span class=cl>		<span class=k>try</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>			<span class=n>driver</span><span class=o>.</span><span class=n>find_element_by_xpath</span><span class=p>(</span><span class=s1>&#39;//*[@id=&#34;profile_optional_list&#34;]/span/label&#39;</span><span class=p>)</span><span class=o>.</span><span class=n>click</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>			<span class=n>driver</span><span class=o>.</span><span class=n>find_element_by_xpath</span><span class=p>(</span><span class=s1>&#39;//*[@id=&#34;content&#34;]/div[4]/div[2]/button&#39;</span><span class=p>)</span><span class=o>.</span><span class=n>click</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>		<span class=k>except</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>			<span class=k>pass</span>
+</span></span><span class=line><span class=cl>		
+</span></span><span class=line><span class=cl>		<span class=n>redirect_url</span> <span class=o>=</span> <span class=n>driver</span><span class=o>.</span><span class=n>current_url</span>
+</span></span><span class=line><span class=cl>		<span class=n>temp</span> <span class=o>=</span> <span class=n>re</span><span class=o>.</span><span class=n>split</span><span class=p>(</span><span class=s1>&#39;code=&#39;</span><span class=p>,</span> <span class=n>redirect_url</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=n>code</span> <span class=o>=</span> <span class=n>re</span><span class=o>.</span><span class=n>split</span><span class=p>(</span><span class=s1>&#39;&amp;state=&#39;</span><span class=p>,</span> <span class=n>temp</span><span class=p>[</span><span class=mi>1</span><span class=p>])[</span><span class=mi>0</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>		<span class=n>driver</span><span class=o>.</span><span class=n>quit</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>		
+</span></span><span class=line><span class=cl>		<span class=n>url</span> <span class=o>=</span> <span class=s1>&#39;https://nid.naver.com/oauth2.0/token?&#39;</span>
+</span></span><span class=line><span class=cl>		<span class=n>data</span> <span class=o>=</span> <span class=s1>&#39;grant_type=authorization_code&#39;</span> <span class=o>+</span> <span class=s1>&#39;&amp;client_id=&#39;</span> <span class=o>+</span> <span class=n>cid</span> <span class=o>+</span> <span class=s1>&#39;&amp;client_secret=&#39;</span> <span class=o>+</span> <span class=n>csec</span> <span class=o>+</span> <span class=s1>&#39;&amp;redirect_uri=&#39;</span> <span class=o>+</span> <span class=n>cburl</span> <span class=o>+</span> <span class=s1>&#39;&amp;code=&#39;</span> <span class=o>+</span> <span class=n>code</span> <span class=o>+</span> <span class=s1>&#39;&amp;state=&#39;</span> <span class=o>+</span> <span class=n>state</span>
+</span></span><span class=line><span class=cl>		<span class=n>request</span> <span class=o>=</span> <span class=n>urllib</span><span class=o>.</span><span class=n>request</span><span class=o>.</span><span class=n>Request</span><span class=p>(</span><span class=n>url</span><span class=p>,</span> <span class=n>data</span><span class=o>=</span><span class=n>data</span><span class=o>.</span><span class=n>encode</span><span class=p>(</span><span class=s2>&#34;utf-8&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>		<span class=n>request</span><span class=o>.</span><span class=n>add_header</span><span class=p>(</span><span class=s1>&#39;X-Naver-Client-Id&#39;</span><span class=p>,</span> <span class=n>cid</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=n>request</span><span class=o>.</span><span class=n>add_header</span><span class=p>(</span><span class=s1>&#39;X-Naver-Client-Secret&#39;</span><span class=p>,</span> <span class=n>cburl</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>		<span class=n>response</span> <span class=o>=</span> <span class=n>urllib</span><span class=o>.</span><span class=n>request</span><span class=o>.</span><span class=n>urlopen</span><span class=p>(</span><span class=n>request</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=n>rescode</span> <span class=o>=</span> <span class=n>response</span><span class=o>.</span><span class=n>getcode</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>		
+</span></span><span class=line><span class=cl>		<span class=k>if</span> <span class=n>rescode</span> <span class=o>==</span> <span class=mi>200</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>			<span class=n>response_body</span> <span class=o>=</span> <span class=n>response</span><span class=o>.</span><span class=n>read</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>			<span class=n>js</span> <span class=o>=</span> <span class=n>json</span><span class=o>.</span><span class=n>loads</span><span class=p>(</span><span class=n>response_body</span><span class=o>.</span><span class=n>decode</span><span class=p>(</span><span class=s1>&#39;utf 8&#39;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>			<span class=n>token</span> <span class=o>=</span> <span class=n>js</span><span class=p>[</span><span class=s1>&#39;access_token&#39;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>			<span class=k>return</span> <span class=n>token</span>
+</span></span><span class=line><span class=cl>		<span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>			<span class=nb>print</span><span class=p>(</span><span class=s2>&#34;Error Code:&#34;</span><span class=p>,</span> <span class=n>rescode</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>			<span class=k>return</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=k>def</span> <span class=nf>write_product</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>blogtoken</span><span class=p>,</span> <span class=n>title</span><span class=p>,</span> <span class=n>contents</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>		<span class=n>blogheader</span> <span class=o>=</span> <span class=s2>&#34;Bearer &#34;</span> <span class=o>+</span> <span class=n>blogtoken</span> <span class=c1># Bearer 다음에 공백 추가</span>
+</span></span><span class=line><span class=cl>		<span class=n>blogwriteapi</span> <span class=o>=</span> <span class=s2>&#34;https://openapi.naver.com/blog/writePost.json&#34;</span>
+</span></span><span class=line><span class=cl>		<span class=n>blogdata</span> <span class=o>=</span> <span class=p>{</span><span class=s1>&#39;title&#39;</span><span class=p>:</span> <span class=n>title</span><span class=p>,</span> <span class=s1>&#39;contents&#39;</span><span class=p>:</span> <span class=n>contents</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>		<span class=n>blogheaders</span> <span class=o>=</span> <span class=p>{</span><span class=s1>&#39;Authorization&#39;</span><span class=p>:</span> <span class=n>blogheader</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>		<span class=n>response</span> <span class=o>=</span> <span class=n>requests</span><span class=o>.</span><span class=n>post</span><span class=p>(</span><span class=n>blogwriteapi</span><span class=p>,</span> <span class=n>headers</span><span class=o>=</span><span class=n>blogheaders</span><span class=p>,</span> <span class=n>data</span><span class=o>=</span><span class=n>blogdata</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=n>rescode</span> <span class=o>=</span> <span class=n>response</span><span class=o>.</span><span class=n>status_code</span>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=n>rescode</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=vm>__name__</span> <span class=o>==</span> <span class=s1>&#39;__main__&#39;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>	<span class=nb>id</span> <span class=o>=</span> <span class=s1>&#39;&#39;</span>
+</span></span><span class=line><span class=cl>	<span class=n>pw</span> <span class=o>=</span> <span class=s1>&#39;&#39;</span>
+</span></span><span class=line><span class=cl>	<span class=n>client_id</span> <span class=o>=</span> <span class=s1>&#39;&#39;</span>
+</span></span><span class=line><span class=cl>	<span class=n>client_secret</span> <span class=o>=</span> <span class=s1>&#39;&#39;</span>
+</span></span><span class=line><span class=cl>	<span class=n>callback_url</span> <span class=o>=</span> <span class=s1>&#39;http://localhost:8080/&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=n>nav</span> <span class=o>=</span> <span class=n>naverMgr</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>	<span class=n>token</span> <span class=o>=</span> <span class=n>nav</span><span class=o>.</span><span class=n>get_logintoken</span><span class=p>(</span><span class=nb>id</span><span class=p>,</span> <span class=n>pw</span><span class=p>,</span> <span class=n>client_id</span><span class=p>,</span> <span class=n>client_secret</span><span class=p>,</span> <span class=n>callback_url</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=n>title</span> <span class=o>=</span> <span class=s1>&#39;제목&#39;</span>
+</span></span><span class=line><span class=cl>	<span class=n>contents</span> <span class=o>=</span> <span class=s1>&#39;내용&#39;</span>
+</span></span><span class=line><span class=cl>	<span class=n>ret</span> <span class=o>=</span> <span class=n>nav</span><span class=o>.</span><span class=n>write_product</span><span class=p>(</span><span class=n>token</span><span class=p>,</span> <span class=n>title</span><span class=p>,</span> <span class=n>contents</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=p>(</span><span class=n>ret</span> <span class=o>==</span> <span class=mi>200</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>		<span class=nb>print</span><span class=p>(</span><span class=s1>&#39;성공&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>		<span class=nb>print</span><span class=p>(</span><span class=s1>&#39;실패&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=k>pass</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>테스트한 결과 정상적으로 업로드 잘 되네요.</li></ul><p><img src=/20200202_5.png alt="테스트 결과" title="테스트 결과">
+<img src=/20200202_6.png alt="테스트 결과" title="테스트 결과"></p><p>다음 포스트에서 설명할 내용</p><ul><li>다음 포스트에서는 쿠팡의 리뷰 가져오기는 알려드릴 예정입니다.</li><li>혹시나 알려줬으면~ 하는게 있으시면 댓글로 달아 주세요. 모두에게 중요하다 싶은게 있으면 같이 업로드 하겠습니다!</li></ul></div><div class=post-copyright><p class=copyright-item><span class=item-title>Author</span>
+<span class=item-content>Jaejin Jang</span></p><p class=copyright-item><span class=item-title>LastMod</span>
+<span class=item-content>2020-02-02</span></p><p class=copyright-item><span class=item-title>License</span>
+<span class=item-content>Jaejin Jang</span></p></div><footer class=post-footer><div class=post-tags><a href=/tags/python/>python</a>
+<a href=/tags/%EC%BF%A0%ED%8C%A1%ED%8C%8C%ED%8A%B8%EB%84%88%EC%8A%A4/>쿠팡파트너스</a>
+<a href=/tags/coupangpartners/>coupangpartners</a></div><nav class=post-nav><a class=prev href=/post/posts195/><i class="iconfont icon-left"></i>
+<span class="prev-text nav-default">Hi 2021</span>
+<span class="prev-text nav-mobile">Prev</span></a>
+<a class=next href=/post/posts194/><span class="next-text nav-default">14회 정보보안기사 합격 후기 및 정보처리기사 합격 후기</span>
+<span class="next-text nav-mobile">Next</span>
+<i class="iconfont icon-right"></i></a></nav></footer></article></div></div></main><footer id=footer class=footer><div class=social-links><a href=mailto:jaejin0me@gmail.com class="iconfont icon-email" title=email></a>
+<a href=https://ko-kr.facebook.com/people/%EC%9E%A5%EC%9E%AC%EC%A7%84/100005230447628 class="iconfont icon-facebook" title=facebook></a>
+<a href=https://www.linkedin.com/in/jaejin0me class="iconfont icon-linkedin" title=linkedin></a>
+<a href=https://github.com/jaejin0me class="iconfont icon-github" title=github></a>
+<a href=https://jaejin0me.github.io/index.xml type=application/rss+xml class="iconfont icon-rss" title=rss></a></div><div class=copyright><span class=power-by>Powered by <a class=hexo-link href=https://gohugo.io>Hugo</a></span>
+<span class=division>|</span>
+<span class=theme-info>Theme -
+<a class=theme-link href=https://github.com/olOwOlo/hugo-theme-even>Even</a></span>
+<span class=copyright-year>&copy;
+2017 -
+2022<span class=heart><i class="iconfont icon-heart"></i></span><span>Jaejin Jang</span></span></div></footer><div class=back-to-top id=back-to-top><i class="iconfont icon-up"></i></div></div><script src=https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin=anonymous></script>
+<script type=text/javascript src=/js/main.min.64437849d125a2d603b3e71d6de5225d641a32d17168a58106e0b61852079683.js></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-111561979-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script></body></html>

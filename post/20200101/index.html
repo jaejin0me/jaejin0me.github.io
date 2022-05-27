@@ -1,0 +1,275 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>파이썬으로 쿠팡 파트너스 API 활용하기 - 2 상품 이미지 가져오기 - Jaejin's blog</title><meta name=renderer content="webkit"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv=cache-control content="no-transform"><meta http-equiv=cache-control content="no-siteapp"><meta name=theme-color content="#f8f5ec"><meta name=msapplication-navbutton-color content="#f8f5ec"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="#f8f5ec"><meta name=author content="Jaejin Jang"><meta name=description content="안녕하세요. 저번 시간에 파트너스 API를 통해서 상품정보를 가져오는 것까지 했습니다. 오늘은 쿠팡에 있는 상품 이미지 가져오는 방법에 대해서 설명하겠습니다."><meta name=keywords content="Hugo,theme,even"><meta name=generator content="Hugo 0.99.1 with theme even"><link rel=canonical href=https://jaejin0me.github.io/post/20200101/><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/manifest.json><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link href=/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin=anonymous><meta property="og:title" content="파이썬으로 쿠팡 파트너스 API 활용하기 - 2 상품 이미지 가져오기"><meta property="og:description" content="안녕하세요. 저번 시간에 파트너스 API를 통해서 상품정보를 가져오는 것까지 했습니다. 오늘은 쿠팡에 있는 상품 이미지 가져오는 방법에 대해서 설명하겠습니다."><meta property="og:type" content="article"><meta property="og:url" content="https://jaejin0me.github.io/post/20200101/"><meta property="article:section" content="post"><meta property="article:published_time" content="2020-01-01T07:12:52+09:00"><meta property="article:modified_time" content="2020-01-01T07:12:52+09:00"><meta itemprop=name content="파이썬으로 쿠팡 파트너스 API 활용하기 - 2 상품 이미지 가져오기"><meta itemprop=description content="안녕하세요. 저번 시간에 파트너스 API를 통해서 상품정보를 가져오는 것까지 했습니다. 오늘은 쿠팡에 있는 상품 이미지 가져오는 방법에 대해서 설명하겠습니다."><meta itemprop=datePublished content="2020-01-01T07:12:52+09:00"><meta itemprop=dateModified content="2020-01-01T07:12:52+09:00"><meta itemprop=wordCount content="3126"><meta itemprop=keywords content="python,쿠팡파트너스,coupangpartners,"><meta name=twitter:card content="summary"><meta name=twitter:title content="파이썬으로 쿠팡 파트너스 API 활용하기 - 2 상품 이미지 가져오기"><meta name=twitter:description content="안녕하세요. 저번 시간에 파트너스 API를 통해서 상품정보를 가져오는 것까지 했습니다. 오늘은 쿠팡에 있는 상품 이미지 가져오는 방법에 대해서 설명하겠습니다."><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script><![endif]--></head><body><div id=mobile-navbar class=mobile-navbar><div class=mobile-header-logo><a href=/ class=logo>Jaejin's blog</a></div><div class=mobile-navbar-icon><span></span>
+<span></span>
+<span></span></div></div><nav id=mobile-menu class="mobile-menu slideout-menu"><ul class=mobile-menu-list><a href=/><li class=mobile-menu-item>Home</li></a><a href=/post/><li class=mobile-menu-item>Archives</li></a><a href=/tags/><li class=mobile-menu-item>Tags</li></a><a href=/categories/><li class=mobile-menu-item>Categories</li></a><a href=/about/><li class=mobile-menu-item>About</li></a></ul></nav><div class=container id=mobile-panel><header id=header class=header><div class=logo-wrapper><a href=/ class=logo>Jaejin's blog</a></div><nav class=site-navbar><ul id=menu class=menu><li class=menu-item><a class=menu-item-link href=/>Home</a></li><li class=menu-item><a class=menu-item-link href=/post/>Archives</a></li><li class=menu-item><a class=menu-item-link href=/tags/>Tags</a></li><li class=menu-item><a class=menu-item-link href=/categories/>Categories</a></li><li class=menu-item><a class=menu-item-link href=/about/>About</a></li></ul></nav></header><main id=main class=main><div class=content-wrapper><div id=content class=content><article class=post><header class=post-header><h1 class=post-title>파이썬으로 쿠팡 파트너스 API 활용하기 - 2 상품 이미지 가져오기</h1><div class=post-meta><span class=post-time>2020-01-01</span><div class=post-category><a href=/categories/python/>python</a></div><span class=more-meta>3126 words</span>
+<span class=more-meta>7 mins read</span></div></header><div class=post-toc id=post-toc><h2 class=post-toc-title>Contents</h2><div class="post-toc-content always-active"><nav id=TableOfContents><ul><li><a href=#크롬웹드라이버-다운>크롬웹드라이버 다운</a></li><li><a href=#파이썬-v3-셀레니움-패키지-설치>파이썬 v3 셀레니움 패키지 설치</a></li><li><a href=#코드의-흐름-및-간단-설명>코드의 흐름 및 간단 설명</a><ul><li><a href=#1-웹드라이버-실행>1. 웹드라이버 실행</a></li><li><a href=#2-url로-상품페이지-접근>2. URL로 상품페이지 접근</a></li><li><a href=#3-타이틀-이미지-element-찾기>3. 타이틀, 이미지 Element 찾기</a></li><li><a href=#3-이미지-다운받기>3. 이미지 다운받기</a></li><li><a href=#코드>코드​</a></li></ul></li></ul></nav></div></div><div class=post-content><p><em>안녕하세요.<br>저번 시간에 파트너스 API를 통해서 상품정보를 가져오는 것까지 했습니다.<br>오늘은 쿠팡에 있는 상품 이미지 가져오는 방법에 대해서 설명하겠습니다.<br>API를 호출해 가져온 상품정보에 접속할 수 있는 URL이 있었는데요.<br>그 URL를 통해 상품페이지로 접속해서 이미지를 가져올꺼에요. 오늘꺼 조금 깁니다&mldr;</em></p><h1 id=용어-대충-설명>용어 대~충 설명</h1><ul><li>파싱 : 가져오는 것? ㅋㅋ (ex. 문자열을 파싱한다 = 문자열을 가져온다)</li></ul><h1 id=이번에-설명할-내용>이번에 설명할 내용</h1><ul><li>상품URL을 타고 상품페이지에 접속해서 상품타이틀, 이미지 가져오기</li></ul><h1 id=시작하기-전에-간단히-알아야할-것들>시작하기 전에 간단히 알아야할 것들</h1><ul><li>웹페이지는 구성하는 요소에는 정적인 정보와 동적인 정보가 있습니다. 정적인 정보는 일반적인 html 태그라고 생각하시면 되고 동적인 정보는 자바스크립트가 들어가있는 부분이라고 생각하시면 돼요.</li><li>근데 이 자바스크립트는 웹브라우저에서 처리를 해주기 때문에 웹브라우저로 접속하지 않으면 처리가 안되서 정보를 가져올 수가 없습니다.</li><li>그래서 웹브라우저를 컨트롤할 수 있는 놈을 이용하는데요. 보통 &ldquo;셀레니움"을 사용합니다(저는 셀레니움밖에 몰라서 다른것도 있는지 모르겠네요 ㅎㅎ)</li><li>셀레니움이 웹브라우저를 컨트롤 하는건 아니고, 브라우저별로 웹드라이버가 있는데 그 웹드라이버를 셀레니움을 이용해서 컨트롤할 수 가 있어요 ㅎㅎ</li></ul><p><img src=/20200101_1.png alt="셀레니움 설명" title="셀레니움 설명"></p><ul><li>출처 : <a href=https://www.slideshare.net/JiLee24/selenium-113082253>https://www.slideshare.net/JiLee24/selenium-113082253</a></li><li>암튼 중요한 것은 웹드라이버가 필요하고 셀레니움으로 컨트롤 한다는 것입니다.</li><li>다들 크롬을 많으 쓰시니까 크롬웹드라이버를 이용할 꺼고, 셀레니움은 파이썬 셀레니움 패키지를 설치하면 됩니다.</li></ul><h2 id=크롬웹드라이버-다운>크롬웹드라이버 다운</h2><ul><li>우선 본인이 사용하는 크롬버전을 확인하시고요.
+<img src=/20200101_2.png alt="크롬 버전 확인" title="크롬 버전 확인"></li><li>크롬웹드라이버 사이트 <a href=https://chromedriver.chromium.org/downloads>https://chromedriver.chromium.org/downloads</a> 에 접속하셔서 받으시면 됩니다.
+<img src=/20200101_3.png alt="크롬웹드라이버 다운" title="크롬웹드라이버 다운">
+​</li></ul><h2 id=파이썬-v3-셀레니움-패키지-설치>파이썬 v3 셀레니움 패키지 설치</h2><ul><li>파이썬은 패키지설치할때 pip를 사용합니다. 우리는 파이썬 v3 이니깐 pip3 이겠죠?ㅎㅎ</li><li>명령어 창에서 &ldquo;pip3 install selenium&rdquo; 이렇게 치시면 설치됩니다. 저는 이미 설치되어 있으니까 already ~~ 하고 나오네요.
+<img src=/20200101_4.png alt="셀레니움 설치" title="셀레니움 설치"></li></ul><h2 id=코드의-흐름-및-간단-설명>코드의 흐름 및 간단 설명</h2><ul><li><ol><li>웹드라이버 실행</li></ol></li><li><ol start=2><li>URL로 상품페이지 접근</li></ol></li><li><ol start=3><li>타이틀, 이미지 찾기</li></ol></li><li><ol start=4><li>이미지 다운로드</li></ol></li></ul><h3 id=1-웹드라이버-실행>1. 웹드라이버 실행</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># ~~</span>
+</span></span><span class=line><span class=cl>	<span class=bp>self</span><span class=o>.</span><span class=n>options</span> <span class=o>=</span> <span class=n>webdriver</span><span class=o>.</span><span class=n>ChromeOptions</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>	<span class=bp>self</span><span class=o>.</span><span class=n>options</span><span class=o>.</span><span class=n>add_argument</span><span class=p>(</span><span class=s1>&#39;headless&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=bp>self</span><span class=o>.</span><span class=n>options</span><span class=o>.</span><span class=n>add_argument</span><span class=p>(</span><span class=s2>&#34;user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=bp>self</span><span class=o>.</span><span class=n>options</span><span class=o>.</span><span class=n>add_argument</span><span class=p>(</span><span class=s2>&#34;lang=ko_KR&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=bp>self</span><span class=o>.</span><span class=n>webdriverpath</span> <span class=o>=</span> <span class=n>os</span><span class=o>.</span><span class=n>getcwd</span><span class=p>()</span> <span class=o>+</span> <span class=sa>r</span><span class=s2>&#34;\chromedriver.exe&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># ~~</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=n>driver</span> <span class=o>=</span> <span class=n>webdriver</span><span class=o>.</span><span class=n>Chrome</span><span class=p>(</span><span class=bp>self</span><span class=o>.</span><span class=n>webdriverpath</span><span class=p>,</span> <span class=n>options</span><span class=o>=</span><span class=bp>self</span><span class=o>.</span><span class=n>options</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=n>time</span><span class=o>.</span><span class=n>sleep</span><span class=p>(</span><span class=mi>5</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>웹드라이버를 소스코드랑 동일한 폴더에 위치해 놓으셔야 됩니다.</li><li>웹드라이버를 실행할때 다양한 옵션들을 줄수가 있습니다. 제가 제공하는 코드에는 이런저런 옵션이 있는데요.</li><li>음 그냥 크롤링(자동으로 돌아다니면서 웹페이지를 파싱하는 것) 방지를 우회하기 위해서 넣어놨다고 생각하시면 됩니다.</li><li>필요없는 옵션들도 있는데 그냥 뭐가 필요하고 안필요한지 구분하는것도 귀찮아서 우선 넣어 놨습니다.</li><li>선택가능한 옵션은 headless 입니다. 프로그램이 동작하는 걸 보고싶은 분은 삭제하시거나 주석처리해서 실행해보세요. 자동으로 웹브라우저가 떠서 동작하는 걸 보실 수 있을꺼에요.</li><li>저 옵션을 설정하는게 컴퓨터의 리소스를 적게 먹으니가 보통 설정해 놓는 편이에요^^. 개발할때에는 빼놨다가 다 끝나면 설정하는 편입니다.</li><li>중간에 sleep()이 있는데요. 실행하는데 시간이 조금 걸릴테니까 기다려주는 부분이라고 생각하시며 됩니다.</li></ul><h3 id=2-url로-상품페이지-접근>2. URL로 상품페이지 접근</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl>	<span class=n>producturl</span> <span class=o>=</span> <span class=n>each_product</span><span class=p>[</span><span class=s1>&#39;productUrl&#39;</span><span class=p>]</span> 
+</span></span><span class=line><span class=cl>	<span class=n>driver</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=n>producturl</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>간~단합니다. 저번시간에 키워드로 검색하는 API 써서 정보를 얻었을때 보면 &ldquo;productUrl&rdquo; 이라는 요소가 있었습니다. 그 요소에 접근해서 url을 가져오고 웹드라이버를 컨트롤 해서 접근합니다.</li></ul><h3 id=3-타이틀-이미지-element-찾기>3. 타이틀, 이미지 Element 찾기</h3><ul><li>웹페이지에서 타이틀과 이미지 엘리먼트를 찾을꺼에요. 이 부분은 음 설명은 할텐데 이해가 안가실 수도 있어요.</li><li>궁금하신분은 개인적으로 좀더 찾아보셔야 될 것 같습니다.</li><li>웹페이지를 구성하는 엘리먼트들에는 이름들이 있어요. 그래서 그 이름을 이용해서 찾으면 됩니다.</li><li>이름을 찾는 방법은 정보를 보고싶은 엘리먼트에다가 마우스를 올리신 후 &ldquo;Ctrl + Shift + c"를 누르시면 개발자도구가 뜨면서 엘리먼트에 대한 정보를 볼 수 있을 꺼에요.</li><li>쿠팡에서 &ldquo;크리스마스 가랜드"로 검색해서 나오는 상품하나를 예로 들어 볼께요.
+<img src=/20200101_5.png alt="크리스마스 가랜드" title="크리스마스 가랜드"></li><li>타이틀에다가 마우스 올리고 &ldquo;Ctrl + Shift + c"를 누르면 이렇게 뜹니다.</li><li>대충 설명드리면 h2 태그에 클래스 이름이 prod-buy-head__title 이네요. 이 이름을 가지고 접근하면 정보를 얻을 수 있어요.</li><li>여러가지 이름들이 있는데 이름이 유일할때는 한방에 접근할 수 있고 유일하지 않을 때는 점진적으로 찾아가서 접근해야 됩니다.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl>	<span class=n>title</span> <span class=o>=</span> <span class=n>driver</span><span class=o>.</span><span class=n>find_element_by_class_name</span><span class=p>(</span><span class=s2>&#34;prod-buy-header__title&#34;</span><span class=p>)</span><span class=o>.</span><span class=n>text</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>클래스명으로 엘리먼트를 찾아서 해당 요소의 텍스트 내용을 읽어오는 코드에요.</li><li>이젠 이미지를 찾아볼께요. 이미지를 찾아서 이미지의 출처를 통해 이미지를 다운받을꺼에요.</li><li>동일하게 그림에다가 마우스 올리고 단축키 누르면 개발자 도구가 뜨면서 요소의 정보가 보입니다.
+<img src=/20200101_6.png alt="이미지 찾기" title="이미지 찾기"></li><li>근데 이놈은 &ldquo;subType-IMAGE&rdquo; 라는 클래스의 하위에 있는데요. 저 클래스 하위의 이미지 요소를 찾으면 제대로 찾아지지가 않아요.</li><li>왜냐하면 &ldquo;subType-IMAGE&rdquo; 라는 클래스는 저 페이지에서 너무 많거든요.</li><li>그래서 이미지 엘리먼트 상위의 유일하게 접근할 수 있는 요소를 찾아서 접근해 나갈꺼에요. 그 애가 바로 &ldquo;detail-item"입니다.</li><li>클래스 이름이 &ldquo;detail-item&rdquo; 엘리먼트 하위의 이미지를 정보를 가져오는 거죠!</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl>	<span class=n>img</span> <span class=o>=</span> <span class=n>driver</span><span class=o>.</span><span class=n>find_elements_by_xpath</span><span class=p>(</span><span class=s2>&#34;//*[@class=&#39;detail-item&#39;]//img&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>클래스 이름이 &ldquo;detail-item"인 엘리먼트 하위의 이미지를 가져오고있습니다. 그리고 이미지 엘리먼트가 여러개일 수 있기 때문에 함수이름에 s가 있는거 보이시죠^^? find_elements_by_xpath()</li></ul><h3 id=3-이미지-다운받기>3. 이미지 다운받기</h3><ul><li>이미지는 소스코드가 위치한 폴더에 imgs라는 폴더에 저장할꺼에요. 자동으로 만들어지게 되어있습니다.</li><li>이미지를 다운받기 위해서는 출처를 알아야되는데, 출처는 이미지 엘리먼트의 &ldquo;src&rdquo; 라는 속성에서 가져올 수 있습니다.</li><li>그리고 유효한 상품이미지가 가지고 있는 몇가지 패턴들이 있어요. 그런 패턴을 가지고 있지 않은 이미지들은 다운로드 하지 않도록 되어있습니다.</li><li>저장될때의 이미지 명은 랜덤으로 생성되게 되어있어요. 사용자가 하나하나 정하기로 그렇고, 정해서 하면 이름이 겹칠 확률도 높기때문에 겹칠확률이 적도록 적당히 긴 랜덤이름으로 저장되게 되어있습니다.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl>	<span class=k>for</span> <span class=n>each_img</span> <span class=ow>in</span> <span class=n>img</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>		<span class=n>src</span> <span class=o>=</span> <span class=n>each_img</span><span class=o>.</span><span class=n>get_attribute</span><span class=p>(</span><span class=s1>&#39;src&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=k>if</span> <span class=s1>&#39;vendor_inventory&#39;</span> <span class=ow>not</span> <span class=ow>in</span> <span class=n>src</span> <span class=ow>and</span> <span class=p>(</span><span class=s1>&#39;thumbnail&#39;</span> <span class=ow>not</span> <span class=ow>in</span> <span class=n>src</span> <span class=ow>or</span> <span class=s1>&#39;remote&#39;</span> <span class=ow>not</span> <span class=ow>in</span> <span class=n>src</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>			<span class=k>continue</span>
+</span></span><span class=line><span class=cl>		<span class=n>fname</span> <span class=o>=</span> <span class=n>secrets</span><span class=o>.</span><span class=n>token_hex</span><span class=p>(</span><span class=mi>16</span><span class=p>)[</span><span class=mi>0</span><span class=p>:</span><span class=mi>10</span><span class=p>]</span> <span class=o>+</span> <span class=s2>&#34;.png&#34;</span> 
+</span></span><span class=line><span class=cl>		<span class=n>fnamefull</span> <span class=o>=</span> <span class=bp>self</span><span class=o>.</span><span class=n>imgpath</span> <span class=o>+</span> <span class=s2>&#34;</span><span class=se>\\</span><span class=s2>&#34;</span> <span class=o>+</span> <span class=n>fname</span>
+</span></span><span class=line><span class=cl>		<span class=n>urllib</span><span class=o>.</span><span class=n>request</span><span class=o>.</span><span class=n>urlretrieve</span><span class=p>(</span><span class=n>src</span><span class=p>,</span> <span class=n>fnamefull</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>하.. 설명이 다 끝났네요. 길다 길어. 너무 전문적이지 않게 적당히 설명한다고는 했는데 잘 전달됐을지 모르겠네요.</li></ul><h3 id=코드>코드​</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span><span class=lnt>60
+</span><span class=lnt>61
+</span><span class=lnt>62
+</span><span class=lnt>63
+</span><span class=lnt>64
+</span><span class=lnt>65
+</span><span class=lnt>66
+</span><span class=lnt>67
+</span><span class=lnt>68
+</span><span class=lnt>69
+</span><span class=lnt>70
+</span><span class=lnt>71
+</span><span class=lnt>72
+</span><span class=lnt>73
+</span><span class=lnt>74
+</span><span class=lnt>75
+</span><span class=lnt>76
+</span><span class=lnt>77
+</span><span class=lnt>78
+</span><span class=lnt>79
+</span><span class=lnt>80
+</span><span class=lnt>81
+</span><span class=lnt>82
+</span><span class=lnt>83
+</span><span class=lnt>84
+</span><span class=lnt>85
+</span><span class=lnt>86
+</span><span class=lnt>87
+</span><span class=lnt>88
+</span><span class=lnt>89
+</span><span class=lnt>90
+</span><span class=lnt>91
+</span><span class=lnt>92
+</span><span class=lnt>93
+</span><span class=lnt>94
+</span><span class=lnt>95
+</span><span class=lnt>96
+</span><span class=lnt>97
+</span><span class=lnt>98
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># coding: utf-8</span>
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>hmac</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>hashlib</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>os</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>time</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>requests</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>json</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>urllib.request</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>selenium</span> <span class=kn>import</span> <span class=n>webdriver</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>secrets</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>urllib.parse</span> <span class=kn>import</span> <span class=n>urlencode</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>PIL</span> <span class=kn>import</span> <span class=n>Image</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>io</span> <span class=kn>import</span> <span class=n>BytesIO</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>__author__</span> <span class=o>=</span> <span class=s2>&#34;Jaejin Jang&lt;jaejin_me@naver.com&gt;&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>cupangMgr</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>	<span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>		<span class=bp>self</span><span class=o>.</span><span class=n>DOMAIN</span> <span class=o>=</span> <span class=s2>&#34;https://api-gateway.coupang.com&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>		<span class=k>if</span> <span class=ow>not</span> <span class=n>os</span><span class=o>.</span><span class=n>path</span><span class=o>.</span><span class=n>isdir</span><span class=p>(</span><span class=s1>&#39;imgs&#39;</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>			<span class=n>os</span><span class=o>.</span><span class=n>makedirs</span><span class=p>(</span><span class=s1>&#39;imgs&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>		<span class=bp>self</span><span class=o>.</span><span class=n>imgpath</span> <span class=o>=</span> <span class=n>os</span><span class=o>.</span><span class=n>getcwd</span><span class=p>()</span> <span class=o>+</span> <span class=sa>r</span><span class=s2>&#34;\imgs&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>		<span class=bp>self</span><span class=o>.</span><span class=n>options</span> <span class=o>=</span> <span class=n>webdriver</span><span class=o>.</span><span class=n>ChromeOptions</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>		<span class=bp>self</span><span class=o>.</span><span class=n>options</span><span class=o>.</span><span class=n>add_argument</span><span class=p>(</span><span class=s1>&#39;headless&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=bp>self</span><span class=o>.</span><span class=n>options</span><span class=o>.</span><span class=n>add_argument</span><span class=p>(</span><span class=s2>&#34;user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=bp>self</span><span class=o>.</span><span class=n>options</span><span class=o>.</span><span class=n>add_argument</span><span class=p>(</span><span class=s2>&#34;lang=ko_KR&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=bp>self</span><span class=o>.</span><span class=n>webdriverpath</span> <span class=o>=</span> <span class=n>os</span><span class=o>.</span><span class=n>getcwd</span><span class=p>()</span> <span class=o>+</span> <span class=sa>r</span><span class=s2>&#34;\chromedriver.exe&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=k>def</span> <span class=nf>generateHmac</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>method</span><span class=p>,</span> <span class=n>url</span><span class=p>,</span> <span class=n>secretKey</span><span class=p>,</span> <span class=n>accessKey</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>		<span class=n>path</span><span class=p>,</span> <span class=o>*</span><span class=n>query</span> <span class=o>=</span> <span class=n>url</span><span class=o>.</span><span class=n>split</span><span class=p>(</span><span class=s2>&#34;?&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=n>os</span><span class=o>.</span><span class=n>environ</span><span class=p>[</span><span class=s2>&#34;TZ&#34;</span><span class=p>]</span> <span class=o>=</span> <span class=s2>&#34;GMT+0&#34;</span>
+</span></span><span class=line><span class=cl>		<span class=n>datetime</span> <span class=o>=</span> <span class=n>time</span><span class=o>.</span><span class=n>strftime</span><span class=p>(</span><span class=s1>&#39;%y%m</span><span class=si>%d</span><span class=s1>&#39;</span><span class=p>)</span><span class=o>+</span><span class=s1>&#39;T&#39;</span><span class=o>+</span><span class=n>time</span><span class=o>.</span><span class=n>strftime</span><span class=p>(</span><span class=s1>&#39;%H%M%S&#39;</span><span class=p>)</span><span class=o>+</span><span class=s1>&#39;Z&#39;</span>
+</span></span><span class=line><span class=cl>		<span class=n>message</span> <span class=o>=</span> <span class=n>datetime</span> <span class=o>+</span> <span class=n>method</span> <span class=o>+</span> <span class=n>path</span> <span class=o>+</span> <span class=p>(</span><span class=n>query</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=k>if</span> <span class=n>query</span> <span class=k>else</span> <span class=s2>&#34;&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=n>signature</span> <span class=o>=</span> <span class=n>hmac</span><span class=o>.</span><span class=n>new</span><span class=p>(</span><span class=nb>bytes</span><span class=p>(</span><span class=n>secretKey</span><span class=p>,</span> <span class=s2>&#34;utf-8&#34;</span><span class=p>),</span> <span class=n>message</span><span class=o>.</span><span class=n>encode</span><span class=p>(</span><span class=s2>&#34;utf-8&#34;</span><span class=p>),</span> <span class=n>hashlib</span><span class=o>.</span><span class=n>sha256</span><span class=p>)</span><span class=o>.</span><span class=n>hexdigest</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=s2>&#34;CEA algorithm=HmacSHA256, access-key=</span><span class=si>{}</span><span class=s2>, signed-date=</span><span class=si>{}</span><span class=s2>, signature=</span><span class=si>{}</span><span class=s2>&#34;</span><span class=o>.</span><span class=n>format</span><span class=p>(</span><span class=n>accessKey</span><span class=p>,</span> <span class=n>datetime</span><span class=p>,</span> <span class=n>signature</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=k>def</span> <span class=nf>get_productsdata</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>request_method</span><span class=p>,</span> <span class=n>authorization</span><span class=p>,</span> <span class=n>keyword</span><span class=p>,</span> <span class=n>limit</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>		<span class=n>URL</span> <span class=o>=</span> <span class=s2>&#34;/v2/providers/affiliate_open_api/apis/openapi/products/search?keyword=&#34;</span> <span class=o>+</span> <span class=n>urllib</span><span class=o>.</span><span class=n>parse</span><span class=o>.</span><span class=n>quote</span><span class=p>(</span><span class=n>keyword</span><span class=p>)</span> <span class=o>+</span> <span class=s2>&#34;&amp;limit=&#34;</span> <span class=o>+</span> <span class=nb>str</span><span class=p>(</span><span class=n>limit</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=n>url</span> <span class=o>=</span> <span class=s2>&#34;</span><span class=si>{}{}</span><span class=s2>&#34;</span><span class=o>.</span><span class=n>format</span><span class=p>(</span><span class=bp>self</span><span class=o>.</span><span class=n>DOMAIN</span><span class=p>,</span> <span class=n>URL</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>		<span class=n>response</span> <span class=o>=</span> <span class=n>requests</span><span class=o>.</span><span class=n>request</span><span class=p>(</span><span class=n>method</span><span class=o>=</span><span class=n>request_method</span><span class=p>,</span> <span class=n>url</span><span class=o>=</span><span class=n>url</span><span class=p>,</span> <span class=n>headers</span><span class=o>=</span><span class=p>{</span> <span class=s2>&#34;Authorization&#34;</span><span class=p>:</span> <span class=n>authorization</span><span class=p>,</span> <span class=s2>&#34;Content-Type&#34;</span><span class=p>:</span> <span class=s2>&#34;application/json;charset=UTF-8&#34;</span> <span class=p>})</span>
+</span></span><span class=line><span class=cl>		<span class=n>retdata</span> <span class=o>=</span> <span class=n>json</span><span class=o>.</span><span class=n>dumps</span><span class=p>(</span><span class=n>response</span><span class=o>.</span><span class=n>json</span><span class=p>(),</span> <span class=n>indent</span><span class=o>=</span><span class=mi>4</span><span class=p>)</span><span class=o>.</span><span class=n>encode</span><span class=p>(</span><span class=s1>&#39;utf-8&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=n>jsondata</span> <span class=o>=</span> <span class=n>json</span><span class=o>.</span><span class=n>loads</span><span class=p>(</span><span class=n>retdata</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=n>data</span> <span class=o>=</span> <span class=n>jsondata</span><span class=p>[</span><span class=s1>&#39;data&#39;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>		<span class=n>productdata</span> <span class=o>=</span> <span class=n>data</span><span class=p>[</span><span class=s1>&#39;productData&#39;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=n>productdata</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=k>def</span> <span class=nf>make_productcontent</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>each_product</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>		<span class=n>driver</span> <span class=o>=</span> <span class=n>webdriver</span><span class=o>.</span><span class=n>Chrome</span><span class=p>(</span><span class=bp>self</span><span class=o>.</span><span class=n>webdriverpath</span><span class=p>,</span> <span class=n>options</span><span class=o>=</span><span class=bp>self</span><span class=o>.</span><span class=n>options</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=n>time</span><span class=o>.</span><span class=n>sleep</span><span class=p>(</span><span class=mi>5</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>		<span class=n>producturl</span> <span class=o>=</span> <span class=n>each_product</span><span class=p>[</span><span class=s1>&#39;productUrl&#39;</span><span class=p>]</span> 
+</span></span><span class=line><span class=cl>		<span class=n>driver</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=n>producturl</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=n>driver</span><span class=o>.</span><span class=n>execute_script</span><span class=p>(</span><span class=s2>&#34;Object.defineProperty(navigator, &#39;plugins&#39;, {get: function() </span><span class=si>{return[1, 2, 3, 4, 5]}</span><span class=s2>})&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=n>driver</span><span class=o>.</span><span class=n>execute_script</span><span class=p>(</span><span class=s2>&#34;Object.defineProperty(navigator, &#39;languages&#39;, {get: function() {return [&#39;ko-KR&#39;, &#39;ko&#39;]}})&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=n>driver</span><span class=o>.</span><span class=n>execute_script</span><span class=p>(</span><span class=s2>&#34;const getParameter = WebGLRenderingContext.getParameter;WebGLRenderingContext.prototype.getParameter = function(parameter) {if (parameter === 37445) {return &#39;NVIDIA Corporation&#39;} if (parameter === 37446) {return &#39;NVIDIA GeForce GTX 980 Ti OpenGL Engine&#39;;}return getParameter(parameter);};&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=n>time</span><span class=o>.</span><span class=n>sleep</span><span class=p>(</span><span class=mi>5</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>		<span class=n>title</span> <span class=o>=</span> <span class=n>driver</span><span class=o>.</span><span class=n>find_element_by_class_name</span><span class=p>(</span><span class=s2>&#34;prod-buy-header__title&#34;</span><span class=p>)</span><span class=o>.</span><span class=n>text</span>
+</span></span><span class=line><span class=cl>		<span class=n>img</span> <span class=o>=</span> <span class=n>driver</span><span class=o>.</span><span class=n>find_elements_by_xpath</span><span class=p>(</span><span class=s2>&#34;//*[@class=&#39;detail-item&#39;]//img&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>		<span class=n>images</span> <span class=o>=</span> <span class=p>[]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>		<span class=k>for</span> <span class=n>each_img</span> <span class=ow>in</span> <span class=n>img</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>			<span class=n>src</span> <span class=o>=</span> <span class=n>each_img</span><span class=o>.</span><span class=n>get_attribute</span><span class=p>(</span><span class=s1>&#39;src&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>			<span class=k>if</span> <span class=s1>&#39;vendor_inventory&#39;</span> <span class=ow>not</span> <span class=ow>in</span> <span class=n>src</span> <span class=ow>and</span> <span class=p>(</span><span class=s1>&#39;thumbnail&#39;</span> <span class=ow>not</span> <span class=ow>in</span> <span class=n>src</span> <span class=ow>or</span> <span class=s1>&#39;remote&#39;</span> <span class=ow>not</span> <span class=ow>in</span> <span class=n>src</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>				<span class=k>continue</span>
+</span></span><span class=line><span class=cl>			<span class=n>fname</span> <span class=o>=</span> <span class=n>secrets</span><span class=o>.</span><span class=n>token_hex</span><span class=p>(</span><span class=mi>16</span><span class=p>)[</span><span class=mi>0</span><span class=p>:</span><span class=mi>10</span><span class=p>]</span> <span class=o>+</span> <span class=s2>&#34;.png&#34;</span> 
+</span></span><span class=line><span class=cl>			<span class=n>fnamefull</span> <span class=o>=</span> <span class=bp>self</span><span class=o>.</span><span class=n>imgpath</span> <span class=o>+</span> <span class=s2>&#34;</span><span class=se>\\</span><span class=s2>&#34;</span> <span class=o>+</span> <span class=n>fname</span>
+</span></span><span class=line><span class=cl>			<span class=n>urllib</span><span class=o>.</span><span class=n>request</span><span class=o>.</span><span class=n>urlretrieve</span><span class=p>(</span><span class=n>src</span><span class=p>,</span> <span class=n>fnamefull</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>			<span class=n>images</span><span class=o>.</span><span class=n>append</span><span class=p>((</span><span class=s1>&#39;image&#39;</span><span class=p>,</span> <span class=p>(</span><span class=n>fname</span><span class=p>,</span> <span class=nb>open</span><span class=p>(</span><span class=n>fnamefull</span><span class=p>,</span> <span class=s1>&#39;rb&#39;</span><span class=p>),</span> <span class=s1>&#39;image/png&#39;</span><span class=p>)))</span>
+</span></span><span class=line><span class=cl>		<span class=n>driver</span><span class=o>.</span><span class=n>close</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=n>title</span><span class=p>,</span> <span class=n>producturl</span><span class=p>,</span> <span class=n>images</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=vm>__name__</span> <span class=o>==</span> <span class=s1>&#39;__main__&#39;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>	<span class=n>method</span> <span class=o>=</span> <span class=s1>&#39;GET&#39;</span>				 <span class=c1>#정보를 얻는것이기 때문에 GET</span>
+</span></span><span class=line><span class=cl>	<span class=n>keyword</span> <span class=o>=</span> <span class=s1>&#39;채워 넣으세요&#39;</span> <span class=c1>#검색할 키워드, 쿠팡에서 검색하는거랑 결과가 동일합니다.</span>
+</span></span><span class=line><span class=cl>	<span class=n>limit</span> <span class=o>=</span> <span class=mi>5</span>					 <span class=c1>#몇개의 정보를 가져올지 설정. 상위부터 가져옵니다.</span>
+</span></span><span class=line><span class=cl>	<span class=n>access_key</span> <span class=o>=</span> <span class=s1>&#39;채워 넣으세요.&#39;</span>			<span class=c1>#API access key</span>
+</span></span><span class=line><span class=cl>	<span class=n>secret_key</span> <span class=o>=</span> <span class=s1>&#39;채워 넣으세요.&#39;</span>		<span class=c1>#API secret key</span>
+</span></span><span class=line><span class=cl>	<span class=n>URL</span> <span class=o>=</span> <span class=s2>&#34;/v2/providers/affiliate_open_api/apis/openapi/products/search?keyword=&#34;</span> <span class=o>+</span> <span class=n>urllib</span><span class=o>.</span><span class=n>parse</span><span class=o>.</span><span class=n>quote</span><span class=p>(</span><span class=n>keyword</span><span class=p>)</span> <span class=o>+</span> <span class=s2>&#34;&amp;limit=&#34;</span> <span class=o>+</span> <span class=nb>str</span><span class=p>(</span><span class=n>limit</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=n>test</span> <span class=o>=</span> <span class=n>cupangMgr</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>	<span class=n>authorization</span> <span class=o>=</span> <span class=n>test</span><span class=o>.</span><span class=n>generateHmac</span><span class=p>(</span><span class=n>method</span><span class=p>,</span> <span class=n>URL</span><span class=p>,</span> <span class=n>secret_key</span><span class=p>,</span> <span class=n>access_key</span><span class=p>)</span>		<span class=c1># HMAC 생성</span>
+</span></span><span class=line><span class=cl>	<span class=n>productdata</span> <span class=o>=</span> <span class=n>test</span><span class=o>.</span><span class=n>get_productsdata</span><span class=p>(</span><span class=n>method</span><span class=p>,</span> <span class=n>authorization</span><span class=p>,</span> <span class=n>keyword</span><span class=p>,</span> <span class=n>limit</span><span class=p>)</span>	<span class=c1># API 호출</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=k>for</span> <span class=n>each_product</span> <span class=ow>in</span> <span class=n>productdata</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>		<span class=n>title</span><span class=p>,</span> <span class=n>producturl</span><span class=p>,</span> <span class=n>images</span> <span class=o>=</span> <span class=n>test</span><span class=o>.</span><span class=n>make_productcontent</span><span class=p>(</span><span class=n>each_product</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=nb>print</span><span class=p>(</span><span class=s1>&#39;타이틀 : &#39;</span><span class=p>,</span> <span class=n>title</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=nb>print</span><span class=p>(</span><span class=s1>&#39;URL : &#39;</span><span class=p>,</span> <span class=n>producturl</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=nb>print</span><span class=p>(</span><span class=s1>&#39;이미지파일 : &#39;</span><span class=p>,</span> <span class=n>images</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>실행하시면 아래그림처럼 파싱해온 결과들이 출력되고, imgs폴더에 이미지가 다운로드 된것을 확인하실수 있습니다.</li></ul><p><img src=/20200101_7.png alt="실행 및 결과" title="실행 및 결과"></p><p>궁금한 점은 질문해주세요^^ 다음 포스팅에는&mldr;</p><ul><li>네이버 블로그 API로 상품정보 올리는 방법방법과</li><li>☆☆☆개꿀팁!! 리뷰 평점 가져오는 방법☆☆☆ 올려드리겠습니다.</li></ul></div><div class=post-copyright><p class=copyright-item><span class=item-title>Author</span>
+<span class=item-content>Jaejin Jang</span></p><p class=copyright-item><span class=item-title>LastMod</span>
+<span class=item-content>2020-01-01</span></p><p class=copyright-item><span class=item-title>License</span>
+<span class=item-content>Jaejin Jang</span></p></div><footer class=post-footer><div class=post-tags><a href=/tags/python/>python</a>
+<a href=/tags/%EC%BF%A0%ED%8C%A1%ED%8C%8C%ED%8A%B8%EB%84%88%EC%8A%A4/>쿠팡파트너스</a>
+<a href=/tags/coupangpartners/>coupangpartners</a></div><nav class=post-nav><a class=prev href=/post/posts194/><i class="iconfont icon-left"></i>
+<span class="prev-text nav-default">14회 정보보안기사 합격 후기 및 정보처리기사 합격 후기</span>
+<span class="prev-text nav-mobile">Prev</span></a>
+<a class=next href=/post/20191230/><span class="next-text nav-default">파이썬으로 쿠팡 파트너스 API 활용하기 - 1</span>
+<span class="next-text nav-mobile">Next</span>
+<i class="iconfont icon-right"></i></a></nav></footer></article></div></div></main><footer id=footer class=footer><div class=social-links><a href=mailto:jaejin0me@gmail.com class="iconfont icon-email" title=email></a>
+<a href=https://ko-kr.facebook.com/people/%EC%9E%A5%EC%9E%AC%EC%A7%84/100005230447628 class="iconfont icon-facebook" title=facebook></a>
+<a href=https://www.linkedin.com/in/jaejin0me class="iconfont icon-linkedin" title=linkedin></a>
+<a href=https://github.com/jaejin0me class="iconfont icon-github" title=github></a>
+<a href=https://jaejin0me.github.io/index.xml type=application/rss+xml class="iconfont icon-rss" title=rss></a></div><div class=copyright><span class=power-by>Powered by <a class=hexo-link href=https://gohugo.io>Hugo</a></span>
+<span class=division>|</span>
+<span class=theme-info>Theme -
+<a class=theme-link href=https://github.com/olOwOlo/hugo-theme-even>Even</a></span>
+<span class=copyright-year>&copy;
+2017 -
+2022<span class=heart><i class="iconfont icon-heart"></i></span><span>Jaejin Jang</span></span></div></footer><div class=back-to-top id=back-to-top><i class="iconfont icon-up"></i></div></div><script src=https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin=anonymous></script>
+<script type=text/javascript src=/js/main.min.64437849d125a2d603b3e71d6de5225d641a32d17168a58106e0b61852079683.js></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-111561979-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script></body></html>
