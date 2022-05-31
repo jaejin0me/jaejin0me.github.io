@@ -166,6 +166,10 @@ copyright = "Jaejin Jang"            # default: author.name ↓        # 默认�
     d-facebook = "https://ko-kr.facebook.com/people/%EC%9E%A5%EC%9E%AC%EC%A7%84/100005230447628"
     e-linkedin = "https://www.linkedin.com/in/jaejin0me"
     g-github = "https://github.com/jaejin0me"
+	
+  [params.utterances]				# Custom
+    owner = "jaejin0me"				# Custom
+    repo = "jaejin0me.github.io"	# Custom
 
 # See https://gohugo.io/about/hugo-and-gdpr/
 [privacy]
