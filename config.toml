@@ -1,6 +1,6 @@
 baseURL = "https://jaejin0me.github.io"
-languageCode = "en"
-defaultContentLanguage = "en"                             # en / zh-cn / ... (This field determines which i18n file to use)
+languageCode = "ko"
+defaultContentLanguage = "ko"                             # en / zh-cn / ... (This field determines which i18n file to use)
 title = "Jaejin's blog"
 preserveTaxonomyNames = true
 enableRobotsTXT = true
