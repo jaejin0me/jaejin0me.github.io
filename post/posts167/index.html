@@ -18,8 +18,7 @@
 </span></span><span class=line><span class=cl> &#34;&amp;{ $clsid = New-Object Guid &#39;%s&#39;;$type = [Type]::GetTypeFromCLSID($clsid);$object= [Activator]::CreateInstance($ty    pe);get-member -inputObject $object; }&#34; % clsid]
 </span></span><span class=line><span class=cl>  ,stdout=subprocess.PIPE,stderr=subprocess.PIPE)  #출력을 처리하기 위해 subprocess로 보냄
 </span></span><span class=line><span class=cl>result, err = powershell.communicate() # subprocess에 있는 출력을 가져옴
-</span></span></code></pre></td></tr></table></div></div><p>가져온 출력을 처리하여 사용하게 되는데, IDE에서 실행하여 디버깅하면서 확이인는 경우 출력이 콘솔에 뜨지 않을 수 있습니다.
-그때는 cmd나 파워쉘창을 열어서 실행하면 출력을 확인할 수 있습니다.</p></div><div class=post-copyright><p class=copyright-item><span class=item-title>Author</span>
+</span></span></code></pre></td></tr></table></div></div><p>가져온 출력을 처리하여 사용하게 되는데, IDE에서 실행하여 디버깅하면서 확이인는 경우 출력이 콘솔에 뜨지 않을 수 있습니다.<br>그때는 cmd나 파워쉘창을 열어서 실행하면 출력을 확인할 수 있습니다.</p></div><div class=post-copyright><p class=copyright-item><span class=item-title>Author</span>
 <span class=item-content>Jaejin Jang</span></p><p class=copyright-item><span class=item-title>LastMod</span>
 <span class=item-content>2017-12-25</span></p><p class=copyright-item><span class=item-title>License</span>
 <span class=item-content>Jaejin Jang</span></p></div><footer class=post-footer><div class=post-tags><a href=/tags/python/>python</a>

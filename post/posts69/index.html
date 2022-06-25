@@ -14,15 +14,10 @@ CLSID를 사람이 다루기 쉽도록 만든 것이 ProgID이다. HKEY_CLASSED_
 컴포넌트를 사용하기 위해서는 레즈스트리에 등록을 해야 한다.인프로세스의 경우</p><ul><li>DllRegisterServer : 컴포넌트를 레지스트리에 등록</li><li>DllUnregisterServer : 컴포넌트를 레지스트리에서 제거아웃프로세스의 경우</li><li>등록 : 프로그램을 실행시키면서 인자로 /RegServer</li><li>제거 : 프로그램을 실행시키면서 인자로 /RegUnServer</li></ul><p><img src=/posts69_1.jpg alt=Fig title="아웃프로세스 레지스트리 등록/제거"></p><h2 id=com-컴포넌트-2>COM 컴포넌트</h2><p>인터페이스COM 컴포넌트의 메소드와 프로퍼티는 인터페이스로 구성된다. 즉 멤버함수로만 구성된다. 프로퍼티는 변수 처럼사용하지만 실제로 함수를 이용해 구현된다.
 모든 COM 컴포넌트는 IUnkonwon이라는 최상위 인터페이스로 부터 상속된다. 이 인터페이스는 3개의 멤버 함수(AddRef, Release, QueryInterface)가 존재 한다.
 따라서 모든 COM 컴포넌트는 이 3개의 함수를 기본적으로 갖고 있다. 인터페이스 또한 구분을 위한 128비트의 ID를 갖는다.
-IID라고 부른다.</p><p>AddRef : 컴포넌트에 대한 레퍼런스가 생길 때마다 사용자 프로그램에서는 그 컴포넌트의 AddRef 메소드를 호출하여 레퍼런스 카운트를 하나 증가시킨다.
-Release : 더 이상 그 컴포넌트를 사용할 일이 없어지면 Release 메소드를 호출.
-Release 메소드에서는 내부적으로 유지하는 레퍼런스 카운트가 0이 되면 자신을 메모리에서 제거한다.
-QueryInterface : 컴포넌트에게 갖고 있는 인터페이스를 달라고 요청하는데 사용된다. 첫 번째 인자로 원하는 IID, 두 번째 인자로 그 인터페이스에 대한 포인터를
-받을 변수의 주소를 지정해야 한다(포인터의 포인터). 즉, 컴포넌트에서 자신이 사용하고자 하는 인터페이스를 받아오는데 사용된다.
-예를 들어 GetMemorySize라는 메소드를 갖는 ISystemInfo라는 인터페이스를 구현한다고 하면, 모든 인터페이스는 앞에 I를 붙여 표시하는 것이 일반적이다.
-당연히 IUnknown으로부터 계승이 되어야할 한다.</p><p>C++로 구현한 예
-class ISystemInfo : public IUnknown
-{ AddRef&mldr; Release&mldr; QueryInterface&mldr; // &mldr;. GetMemorySize&mldr; };</p><p>IUnknown 이외에도 모든 컴포넌트는 COM에서 자신을 쉽게 생성할 수 있도록 하는 용도로 IClassFactory라는 인터페이스를 지원해야 한다.
+IID라고 부른다.</p><p>AddRef : 컴포넌트에 대한 레퍼런스가 생길 때마다 사용자 프로그램에서는 그 컴포넌트의 AddRef 메소드를 호출하여 레퍼런스 카운트를 하나 증가시킨다.<br>Release : 더 이상 그 컴포넌트를 사용할 일이 없어지면 Release 메소드를 호출.
+Release 메소드에서는 내부적으로 유지하는 레퍼런스 카운트가 0이 되면 자신을 메모리에서 제거한다.<br>QueryInterface : 컴포넌트에게 갖고 있는 인터페이스를 달라고 요청하는데 사용된다. 첫 번째 인자로 원하는 IID, 두 번째 인자로 그 인터페이스에 대한 포인터를
+받을 변수의 주소를 지정해야 한다(포인터의 포인터). 즉, 컴포넌트에서 자신이 사용하고자 하는 인터페이스를 받아오는데 사용된다.<br>예를 들어 GetMemorySize라는 메소드를 갖는 ISystemInfo라는 인터페이스를 구현한다고 하면, 모든 인터페이스는 앞에 I를 붙여 표시하는 것이 일반적이다.
+당연히 IUnknown으로부터 계승이 되어야할 한다.</p><p>C++로 구현한 예<br>class ISystemInfo : public IUnknown<br>{ AddRef&mldr; Release&mldr; QueryInterface&mldr; // &mldr;. GetMemorySize&mldr; };</p><p>IUnknown 이외에도 모든 컴포넌트는 COM에서 자신을 쉽게 생성할 수 있도록 하는 용도로 IClassFactory라는 인터페이스를 지원해야 한다.
 이 것 역시 IUnknown 인터페이스로부터 계승되어야함은 물론이다. 이 인터페이스의 목적은 요청된 컴포넌트를 COM에서 실제로 생성하는데 있다.
 이 인터페이스에는 CreateInstance와 LockServer 두 개의 멤버 함수가 존재한다. CreateInstance가 실제로 컴포넌트를 생성하는데 사용된다.
 그러면 잠깐 컴포넌트와 컴포넌트 사용자간의 상호 동작을 한 번 살펴보도록 하자.</p><p>1.어떤 프로그램에서 특정 컴포넌트를 사용하려면 그 컴포넌트의 ProgID나 CLSID를 지정해야 한다.
@@ -35,10 +30,7 @@ class ISystemInfo : public IUnknown
 사실 COM 인터페이스 자체는 포인터라는 개념하에 동작하도록 되어 있기 때문에 포인터를 모르는 대부분의 RAD 환경하에서는 사용할 수가 없다.
 그래서 COM에 추가된 것이 바로 IDispatch라는 인터페이스이다. 위의 절차를 다시 보면 내가 만들어야 하는 직접적인 ISystemInfo라는 인터페이스 이외에도
 IUnknown, IClassFactory, IDispatch 인터페이스를 별도로 구현해주어야 한다. 사실 이 인터페이스들은 누가 구현해도 내용이 비슷할 수 밖에 없는 부분들이기
-때문에 ATL이나 MFC, VB 등의 상위 레벨의 개발 도구를 사용하면 알아서(?) 구현해준다. 하지만 직접 COM 컴포넌트를 만들려 한다면 일일이 다 코딩해주어야 한다.</p><p>참고
-<a href=http://blog.naver.com/xinfra/80007894227>http://blog.naver.com/xinfra/80007894227</a>
-<a href="https://www.google.co.kr/search?q=/regserver&newwindow=1&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi7zq7K_8XXAhUTO7wKHVNJA4EQ_AUICygC&biw=1918&bih=949&dpr=1#imgrc=nzHUqbHFVtWtiM">https://www.google.co.kr/search?q=/regserver&newwindow=1&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi7zq7K_8XXAhUTO7wKHVNJA4EQ_AUICygC&biw=1918&bih=949&dpr=1#imgrc=nzHUqbHFVtWtiM</a>:
-<a href="http://blog.naver.com/PostView.nhn?blogId=netrance&logNo=110052088818">http://blog.naver.com/PostView.nhn?blogId=netrance&logNo=110052088818</a></p></div><div class=post-copyright><p class=copyright-item><span class=item-title>Author</span>
+때문에 ATL이나 MFC, VB 등의 상위 레벨의 개발 도구를 사용하면 알아서(?) 구현해준다. 하지만 직접 COM 컴포넌트를 만들려 한다면 일일이 다 코딩해주어야 한다.</p><p>참고<br><a href=http://blog.naver.com/xinfra/80007894227>http://blog.naver.com/xinfra/80007894227</a><br><a href="https://www.google.co.kr/search?q=/regserver&newwindow=1&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi7zq7K_8XXAhUTO7wKHVNJA4EQ_AUICygC&biw=1918&bih=949&dpr=1#imgrc=nzHUqbHFVtWtiM">https://www.google.co.kr/search?q=/regserver&newwindow=1&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi7zq7K_8XXAhUTO7wKHVNJA4EQ_AUICygC&biw=1918&bih=949&dpr=1#imgrc=nzHUqbHFVtWtiM</a>:<br><a href="http://blog.naver.com/PostView.nhn?blogId=netrance&logNo=110052088818">http://blog.naver.com/PostView.nhn?blogId=netrance&logNo=110052088818</a></p></div><div class=post-copyright><p class=copyright-item><span class=item-title>Author</span>
 <span class=item-content>Jaejin Jang</span></p><p class=copyright-item><span class=item-title>LastMod</span>
 <span class=item-content>2017-12-26</span></p><p class=copyright-item><span class=item-title>License</span>
 <span class=item-content>Jaejin Jang</span></p></div><footer class=post-footer><div class=post-tags><a href=/tags/cpp/>cpp</a>
