@@ -16,7 +16,7 @@ ActiveX 컨트롤각각의 ActiveX는 독립된 사용자 인터페이스를 가
 애니메이션을 보여주거나, 은행업무에 사용되는 공인인증, 파일 관련 작업 등이 있다.어떠한 면에서는 자바 애플릿과 비슷하다. 
 ActiveX나 자바 애플릿을 사용하여 웹 브라우저가 해당 프로그램을 다운로드하여 실행하게 한다. 차이점을 다음과 같다.
 
-호환성의 차이 : 자바 애플릿은 대부분의 플랫폼에서 동작할 수 있지만, ActiveX의 경우 IE와 윈도에서만 동작한다. <br>
+호환성의 차이 : 자바 애플릿은 대부분의 플랫폼에서 동작할 수 있지만, ActiveX의 경우 IE와 윈도에서만 동작한다.   
 가능한 작업 제약의 차이 : ActiveX의 경우 자바 애플릿에 비해 코드 실행에 대한 제약이 적어서 보안에 취약하다.
 
 ActiveX와 IE와의 역사IE 3.0에서부터 HTML에서 Object 태그를 이용해 ActiveX 관리할 수 있는 기능을 추가하였다. 
@@ -29,6 +29,6 @@ ActiveX와 IE와의 역사IE 3.0에서부터 HTML에서 Object 태그를 이용�
 
 ![Fig](/posts70_1.jpg "HTML에서, ActiveX를 사용한 예")
 
-참고<br>
-https://ko.wikipedia.org/wiki/%EC%95%A1%ED%8B%B0%EB%B8%8CX <br>
+참고  
+https://ko.wikipedia.org/wiki/%EC%95%A1%ED%8B%B0%EB%B8%8CX   
 https://namu.wiki/w/ActiveXhttp://blog.naver.com/PostView.nhn?blogId=comgghh&logNo=140176061963

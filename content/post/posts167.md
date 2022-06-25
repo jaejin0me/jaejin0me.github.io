@@ -21,5 +21,5 @@ if __name__ == '__main__':
   ,stdout=subprocess.PIPE,stderr=subprocess.PIPE)  #출력을 처리하기 위해 subprocess로 보냄
 result, err = powershell.communicate() # subprocess에 있는 출력을 가져옴
 ```
-가져온 출력을 처리하여 사용하게 되는데, IDE에서 실행하여 디버깅하면서 확이인는 경우 출력이 콘솔에 뜨지 않을 수 있습니다.<br>
+가져온 출력을 처리하여 사용하게 되는데, IDE에서 실행하여 디버깅하면서 확이인는 경우 출력이 콘솔에 뜨지 않을 수 있습니다.  
 그때는 cmd나 파워쉘창을 열어서 실행하면 출력을 확인할 수 있습니다.

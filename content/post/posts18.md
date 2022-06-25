@@ -7,7 +7,7 @@ categories: ["algorithm"]
 author: "Jaejin Jang"
 ---
 
-타입에러 때문에 제공하는 정렬함수를 쓸 수 없을때 그리고 형변환 하기 귀찮을 때<br>
+타입에러 때문에 제공하는 정렬함수를 쓸 수 없을때 그리고 형변환 하기 귀찮을 때  
 comparator, comparable의 재정의 없이 간단하게 정렬할 수 있는 방법입니다.
 
 ```

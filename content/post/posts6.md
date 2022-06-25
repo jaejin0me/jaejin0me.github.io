@@ -7,7 +7,7 @@ categories: ["algorithm"]
 author: "Jaejin Jang"
 ---
 
-원래 dp로 풀었는데 알고보니, 단순 비교문제였음..<br>
+원래 dp로 풀었는데 알고보니, 단순 비교문제였음..  
 그냥 사람수가 가장 많은 도시는 고르면 되는 문제
 ```java
 import java.util.Arrays;

@@ -7,7 +7,7 @@ categories: ["algorithm"]
 author: "Jaejin Jang"
 ---
 
-연산도중에 int형의 범위를 넘어갈 수 있기 때문에 long으로 바꿔주는 것이 포인트!<br>
+연산도중에 int형의 범위를 넘어갈 수 있기 때문에 long으로 바꿔주는 것이 포인트!  
 시간 많이 날림 ㅜ
 ```
 class Collatz {

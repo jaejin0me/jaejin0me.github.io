@@ -30,7 +30,7 @@ public class Caesar {
     }
 }
 ```
-알파벳의 대소문자를 조건문의 범위로 확인하는 방법 말고 Character.isLowerCase()가 있음<br>
-삼항 연산자를 사용한 라인에서<br>
-temp[i] = (char) ((temp[i] - 'a' + n) % 26 + 'a'); <br>
+알파벳의 대소문자를 조건문의 범위로 확인하는 방법 말고 Character.isLowerCase()가 있음  
+삼항 연산자를 사용한 라인에서  
+temp[i] = (char) ((temp[i] - 'a' + n) % 26 + 'a');   
 로 하면 분기를 줄일 수 있음

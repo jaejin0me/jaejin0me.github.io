@@ -16,9 +16,9 @@ mathjax : true
 
 아무튼 푸는 방법은, 격자의 입력을 두 그룹으로 나눈다. 나누는 방법은 이웃(상,하,좌,우)한 격자점은 다른 그룹으로 두면 된다.
 
-A B A B A<br>
-B A B A B<br>
-A B A B A<br>
+A B A B A  
+B A B A B  
+A B A B A  
 
 이런 방식으로
 

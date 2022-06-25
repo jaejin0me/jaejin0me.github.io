@@ -7,7 +7,7 @@ categories: ["algorithm"]
 author: "Jaejin Jang"
 ---
 
-label이 break, continue와 사용가능해서 좋은 자바:)<br>
+label이 break, continue와 사용가능해서 좋은 자바:)  
 좀 더 좋은 소수찾는 방법으로 풀어봐야지 한번 더 시도해봐야지
 ```java
 public class NumOfPrime {

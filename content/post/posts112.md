@@ -7,5 +7,5 @@ categories: ["etc"]
 author: "Jaejin Jang"
 ---
 
-플랫폼 별로 다 만들어주고 html코드까지 제공해줌 히트다 히트<br>
+플랫폼 별로 다 만들어주고 html코드까지 제공해줌 히트다 히트  
 https://realfavicongenerator.net/
