@@ -1,5 +1,5 @@
 ﻿---
-title: "About"
+title: "About Me"
 date: 2017-08-20T21:38:52+09:00
 lastmod: 2017-08-28T21:41:52+09:00
 menu: "main"
