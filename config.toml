@@ -34,7 +34,7 @@ copyright = "Jaejin Jang"            # default: author.name ↓        # 默认�
   identifier = "home"
   url = "/"
 [[menu.main]]
-  name = "Archives"
+  name = "Posts"
   weight = 20
   identifier = "archives"
   url = "/post/"
