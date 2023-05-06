@@ -1,11 +1,11 @@
 baseURL = "https://jaejin0me.github.io"
 languageCode = "ko"
-defaultContentLanguage = "en"                             # en / zh-cn / ... (This field determines which i18n file to use)
+defaultContentLanguage = "ko"                             # en / zh-cn / ... (This field determines which i18n file to use)
 title = "Jaejin's blog"
 preserveTaxonomyNames = true
 enableRobotsTXT = true
 enableEmoji = true
-theme = "even"
+theme = "PaperMod"
 enableGitInfo = false # use git commit log to generate lastmod record # 可根据 Git 中的提交生成最近更新记录。
 
 # Syntax highlighting by Chroma. NOTE: Don't enable `highlightInClient` and `chroma` at the same time!
@@ -33,6 +33,10 @@ copyright = "Jaejin Jang"            # default: author.name ↓        # 默认�
   weight = 10
   identifier = "home"
   url = "/"
+[[menu.main]]
+  name = "Search"
+  weight = 10
+  url = "/search/" 
 [[menu.main]]
   name = "Posts"
   weight = 20
@@ -189,9 +193,5 @@ copyright = "Jaejin Jang"            # default: author.name ↓        # 默认�
 #  isPlainText = true
 #  isHTML = false
 #
-#[outputs]
-#  home = ["HTML", "RSS"]
-#  page = ["HTML", "MarkDown"]
-#  section = ["HTML", "RSS"]
-#  taxonomy = ["HTML", "RSS"]
-#  taxonomyTerm = ["HTML"]
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
