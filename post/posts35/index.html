@@ -1,6 +1,6 @@
 <!doctype html><html lang=ko dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>백준알고리즘 2750번, 수 정렬하기 | Jaejin's blog</title><meta name=keywords content="algorithm"><meta name=description content="1~N 까지의 수를 임의로 입력 받아 정렬하는 문제 입니다. 버블, 삽입, 선택 정렬 3가지를 이용해 풀어봤습니다. 버블 정렬만 알고 있었는데 이번 기회로 삽입, 선택 정렬"><meta name=author content="Jaejin Jang"><link rel=canonical href=https://jaejin0me.github.io/post/posts35/><link crossorigin=anonymous href=/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe+FVUFzPh7U=" rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG+9vmJ0cTS+ovo0FeA=" onload=hljs.initHighlightingOnLoad()></script>
 <link rel=icon href=https://jaejin0me.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://jaejin0me.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://jaejin0me.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://jaejin0me.github.io/apple-touch-icon.png><link rel=mask-icon href=https://jaejin0me.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><script async src="https://www.googletagmanager.com/gtag/js?id=G-F8504X956T"></script>
-<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-F8504X956T",{anonymize_ip:!0})}</script><meta property="og:title" content="백준알고리즘 2750번, 수 정렬하기"><meta property="og:description" content="1~N 까지의 수를 임의로 입력 받아 정렬하는 문제 입니다. 버블, 삽입, 선택 정렬 3가지를 이용해 풀어봤습니다. 버블 정렬만 알고 있었는데 이번 기회로 삽입, 선택 정렬"><meta property="og:type" content="article"><meta property="og:url" content="https://jaejin0me.github.io/post/posts35/"><meta property="article:section" content="post"><meta property="article:published_time" content="2017-12-23T01:37:56+08:00"><meta property="article:modified_time" content="2017-12-23T01:37:56+08:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="백준알고리즘 2750번, 수 정렬하기"><meta name=twitter:description content="1~N 까지의 수를 임의로 입력 받아 정렬하는 문제 입니다. 버블, 삽입, 선택 정렬 3가지를 이용해 풀어봤습니다. 버블 정렬만 알고 있었는데 이번 기회로 삽입, 선택 정렬"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Posts","item":"https://jaejin0me.github.io/post/"},{"@type":"ListItem","position":3,"name":"백준알고리즘 2750번, 수 정렬하기","item":"https://jaejin0me.github.io/post/posts35/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"백준알고리즘 2750번, 수 정렬하기","name":"백준알고리즘 2750번, 수 정렬하기","description":"1~N 까지의 수를 임의로 입력 받아 정렬하는 문제 입니다. 버블, 삽입, 선택 정렬 3가지를 이용해 풀어봤습니다. 버블 정렬만 알고 있었는데 이번 기회로 삽입, 선택 정렬","keywords":["algorithm"],"articleBody":"1~N 까지의 수를 임의로 입력 받아 정렬하는 문제 입니다. 버블, 삽입, 선택 정렬 3가지를 이용해 풀어봤습니다. 버블 정렬만 알고 있었는데 이번 기회로 삽입, 선택 정렬에 대해서 알게 되었네요. Bin-O로 표기할 경우 시간복잡도는 모두 n^2 으로 동일합니다.\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 #include #include #define MAX_ARRAY_SIZE 1000 using namespace std; void selection(int *arr, int N) { int min; int p; int temp; for (int i = 0; i ","wordCount":"445","inLanguage":"ko","datePublished":"2017-12-23T01:37:56+08:00","dateModified":"2017-12-23T01:37:56+08:00","author":{"@type":"Person","name":"Jaejin Jang"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://jaejin0me.github.io/post/posts35/"},"publisher":{"@type":"Organization","name":"Jaejin's blog","logo":{"@type":"ImageObject","url":"https://jaejin0me.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://jaejin0me.github.io accesskey=h title="Jaejin's blog (Alt + H)">Jaejin's blog</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://jaejin0me.github.io/ title=Home><span>Home</span></a></li><li><a href=https://jaejin0me.github.io/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li><li><a href=https://jaejin0me.github.io/post/ title=Posts><span>Posts</span></a></li><li><a href=https://jaejin0me.github.io/tags/ title=Tags><span>Tags</span></a></li><li><a href=https://jaejin0me.github.io/categories/ title=Categories><span>Categories</span></a></li><li><a href=https://jaejin0me.github.io/about/ title="About Me"><span>About Me</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class=post-title>백준알고리즘 2750번, 수 정렬하기</h1><div class=post-meta><span title='2017-12-23 01:37:56 +0800 +0800'>12월 23, 2017</span>&nbsp;·&nbsp;Jaejin Jang</div></header><div class=post-content><p>1~N 까지의 수를 임의로 입력 받아 정렬하는 문제 입니다.
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-F8504X956T",{anonymize_ip:!0})}</script><meta property="og:title" content="백준알고리즘 2750번, 수 정렬하기"><meta property="og:description" content="1~N 까지의 수를 임의로 입력 받아 정렬하는 문제 입니다. 버블, 삽입, 선택 정렬 3가지를 이용해 풀어봤습니다. 버블 정렬만 알고 있었는데 이번 기회로 삽입, 선택 정렬"><meta property="og:type" content="article"><meta property="og:url" content="https://jaejin0me.github.io/post/posts35/"><meta property="article:section" content="post"><meta property="article:published_time" content="2017-12-23T01:37:56+08:00"><meta property="article:modified_time" content="2017-12-23T01:37:56+08:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="백준알고리즘 2750번, 수 정렬하기"><meta name=twitter:description content="1~N 까지의 수를 임의로 입력 받아 정렬하는 문제 입니다. 버블, 삽입, 선택 정렬 3가지를 이용해 풀어봤습니다. 버블 정렬만 알고 있었는데 이번 기회로 삽입, 선택 정렬"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Posts","item":"https://jaejin0me.github.io/post/"},{"@type":"ListItem","position":3,"name":"백준알고리즘 2750번, 수 정렬하기","item":"https://jaejin0me.github.io/post/posts35/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"백준알고리즘 2750번, 수 정렬하기","name":"백준알고리즘 2750번, 수 정렬하기","description":"1~N 까지의 수를 임의로 입력 받아 정렬하는 문제 입니다. 버블, 삽입, 선택 정렬 3가지를 이용해 풀어봤습니다. 버블 정렬만 알고 있었는데 이번 기회로 삽입, 선택 정렬","keywords":["algorithm"],"articleBody":"1~N 까지의 수를 임의로 입력 받아 정렬하는 문제 입니다. 버블, 삽입, 선택 정렬 3가지를 이용해 풀어봤습니다. 버블 정렬만 알고 있었는데 이번 기회로 삽입, 선택 정렬에 대해서 알게 되었네요. Bin-O로 표기할 경우 시간복잡도는 모두 n^2 으로 동일합니다.\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 #include #include #define MAX_ARRAY_SIZE 1000 using namespace std; void selection(int *arr, int N) { int min; int p; int temp; for (int i = 0; i \u003cN; i++) { min = 1000000; p = i; for (int j = i; j \u003c N; j++) { if (arr[j] \u003c min) { min = arr[j]; p = j; } } if (p != i) { temp = arr[p]; arr[p] = arr[i]; arr[i] = temp; } } } void insert(int *arr, int N) { int temp; for (int i = 1; i \u003c N; i++) { for (int j = i; j \u003e0; j--) { if (arr[j] \u003c arr[j-1]) { temp = arr[j]; arr[j] = arr[j-1]; arr[j-1] = temp; } } } } void bubble(int *arr,int N) { int temp; for (int i = N - 1; i \u003e -1; i--) { for (int j = 0; j \u003c i; j++) { if (arr[j] \u003e arr[j + 1]) { temp = arr[j]; arr[j] = arr[j + 1]; arr[j + 1] = temp; } } } } int main(void) { int arr[1000] = { 0 }; int temp; int n; #ifndef ONLINE_JUDGE freopen(\"input.txt\", \"r\", stdin); freopen(\"output.txt\", \"w\", stdout); #endif scanf(\"%d\", \u0026n); for (int i = 0; i \u003c n; i++) { scanf(\"%d\", \u0026temp); arr[i] = temp; } insert(arr,n); #bubble(arr,n); #selection(arr,n); for (int i = 0; i \u003c n; i++) { printf(\"%d\\n\", arr[i]); } #ifndef ONLINE_JUDGE fclose(stdin); fclose(stdout); #endif return 0; ","wordCount":"445","inLanguage":"ko","datePublished":"2017-12-23T01:37:56+08:00","dateModified":"2017-12-23T01:37:56+08:00","author":{"@type":"Person","name":"Jaejin Jang"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://jaejin0me.github.io/post/posts35/"},"publisher":{"@type":"Organization","name":"Jaejin's blog","logo":{"@type":"ImageObject","url":"https://jaejin0me.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://jaejin0me.github.io accesskey=h title="Jaejin's blog (Alt + H)">Jaejin's blog</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://jaejin0me.github.io/ title=Home><span>Home</span></a></li><li><a href=https://jaejin0me.github.io/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li><li><a href=https://jaejin0me.github.io/post/ title=Posts><span>Posts</span></a></li><li><a href=https://jaejin0me.github.io/tags/ title=Tags><span>Tags</span></a></li><li><a href=https://jaejin0me.github.io/categories/ title=Categories><span>Categories</span></a></li><li><a href=https://jaejin0me.github.io/about/ title="About Me"><span>About Me</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class=post-title>백준알고리즘 2750번, 수 정렬하기</h1><div class=post-meta><span title='2017-12-23 01:37:56 +0800 +0800'>12월 23, 2017</span>&nbsp;·&nbsp;Jaejin Jang</div></header><div class=post-content><p>1~N 까지의 수를 임의로 입력 받아 정렬하는 문제 입니다.
 버블, 삽입, 선택 정렬 3가지를 이용해 풀어봤습니다.
 버블 정렬만 알고 있었는데 이번 기회로 삽입, 선택 정렬에 대해서 알게 되었네요.
 Bin-O로 표기할 경우 시간복잡도는 모두 n^2 으로 동일합니다.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -101,104 +101,104 @@ Bin-O로 표기할 경우 시간복잡도는 모두 n^2 으로 동일합니다.<
 </span><span class=lnt>96
 </span><span class=lnt>97
 </span><span class=lnt>98
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>#include &lt;stdio.h&gt;
-</span></span><span class=line><span class=cl>#include &lt;string.h&gt;
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;stdio.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;string.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp></span>
+</span></span><span class=line><span class=cl><span class=cp>#define MAX_ARRAY_SIZE 1000
+</span></span></span><span class=line><span class=cl><span class=cp></span>
+</span></span><span class=line><span class=cl><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>#define MAX_ARRAY_SIZE 1000
+</span></span><span class=line><span class=cl><span class=kt>void</span> <span class=nf>selection</span><span class=p>(</span><span class=kt>int</span> <span class=o>*</span><span class=n>arr</span><span class=p>,</span> <span class=kt>int</span> <span class=n>N</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=n>min</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=n>p</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=n>temp</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span><span class=n>N</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>)</span>
+</span></span><span class=line><span class=cl> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=n>min</span> <span class=o>=</span> <span class=mi>1000000</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>p</span> <span class=o>=</span> <span class=n>i</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>j</span> <span class=o>=</span> <span class=n>i</span><span class=p>;</span> <span class=n>j</span> <span class=o>&lt;</span> <span class=n>N</span><span class=p>;</span> <span class=n>j</span><span class=o>++</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span>
+</span></span><span class=line><span class=cl>   <span class=k>if</span> <span class=p>(</span><span class=n>arr</span><span class=p>[</span><span class=n>j</span><span class=p>]</span> <span class=o>&lt;</span> <span class=n>min</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>   <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>min</span> <span class=o>=</span> <span class=n>arr</span><span class=p>[</span><span class=n>j</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>    <span class=n>p</span> <span class=o>=</span> <span class=n>j</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>   <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=p>(</span><span class=n>p</span> <span class=o>!=</span> <span class=n>i</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span>
+</span></span><span class=line><span class=cl>   <span class=n>temp</span> <span class=o>=</span> <span class=n>arr</span><span class=p>[</span><span class=n>p</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>   <span class=n>arr</span><span class=p>[</span><span class=n>p</span><span class=p>]</span> <span class=o>=</span> <span class=n>arr</span><span class=p>[</span><span class=n>i</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>   <span class=n>arr</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>=</span> <span class=n>temp</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>using namespace std;
+</span></span><span class=line><span class=cl><span class=kt>void</span> <span class=nf>insert</span><span class=p>(</span><span class=kt>int</span> <span class=o>*</span><span class=n>arr</span><span class=p>,</span> <span class=kt>int</span> <span class=n>N</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=n>temp</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>N</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>)</span>
+</span></span><span class=line><span class=cl> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>j</span> <span class=o>=</span> <span class=n>i</span><span class=p>;</span> <span class=n>j</span> <span class=o>&gt;</span><span class=mi>0</span><span class=p>;</span> <span class=n>j</span><span class=o>--</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span>
+</span></span><span class=line><span class=cl>   <span class=k>if</span> <span class=p>(</span><span class=n>arr</span><span class=p>[</span><span class=n>j</span><span class=p>]</span> <span class=o>&lt;</span> <span class=n>arr</span><span class=p>[</span><span class=n>j</span><span class=o>-</span><span class=mi>1</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>   <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>temp</span> <span class=o>=</span> <span class=n>arr</span><span class=p>[</span><span class=n>j</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>    <span class=n>arr</span><span class=p>[</span><span class=n>j</span><span class=p>]</span> <span class=o>=</span> <span class=n>arr</span><span class=p>[</span><span class=n>j</span><span class=o>-</span><span class=mi>1</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>    <span class=n>arr</span><span class=p>[</span><span class=n>j</span><span class=o>-</span><span class=mi>1</span><span class=p>]</span> <span class=o>=</span> <span class=n>temp</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>   <span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>void selection(int *arr, int N)
-</span></span><span class=line><span class=cl>{
-</span></span><span class=line><span class=cl> int min;
-</span></span><span class=line><span class=cl> int p;
-</span></span><span class=line><span class=cl> int temp;
-</span></span><span class=line><span class=cl> for (int i = 0; i &lt;N; i++)
-</span></span><span class=line><span class=cl> {
-</span></span><span class=line><span class=cl>  min = 1000000;
-</span></span><span class=line><span class=cl>  p = i;
-</span></span><span class=line><span class=cl>  for (int j = i; j &lt; N; j++)
-</span></span><span class=line><span class=cl>  {
-</span></span><span class=line><span class=cl>   if (arr[j] &lt; min)
-</span></span><span class=line><span class=cl>   {
-</span></span><span class=line><span class=cl>    min = arr[j];
-</span></span><span class=line><span class=cl>    p = j;
-</span></span><span class=line><span class=cl>   }
-</span></span><span class=line><span class=cl>  }
-</span></span><span class=line><span class=cl>  if (p != i)
-</span></span><span class=line><span class=cl>  {
-</span></span><span class=line><span class=cl>   temp = arr[p];
-</span></span><span class=line><span class=cl>   arr[p] = arr[i];
-</span></span><span class=line><span class=cl>   arr[i] = temp;
-</span></span><span class=line><span class=cl>  }
-</span></span><span class=line><span class=cl> }
-</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>void insert(int *arr, int N)
-</span></span><span class=line><span class=cl>{
-</span></span><span class=line><span class=cl> int temp;
-</span></span><span class=line><span class=cl> for (int i = 1; i &lt; N; i++)
-</span></span><span class=line><span class=cl> {
-</span></span><span class=line><span class=cl>  for (int j = i; j &gt;0; j--)
-</span></span><span class=line><span class=cl>  {
-</span></span><span class=line><span class=cl>   if (arr[j] &lt; arr[j-1])
-</span></span><span class=line><span class=cl>   {
-</span></span><span class=line><span class=cl>    temp = arr[j];
-</span></span><span class=line><span class=cl>    arr[j] = arr[j-1];
-</span></span><span class=line><span class=cl>    arr[j-1] = temp;
-</span></span><span class=line><span class=cl>   }
+</span></span><span class=line><span class=cl><span class=kt>void</span> <span class=nf>bubble</span><span class=p>(</span><span class=kt>int</span> <span class=o>*</span><span class=n>arr</span><span class=p>,</span><span class=kt>int</span> <span class=n>N</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=n>temp</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=n>N</span> <span class=o>-</span> <span class=mi>1</span><span class=p>;</span> <span class=n>i</span> <span class=o>&gt;</span> <span class=o>-</span><span class=mi>1</span><span class=p>;</span> <span class=n>i</span><span class=o>--</span><span class=p>)</span>
+</span></span><span class=line><span class=cl> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>j</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>j</span> <span class=o>&lt;</span> <span class=n>i</span><span class=p>;</span> <span class=n>j</span><span class=o>++</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span>
+</span></span><span class=line><span class=cl>   <span class=k>if</span> <span class=p>(</span><span class=n>arr</span><span class=p>[</span><span class=n>j</span><span class=p>]</span> <span class=o>&gt;</span> <span class=n>arr</span><span class=p>[</span><span class=n>j</span> <span class=o>+</span> <span class=mi>1</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>   <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>temp</span> <span class=o>=</span> <span class=n>arr</span><span class=p>[</span><span class=n>j</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>    <span class=n>arr</span><span class=p>[</span><span class=n>j</span><span class=p>]</span> <span class=o>=</span> <span class=n>arr</span><span class=p>[</span><span class=n>j</span> <span class=o>+</span> <span class=mi>1</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>    <span class=n>arr</span><span class=p>[</span><span class=n>j</span> <span class=o>+</span> <span class=mi>1</span><span class=p>]</span> <span class=o>=</span> <span class=n>temp</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>   <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>  }
-</span></span><span class=line><span class=cl> }
-</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>main</span><span class=p>(</span><span class=kt>void</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=n>arr</span><span class=p>[</span><span class=mi>1000</span><span class=p>]</span> <span class=o>=</span> <span class=p>{</span> <span class=mi>0</span> <span class=p>};</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=n>temp</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=n>n</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>void bubble(int *arr,int N)
-</span></span><span class=line><span class=cl>{
-</span></span><span class=line><span class=cl> int temp;
-</span></span><span class=line><span class=cl> for (int i = N - 1; i &gt; -1; i--)
-</span></span><span class=line><span class=cl> {
-</span></span><span class=line><span class=cl>  for (int j = 0; j &lt; i; j++)
-</span></span><span class=line><span class=cl>  {
-</span></span><span class=line><span class=cl>   if (arr[j] &gt; arr[j + 1])
-</span></span><span class=line><span class=cl>   {
-</span></span><span class=line><span class=cl>    temp = arr[j];
-</span></span><span class=line><span class=cl>    arr[j] = arr[j + 1];
-</span></span><span class=line><span class=cl>    arr[j + 1] = temp;
-</span></span><span class=line><span class=cl>   }
-</span></span><span class=line><span class=cl>  }
-</span></span><span class=line><span class=cl> }
-</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl><span class=cp>#ifndef ONLINE_JUDGE
+</span></span></span><span class=line><span class=cl><span class=cp></span> <span class=n>freopen</span><span class=p>(</span><span class=s>&#34;input.txt&#34;</span><span class=p>,</span> <span class=s>&#34;r&#34;</span><span class=p>,</span> <span class=n>stdin</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=n>freopen</span><span class=p>(</span><span class=s>&#34;output.txt&#34;</span><span class=p>,</span> <span class=s>&#34;w&#34;</span><span class=p>,</span> <span class=n>stdout</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=cp>#endif
+</span></span></span><span class=line><span class=cl><span class=cp></span> <span class=n>scanf</span><span class=p>(</span><span class=s>&#34;%d&#34;</span><span class=p>,</span> <span class=o>&amp;</span><span class=n>n</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>n</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=n>scanf</span><span class=p>(</span><span class=s>&#34;%d&#34;</span><span class=p>,</span> <span class=o>&amp;</span><span class=n>temp</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=n>arr</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>=</span> <span class=n>temp</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>int main(void) {
-</span></span><span class=line><span class=cl> int arr[1000] = { 0 };
-</span></span><span class=line><span class=cl> int temp;
-</span></span><span class=line><span class=cl> int n;
+</span></span><span class=line><span class=cl> <span class=n>insert</span><span class=p>(</span><span class=n>arr</span><span class=p>,</span><span class=n>n</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=cp>#bubble(arr,n);
+</span></span></span><span class=line><span class=cl><span class=cp></span>    <span class=cp>#selection(arr,n);
+</span></span></span><span class=line><span class=cl><span class=cp></span>
+</span></span><span class=line><span class=cl> <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>n</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>)</span>
+</span></span><span class=line><span class=cl> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=n>printf</span><span class=p>(</span><span class=s>&#34;%d</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>arr</span><span class=p>[</span><span class=n>i</span><span class=p>]);</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>#ifndef ONLINE_JUDGE
-</span></span><span class=line><span class=cl> freopen(&#34;input.txt&#34;, &#34;r&#34;, stdin);
-</span></span><span class=line><span class=cl> freopen(&#34;output.txt&#34;, &#34;w&#34;, stdout);
-</span></span><span class=line><span class=cl>#endif
-</span></span><span class=line><span class=cl> scanf(&#34;%d&#34;, &amp;n);
-</span></span><span class=line><span class=cl> for (int i = 0; i &lt; n; i++) {
-</span></span><span class=line><span class=cl>  scanf(&#34;%d&#34;, &amp;temp);
-</span></span><span class=line><span class=cl>  arr[i] = temp;
-</span></span><span class=line><span class=cl> }
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl> insert(arr,n);
-</span></span><span class=line><span class=cl>    #bubble(arr,n);
-</span></span><span class=line><span class=cl>    #selection(arr,n);
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl> for (int i = 0; i &lt; n; i++)
-</span></span><span class=line><span class=cl> {
-</span></span><span class=line><span class=cl>  printf(&#34;%d\n&#34;, arr[i]);
-</span></span><span class=line><span class=cl> }
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>#ifndef ONLINE_JUDGE
-</span></span><span class=line><span class=cl> fclose(stdin);
-</span></span><span class=line><span class=cl> fclose(stdout);
-</span></span><span class=line><span class=cl>#endif
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl> return 0;
+</span></span><span class=line><span class=cl><span class=cp>#ifndef ONLINE_JUDGE
+</span></span></span><span class=line><span class=cl><span class=cp></span> <span class=n>fclose</span><span class=p>(</span><span class=n>stdin</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=n>fclose</span><span class=p>(</span><span class=n>stdout</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=cp>#endif
+</span></span></span><span class=line><span class=cl><span class=cp></span>
+</span></span><span class=line><span class=cl> <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
 </span></span></code></pre></td></tr></table></div></div></div><footer class=post-footer><ul class=post-tags><li><a href=https://jaejin0me.github.io/tags/algorithm/>algorithm</a></li></ul></footer></article></main><footer class=footer><span>Jaejin Jang</span>
 <span>Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &

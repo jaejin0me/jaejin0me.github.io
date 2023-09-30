@@ -92,86 +92,86 @@ top이 m보다 작다면 m까지 push한후 pop.
 </span><span class=lnt>78
 </span><span class=lnt>79
 </span><span class=lnt>80
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>#include &lt;stdio.h&gt;
-</span></span><span class=line><span class=cl>#include &lt;string.h&gt;
-</span></span><span class=line><span class=cl>#define MAX_STACK_SIZE 1000000
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;stdio.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;string.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp>#define MAX_STACK_SIZE 1000000
+</span></span></span><span class=line><span class=cl><span class=cp></span>
+</span></span><span class=line><span class=cl><span class=n>class</span> <span class=n>Stack</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=nl>private</span><span class=p>:</span>
+</span></span><span class=line><span class=cl> <span class=kt>unsigned</span> <span class=n>size</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=n>stack</span><span class=p>[</span><span class=n>MAX_STACK_SIZE</span><span class=p>];</span>
+</span></span><span class=line><span class=cl><span class=nl>public</span><span class=p>:</span>
+</span></span><span class=line><span class=cl> <span class=nf>Stack</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=n>size</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=nf>memset</span><span class=p>(</span><span class=n>stack</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=k>sizeof</span> <span class=n>stack</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=nf>Size</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=n>size</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=kt>bool</span> <span class=nf>Empty</span><span class=p>(){</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=n>size</span> <span class=o>==</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=nf>Top</span><span class=p>(){</span>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=p>(</span><span class=n>size</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>   <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=n>stack</span><span class=p>[</span><span class=n>size</span><span class=o>-</span><span class=mi>1</span><span class=p>];</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=kt>void</span> <span class=nf>Push</span><span class=p>(</span><span class=kt>int</span> <span class=n>item</span><span class=p>)</span>
+</span></span><span class=line><span class=cl> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=n>stack</span><span class=p>[</span><span class=n>size</span><span class=o>++</span><span class=p>]</span> <span class=o>=</span> <span class=n>item</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=nf>Pop</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=n>stack</span><span class=p>[</span><span class=o>--</span><span class=n>size</span><span class=p>];</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>class Stack {
-</span></span><span class=line><span class=cl>private:
-</span></span><span class=line><span class=cl> unsigned size;
-</span></span><span class=line><span class=cl> int stack[MAX_STACK_SIZE];
-</span></span><span class=line><span class=cl>public:
-</span></span><span class=line><span class=cl> Stack() {
-</span></span><span class=line><span class=cl>  size = 0;
-</span></span><span class=line><span class=cl>  memset(stack, 0, sizeof stack);
-</span></span><span class=line><span class=cl> }
-</span></span><span class=line><span class=cl> int Size() {
-</span></span><span class=line><span class=cl>  return size;
-</span></span><span class=line><span class=cl> }
-</span></span><span class=line><span class=cl> bool Empty(){
-</span></span><span class=line><span class=cl>  return size == 0;
-</span></span><span class=line><span class=cl> }
-</span></span><span class=line><span class=cl> int Top(){
-</span></span><span class=line><span class=cl>  if (size == 0)
-</span></span><span class=line><span class=cl>   return 0;
-</span></span><span class=line><span class=cl>  return stack[size-1];
-</span></span><span class=line><span class=cl> }
-</span></span><span class=line><span class=cl> void Push(int item)
-</span></span><span class=line><span class=cl> {
-</span></span><span class=line><span class=cl>  stack[size++] = item;
-</span></span><span class=line><span class=cl> }
-</span></span><span class=line><span class=cl> int Pop() {
-</span></span><span class=line><span class=cl>  return stack[--size];
-</span></span><span class=line><span class=cl> }
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>};
+</span></span><span class=line><span class=cl><span class=p>};</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>int main(void) {
-</span></span><span class=line><span class=cl> Stack st1, st2;
-</span></span><span class=line><span class=cl> int n;
-</span></span><span class=line><span class=cl> char sign[1000000] = { 0 };
-</span></span><span class=line><span class=cl> unsigned cnt = 0;
-</span></span><span class=line><span class=cl> int item;
-</span></span><span class=line><span class=cl>#ifndef ONLINE_JUDGE
-</span></span><span class=line><span class=cl> freopen(&#34;input.txt&#34;, &#34;r&#34;, stdin);
-</span></span><span class=line><span class=cl> freopen(&#34;output.txt&#34;, &#34;w&#34;, stdout);
-</span></span><span class=line><span class=cl>#endif
-</span></span><span class=line><span class=cl> scanf(&#34;%d&#34;, &amp;n);
-</span></span><span class=line><span class=cl> for (int i = n; i &gt; 0; i--)
-</span></span><span class=line><span class=cl> {
-</span></span><span class=line><span class=cl>  st2.Push(i);
-</span></span><span class=line><span class=cl> }
-</span></span><span class=line><span class=cl> for (int i = 0; i &lt; n; i++) {
-</span></span><span class=line><span class=cl>  scanf(&#34;%d&#34;, &amp;item);
-</span></span><span class=line><span class=cl>  if (st1.Top() &lt;= item)
-</span></span><span class=line><span class=cl>  {
-</span></span><span class=line><span class=cl>   while (st1.Top() &lt; item)
-</span></span><span class=line><span class=cl>   {
-</span></span><span class=line><span class=cl>    st1.Push(st2.Pop());
-</span></span><span class=line><span class=cl>    sign[cnt++] = &#39;+&#39;;
-</span></span><span class=line><span class=cl>   }
-</span></span><span class=line><span class=cl>   st1.Pop();
-</span></span><span class=line><span class=cl>   sign[cnt++] = &#39;-&#39;;
-</span></span><span class=line><span class=cl>  }
-</span></span><span class=line><span class=cl>  else
-</span></span><span class=line><span class=cl>  {
-</span></span><span class=line><span class=cl>   printf(&#34;NO\n&#34;);
-</span></span><span class=line><span class=cl>   return 0;
-</span></span><span class=line><span class=cl>  }
-</span></span><span class=line><span class=cl> }
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>main</span><span class=p>(</span><span class=kt>void</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl> <span class=n>Stack</span> <span class=n>st1</span><span class=p>,</span> <span class=n>st2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=n>n</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=kt>char</span> <span class=n>sign</span><span class=p>[</span><span class=mi>1000000</span><span class=p>]</span> <span class=o>=</span> <span class=p>{</span> <span class=mi>0</span> <span class=p>};</span>
+</span></span><span class=line><span class=cl> <span class=kt>unsigned</span> <span class=n>cnt</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=n>item</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=cp>#ifndef ONLINE_JUDGE
+</span></span></span><span class=line><span class=cl><span class=cp></span> <span class=nf>freopen</span><span class=p>(</span><span class=s>&#34;input.txt&#34;</span><span class=p>,</span> <span class=s>&#34;r&#34;</span><span class=p>,</span> <span class=n>stdin</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=nf>freopen</span><span class=p>(</span><span class=s>&#34;output.txt&#34;</span><span class=p>,</span> <span class=s>&#34;w&#34;</span><span class=p>,</span> <span class=n>stdout</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=cp>#endif
+</span></span></span><span class=line><span class=cl><span class=cp></span> <span class=nf>scanf</span><span class=p>(</span><span class=s>&#34;%d&#34;</span><span class=p>,</span> <span class=o>&amp;</span><span class=n>n</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=n>n</span><span class=p>;</span> <span class=n>i</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span><span class=o>--</span><span class=p>)</span>
+</span></span><span class=line><span class=cl> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=n>st2</span><span class=p>.</span><span class=nf>Push</span><span class=p>(</span><span class=n>i</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>n</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nf>scanf</span><span class=p>(</span><span class=s>&#34;%d&#34;</span><span class=p>,</span> <span class=o>&amp;</span><span class=n>item</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=p>(</span><span class=n>st1</span><span class=p>.</span><span class=nf>Top</span><span class=p>()</span> <span class=o>&lt;=</span> <span class=n>item</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span>
+</span></span><span class=line><span class=cl>   <span class=k>while</span> <span class=p>(</span><span class=n>st1</span><span class=p>.</span><span class=nf>Top</span><span class=p>()</span> <span class=o>&lt;</span> <span class=n>item</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>   <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>st1</span><span class=p>.</span><span class=nf>Push</span><span class=p>(</span><span class=n>st2</span><span class=p>.</span><span class=nf>Pop</span><span class=p>());</span>
+</span></span><span class=line><span class=cl>    <span class=n>sign</span><span class=p>[</span><span class=n>cnt</span><span class=o>++</span><span class=p>]</span> <span class=o>=</span> <span class=sc>&#39;+&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>   <span class=p>}</span>
+</span></span><span class=line><span class=cl>   <span class=n>st1</span><span class=p>.</span><span class=nf>Pop</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>   <span class=n>sign</span><span class=p>[</span><span class=n>cnt</span><span class=o>++</span><span class=p>]</span> <span class=o>=</span> <span class=sc>&#39;-&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=k>else</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span>
+</span></span><span class=line><span class=cl>   <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;NO</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>   <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
 </span></span><span class=line><span class=cl> 
-</span></span><span class=line><span class=cl> #ifndef ONLINE_JUDGE
-</span></span><span class=line><span class=cl> fclose(stdin);
-</span></span><span class=line><span class=cl> fclose(stdout);
-</span></span><span class=line><span class=cl> #endif
+</span></span><span class=line><span class=cl> <span class=cp>#ifndef ONLINE_JUDGE
+</span></span></span><span class=line><span class=cl><span class=cp></span> <span class=nf>fclose</span><span class=p>(</span><span class=n>stdin</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=nf>fclose</span><span class=p>(</span><span class=n>stdout</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=cp>#endif
+</span></span></span><span class=line><span class=cl><span class=cp></span>
+</span></span><span class=line><span class=cl> <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>cnt</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;%c</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>sign</span><span class=p>[</span><span class=n>i</span><span class=p>]);</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl> for (int i = 0; i &lt; cnt; i++) {
-</span></span><span class=line><span class=cl>  printf(&#34;%c\n&#34;, sign[i]);
-</span></span><span class=line><span class=cl> }
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl> return 0;
-</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl> <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></td></tr></table></div></div></div><footer class=post-footer><ul class=post-tags><li><a href=https://jaejin0me.github.io/tags/algorithm/>algorithm</a></li></ul></footer></article></main><footer class=footer><span>Jaejin Jang</span>
 <span>Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &

@@ -108,112 +108,112 @@ push,pop,empty,size,front,back 함수를 구현해야 한다.
 </span><span class=lnt>104
 </span><span class=lnt>105
 </span><span class=lnt>106
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>#include &lt;stdio.h&gt;
-</span></span><span class=line><span class=cl>#include &lt;string.h&gt;
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;stdio.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;string.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp></span>
+</span></span><span class=line><span class=cl><span class=cp>#define MAX_QUEUE_SIZE 100000
+</span></span></span><span class=line><span class=cl><span class=cp></span>
+</span></span><span class=line><span class=cl><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>#define MAX_QUEUE_SIZE 100000
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>Queue</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=k>private</span><span class=o>:</span>
+</span></span><span class=line><span class=cl> <span class=kt>unsigned</span> <span class=kt>int</span> <span class=n>first</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=kt>unsigned</span> <span class=kt>int</span> <span class=n>last</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=kt>unsigned</span> <span class=kt>int</span> <span class=n>size</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=n>queue</span><span class=p>[</span><span class=n>MAX_QUEUE_SIZE</span><span class=p>];</span>
+</span></span><span class=line><span class=cl><span class=k>public</span><span class=o>:</span>
+</span></span><span class=line><span class=cl> <span class=n>Queue</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=n>first</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>last</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>size</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>memset</span><span class=p>(</span><span class=n>queue</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=k>sizeof</span> <span class=n>queue</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=nf>Size</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=n>size</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=kt>bool</span> <span class=nf>Empty</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=n>size</span> <span class=o>==</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=nf>Front</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=p>(</span><span class=n>size</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>   <span class=k>return</span> <span class=o>-</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=n>queue</span><span class=p>[</span><span class=n>first</span><span class=p>];</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=nf>Back</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=p>(</span><span class=n>size</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>   <span class=k>return</span> <span class=o>-</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=n>queue</span><span class=p>[(</span><span class=n>last</span><span class=o>-</span><span class=mi>1</span><span class=p>)</span><span class=o>%</span><span class=n>MAX_QUEUE_SIZE</span><span class=p>];</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>using namespace std;
+</span></span><span class=line><span class=cl> <span class=kt>void</span> <span class=nf>Push</span><span class=p>(</span><span class=kt>int</span> <span class=n>item</span><span class=p>)</span>
+</span></span><span class=line><span class=cl> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=n>size</span><span class=o>++</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>queue</span><span class=p>[</span><span class=n>last</span><span class=o>++</span><span class=p>]</span> <span class=o>=</span> <span class=n>item</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=p>(</span><span class=n>last</span> <span class=o>==</span> <span class=n>MAX_QUEUE_SIZE</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>   <span class=n>last</span> <span class=o>%=</span> <span class=n>MAX_QUEUE_SIZE</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>class Queue {
-</span></span><span class=line><span class=cl>private:
-</span></span><span class=line><span class=cl> unsigned int first;
-</span></span><span class=line><span class=cl> unsigned int last;
-</span></span><span class=line><span class=cl> unsigned int size;
-</span></span><span class=line><span class=cl> int queue[MAX_QUEUE_SIZE];
-</span></span><span class=line><span class=cl>public:
-</span></span><span class=line><span class=cl> Queue() {
-</span></span><span class=line><span class=cl>  first = 0;
-</span></span><span class=line><span class=cl>  last = 0;
-</span></span><span class=line><span class=cl>  size = 0;
-</span></span><span class=line><span class=cl>  memset(queue, 0, sizeof queue);
-</span></span><span class=line><span class=cl> }
-</span></span><span class=line><span class=cl> int Size() {
-</span></span><span class=line><span class=cl>  return size;
-</span></span><span class=line><span class=cl> }
-</span></span><span class=line><span class=cl> bool Empty() {
-</span></span><span class=line><span class=cl>  return size == 0;
-</span></span><span class=line><span class=cl> }
-</span></span><span class=line><span class=cl> int Front() {
-</span></span><span class=line><span class=cl>  if (size == 0)
-</span></span><span class=line><span class=cl>   return -1;
-</span></span><span class=line><span class=cl>  return queue[first];
-</span></span><span class=line><span class=cl> }
-</span></span><span class=line><span class=cl> int Back() {
-</span></span><span class=line><span class=cl>  if (size == 0)
-</span></span><span class=line><span class=cl>   return -1;
-</span></span><span class=line><span class=cl>  return queue[(last-1)%MAX_QUEUE_SIZE];
-</span></span><span class=line><span class=cl> }
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=nf>Pop</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=p>(</span><span class=n>size</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>   <span class=k>return</span> <span class=o>-</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=kt>int</span> <span class=n>temp</span> <span class=o>=</span> <span class=n>queue</span><span class=p>[</span><span class=n>first</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>  <span class=n>size</span><span class=o>--</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>first</span><span class=o>++</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=p>(</span><span class=n>first</span> <span class=o>==</span> <span class=n>MAX_QUEUE_SIZE</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>   <span class=n>first</span> <span class=o>%=</span> <span class=n>MAX_QUEUE_SIZE</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=n>temp</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl> void Push(int item)
-</span></span><span class=line><span class=cl> {
-</span></span><span class=line><span class=cl>  size++;
-</span></span><span class=line><span class=cl>  queue[last++] = item;
-</span></span><span class=line><span class=cl>  if (last == MAX_QUEUE_SIZE)
-</span></span><span class=line><span class=cl>   last %= MAX_QUEUE_SIZE;
-</span></span><span class=line><span class=cl> }
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>main</span><span class=p>(</span><span class=kt>void</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl> <span class=n>Queue</span> <span class=n>q1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=kt>char</span> <span class=n>sign</span><span class=p>[</span><span class=mi>6</span><span class=p>]</span> <span class=o>=</span> <span class=p>{</span> <span class=mi>0</span> <span class=p>};</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=n>n</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=n>item</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl> int Pop() {
-</span></span><span class=line><span class=cl>  if (size == 0)
-</span></span><span class=line><span class=cl>   return -1;
-</span></span><span class=line><span class=cl>  int temp = queue[first];
-</span></span><span class=line><span class=cl>  size--;
-</span></span><span class=line><span class=cl>  first++;
-</span></span><span class=line><span class=cl>  if (first == MAX_QUEUE_SIZE)
-</span></span><span class=line><span class=cl>   first %= MAX_QUEUE_SIZE;
-</span></span><span class=line><span class=cl>  return temp;
-</span></span><span class=line><span class=cl> }
-</span></span><span class=line><span class=cl>};
+</span></span><span class=line><span class=cl><span class=cp>#ifndef ONLINE_JUDGE
+</span></span></span><span class=line><span class=cl><span class=cp></span> <span class=n>freopen</span><span class=p>(</span><span class=s>&#34;input.txt&#34;</span><span class=p>,</span> <span class=s>&#34;r&#34;</span><span class=p>,</span> <span class=n>stdin</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=n>freopen</span><span class=p>(</span><span class=s>&#34;output.txt&#34;</span><span class=p>,</span> <span class=s>&#34;w&#34;</span><span class=p>,</span> <span class=n>stdout</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=cp>#endif
+</span></span></span><span class=line><span class=cl><span class=cp></span>
+</span></span><span class=line><span class=cl> <span class=n>scanf</span><span class=p>(</span><span class=s>&#34;%d&#34;</span><span class=p>,</span> <span class=o>&amp;</span><span class=n>n</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>n</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>)</span>
+</span></span><span class=line><span class=cl> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=n>scanf</span><span class=p>(</span><span class=s>&#34;%s&#34;</span><span class=p>,</span> <span class=n>sign</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=p>(</span><span class=n>strstr</span><span class=p>(</span><span class=n>sign</span><span class=p>,</span> <span class=s>&#34;push&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span>
+</span></span><span class=line><span class=cl>   <span class=n>scanf</span><span class=p>(</span><span class=s>&#34;%d&#34;</span><span class=p>,</span> <span class=o>&amp;</span><span class=n>item</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>   <span class=n>q1</span><span class=p>.</span><span class=n>Push</span><span class=p>(</span><span class=n>item</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=k>else</span> <span class=k>if</span> <span class=p>(</span><span class=n>strstr</span><span class=p>(</span><span class=n>sign</span><span class=p>,</span> <span class=s>&#34;pop&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span>
+</span></span><span class=line><span class=cl>   <span class=n>printf</span><span class=p>(</span><span class=s>&#34;%d</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>q1</span><span class=p>.</span><span class=n>Pop</span><span class=p>());</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=k>else</span> <span class=k>if</span> <span class=p>(</span><span class=n>strstr</span><span class=p>(</span><span class=n>sign</span><span class=p>,</span> <span class=s>&#34;front&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span>
+</span></span><span class=line><span class=cl>   <span class=n>printf</span><span class=p>(</span><span class=s>&#34;%d</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>q1</span><span class=p>.</span><span class=n>Front</span><span class=p>());</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=k>else</span> <span class=k>if</span> <span class=p>(</span><span class=n>strstr</span><span class=p>(</span><span class=n>sign</span><span class=p>,</span> <span class=s>&#34;back&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span>
+</span></span><span class=line><span class=cl>   <span class=n>printf</span><span class=p>(</span><span class=s>&#34;%d</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>q1</span><span class=p>.</span><span class=n>Back</span><span class=p>());</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=k>else</span> <span class=k>if</span> <span class=p>(</span><span class=n>strstr</span><span class=p>(</span><span class=n>sign</span><span class=p>,</span> <span class=s>&#34;size&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span>
+</span></span><span class=line><span class=cl>   <span class=n>printf</span><span class=p>(</span><span class=s>&#34;%d</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>q1</span><span class=p>.</span><span class=n>Size</span><span class=p>());</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=k>else</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span>
+</span></span><span class=line><span class=cl>   <span class=n>printf</span><span class=p>(</span><span class=s>&#34;%d</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>q1</span><span class=p>.</span><span class=n>Empty</span><span class=p>());</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>  
+</span></span><span class=line><span class=cl> <span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>int main(void) {
-</span></span><span class=line><span class=cl> Queue q1;
-</span></span><span class=line><span class=cl> char sign[6] = { 0 };
-</span></span><span class=line><span class=cl> int n = 0;
-</span></span><span class=line><span class=cl> int item = 0;
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>#ifndef ONLINE_JUDGE
-</span></span><span class=line><span class=cl> freopen(&#34;input.txt&#34;, &#34;r&#34;, stdin);
-</span></span><span class=line><span class=cl> freopen(&#34;output.txt&#34;, &#34;w&#34;, stdout);
-</span></span><span class=line><span class=cl>#endif
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl> scanf(&#34;%d&#34;, &amp;n);
-</span></span><span class=line><span class=cl> for (int i = 0; i &lt; n; i++)
-</span></span><span class=line><span class=cl> {
-</span></span><span class=line><span class=cl>  scanf(&#34;%s&#34;, sign);
-</span></span><span class=line><span class=cl>  if (strstr(sign, &#34;push&#34;))
-</span></span><span class=line><span class=cl>  {
-</span></span><span class=line><span class=cl>   scanf(&#34;%d&#34;, &amp;item);
-</span></span><span class=line><span class=cl>   q1.Push(item);
-</span></span><span class=line><span class=cl>  }
-</span></span><span class=line><span class=cl>  else if (strstr(sign, &#34;pop&#34;))
-</span></span><span class=line><span class=cl>  {
-</span></span><span class=line><span class=cl>   printf(&#34;%d\n&#34;, q1.Pop());
-</span></span><span class=line><span class=cl>  }
-</span></span><span class=line><span class=cl>  else if (strstr(sign, &#34;front&#34;))
-</span></span><span class=line><span class=cl>  {
-</span></span><span class=line><span class=cl>   printf(&#34;%d\n&#34;, q1.Front());
-</span></span><span class=line><span class=cl>  }
-</span></span><span class=line><span class=cl>  else if (strstr(sign, &#34;back&#34;))
-</span></span><span class=line><span class=cl>  {
-</span></span><span class=line><span class=cl>   printf(&#34;%d\n&#34;, q1.Back());
-</span></span><span class=line><span class=cl>  }
-</span></span><span class=line><span class=cl>  else if (strstr(sign, &#34;size&#34;))
-</span></span><span class=line><span class=cl>  {
-</span></span><span class=line><span class=cl>   printf(&#34;%d\n&#34;, q1.Size());
-</span></span><span class=line><span class=cl>  }
-</span></span><span class=line><span class=cl>  else
-</span></span><span class=line><span class=cl>  {
-</span></span><span class=line><span class=cl>   printf(&#34;%d\n&#34;, q1.Empty());
-</span></span><span class=line><span class=cl>  }  
-</span></span><span class=line><span class=cl> }
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>#ifndef ONLINE_JUDGE
-</span></span><span class=line><span class=cl> fclose(stdin);
-</span></span><span class=line><span class=cl> fclose(stdout);
-</span></span><span class=line><span class=cl>#endif
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl> return 0;
-</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl><span class=cp>#ifndef ONLINE_JUDGE
+</span></span></span><span class=line><span class=cl><span class=cp></span> <span class=n>fclose</span><span class=p>(</span><span class=n>stdin</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=n>fclose</span><span class=p>(</span><span class=n>stdout</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=cp>#endif
+</span></span></span><span class=line><span class=cl><span class=cp></span>
+</span></span><span class=line><span class=cl> <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></td></tr></table></div></div></div><footer class=post-footer><ul class=post-tags><li><a href=https://jaejin0me.github.io/tags/algorithm/>algorithm</a></li></ul></footer></article></main><footer class=footer><span>Jaejin Jang</span>
 <span>Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &

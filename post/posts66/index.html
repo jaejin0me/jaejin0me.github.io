@@ -33,39 +33,39 @@
 </span><span class=lnt>31
 </span><span class=lnt>32
 </span><span class=lnt>33
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>#include &lt;iostream&gt;
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;iostream&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp></span>
+</span></span><span class=line><span class=cl><span class=cp>#pragma warning(disable:4996)
+</span></span></span><span class=line><span class=cl><span class=cp></span>
+</span></span><span class=line><span class=cl><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>#pragma warning(disable:4996)
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>main</span><span class=p>(</span><span class=kt>void</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=kt>int</span> <span class=n>num</span><span class=p>,</span> <span class=n>tmp</span><span class=p>,</span> <span class=n>cnt</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>using namespace std;
+</span></span><span class=line><span class=cl>	<span class=n>cin</span><span class=p>.</span><span class=n>tie</span><span class=p>(</span><span class=nb>NULL</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>	<span class=n>ios_base</span><span class=o>::</span><span class=n>sync_with_stdio</span><span class=p>(</span><span class=nb>false</span><span class=p>);</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>int main(void) {
-</span></span><span class=line><span class=cl>	int num, tmp, cnt = 0;
+</span></span><span class=line><span class=cl><span class=cp>#ifndef ONLINE_JUDGE
+</span></span></span><span class=line><span class=cl><span class=cp></span>	<span class=n>freopen</span><span class=p>(</span><span class=s>&#34;input.txt&#34;</span><span class=p>,</span> <span class=s>&#34;r&#34;</span><span class=p>,</span> <span class=n>stdin</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>	<span class=n>freopen</span><span class=p>(</span><span class=s>&#34;output.txt&#34;</span><span class=p>,</span> <span class=s>&#34;w&#34;</span><span class=p>,</span> <span class=n>stdout</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=cp>#endif
+</span></span></span><span class=line><span class=cl><span class=cp></span>
+</span></span><span class=line><span class=cl>	<span class=n>cin</span> <span class=o>&gt;&gt;</span> <span class=n>num</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>	<span class=n>tmp</span> <span class=o>=</span> <span class=n>num</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>	<span class=k>do</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=n>tmp</span> <span class=o>=</span> <span class=p>((</span><span class=n>tmp</span> <span class=o>%</span> <span class=mi>10</span><span class=p>)</span> <span class=o>*</span> <span class=mi>10</span><span class=p>)</span> <span class=o>+</span> <span class=p>(</span><span class=n>tmp</span><span class=o>%</span><span class=mi>10</span> <span class=o>+</span> <span class=n>tmp</span><span class=o>/</span><span class=mi>10</span><span class=p>)</span><span class=o>%</span><span class=mi>10</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>		<span class=n>cnt</span><span class=o>++</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span> <span class=k>while</span> <span class=p>(</span><span class=n>tmp</span> <span class=o>!=</span> <span class=n>num</span><span class=p>);</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>	cin.tie(NULL);
-</span></span><span class=line><span class=cl>	ios_base::sync_with_stdio(false);
+</span></span><span class=line><span class=cl>	<span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=n>cnt</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>#ifndef ONLINE_JUDGE
-</span></span><span class=line><span class=cl>	freopen(&#34;input.txt&#34;, &#34;r&#34;, stdin);
-</span></span><span class=line><span class=cl>	freopen(&#34;output.txt&#34;, &#34;w&#34;, stdout);
-</span></span><span class=line><span class=cl>#endif
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>	cin &gt;&gt; num;
-</span></span><span class=line><span class=cl>	tmp = num;
-</span></span><span class=line><span class=cl>	do {
-</span></span><span class=line><span class=cl>		tmp = ((tmp % 10) * 10) + (tmp%10 + tmp/10)%10;
-</span></span><span class=line><span class=cl>		cnt++;
-</span></span><span class=line><span class=cl>	} while (tmp != num);
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>	cout &lt;&lt; cnt;
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>#ifndef ONLINE_JUDGE
-</span></span><span class=line><span class=cl>	fclose(stdin);
-</span></span><span class=line><span class=cl>	fclose(stdout);
-</span></span><span class=line><span class=cl>#endif
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>	return 0;
-</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl><span class=cp>#ifndef ONLINE_JUDGE
+</span></span></span><span class=line><span class=cl><span class=cp></span>	<span class=n>fclose</span><span class=p>(</span><span class=n>stdin</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>	<span class=n>fclose</span><span class=p>(</span><span class=n>stdout</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=cp>#endif
+</span></span></span><span class=line><span class=cl><span class=cp></span>
+</span></span><span class=line><span class=cl>	<span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></td></tr></table></div></div></div><footer class=post-footer><ul class=post-tags><li><a href=https://jaejin0me.github.io/tags/algorithm/>algorithm</a></li></ul></footer></article></main><footer class=footer><span>Jaejin Jang</span>
 <span>Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
