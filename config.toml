@@ -115,6 +115,9 @@ copyright = "Jaejin Jang"            # default: author.name ↓        # 默认�
 
   uglyURLs = false          # please keep same with uglyurls setting
 
+  # 댓글 기능 추가 (2023.10.01 - utterances)
+  comments = true
+
   [params.publicCDN]        # load these files from public cdn                          # 启用公共CDN，需自行定义
     enable = true
     jquery = '<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>'
@@ -171,10 +174,6 @@ copyright = "Jaejin Jang"            # default: author.name ↓        # 默认�
     e-linkedin = "https://www.linkedin.com/in/jaejin0me"
     g-github = "https://github.com/jaejin0me"
 	
-  [params.utterances]				# Custom
-    owner = "jaejin0me"				# Custom
-    repo = "jaejin0me.github.io"	# Custom
-
 # See https://gohugo.io/about/hugo-and-gdpr/
 [privacy]
   [privacy.googleAnalytics]
