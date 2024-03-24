@@ -15,7 +15,7 @@ mathjax: false
 
 ## Work Experience
 ### [Korea Testing Laboratory](https://www.ktl.re.kr), Software Engineer (2020.10 ~ )  
-* Certiplanner(Mobile Device Testing & Certification Solution) Development, Full-stack  
+* TIC platform(Mobile Device Testing & Certification Solution) Development, Full-stack  
 
 ### [Genians](https://www.genians.com), Software Engineer (2018.03 ~ 2020.09)  
 * Genian NAC(Network Access Control) Development, Engine  
