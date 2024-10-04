@@ -1,1 +1,1742 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Sql 튜닝 on Jaejin's blog</title><link>https://jaejin0me.github.io/tags/sql-%ED%8A%9C%EB%8B%9D/</link><description>Recent content in Sql 튜닝 on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Wed, 29 May 2019 01:39:17 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/tags/sql-%ED%8A%9C%EB%8B%9D/index.xml" rel="self" type="application/rss+xml"/><item><title>책뿌숴짐 - SQL 레벨업 9</title><link>https://jaejin0me.github.io/post/posts182/</link><pubDate>Wed, 29 May 2019 01:39:17 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts182/</guid><description>9장. 갱신과 데이터 모델 - 망치와 못 26강. 갱신을 효율적으로 갱신을 효율적으로 수행하는 SQL을 케이스 스터디 1. NULL 채우기 1 2 3 4 5 6 7 8 9 UPDATE OmitTbl SET val = (SELECT</description></item><item><title>책뿌수기 - SQL 레벨업 8</title><link>https://jaejin0me.github.io/post/posts181/</link><pubDate>Tue, 28 May 2019 23:49:45 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts181/</guid><description>8장. SQL의 순서 - 깨어나는 절차 지향 sql은 관계 모델의 이론에 기초하고 있기 때문에 순번을 다루기 위한 기능이 없다. 하지만 레코드에 순번을 붙여 처리하는 경</description></item><item><title>책뿌수기 - SQL 레벨업 7</title><link>https://jaejin0me.github.io/post/posts109/</link><pubDate>Thu, 07 Feb 2019 22:20:56 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts109/</guid><description>최근 sql 튜닝에 대해서 책도 보고 유투브에서 동영상도 몇편 봤었는데 그 중에서 저에게 가장 큰 통찰?을 줬던 영상이 있어서 링크 올립니다 [SQL Unplugged 2013] 쉽고 재미있는 인덱스 이야</description></item><item><title>책뿌수기 - SQL 레벨업 6</title><link>https://jaejin0me.github.io/post/posts107/</link><pubDate>Thu, 31 Jan 2019 22:20:56 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts107/</guid><description>6. 결합(결합을 지배하는 자가 SQL을 지배한다) ch 18. 기능적인 관점으로 구분하는 결합의 종류 크로스 결합 내부 결합 외부 결합 자기 결합 등가 결합/비등가 결합 자연</description></item><item><title>책뿌수기 - SQL 레벨업 7</title><link>https://jaejin0me.github.io/post/posts108/</link><pubDate>Thu, 31 Jan 2019 22:20:56 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts108/</guid><description>7. 서브쿼리(곤란한 부분은 분할해야만 할까?) ch 21. 서브쿼리가 일으키는 폐해 1) 서브쿼리의 문제점 성능적 문제는 서브쿼리가 실체적인 데이터를 저장하고 있지 않다</description></item><item><title>책뿌수기 - SQL 레벨업 5</title><link>https://jaejin0me.github.io/post/posts106/</link><pubDate>Wed, 30 Jan 2019 22:20:56 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts106/</guid><description>인용하는 그림은 다양한 곳에서 가져왔음을 밝힙니다 5. 반복된(절차 지향형의 속박) ch 14. 반복문 의존증 RDB는 관계 전체를 조작의 대상으로 삼기 때문에 설계상에서</description></item><item><title>책뿌수기 - SQL 레벨업 4</title><link>https://jaejin0me.github.io/post/posts105/</link><pubDate>Tue, 29 Jan 2019 22:20:56 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts105/</guid><description>4. 집약과 자르기 ch 12. 집약 COUNT, SUM, AVG, MAX, MIN(Aggregate function) 1) 여러 개의 리코드를 한 개의 레코드로 집합 필드 수가 다르면 UNION 적용이 불가능하다. 또한 UNION으로 여러개의 쿼리를 머지</description></item><item><title>책뿌수기 - SQL 레벨업 3</title><link>https://jaejin0me.github.io/post/posts104/</link><pubDate>Sun, 20 Jan 2019 22:20:56 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts104/</guid><description>3. SQL의 조건 분기 ch 8. UNION을 사용한 쓸데없이 긴 표현 UNION을 사용한 조건 분기는 좋지 않다. UNION은 내부적으로 여러개의 SELECT 구문을 실행하는 실</description></item><item><title>책뿌수기 - SQL 레벨업-2</title><link>https://jaejin0me.github.io/post/posts103/</link><pubDate>Sun, 20 Jan 2019 22:20:56 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts103/</guid><description>인용하는 그림은 다양한 곳에서 가져왔음을 밝힙니다 1. SQL 기초 ch 6. SELECT 구문 1) SELECT 구와 FROM 구 SELECT 1 처럼 상수를 선택하는 경우 FROM이 필요없다. )2) WHERE 구 WHERE 구의 조건이 많</description></item><item><title>책뿌수기 - SQL 레벨업-1</title><link>https://jaejin0me.github.io/post/posts102/</link><pubDate>Sun, 30 Dec 2018 22:20:56 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts102/</guid><description>인용하는 그림은 다양한 곳에서 가져왔음을 밝힙니다 1. DBMS 아키텍처 ch 1.DBMS 아키텍처 개요 1) 쿼리 평가 엔진 SQL 구문을 분석하고, 어떤 순서로 기억장치의 데이터에 접근할지</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Sql 튜닝 on Jaejin's blog</title><link>https://jaejin0me.github.io/tags/sql-%ED%8A%9C%EB%8B%9D/</link><description>Recent content in Sql 튜닝 on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Wed, 29 May 2019 01:39:17 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/tags/sql-%ED%8A%9C%EB%8B%9D/index.xml" rel="self" type="application/rss+xml"/><item><title>책뿌숴짐 - SQL 레벨업 9</title><link>https://jaejin0me.github.io/post/posts182/</link><pubDate>Wed, 29 May 2019 01:39:17 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts182/</guid><description>&lt;h1 id="9장-갱신과-데이터-모델---망치와-못">9장. 갱신과 데이터 모델 - 망치와 못&lt;/h1>
+&lt;h2 id="26강-갱신을-효율적으로">26강. 갱신을 효율적으로&lt;/h2>
+&lt;ul>
+&lt;li>갱신을 효율적으로 수행하는 SQL을 케이스 스터디&lt;/li>
+&lt;/ul>
+&lt;h3 id="1-null-채우기">1. NULL 채우기&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">UPDATE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OmitTbl&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">SET&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">val&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">val&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OmitTbl&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OT1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OT1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">keycol&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">MAX&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">seq&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OmitTbl&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OT2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OT2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">keycol&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OmitTbl&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">keycol&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OT2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">seq&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OmitTbl&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">seq&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OT2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">val&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">IS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">))&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">val&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">IS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="2-반대로-null을-설정">2. 반대로 NULL을 설정&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">UPDATE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OmitTbl&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">SET&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">val&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">CASE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">WHEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">val&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">val&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OmitTbl&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">01&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">01&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">keycol&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OmitTbl&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">keycol&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">01&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">seq&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">MAX&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">seq&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OmitTbl&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">02&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">02&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">keycol&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OmitTbl&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">keycol&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">02&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">seq&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OmitTbl&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">seq&lt;/span>&lt;span class="p">))&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">THEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ELSE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">val&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">END&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="27강-레코드에서-필드로의-갱신">27강. 레코드에서 필드로의 갱신&lt;/h2>
+&lt;h3 id="1-필드를-하나씩-갱신">1. 필드를 하나씩 갱신&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">UPDATE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreCols&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">SET&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">score_en&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">score&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreRow&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SR&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SR&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">studend_id&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreCols&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">studend_id&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">subject&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;영어&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">score_nl&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">score&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreRow&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SR&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SR&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">studend_id&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreCols&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">studend_id&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">subject&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;국어&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">score_mt&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">score&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreRow&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SR&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SR&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">studend_id&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreCols&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">studend_id&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">subject&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;수학&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>명확하지만 항목별로 서브쿼리를 필요로하기 때문에 비효율적이다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-다중-필드-할당">2. 다중 필드 할당&lt;/h3>
+&lt;ul>
+&lt;li>여러 개의 필드를 리스트화하고 한번에 갱신&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">UPDATE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreCols&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">SET&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">score_en&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">score_nl&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">score_mt&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">MAX&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">CASE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">WHEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">subject&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;영어&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">THEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">score&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ELSE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">END&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">score_en&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">MAX&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">CASE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">WHEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">subject&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;국어&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">THEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">score&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ELSE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">END&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">score_nl&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">MAX&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">CASE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">WHEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">subject&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;수학&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">THEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">score&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ELSE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">END&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">score_mt&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreRows&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SR&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SR&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreCols&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>상관 서브쿼리가 하나로 정리된 대신, ScoreRows 테이블에 대한 접근이 INDEX UNIQUE SCAN -&amp;gt; INDEX RANGE SCAN, MAX 함수의 정렬리 추가되므로 트레이드오프가 있다.&lt;/li>
+&lt;/ul>
+&lt;h4 id="1-다중-필드-할당">1) 다중 필드 할당&lt;/h4>
+&lt;h4 id="2-스칼라-서브쿼리">2) 스칼라 서브쿼리&lt;/h4>
+&lt;ul>
+&lt;li>MAX함수를 적용해 집약시킴으로써 가능해진다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-not-null-제약이-걸려있는-경">3. NOT NULL 제약이 걸려있는 경&lt;/h3>
+&lt;h4 id="1-update-구문-사용">1) UPDATE 구문 사용&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">UPDATE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreColsNN&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">SET&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">score_en&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">COALESCE&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">score&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreRow&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SR&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SR&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">studend_id&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreCols&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">studend_id&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">subject&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;영어&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">score_nl&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">COALESCE&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">score&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreRow&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SR&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SR&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">studend_id&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreCols&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">studend_id&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">subject&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;국어&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">score_mt&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">COALESCE&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">score&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreRow&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SR&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SR&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">studend_id&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreCols&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">studend_id&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">subject&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;수학&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">EXISTS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreRows&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreColsNN&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">studend_id&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>테이블 사이에 일치하지 않는 레코드는 제거&lt;/li>
+&lt;li>학생은 존재하지만 과목이 없는 경우 처리&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-merge-구문-사용">2) MERGE 구문 사용&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="n">MERGE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">INTO&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreColsNN&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">USING&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">COALESCE&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">MAX&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">CASE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">WHEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">subject&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;영어&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">THEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">score&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ELSE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">END&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Score_en&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">COALESCE&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">MAX&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">CASE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">WHEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">subject&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;국어&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">THEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">score&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ELSE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">END&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Score_nl&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">COALESCE&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">MAX&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">CASE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">WHEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">subject&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;수학&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">THEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">score&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ELSE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">END&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Score_mt&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreRows&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">GROUP&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">By&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">studend_id&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SR&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ON&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ScoreColsNN&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SR&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">MATCHED&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">THEN&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">UPDATE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">SET&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreColsNN&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">score_en&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SR&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">score_en&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">coreColsNN&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">score_nl&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SR&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">score_nl&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreColsNN&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">score_mt&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SR&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">score_mt&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>결합조건을 ON 구 하나에 묶을 수 있다.&lt;/li>
+&lt;li>ScoreRows 테이블 풀 스캔 1회 + 정렬 1회로 고정된다.&lt;/li>
+&lt;li>나은 선택지로 고려해볼만 하다.&lt;/li>
+&lt;/ul>
+&lt;h2 id="28강-필드에서-레코드로-변경">28강. 필드에서 레코드로 변경&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">UPDATE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreRows&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">SET&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Score&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">CASE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreRows&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">subject&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;영어&amp;#39;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">THEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">score_en&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;국어&amp;#39;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">THEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">score_nl&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;수학&amp;#39;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">THEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">score_nt&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ELSE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">END&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreCols&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ScoreRow&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="29강-같은-테이블의-다른-레코드로-갱신">29강. 같은 테이블의 다른 레코드로 갱신&lt;/h2>
+&lt;h3 id="1-상관-서브쿼리-사용">1. 상관 서브쿼리 사용&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">INSERT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">INTO&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Stocks2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">brand&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">sale_date&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">price&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">CASE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SIGN&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">price&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">price&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Stocks&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">S1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">brand&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Stocks&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">brand&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">sale_date&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">MAX&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sale_date&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Stocks&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">S2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">brand&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Stocks&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">brand&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">sale_date&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Stock&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">sale_date&lt;/span>&lt;span class="p">)))&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">THEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;아래화살표&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">THEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;오른쪽화살표&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">THEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;위쪽화살표&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ELSE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">END&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Stocks&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">S2&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>상관서브쿼리 때문에 테이블에 여러번 접근해야 한다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-윈도우-함수-적용">2. 윈도우 함수 적용&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">INSERT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">INTO&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Stocks2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">brand&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">sale_date&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">price&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">CASE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SIGN&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">price&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">MAX&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">price&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OVER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">PARTITION&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">brand&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ORDER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">sale_date&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ROWS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BETWEEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">PRECEDING&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">PRECEDING&lt;/span>&lt;span class="p">))&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">THEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;아래화살표&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">THEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;오른쪽화살표&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">THEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;위쪽화살표&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ELSE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">END&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Stocks&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">S2&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>매우 간단하고 효율적이 된다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-insert와-update-어떤-것이-좋을까">3. INSERT와 UPDATE 어떤 것이 좋을까?&lt;/h3>
+&lt;ul>
+&lt;li>INSERT SELECT 장점&lt;/li>
+&lt;li>처리가 더 빠름&lt;/li>
+&lt;li>자기참조를 허가하지 않는 DB에서도 사용가능&lt;/li>
+&lt;li>단점&lt;/li>
+&lt;li>같은 데이털르 두개 만들어야하므로 저장소를 2배 이상 소비&lt;/li>
+&lt;li>뷰로 만들어도 되나 트레이드 오프가 있다&lt;/li>
+&lt;/ul>
+&lt;h2 id="30강-갱신이-초래하는-트레이드오프">30강. 갱신이 초래하는 트레이드오프&lt;/h2>
+&lt;ul>
+&lt;li>주문일과 배송 예정일 차이가 3일 이상 차이나는 것&lt;/li>
+&lt;/ul>
+&lt;h3 id="1-sql을-사용하는-방법">1. SQL을 사용하는 방법&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_id&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_name&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">ORC&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">delivery_date&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_date&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">diff_days&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Orders&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">INNER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">JOIN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OrderReceipts&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ORC&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ON&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_id&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ORC&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_id&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ORC&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">delivery_date&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_date&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;gt;=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>주문별로 최대 지연일을 알고 싶은 경우&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_id&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">MAX&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_name&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">-- SELECT 하기 위해 MAX를 사용
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">MAX&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ORC&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">delivery_date&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_date&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">max_diff_days&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Orders&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">INNER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">JOIN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OrderReceipts&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ORC&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ON&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_id&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ORC&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_id&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ORC&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">delivery_date&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_date&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;gt;=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">GROUP&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_id&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="2-모델-갱신을-사용하는-방법">2. 모델 갱신을 사용하는 방법&lt;/h3>
+&lt;ul>
+&lt;li>쿼리를 통해 찾는게 아니라 필드를 하나 추가해 해결할수도 있을 것&lt;/li>
+&lt;li>코딩 외의 방법도 해결수단이 된다.&lt;/li>
+&lt;/ul>
+&lt;h2 id="31강-모델-갱신의-주의점">31강. 모델 갱신의 주의점&lt;/h2>
+&lt;ul>
+&lt;li>3가지의 트레이드 오프가 있다&lt;/li>
+&lt;/ul>
+&lt;h3 id="1-높아지는-갱신-비용">1. 높아지는 갱신 비용&lt;/h3>
+&lt;ul>
+&lt;li>배송 지연 플래그 필드를 갱신하는 비용이 든다&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-갱신까지의-시간-랙-발생">2. 갱신까지의 시간 랙 발생&lt;/h3>
+&lt;ul>
+&lt;li>갱신 되기 전까지의 시간차이가 발생&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-모델-갱신-비용-발생">3. 모델 갱신 비용 발생&lt;/h3>
+&lt;ul>
+&lt;li>모델의 수정은 대단히 큰 수정이 요구됨, 특히나 이미 운영을 시작했다면 더욱 더&lt;/li>
+&lt;/ul>
+&lt;h2 id="32강-시야-협착--관련-문제">32강. 시야 협착 : 관련 문제&lt;/h2>
+&lt;ul>
+&lt;li>시야 협착에 빠지기 쉬운 경우를 살펴본다&lt;/li>
+&lt;li>31강의 문제를 그대로 사용한다&lt;/li>
+&lt;li>주문번호마다 몇개의 상품이 주문되었는지 확인(주문번호, 주문자 이름, 주문일, 상품수)&lt;/li>
+&lt;/ul>
+&lt;h3 id="1-다시-sql을-사용한다면">1. 다시 SQL을 사용한다면&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_id&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">MAX&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_name&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">order_name&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">MAX&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_date&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">order_date&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">COUNT&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">item_count&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Orders&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">INNER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">JOIN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OrderReceipts&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ORC&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ON&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_id&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ORC&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_id&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">GROUP&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_id&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_id&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_name&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_date&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">COUNT&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OVER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">PARTITION&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_id&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">item_count&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Orders&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">INNER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">JOIN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OrderReceipts&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ORC&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ON&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">O&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_id&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ORC&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">order_id&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>집약을 쓰든 윈도우 함수를 쓰든 모두 결합과 집약을 수행하기 때문에 실행 비용은 비슷하다. 가독성과 확장성 측면에서 윈도우 함수를 쓰는 것이 더 좋다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-다시-모델-갱신을-사용한다면">2. 다시 모델 갱신을 사용한다면&lt;/h3>
+&lt;ul>
+&lt;li>주문이 등록될 때 수를 알 수 있으므로 필드를 추가해 개수를 넣기 쉽다. 다만, 주문 변경이 일어나는 경우의 처리를 고려해야 한다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-초보자보다-중급자가-경계해야">3. 초보자보다 중급자가 경계해야&lt;/h3>
+&lt;h2 id="33강-데이터-모델을-지배하는-자가-시스템을-지배한다">33강. 데이터 모델을 지배하는 자가 시스템을 지배한다.&lt;/h2>
+&lt;ul>
+&lt;li>현명한 데이터 구조와 멍청한 코드의 조합이 멍청한 데이터 구조와 현명한 코드의 조합보다 좋다.&lt;/li>
+&lt;li>엔지니어의 사명은 전략적 실패를 만회하는 전술을 찾는 것이 아닌 올바른 전략을 고려하는 것&lt;/li>
+&lt;/ul>
+&lt;h2 id="34강-인덱스와-b-tree">34강. 인덱스와 B-tree&lt;/h2>
+&lt;ul>
+&lt;li>RDB의 인덱스 구조, 1. B-tree, 2. 비트맵, 3. 해시&lt;/li>
+&lt;/ul>
+&lt;h3 id="1-만능형--b-tree">1. 만능형 : B-tree&lt;/h3>
+&lt;ul>
+&lt;li>대부분 DB의 B+tree 라는 수정 버전을 사용한다.&lt;/li>
+&lt;li>B+tree는 리프노드에만 키값을 저장한다.&lt;/li>
+&lt;li>B+tree는 루트와 리프의 거리를 가능한 일정하게 유지하려고 하기 때문에 검색 속도가 안정적이다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-기타-인덱스">2. 기타 인덱스&lt;/h3>
+&lt;ul>
+&lt;li>비트맵 인덱스 : 데이터를 비트 플래그로 변환해서 저장하는 형태의 인덱스로 카디널리티가 낮은 필드에 대해 효과를 발휘한다. 하지만 갱신할 때 오버헤드가 키 BI/DWH 용도로 사용된다.&lt;/li>
+&lt;li>해시 인덱스 : 검색 외에 효과가 없어 거의 사용되지 않는다.&lt;/li>
+&lt;/ul>
+&lt;h2 id="35강-인덱스를-잘-활용하려면">35강. 인덱스를 잘 활용하려면&lt;/h2>
+&lt;ul>
+&lt;li>B+tree는 양이 증가해도 검색이 안정적이고, 범위 검색도 쉬움&lt;/li>
+&lt;/ul>
+&lt;h3 id="1-카디널리티값의-균형와-선택률전체중에서-몇개가-선택되는지">1. 카디널리티(값의 균형)와 선택률(전체중에서 몇개가 선택되는지)&lt;/h3>
+&lt;ul>
+&lt;li>클러스터링 팩터(저장소에 같은 값이 어느정도 물리적으로 뭉쳐 존재하는지)가 낮을수록 좋다. 하지만 이것은 구현에 의족한다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-인덱스를-사용하는-것이-좋은지-판단하려면">2. 인덱스를 사용하는 것이 좋은지 판단하려면&lt;/h3>
+&lt;ul>
+&lt;li>카디널리티가 높은 것&lt;/li>
+&lt;li>선택률이 낮은 것 5 ~ 10 % 이하, 저장소의 성능향상과 반비례한다.&lt;/li>
+&lt;/ul>
+&lt;h2 id="36강-인덱스로-성능-향상이-어려운-경우">36강. 인덱스로 성능 향상이 어려운 경우&lt;/h2>
+&lt;ul>
+&lt;li>인덱스 설계는 테이블 정의와 SQL만 봐서는 할 수 없다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="1-압축-조건이-존재하지-않음">1. 압축 조건이 존재하지 않음&lt;/h3>
+&lt;ul>
+&lt;li>WHERE 구가 없이 SELECT 하는 경우&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-레코드를-제대로-압축하지-못하는-경우">2. 레코드를 제대로 압축하지 못하는 경우&lt;/h3>
+&lt;ul>
+&lt;li>WHERE 구 조건의 선택률이 너무 높아 인덱스를 만들기 비효율적이다.&lt;/li>
+&lt;/ul>
+&lt;h4 id="1-입력-매개변수에-따라-선택률이-변동하는-경우---1">1) 입력 매개변수에 따라 선택률이 변동하는 경우 - 1&lt;/h4>
+&lt;h4 id="2-입력-매개변수에-따라-선택률이-변동하는-경우---2">2) 입력 매개변수에 따라 선택률이 변동하는 경우 - 2&lt;/h4>
+&lt;h3 id="3-인덱스를-사용하지-않는-검색-조건">3. 인덱스를 사용하지 않는 검색 조건&lt;/h3>
+&lt;h4 id="1-중간-일치-후방-일치-like-연산자">1) 중간 일치, 후방 일치 LIKE 연산자&lt;/h4>
+&lt;ul>
+&lt;li>LIKE를 사용하는 경우 인덱스는 전방일치에만 적용 가능하다.&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-색인-필드로-연산하는-경우함수를-적요하는-경우에도-안됨">2) 색인 필드로 연산하는 경우(함수를 적요하는 경우에도 안됨)&lt;/h4>
+&lt;ul>
+&lt;li>다음과 같이 바꾸면 됨&lt;/li>
+&lt;li>WHERE col_1 * 1.1 &amp;gt; 100 -&amp;gt; col_1 &amp;gt; 100/1.1&lt;/li>
+&lt;/ul>
+&lt;h4 id="3-is-null을-사용하는-경우">3) IS NULL을 사용하는 경우&lt;/h4>
+&lt;ul>
+&lt;li>색인 필드 데이터에는 NULL이 존재하지 않기 때문에 인덱스를 사용불가&lt;/li>
+&lt;/ul>
+&lt;h4 id="4-부정형을-사용하는-경우">4) 부정형을 사용하는 경우&lt;/h4>
+&lt;ul>
+&lt;li>&amp;lt;&amp;gt;, !=, NOT IN&lt;/li>
+&lt;/ul>
+&lt;h2 id="37강-인덱스를-사용할-수-없는-경우-대처법">37강. 인덱스를 사용할 수 없는 경우 대처법&lt;/h2>
+&lt;h3 id="1-외부-설정으로-처리---깊고-어두운-강-건너기">1. 외부 설정으로 처리 - 깊고 어두운 강 건너기&lt;/h3>
+&lt;h4 id="1-ui-설계로-처리">1) UI 설계로 처리&lt;/h4>
+&lt;ul>
+&lt;li>사용자가 선택할 수 있는 조건을 제한한다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-외부-설정을-사용한-대처-방법의-주의점">2. 외부 설정을 사용한 대처 방법의 주의점&lt;/h3>
+&lt;ul>
+&lt;li>개발전에 합의해야 한다. 서로의 이해관계를 파악하는 것이 중요!&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-데이터-맡로-대처">3. 데이터 맡로 대처&lt;/h3>
+&lt;ul>
+&lt;li>특정한 쿼리에서 필요한 데이터만을 저장하는, 상대적으로 작은 크기의 테이블이다. 서브셋&lt;/li>
+&lt;li>원래 대규모의 데이터를 다뤄야 하는(성능 조건이 중요함) BI/DWH 분야에 사용되는 기술이다. 접근 대상 테이블의 크기를 작게해서 I/O양을 줄이는 것이 목적이다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="4-데이터-마트를-채택할-시-주의점">4. 데이터 마트를 채택할 시 주의점&lt;/h3>
+&lt;h4 id="1-데이터-신선도">1) 데이터 신선도&lt;/h4>
+&lt;ul>
+&lt;li>동기 시점에 따라 신선도와 성능간의 트레이드 오프 고려 할 것&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-데이터-마트-크기">2) 데이터 마트 크기&lt;/h4>
+&lt;ul>
+&lt;li>I/0 양을 줄이는 것이 목적이므로 테이블의 크기가 딱히 줄어들지 않는다면 필요없다.&lt;/li>
+&lt;li>GROUP BY절을 미리 사용해 집계를 마치고 데이터 마트로 만들면 필드 수와 레코드수를 크게 줄일 수 있다.&lt;/li>
+&lt;/ul>
+&lt;h4 id="3-데이터-마트수">3) 데이터 마트수&lt;/h4>
+&lt;ul>
+&lt;li>목적에 맞게 잘 만들어 관리해야, 용량과 성능문제가 안생긴다.&lt;/li>
+&lt;li>빠르다고 무작점 만들어서 쓰면 안됨&lt;/li>
+&lt;/ul>
+&lt;h4 id="4-배치-윈도우">4) 배치 윈도우&lt;/h4>
+&lt;ul>
+&lt;li>데이터 마트도 만드는데 시간이 걸리고 변경에 따른 갱신도 발생하므로 배치 윈도우를 압박한다. 배치윈도우와 Job Net도 고려할 것&lt;/li>
+&lt;/ul>
+&lt;h3 id="5-인덱스-온리-스캔으로-대처">5. 인덱스 온리 스캔으로 대처&lt;/h3>
+&lt;ul>
+&lt;li>I/O 감소를 목적으로하는 데이터 마트와 접근이 같고, 데이터 동기 문제를 해결할 수 있다.&lt;/li>
+&lt;li>풀 스캔을 할 때 검사대상을 테이블이 아닌 인덱스로 바꿀 수 있다.&lt;/li>
+&lt;li>압축 요건이 존재하지 않는 경우&lt;/li>
+&lt;li>CREATE INDEX CoveringIndex ON Orders (order_id, receive_date);&lt;/li>
+&lt;li>SQL 구문에서 필요한 필드를 인덱스만으로 커버할 수 있는 경우, 테이블 접근을 생략하는 기술 이다.&lt;/li>
+&lt;li>레코드를 제대로 압축하지 못하는 검색 조건&lt;/li>
+&lt;li>CREATE INDEX CoveringIndex_1 ON Orders (process_flg, order_id, receive_date);&lt;/li>
+&lt;li>압축은 되지만 인덱스를 사용하지 않는 검색 조건&lt;/li>
+&lt;li>CREATE INDEX CoveringIndex_2 ON Orders (shop_name, order_id, receive_date);&lt;/li>
+&lt;li>로우 지향 DB를 컬럼 지향 DB로 만드는 방법이라고 생각하면 된다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="6-인덱스-온리-스캔의-주의사항">6. 인덱스 온리 스캔의 주의사항&lt;/h3>
+&lt;h4 id="1-dbms에-따라-사용할-수-없는-경우도-있다">1) DBMS에 따라 사용할 수 없는 경우도 있다.&lt;/h4>
+&lt;h4 id="2-한-개의-인덱스에-포함할-수-있는-필드-수에-제한이-있다">2) 한 개의 인덱스에 포함할 수 있는 필드 수에 제한이 있다.&lt;/h4>
+&lt;h4 id="3-갱신-오버-헤드가-커진다">3) 갱신 오버 헤드가 커진다.&lt;/h4>
+&lt;ul>
+&lt;li>커버링 인덱스는 성질살 필연적으로 필드 수가 많아 크기가 큰 인덱스가 되기 쉽다.&lt;/li>
+&lt;li>따라서 테이블을 갱신할 때의 오버헤드도 일반적인 인덱스에 비해 커진다.&lt;/li>
+&lt;/ul>
+&lt;h4 id="4-정기적인-인덱스-리빌드가-필요">4) 정기적인 인덱스 리빌드가 필요&lt;/h4>
+&lt;ul>
+&lt;li>인덱스에만 접근한다는 것은 성능이 인덱스의 크기에 의존한다는 것이다. 따라서 정기적인 모니터링과 리빌드를 필요로 한다.&lt;/li>
+&lt;/ul>
+&lt;h4 id="5-sql에-새로운-필드가-추가되면-사용할-수-없다">5) SQL에 새로운 필드가 추가되면 사용할 수 없다.&lt;/h4>
+&lt;ul>
+&lt;li>일반적인 인덱스에 비해 어플리케이션 유지 보수에 약한 타입의 튜닝이라고 할 수 있다.&lt;/li>
+&lt;/ul></description></item><item><title>책뿌수기 - SQL 레벨업 8</title><link>https://jaejin0me.github.io/post/posts181/</link><pubDate>Tue, 28 May 2019 23:49:45 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts181/</guid><description>&lt;h1 id="8장-sql의-순서---깨어나는-절차-지향">8장. SQL의 순서 - 깨어나는 절차 지향&lt;/h1>
+&lt;ul>
+&lt;li>sql은 관계 모델의 이론에 기초하고 있기 때문에 순번을 다루기 위한 기능이 없다.&lt;/li>
+&lt;li>하지만 레코드에 순번을 붙여 처리하는 경우가 많아 관련기능(시퀀스 객체, ID 필드, 윈도우 함수)을 추가하고 있다.&lt;/li>
+&lt;/ul>
+&lt;h2 id="23강-레코드에-순번-붙이기">23강. 레코드에 순번 붙이기&lt;/h2>
+&lt;h3 id="1-기본키가-한-개의-필드일-경우">1. 기본키가 한 개의 필드일 경우&lt;/h3>
+&lt;h4 id="1-윈도우-함수로-사용">1) 윈도우 함수로 사용&lt;/h4>
+&lt;ul>
+&lt;li>ROW_NUMBER 함수를 사용&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">ROW_NUMBER&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OVER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">ORDER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Seq&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Weights&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="2-상관-서브쿼리-사용">2) 상관 서브쿼리 사용&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">COUNT&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Weight&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Seq&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Weights&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W1&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>기능은 동일하지만 1) 방법의 성능이 좋다. 스캔 횟수 1):1회, 2):2회&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-기본-키가-여러-개의-필드로-구성되는-경우">2. 기본 키가 여러 개의 필드로 구성되는 경우&lt;/h3>
+&lt;h4 id="1-윈도우-함수를-사용">1) 윈도우 함수를 사용&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">ROW_NUMBER&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OVER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ORBER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">stduent_id&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Seq&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Weight2&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="2-상관-서브쿼리를-사용">2) 상관 서브쿼리를 사용&lt;/h4>
+&lt;ul>
+&lt;li>다중 필드 비교하기(문자, 숫자, 3개 비교도 가능)&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">COUNT&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Weight&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">W2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">W1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">stduent_id&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Seq&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Weight&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W1&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="3-그룹마다-순번을-붙이는-경우">3. 그룹마다 순번을 붙이는 경우&lt;/h3>
+&lt;h4 id="1-윈도우-함수를-사용-1">1) 윈도우 함수를 사용&lt;/h4>
+&lt;ul>
+&lt;li>class 필드에 PARTITION BY 적용&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">ROW_NUMBER&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OVER&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">PARTITION&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">ORDER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Seq&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Weight2&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="2-상관서브쿼리를-사용">2) 상관서브쿼리를 사용&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">COUNT&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">COUNT&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Seq&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Weight2&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W1&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="4-순번과-갱신">4. 순번과 갱신&lt;/h3>
+&lt;h4 id="1-윈도우-함수를-사용-2">1) 윈도우 함수를 사용&lt;/h4>
+&lt;ul>
+&lt;li>셀렉트 쿼리를 SET에 넣으면 됨&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">UPDATE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Weights3&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">SET&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Seq&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Seq&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">ROW_NUMBER&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OVER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">PARTITION&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ORDER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Seq&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Weights3&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SeqTbl&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Weights3&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SeqTbls&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Weights3&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SeqTbl&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="2-상관-서브쿼리를-사용-1">2) 상관 서브쿼리를 사용&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">UPDATE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Weight3&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">SET&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">seq&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">COUNT&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Weight3&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Weights3&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Weight3&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="24강-레코드에-순번-붙이기-응용">24강. 레코드에 순번 붙이기 응용&lt;/h2>
+&lt;h3 id="1-중앙값-구하기">1. 중앙값 구하기&lt;/h3>
+&lt;h4 id="1-집합-지향적-방법">1) 집합 지향적 방법&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AVG&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">weight&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">weight&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Weights&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Weights&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">GROUP&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">weight&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">HAVING&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">SUM&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">CASE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">WHEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">weight&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;gt;=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">weight&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">THEN&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">ELSE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">END&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;gt;=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">COUNT&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">SUM&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">CASE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">WHEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">weight&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">W1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">weight&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">THEN&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">ELSE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">END&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;gt;=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">COUNT&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">TMP&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>코드가 복잡하다&lt;/li>
+&lt;li>성능이 나쁘다. w1과 w2간에 결합이 발생&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-절차-지향적-방법-1---세계의-중심을-향해">2) 절차 지향적 방법 1 - 세계의 중심을 향해&lt;/h4>
+&lt;ul>
+&lt;li>sql에서 자연수의 특징을 활용하면 &amp;lsquo;양쪽 끝부터 숫자 세기&amp;rsquo;를 할 수 있다&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AVG&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">weight&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">median&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">weight&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">ROW_NUMBER&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OVER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">ORDER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">weight&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">ASC&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">ASC&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">hi&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">ROW_NUMBER&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OVER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">ORDER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">weight&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">DESC&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">student_id&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">DESC&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">lo&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Weights&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">TMP&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">WEHRE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">hi&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">IN&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">lo&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">lo&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">lo&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>RANK 또는 DENSE_RANK를 사용해서는 안된다. 순위가 겹치거나 빌 수 있다.&lt;/li>
+&lt;li>테이블 접근 1회로 감소, 대신 정렬이 2회로 늘었다. ROW_NUMBER에서 사용하는 정렬이 오름/내림차순 2개라서 그렇다.&lt;/li>
+&lt;/ul>
+&lt;h4 id="3-절차-지향적-방법-2---2빼기-1은-1">3) 절차 지향적 방법 2 - 2빼기 1은 1&lt;/h4>
+&lt;ul>
+&lt;li>성능적으로 개선하기&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AVG&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">weight&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">weight&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ROW_NUMBER&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OVER&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">ORDER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">weight&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">COUNT&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OVER&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">diff&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Weights&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">TMP&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">diff&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BETWEEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>정렬리 1회로 줄어든다. 이 방법이 SQL 표준으로 중앙값을 구하는 가장 빠른 방법이다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-순번을-사용한-테이블-분할">2. 순번을 사용한 테이블 분할&lt;/h3>
+&lt;ul>
+&lt;li>비어있는 자리 출력하기&lt;/li>
+&lt;/ul>
+&lt;h4 id="1-집합-지향적-방법---집합의-경계선">1) 집합 지향적 방법 - 집합의 경계선&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">N1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">gap_start&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;~&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">MIN&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">N2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">min&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">gap_end&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">Number&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">N1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">INNER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">JOIN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Numbers&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">N2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ON&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">N2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">N1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">GROUP&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">N1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">HAVING&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">N1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">MIN&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">N2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>코드도 간단하며 집합 지향적인 방식이라 좋다. 다만, 자기 결합을 사용해야 한다(Nested Loop).&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-절차-지향적-방법---다음-레코드와-비교">2) 절차 지향적 방법 - 다음 레코드와 비교&lt;/h4>
+&lt;ul>
+&lt;li>컨셉 : 현재 레코드와 다음 레코드를 비교해 차이가 1이 아니면&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">NUM&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">gap_start&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;~&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">diff&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">As&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">gap_end&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">MAX&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">OVER&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">ORDER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ROWS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BETWEEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">FOLLOWING&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">FOLLOWING&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">numbers&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">TMP&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">diff&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">diff&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>테이블 접근 1회, 정렬 1회로 안정적 성능&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-테이블에-존재하는-시퀀스-찾기">3. 테이블에 존재하는 시퀀스 찾기&lt;/h3>
+&lt;ul>
+&lt;li>친구 또는 가족 인원수에 맞게 자리를 예약하는 경우 활용됨&lt;/li>
+&lt;/ul>
+&lt;h4 id="1-집합-지향적-방법---다시-집합의-경계선">1) 집합 지향적 방법 - 다시, 집합의 경계선&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">MIN&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">NUM&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">low&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;~&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">MAX&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">high&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">N1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">COUNT&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">N2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">N1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Numbers&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">N1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">INNER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">JOIN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Numbers&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">N2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ON&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">N2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">N1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">GROUP&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">N1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">N&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">gp&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">GROUP&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">gp&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="2-집합-지향적-방법---다시-다음-레코드-하나와-비교">2) 집합 지향적 방법 - 다시, 다음 레코드 하나와 비교&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">low&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">high&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">low&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">CASE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">WHEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">high&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">IS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">THEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">MIN&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">high&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">OVER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">ORDER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">seq&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ROW&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BETWEEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">CURRENT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">ROW&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">UNBOUNDED&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">FOLLOWING&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ELSE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">high&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">END&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">high&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">CASE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">WHEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">COALESCE&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">prev_diff&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">THEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">ELSE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">END&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">low&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">CASE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">WHEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">COALESCE&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">next_diff&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">THEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">ELSE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">END&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">As&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">high&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">seq&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">MAX&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">OVER&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">ORDER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ROWS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BETWEEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">FOLLOWING&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">FOLLOWING&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">next_diff&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">MAX&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">OVER&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">ORDER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">ROWS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BETWEEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">PRECEDING&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">PRECEDING&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">prev_diff&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">ROW_NUMBER&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">OVER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">ORDER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">seq&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Numbers&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">TMP1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">TMP2&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">TMP3&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">low&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">IS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="25강-시퀀스-객체-identify-필드-채번-테이블">25강. 시퀀스 객체, IDENTIFY 필드, 채번 테이블&lt;/h2>
+&lt;ul>
+&lt;li>표준 SQL에는 순번을 다루는 기능으로 시퀀셜 객체나 IDENTIFY 필드가 존재한다. 하지만 사용하는 것을 권장하지는 않고, 사용한다면 시퀀스 객체를 권한다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="1-시퀀스-객체">1. 시퀀스 객체&lt;/h3>
+&lt;ul>
+&lt;li>테이블 또는 뷰처럼 스키마 내부에 존재하는 객체 중 하나&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">CREATE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SEQUENCE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">testseq&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">START&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">WITH&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">INCREMENT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">MAXVALUE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">10000&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">MINVALUE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">CYCLE&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>INSERT 구문에서 흔히 사용된다.&lt;/li>
+&lt;/ul>
+&lt;h4 id="1-시퀀스-객체의-문제점">1) 시퀀스 객체의 문제점&lt;/h4>
+&lt;ul>
+&lt;li>표준화가 늦어서, 구현에 따라 구문이 달라 이식성이 없고, 사용할 수 없는 구현도 있다&lt;/li>
+&lt;li>시스템에서 자동으로 생성되는 값이므로 실제 엔티티 속성이 아니다.&lt;/li>
+&lt;li>성능적인 문제를 일으킨다&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-시퀀스-객체로-발생하는-성능-문제">2) 시퀀스 객체로 발생하는 성능 문제&lt;/h4>
+&lt;ul>
+&lt;li>순서성(순번의 대소 관계가 유지됨), 유일성, 연속성&lt;/li>
+&lt;li>사용자 A가 시퀀스 객체에서 NEXT VALUE를 검색할 때의 처리&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>시퀀스 기개체에 배타 락을 적용&lt;/li>
+&lt;li>NEXT VALUEfmf rjator&lt;/li>
+&lt;li>CURRENT VALUE를 1만큼 증가&lt;/li>
+&lt;li>시퀀스 객체에 배타 락을 해제&lt;/li>
+&lt;/ol>
+&lt;h4 id="3-시퀀스-객체로-발생하는-성능-문제의-대처">3) 시퀀스 객체로 발생하는 성능 문제의 대처&lt;/h4>
+&lt;h5 id="1-cache">(1) CACHE&lt;/h5>
+&lt;ol>
+&lt;li>읽어들일 변수를 메모리에 설정하는 것, 다만 시스템 장애시 정상동작을 담보할 수 없다.&lt;/li>
+&lt;/ol>
+&lt;h5 id="1-noorder">(1) NOORDER&lt;/h5>
+&lt;ol>
+&lt;li>순서성을 담보하지 않음으로써 오버 헤드를 줄인다.&lt;/li>
+&lt;/ol>
+&lt;h4 id="4-순번을-키로-사용할-때의-성능-문제">4) 순번을 키로 사용할 때의 성능 문제&lt;/h4>
+&lt;ul>
+&lt;li>Hot spot 과 관련된 문제임&lt;/li>
+&lt;li>DBMS는 비슷한 데이털르 연속적으로 INSERT하면 물리적으로 같은 영역에 저장한다. 이 때 특정 물리적 블록에만 I/O 부하가 커지므로 성능 악화가 발생 = Hot spot, Hot block&lt;/li>
+&lt;li>시퀀스 객체를 사용해 INSERT를 반복하는 경우 발생하고, 대처가 불가능&lt;/li>
+&lt;/ul>
+&lt;h4 id="5-순번을-키로-사용할-때의-성능-문제에-대처">5) 순번을 키로 사용할 때의 성능 문제에 대처&lt;/h4>
+&lt;h5 id="1-oracle의-열-키-인덱스">(1) Oracle의 열 키 인덱스&lt;/h5>
+&lt;ul>
+&lt;li>연속된 값을 도입하는 경우라도 DBMS 내부에서 변화를 주어 제대로 분산할 수 있는 구조를 사용하는 것, 다만 SELECT 성능이 나빠질 수 있다.&lt;/li>
+&lt;/ul>
+&lt;h5 id="2-인덱스에-복잡한-필드를-추가해서-데이터의-분산도를-높인다">(2) 인덱스에 복잡한 필드를 추가해서 데이터의 분산도를 높인다.&lt;/h5>
+&lt;ul>
+&lt;li>논리적으로 좋은 설계가 아님&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-identify-필드">2. IDENTIFY 필드&lt;/h3>
+&lt;ul>
+&lt;li>&amp;lsquo;자동 순번 필드&amp;rsquo;라고도 한다. 테이블의 필드로 정의하고, INSERT 발생할때마다 자동을 순번을 붙여주는 기능이다.&lt;/li>
+&lt;li>시퀀스 객체에 비해 단점이 많다.&lt;/li>
+&lt;li>시퀀스 객체는 여러 테이블에서 사용가능하지만, IDENTIFY 필드는 특정 테이블에 국한된다.&lt;/li>
+&lt;li>CACHE, NOORDER를 지정할 수도 없다.&lt;/li>
+&lt;li>이점이 거의 없다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-채번-테이블">3. 채번 테이블&lt;/h3>
+&lt;ul>
+&lt;li>순번을 부여하기 위해 어플리케이션에서 채번 테이블이라는 것을 만들어 사용했었다.&lt;/li>
+&lt;li>구시대 유물이며 문제가 안생기기를 바라는 것이 최선(튜닝할 방법도 없다)&lt;/li>
+&lt;/ul></description></item><item><title>책뿌수기 - SQL 레벨업 7</title><link>https://jaejin0me.github.io/post/posts109/</link><pubDate>Thu, 07 Feb 2019 22:20:56 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts109/</guid><description>&lt;p>최근 sql 튜닝에 대해서 책도 보고 유투브에서 동영상도 몇편 봤었는데&lt;/p>
+&lt;p>그 중에서 저에게 가장 큰 통찰?을 줬던 영상이 있어서 링크 올립니다&lt;/p>
+&lt;p>&lt;a href="https://www.youtube.com/watch?v=TRfVeco4wZM">[SQL Unplugged 2013] 쉽고 재미있는 인덱스 이야기/ 씨퀄로 이장래&lt;/a>&lt;/p></description></item><item><title>책뿌수기 - SQL 레벨업 6</title><link>https://jaejin0me.github.io/post/posts107/</link><pubDate>Thu, 31 Jan 2019 22:20:56 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts107/</guid><description>&lt;h1 id="6-결합결합을-지배하는-자가-sql을-지배한다">6. 결합(결합을 지배하는 자가 SQL을 지배한다)&lt;/h1>
+&lt;h2 id="ch-18-기능적인-관점으로-구분하는-결합의-종류">ch 18. 기능적인 관점으로 구분하는 결합의 종류&lt;/h2>
+&lt;ul>
+&lt;li>크로스 결합&lt;/li>
+&lt;li>내부 결합&lt;/li>
+&lt;li>외부 결합&lt;/li>
+&lt;li>자기 결합&lt;/li>
+&lt;li>등가 결합/비등가 결합&lt;/li>
+&lt;li>자연 결합&lt;/li>
+&lt;li>위에서 3개는 배타적 결합이다.&lt;/li>
+&lt;li>컬럼) 자연 결합 구문
+&lt;ul>
+&lt;li>자연결합 = 내부 결합 + 등가 결합&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="1-크로스-결합---모든-결합의-모체">1) 크로스 결합 - 모든 결합의 모체&lt;/h3>
+&lt;ul>
+&lt;li>데카르트 곱&lt;/li>
+&lt;/ul>
+&lt;h4 id="1-실무에서-사용하지-않음">(1) 실무에서 사용하지 않음&lt;/h4>
+&lt;ul>
+&lt;li>그런 결과가 필요없다&lt;/li>
+&lt;li>비용이 크다&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-실수로-사용한-크로스-결합">(2) 실수로 사용한 크로스 결합&lt;/h4>
+&lt;ul>
+&lt;li>SELECT * FROM Employees, Departments;&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-내부-결합---왜-내부라는-말을-사용할까">2) 내부 결합 - 왜 ‘내부’라는 말을 사용할까?&lt;/h3>
+&lt;h4 id="httpsjaejin0megithubiopostdb251-eb82b4ebb680-eab2b0ed95a9ec9d98-ec9e91ec9aa9-1-내부-결합의-작용1-내부-결합의-작용">&lt;a href="https://jaejin0me.github.io/post/db25/#1-%EB%82%B4%EB%B6%80-%EA%B2%B0%ED%95%A9%EC%9D%98-%EC%9E%91%EC%9A%A9" title="(1) 내부 결합의 작용">&lt;/a>(1) 내부 결합의 작용&lt;/h4>
+&lt;ul>
+&lt;li>크로스 결합 결과의 부분집합&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-내부-결합과-같은-기능을-하는-상관-서브쿼리">(2) 내부 결합과 같은 기능을 하는 상관 서브쿼리&lt;/h4>
+&lt;ul>
+&lt;li>스칼라 서브쿼리 = 리턴값이 하나인쿼리(SELECT의 필요 조건)&lt;/li>
+&lt;li>상관 서브쿼리보다 결합이 우수하다&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-외부-결합---왜-외부라는-말을-사용할까">3) 외부 결합 - 왜 ‘외부’라는 말을 사용할까?&lt;/h3>
+&lt;h4 id="1-외부-결합의-작동">(1) 외부 결합의 작동&lt;/h4>
+&lt;ul>
+&lt;li>왼쪽/오른쪽/완전 외부 결합&lt;/li>
+&lt;li>키를 모두 가진 레이아웃의 리포트를 만들때 사용&lt;/li>
+&lt;/ul>
+&lt;h3 id="4-외부-결합과-내부-결합의-차이">4) 외부 결합과 내부 결합의 차이&lt;/h3>
+&lt;ul>
+&lt;li>외부 결합은 NULL을 생성한다&lt;/li>
+&lt;/ul>
+&lt;h3 id="5-자기-결합---자기란-누구일까">5) 자기 결합 - ‘자기’란 누구일까?&lt;/h3>
+&lt;h2 id="ch-19-결합-알고리즘과-성능">ch 19. 결합 알고리즘과 성능&lt;/h2>
+&lt;ul>
+&lt;li>Nested Loops&lt;/li>
+&lt;li>Hash&lt;/li>
+&lt;li>Sort Merge&lt;/li>
+&lt;/ul>
+&lt;h3 id="1-nested-loops">1) Nested Loops&lt;/h3>
+&lt;ul>
+&lt;li>이중 반복&lt;/li>
+&lt;li>바깥 반복 테이블(구동 테이블, 외부 테이블) &amp;lt;-&amp;gt; 내부 테이블&lt;/li>
+&lt;li>접근하는 레코드 수 R(A) * R(B)이며 실행 시간은 레코드수에 비례한다.&lt;/li>
+&lt;li>구동 테이블을 작게 만드는 것이 중요하다&lt;/li>
+&lt;/ul>
+&lt;h4 id="1-구동-테이블의-중요성">(1) 구동 테이블의 중요성&lt;/h4>
+&lt;ul>
+&lt;li>(내부 테이블의 결합키 필드에 인덱스가 존재) 구동 테이블을 작게&lt;/li>
+&lt;li>내부 테이블의 반복을 줄일 수 있음&lt;/li>
+&lt;li>이상적으로 구동 테이블의 레코드 한개에 내부 테이블의 레코드 한개가 대응하고, 해당 레코드를 내부 테이블의 인덱스로 사용해 찾을 수 있는 경우 레코드 레코드 수는 R(A) * 2&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-nested-loops-의-단점">(2) Nested Loops 의 단점&lt;/h4>
+&lt;ul>
+&lt;li>결합키로 내부 테이블에 접근할 때 히트되는 레코드가 너무 많기 때문이다.&lt;/li>
+&lt;li>해결
+&lt;ul>
+&lt;li>
+&lt;ol>
+&lt;li>역설적이게 구동 테이블을 큰것으로&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;ol start="2">
+&lt;li>Hash&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-hash">2) Hash&lt;/h3>
+&lt;h4 id="1-hash의-작동">(1) Hash의 작동&lt;/h4>
+&lt;ul>
+&lt;li>작은 테이블을 스캔해 결합키 Hash (워키 메모리 사용량을 줄이기 위해)&lt;/li>
+&lt;li>큰 테이블에 접근해 Hash하고 매칭&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-hash의-특징">(2) Hash의 특징&lt;/h4>
+&lt;ul>
+&lt;li>결합 테이블로부터 해시 테이블을 만드므로 Nested Loops에 비해 메모리를 많이 사용&lt;/li>
+&lt;li>메모리가 부족하면 저장소 사용으로 지연&lt;/li>
+&lt;li>출력되는 해시값은 입력값의 순서를 알지 못하므로, 등치 결합에만 사용 가능&lt;/li>
+&lt;/ul>
+&lt;h4 id="3-hash가-유용한-경우">(3) Hash가 유용한 경우&lt;/h4>
+&lt;ul>
+&lt;li>Nested Loops에서 적절한 구동 테이블이 존재하지 않는 경우&lt;/li>
+&lt;li>적절한 구동 테이블이 있지만, 내부 테이블에서 히트되는 레코드 수가 많은 경우&lt;/li>
+&lt;li>Nested Loops의 내부 테이블에 인덱스가 존재하지 않는 경우&lt;/li>
+&lt;/ul>
+&lt;h4 id="4-유의사항">(4) 유의사항&lt;/h4>
+&lt;ul>
+&lt;li>OLTP에서는 사용하면 안된다.&lt;/li>
+&lt;li>풀스캔(해시를 위해)의 비용도 고려할 것&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-sort-merge">3) Sort Merge&lt;/h3>
+&lt;h4 id="1-sort-merge의-작동">(1) Sort Merge의 작동&lt;/h4>
+&lt;ul>
+&lt;li>결합키로 테이블들을 정렬하고, 일치하는 것 끼리 결합&lt;/li>
+&lt;li>대상 테이블을 모두 정렬해야하므로 메모리가 많이 사용&lt;/li>
+&lt;li>Hash와 달리 부등호를 사용해 결합 가능&lt;/li>
+&lt;li>테이블이 정렬되어 있다면 정렬을 생략 가능&lt;/li>
+&lt;li>테이블을 정렬하므로 테이블을 모두 스캔한 시점에 결합 완료&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-sort-meger가-유효한-경우">(2) Sort Meger가 유효한 경우&lt;/h4>
+&lt;ul>
+&lt;li>테이블 정렬을 생략 가능한 경우&lt;/li>
+&lt;/ul>
+&lt;h3 id="4-의도하지-않은-크로스-결합">4) 의도하지 않은 크로스 결합&lt;/h3>
+&lt;ul>
+&lt;li>삼각 결합 : 결합 조건이 A-B, A-C인 경우&lt;/li>
+&lt;li>B-C 사이에 크로스 결합이 일어날 수 있다. 옵티마이저가 B,C의 크기가 충분히 작다고 판단하는 경우&lt;/li>
+&lt;/ul>
+&lt;h4 id="1-의도하지-않은-크로스-결합을-회피하는-방법">(1) 의도하지 않은 크로스 결합을 회피하는 방법&lt;/h4>
+&lt;ul>
+&lt;li>불필요한 결합 조건 추가&lt;/li>
+&lt;/ul>
+&lt;h2 id="ch-20-결합이-느리다면">ch 20. 결합이 느리다면&lt;/h2></description></item><item><title>책뿌수기 - SQL 레벨업 7</title><link>https://jaejin0me.github.io/post/posts108/</link><pubDate>Thu, 31 Jan 2019 22:20:56 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts108/</guid><description>&lt;h1 id="7-서브쿼리곤란한-부분은-분할해야만-할까">7. 서브쿼리(곤란한 부분은 분할해야만 할까?)&lt;/h1>
+&lt;h2 id="ch-21-서브쿼리가-일으키는-폐해">ch 21. 서브쿼리가 일으키는 폐해&lt;/h2>
+&lt;h3 id="1-서브쿼리의-문제점">1) 서브쿼리의 문제점&lt;/h3>
+&lt;ul>
+&lt;li>성능적 문제는 서브쿼리가 실체적인 데이터를 저장하고 있지 않다는 것에 있다.&lt;/li>
+&lt;/ul>
+&lt;h4 id="1-연산-비용-추가">(1) 연산 비용 추가&lt;/h4>
+&lt;ul>
+&lt;li>서브쿼리 = SELECT 이므로 실행할때마다 SELECT 하는 것&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-데이터-io-비용-발생">(2) 데이터 I/O 비용 발생&lt;/h4>
+&lt;ul>
+&lt;li>연살결과가 커 저장소를 쓰게 되는 경우 급격한 속도 저하 발생&lt;/li>
+&lt;/ul>
+&lt;h4 id="3-최적화를-받을-수-없음">(3) 최적화를 받을 수 없음&lt;/h4>
+&lt;ul>
+&lt;li>서브쿼리의 결과에는 메타 정보가 없어 최적화가 불가능&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-서브쿼리-의존증">2) 서브쿼리 의존증&lt;/h3>
+&lt;h4 id="1-서브쿼리를-사용한-방법">(1) 서브쿼리를 사용한 방법&lt;/h4>
+&lt;ul>
+&lt;li>코드가 복잡해 읽기 어렵다&lt;/li>
+&lt;li>성능
+&lt;ul>
+&lt;li>결과가 일시적인 영역에 확보되므로 오버헤드 발생&lt;/li>
+&lt;li>최적화 불가&lt;/li>
+&lt;li>결합을 필요로 하기 때문에 비용이 높고 실행계획 변동 리스크가 존재&lt;/li>
+&lt;li>recipts 테이블 두번 스캔 필요&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-상관-서브쿼리는-답이-될-수-없다">(2) 상관 서브쿼리는 답이 될 수 없다&lt;/h4>
+&lt;ul>
+&lt;li>어쨋든 테이블에 2번 접근해야 한다&lt;/li>
+&lt;/ul>
+&lt;h4 id="3-윈도우-함수로-결합-해결">(3) 윈도우 함수로 결합 해결&lt;/h4>
+&lt;ul>
+&lt;li>목표는 테이블 접근 1회로 줄이기&lt;/li>
+&lt;li>ROW_NUMBER를 사용해 구매 이력 번호를 붙이고, 이력이 1인 레코드 추출&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-장기적인-관점에서의-리스크-관리">3) 장기적인 관점에서의 리스크 관리&lt;/h3>
+&lt;ul>
+&lt;li>결합을 사용한 쿼리의 불안정 요소(상관 서브쿼리도 유사)
+&lt;ul>
+&lt;li>결합 알고리즘의 변동 리스크&lt;/li>
+&lt;li>환경 요인에 의한 지연 리스크(인덱스, 메모리, 매개변수 등)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="1-알고리즘-변동리스크">(1) 알고리즘 변동리스크&lt;/h4>
+&lt;ul>
+&lt;li>상황에 따라 변하는 결합 알고리즘&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-환경-요인에-의한-지연-리스크">(2) 환경 요인에 의한 지연 리스크&lt;/h4>
+&lt;ul>
+&lt;li>결합을 사용한다는 것 = 장기적인 관점에서의 리스크 증가&lt;/li>
+&lt;/ul>
+&lt;h3 id="4-서브쿼리-의존증---응용편">4) 서브쿼리 의존증 - 응용편&lt;/h3>
+&lt;h4 id="1-다시-서브쿼리-의존증">(1) 다시 서브쿼리 의존증&lt;/h4>
+&lt;h4 id="5-서브쿼리는-정말-나쁠까">(5) 서브쿼리는 정말 나쁠까?&lt;/h4>
+&lt;ul>
+&lt;li>생각하기는 쉬우나 RDB와는 맞지 않다&lt;/li>
+&lt;/ul>
+&lt;h2 id="ch-22-서브쿼리-사용이-더-나은-경우">ch 22. 서브쿼리 사용이 더 나은 경우&lt;/h2>
+&lt;ul>
+&lt;li>결합쿼리는 최대한 결합 대상 레코드수를 줄이는 것이 중요한데, 옵티마이저가 잘 판단하지 못하는 경우 직접 연산 순서를 명시하는 용도로 힌트 사용&lt;/li>
+&lt;/ul>
+&lt;h3 id="1-결합과-집약-순서">1) 결합과 집약 순서&lt;/h3>
+&lt;h4 id="1-두-가지-방법">(1) 두 가지 방법&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;ol>
+&lt;li>결합 -&amp;gt; 집약&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;ol start="2">
+&lt;li>집약 -&amp;gt; 결합&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-결합-대상의-레코드-수">(2) 결합 대상의 레코드 수&lt;/h4>
+&lt;ul>
+&lt;li>2의 경우 레코드수가 줄기 때문에 더 나은 선택일 수 있다(사전에 결합 레코드수 압축)&lt;/li>
+&lt;/ul></description></item><item><title>책뿌수기 - SQL 레벨업 5</title><link>https://jaejin0me.github.io/post/posts106/</link><pubDate>Wed, 30 Jan 2019 22:20:56 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts106/</guid><description>&lt;p>&lt;em>인용하는 그림은 다양한 곳에서 가져왔음을 밝힙니다&lt;/em>&lt;/p>
+&lt;h1 id="5-반복된절차-지향형의-속박">5. 반복된(절차 지향형의 속박)&lt;/h1>
+&lt;h2 id="ch-14-반복문-의존증">ch 14. 반복문 의존증&lt;/h2>
+&lt;ul>
+&lt;li>RDB는 관계 전체를 조작의 대상으로 삼기 때문에 설계상에서 반복을 제외했다&lt;/li>
+&lt;/ul>
+&lt;h2 id="ch-15-반복계의-공포">ch 15. 반복계의 공포&lt;/h2>
+&lt;ul>
+&lt;li>record at a time 사고 방식&lt;/li>
+&lt;li>반복계의 장점은 생각하기 쉽고 단순하다는 것&lt;/li>
+&lt;/ul>
+&lt;h3 id="1-반복계의-단점">1) 반복계의 단점&lt;/h3>
+&lt;ul>
+&lt;li>성능&lt;/li>
+&lt;/ul>
+&lt;h4 id="1-sql-실행의-오버헤드">(1) SQL 실행의 오버헤드&lt;/h4>
+&lt;ul>
+&lt;li>전처리
+&lt;ul>
+&lt;li>a. sql 구문을 네트워크로 전송&lt;/li>
+&lt;li>b. DB 연결&lt;/li>
+&lt;li>c. sql 구문 파스&lt;/li>
+&lt;li>d. sql 구문의 실행 계획 생성 또는 평가&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>후처리
+&lt;ul>
+&lt;li>e. 결과 집합을 네트워크로 전송&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>a, e는 동일한 본체에 있거나 분리되어 있어도 고만고만함&lt;/li>
+&lt;li>b는 요즘에 커넥션 풀이라는 기술로 오버헤드를 감소시킴&lt;/li>
+&lt;li>c와 d가 주된 오버헤드이다. 그중에서도 c가 성가시다&lt;/li>
+&lt;li>c는 db가 sql을 받을때 마다 실행하므로 반복계에서는 오버헤드의 비중이 커진다&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-병렬-분산이-힘들다">(2) 병렬 분산이 힘들다&lt;/h4>
+&lt;ul>
+&lt;li>반본계는 하나씩만 처리하기 때문에 병렬처리가 힘들다&lt;/li>
+&lt;li>저장소의 분산 효율이 낮다(하나씩 처리하다보니 한번에 처리하는 데이터가 얼마안됨)&lt;/li>
+&lt;/ul>
+&lt;h4 id="3-데이터-베이스의-진화로-인한-혜택을-받을-수-없다">(3) 데이터 베이스의 진화로 인한 혜택을 받을 수 없다&lt;/h4>
+&lt;ul>
+&lt;li>대규모의 데이터를 효율적으로 다루기 위해 진화하고 있으나, 반복계를 사요하면 그 혜택을 받을 수 없다&lt;/li>
+&lt;li>포장계 sql이 반복계에 비해 복잡하므로 튜닝을 잘해야 하는 단점도 있는 반면 제대로만 튜닝하면 현격한 성능차이가 발생한다&lt;/li>
+&lt;li>반복계는 단순해 튜닝포인트도 적다&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-반복계를-빠르게-만드는-방법은-없다">2) 반복계를 빠르게 만드는 방법은 없다&lt;/h3>
+&lt;h4 id="1-반복계를-포장계로-다시-작성">(1) 반복계를 포장계로 다시 작성&lt;/h4>
+&lt;ul>
+&lt;li>애플리케이션의 수정을 의미&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-각각의-sql을-빠르게-수정">(2) 각각의 sql을 빠르게 수정&lt;/h4>
+&lt;ul>
+&lt;li>너무 단순해 튜닝한 건덕지가 없음&lt;/li>
+&lt;/ul>
+&lt;h4 id="3-다중화-처리">(3) 다중화 처리&lt;/h4>
+&lt;ul>
+&lt;li>리소스 여유가 있고, 처리를 나눌 수 있는 키가 있고, 순서가 중요하지 않다면 다중화 가능&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-반복계의-장점">3) 반복계의 장점&lt;/h3>
+&lt;ul>
+&lt;li>sql이 단순하다&lt;/li>
+&lt;/ul>
+&lt;h4 id="1-실행-계획의-안정성">(1) 실행 계획의 안정성&lt;/h4>
+&lt;ul>
+&lt;li>실행계획이 바뀌어 느려지는 경우가 없다&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-예상-처리-시간의-정밀도">(2) 예상 처리 시간의 정밀도&lt;/h4>
+&lt;h4 id="3-트랜잭션-제어가-편리">(3) 트랜잭션 제어가 편리&lt;/h4>
+&lt;h2 id="ch-16-sql에서는-반복을-어떻게-표현할까">ch 16. sql에서는 반복을 어떻게 표현할까?&lt;/h2>
+&lt;h3 id="1-포인트는-case식과-윈도우-함수">1) 포인트는 CASE식과 윈도우 함수&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">INSERT INTO Sales2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SELECT company, year, sale,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> CASE SIGN(sale - max(sale)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> OVER(PARTITION BY company
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ORDER BY year
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ROWS BETWEEN 1 PRECENDING
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> AND 1 PRECENDING)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> WHEN 0 THEN &amp;#39;=&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> WHEN 1 THEN &amp;#39;+&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> WHEN -1 THEN &amp;#39;-&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ELSE NULL END AS Var
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> FROM Sales;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ROWS BETWEEN 1 PRECENDING AND 1 PRECENDING
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>현재 레코드에서 1개 이전부터 1개 이전까지의 레코드 범위 지정&lt;/p></description></item><item><title>책뿌수기 - SQL 레벨업 4</title><link>https://jaejin0me.github.io/post/posts105/</link><pubDate>Tue, 29 Jan 2019 22:20:56 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts105/</guid><description>&lt;h1 id="4-집약과-자르기">4. 집약과 자르기&lt;/h1>
+&lt;h2 id="ch-12-집약">ch 12. 집약&lt;/h2>
+&lt;ul>
+&lt;li>COUNT, SUM, AVG, MAX, MIN(Aggregate function)&lt;/li>
+&lt;/ul>
+&lt;h3 id="1-여러-개의-리코드를-한-개의-레코드로-집합">1) 여러 개의 리코드를 한 개의 레코드로 집합&lt;/h3>
+&lt;ul>
+&lt;li>필드 수가 다르면 UNION 적용이 불가능하다. 또한 UNION으로 여러개의 쿼리를 머지하는 것은 성능적으로 안티패턴이다.&lt;/li>
+&lt;li>GROUP BY 구로 집약을 했을 때 SELECT 구에 입력할 수 있는 것은
+&lt;ul>
+&lt;li>상수&lt;/li>
+&lt;li>GROUP BY 구에서 사용한 집약 키&lt;/li>
+&lt;li>집약함수&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>집약함수가 적용되면 여러 요소가 있는 집합으로부터 연산결과가 나옴&lt;/li>
+&lt;li>집약, 해시, 정렬
+&lt;ul>
+&lt;li>집약시에는 해쉬 알고리즘을 사용한다(때로는 정렬)&lt;/li>
+&lt;li>GROUP BY 구에 지정된 필드를 해쉬 함수로 사용해 결과를 만들고, 같은 결과로 그룹을 만들어 집약한다. 고전적인 방법보다 효율적&lt;/li>
+&lt;li>해쉬와 정렬 모두 메모미를 많이 사용하기 때문에, 충분한 워킹 메모리가 확보되지 않으면 스왑이 발생한다(극단적 성능저하 발생)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-합쳐서-하나">2) 합쳐서 하나&lt;/h3>
+&lt;ul>
+&lt;li>문제 : 연령대 별로 가격이 다른 제품중에서 0 ~ 100세가 이용가능한 제품 고르기&lt;/li>
+&lt;li>hint : 각 범위의 상수를 합해 101인 제품 선택하기&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">SELECT product_id
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> FROM PriceByAge
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> GROUP BY product_id
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> HAVING SUM(high_age - low_age + 1) = 101;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="ch-13-자르기">ch 13. 자르기&lt;/h2>
+&lt;ul>
+&lt;li>집약 이외에도 중요한 자르기 라는 기능이 있다&lt;/li>
+&lt;/ul>
+&lt;h3 id="1-자르기와-파티션">1) 자르기와 파티션&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">SELECT SUBSTRING(name, 1, 1) AS label,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> COUNT(*)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> FROM Persons
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> GROUP BY SUBSTRING(name, 1, 1);
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>GROUP BY 구로 잘라 만든 하나 하나의 부분 집합을 ‘파티션’이라고 한다.&lt;/p></description></item><item><title>책뿌수기 - SQL 레벨업 3</title><link>https://jaejin0me.github.io/post/posts104/</link><pubDate>Sun, 20 Jan 2019 22:20:56 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts104/</guid><description>&lt;h1 id="3-sql의-조건-분기">3. SQL의 조건 분기&lt;/h1>
+&lt;h2 id="ch-8-union을-사용한-쓸데없이-긴-표현">ch 8. UNION을 사용한 쓸데없이 긴 표현&lt;/h2>
+&lt;ul>
+&lt;li>UNION을 사용한 조건 분기는 좋지 않다.&lt;/li>
+&lt;li>UNION은 내부적으로 여러개의 SELECT 구문을 실행하는 실행계획으로 해석된다 (= 테이블에 접근하는 횟수(I/O)가 늘어난다)&lt;/li>
+&lt;/ul>
+&lt;h3 id="1-union을-사용한-조건-분기와-관련된-간단한-예제">1) UNION을 사용한 조건 분기와 관련된 간단한 예제&lt;/h3>
+&lt;ul>
+&lt;li>UNION을 사용한 조건 분기&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">SELECT item_name, year, price_tax_ex AS price
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> FROM Items
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> WHERE year &amp;lt;= 2001
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">UNION ALL
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SELECT item_name, year, price_tax_in AS price
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> FROM Items
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> WHERE year &amp;gt;= 2002
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>단점 : 1. 길다, 2. 테이블에 2회 접근한다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-where-구에서-조건-분기를-하는-사람을-초보자">2) WHERE 구에서 조건 분기를 하는 사람을 초보자&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">SELECT item_name, year
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> CASE WHEN year &amp;lt;= 2001 TEHN price_tax_ex
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> WHEN year &amp;gt;= 2002 THEN price_tax_in END AS price
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">FROM Items
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="3-select-구를-사용한-조건-분기의-실행-계획">3) SELECT 구를 사용한 조건 분기의 실행 계획&lt;/h3>
+&lt;ul>
+&lt;li>테이블 1회 접근으로 끝난다&lt;/li>
+&lt;li>구문 =&amp;gt; 식, UNION =&amp;gt; CASE&lt;/li>
+&lt;/ul>
+&lt;h2 id="ch-9-select-구를-사용한-조건-분기의-실행-계획">ch 9. SELECT 구를 사용한 조건 분기의 실행 계획&lt;/h2>
+&lt;h3 id="1-집계-대상으로-조건-분기">1) 집계 대상으로 조건 분기&lt;/h3>
+&lt;ul>
+&lt;li>UNION을 사용한 방법&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">SELECT prefecture, SUM(pop_men) AS pop_men, SUM(pop_wom) AS pop_wom
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> FROM(SELECT prefecture, pop AS pop_men null AS pop_wom)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> FROM Population
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> WHERE sex = &amp;#39;1&amp;#39; # 남성
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> UNION
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> SELECT prefecture, null AS pop_men, pop AS pop_wom
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> FROM Population
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> WHERE sex = &amp;#39;2&amp;#39;) TMP # 여성
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">GROUP BY prefecture
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>풀스캔이 2회 수행된다.&lt;/p></description></item><item><title>책뿌수기 - SQL 레벨업-2</title><link>https://jaejin0me.github.io/post/posts103/</link><pubDate>Sun, 20 Jan 2019 22:20:56 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts103/</guid><description>&lt;p>&lt;em>인용하는 그림은 다양한 곳에서 가져왔음을 밝힙니다&lt;/em>&lt;/p>
+&lt;h1 id="1-sql-기초">1. SQL 기초&lt;/h1>
+&lt;h2 id="ch-6-select-구문">ch 6. SELECT 구문&lt;/h2>
+&lt;h3 id="1-select-구와-from-구">1) SELECT 구와 FROM 구&lt;/h3>
+&lt;ul>
+&lt;li>SELECT 1 처럼 상수를 선택하는 경우 FROM이 필요없다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-where-구">)2) WHERE 구&lt;/h3>
+&lt;ul>
+&lt;li>WHERE 구의 조건이 많을 경우 IN 으로 대체&lt;/li>
+&lt;li>SELECT 구문은 테이블을 반환하는 읽기 전용 함수 이다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-group-by-구">3) GROUP BY 구&lt;/h3>
+&lt;ul>
+&lt;li>일부 DBMS에서는 지원하지 않음&lt;/li>
+&lt;/ul>
+&lt;h3 id="4-having">4) HAVING&lt;/h3>
+&lt;ul>
+&lt;li>GROUP BY에 조건을 걸때&lt;/li>
+&lt;li>WHERE가 레코드에 조건을 거는 것이라면, HAVING은 집합에 조건을 거는 것&lt;/li>
+&lt;/ul>
+&lt;h3 id="5-order-by">5) ORDER BY&lt;/h3>
+&lt;h3 id="6-뷰와-서브쿼리">6) 뷰와 서브쿼리&lt;/h3>
+&lt;ul>
+&lt;li>자주 사용하는 SELECT 구문을 DB에 저장 = 뷰(view)&lt;/li>
+&lt;li>뷰는 내부에 데이터러 보유하지 않음(SELECT 구문을 저장할 뿐)&lt;/li>
+&lt;li>서브쿼리의 실행과 동일하다&lt;/li>
+&lt;li>WHERE 조건에 서브쿼리를 거면 조건이 바뀌어도 문제없음(조건을 하나하나 하드코딩하는 번거로움을 없앨수있다)&lt;/li>
+&lt;/ul>
+&lt;h2 id="ch-7-조건-분기-집합-연산-윈도우-함수-갱신">ch 7. 조건 분기, 집합 연산, 윈도우 함수, 갱신&lt;/h2>
+&lt;h3 id="1-sql과-조건-분기">1) SQL과 조건 분기&lt;/h3>
+&lt;ul>
+&lt;li>SQL의 조건 분기는 CASE식을 통해 한다.&lt;/li>
+&lt;li>SQL의 조건 분기는 특정한 값을 리턴하는 것이 특징이다.&lt;/li>
+&lt;li>CASE는 식이기 때문에 활용성이 높은 것이 강점이다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-sql의-집합-연산">2) SQL의 집합 연산&lt;/h3>
+&lt;ul>
+&lt;li>UNION : 합집합(기본적으로 중복을 제거)&lt;/li>
+&lt;li>INTERSECT : 교집합&lt;/li>
+&lt;li>EXCEPT : 차집합&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-윈도우-함수">3) 윈도우 함수&lt;/h3>
+&lt;ul>
+&lt;li>집약 기능이 없는 GROUP BY 구&lt;/li>
+&lt;li>PARTITION BY&lt;/li>
+&lt;li>SELECT 구에만 사용됨&lt;/li>
+&lt;li>윈도우 전용함수로 RANK, ROW_NUMBER가 있다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="4-트랜잭션과-갱신">4) 트랜잭션과 갱신&lt;/h3>
+&lt;ul>
+&lt;li>INSERT, UPDATE, DELETE&lt;/li>
+&lt;/ul></description></item><item><title>책뿌수기 - SQL 레벨업-1</title><link>https://jaejin0me.github.io/post/posts102/</link><pubDate>Sun, 30 Dec 2018 22:20:56 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts102/</guid><description>&lt;p>&lt;em>인용하는 그림은 다양한 곳에서 가져왔음을 밝힙니다&lt;/em>&lt;/p>
+&lt;h1 id="1-dbms-아키텍처">1. DBMS 아키텍처&lt;/h1>
+&lt;h2 id="ch-1dbms-아키텍처-개요">ch 1.DBMS 아키텍처 개요&lt;/h2>
+&lt;p>&lt;img loading="lazy" src="https://jaejin0me.github.io/posts102_1.jpg" alt="Fig" title="dbms 아키텍처" />
+&lt;/p>
+&lt;h3 id="1-쿼리-평가-엔진">1) 쿼리 평가 엔진&lt;/h3>
+&lt;ul>
+&lt;li>SQL 구문을 분석하고, 어떤 순서로 기억장치의 데이터에 접근할지 결정 = 실행 계획(Explain plan)&lt;/li>
+&lt;li>Access Method : 실행 계획에 기반을 둬서 데이터에 접근하는 방법&lt;/li>
+&lt;li>핵심 모듈이며 성능과도 깊은 관련이 있다&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-버퍼-매니저">2) 버퍼 매니저&lt;/h3>
+&lt;ul>
+&lt;li>특별한 용도로 버퍼라는 메모리 영역을 확보해둔다&lt;/li>
+&lt;li>디스크 용량 매니저와 함께 작동한다&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-디스크-용량-매니저">3) 디스크 용량 매니저&lt;/h3>
+&lt;ul>
+&lt;li>데이터를 어디에/어떻게 읽고 쓸지 관리&lt;/li>
+&lt;/ul>
+&lt;h3 id="4-트랜잭션-매니저와-락-매니저">4) 트랜잭션 매니저와 락 매니저&lt;/h3>
+&lt;ul>
+&lt;li>동시 접근에 대한 안전성 제공&lt;/li>
+&lt;/ul>
+&lt;h3 id="5-리커버리-매니저">5) 리커버리 매니저&lt;/h3>
+&lt;ul>
+&lt;li>절대 잃어버리면 안되는 데이터를 장애로 잃었을시에 복구해주는 기능&lt;/li>
+&lt;/ul>
+&lt;h2 id="ch-2-dbms와-버퍼">ch 2. DBMS와 버퍼&lt;/h2>
+&lt;h3 id="1-공짜-밥은-존재할까">1) 공짜 밥은 존재할까?&lt;/h3>
+&lt;ul>
+&lt;li>기억장치에 따른 트레이드오프, 무조건 좋은건 없다&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-dbms가-기억장치의-관계">2) DBMS가 기억장치의 관계&lt;/h3>
+&lt;ul>
+&lt;li>DBMS는 데이터 저장을 목적으로 하는 미드뤠어 이며, 사용하는 대표적인 기억장치는 다음과 같다&lt;/li>
+&lt;/ul>
+&lt;h4 id="1-하드디스크hdd">(1) 하드디스크(HDD)&lt;/h4>
+&lt;ul>
+&lt;li>DBMS가 데이터를 저장하는 대부분&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-메모리">(2) 메모리&lt;/h4>
+&lt;ul>
+&lt;li>성능 향상을 위해 올려둠, I/O를 줄이기 위해&lt;/li>
+&lt;/ul>
+&lt;h4 id="3-버퍼를-활용한-속도-향상">(3) 버퍼를 활용한 속도 향상&lt;/h4>
+&lt;ul>
+&lt;li>성능 향상을 목적으로 데이터를 저장하는 메모리를 버퍼, 캐시&lt;/li>
+&lt;li>버퍼 매니저 : 버퍼에 데이터를 어떻게, 어느 정도 기간 동안 올릴지 결정&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-메모리-위에-있는-두-개의-버퍼">3) 메모리 위에 있는 두 개의 버퍼&lt;/h3>
+&lt;ul>
+&lt;li>DBMS가 데이터를 유지하기 위해 사용하는 메모리는 크게. 1. 데이터 캐시, 2. 로그 버퍼&lt;/li>
+&lt;li>MySQL DBMS의 버퍼 메모리와 제어 매개변수&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align: left">명칭&lt;/th>
+&lt;th style="text-align: left">버퍼 풀&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align: left">매개변수&lt;/td>
+&lt;td style="text-align: left">innodb_buffuer_pool_size&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">초기값&lt;/td>
+&lt;td style="text-align: left">128MB&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">설정값확인&lt;/td>
+&lt;td style="text-align: left">SHOW VARIABLES LIKE &amp;lsquo;innodb_buffer_pool_size&amp;rsquo;&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align: left">명칭&lt;/th>
+&lt;th style="text-align: left">로그 버퍼&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align: left">매개변수&lt;/td>
+&lt;td style="text-align: left">innodb_log_buffer_size&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">초기값&lt;/td>
+&lt;td style="text-align: left">8MB&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">설정값확인&lt;/td>
+&lt;td style="text-align: left">SHOW VARIABLES LIKE &amp;lsquo;innodb_log_buffer_size&amp;rsquo;&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="1-데이터-캐시">(1) 데이터 캐시&lt;/h4>
+&lt;ul>
+&lt;li>디스크에 있는 데이터의 일부를 메모리에 유지하기 위해 사용하는 영역&lt;/li>
+&lt;li>SELECT 하는 데이터가 캐시 영역에 있다면 빨라짐&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-로그-버퍼">(2) 로그 버퍼&lt;/h4>
+&lt;ul>
+&lt;li>갱신 처리(INSERT, DELETE, UPDATE, MERGE)와 관련&lt;/li>
+&lt;li>갱신 관련 SQL이 오면 로그버퍼에 변경 정보를 보내고 이후에 디스크 변경을 수행(비동기 처리)&lt;/li>
+&lt;/ul>
+&lt;h3 id="4-메모리-성질이-초래하는-트레이프오프">4) 메모리 성질이 초래하는 트레이프오프&lt;/h3>
+&lt;h4 id="1-휘발성">(1) 휘발성&lt;/h4>
+&lt;ul>
+&lt;li>장애 발생시 데이터가 날라가버려 부정합이 발생한다.&lt;/li>
+&lt;li>커밋 시점에 갱신정보를 로그 파일(HDD에 존재)에씀으로 정합성 유지&lt;/li>
+&lt;li>반대로 커밋시에는 디스크에 동기 저근이 일어나기 때문에 지연이 발생할 가능성이 높아진다&lt;/li>
+&lt;/ul>
+&lt;h3 id="5-시스템-특성에-따른-트레이드오프">5) 시스템 특성에 따른 트레이드오프&lt;/h3>
+&lt;h4 id="1-데이터-캐시와-로그-버퍼의-크기">(1) 데이터 캐시와 로그 버퍼의 크기&lt;/h4>
+&lt;ul>
+&lt;li>기본적으로 데이터 캐시에 비해 로그 버퍼의 초기값이 굉장히 작다. 그 이유는 주된 작업이 검색이라고 가정하기 때문이다.&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-검색과-갱신-중에서-중요한-것">(2) 검색과 갱신 중에서 중요한 것&lt;/h4>
+&lt;h3 id="6-추가적인-메모리-영역-워킹-메모리">6) 추가적인 메모리 영역 &amp;lsquo;워킹 메모리&amp;rsquo;&lt;/h3>
+&lt;h4 id="1-언제-사용될까">(1) 언제 사용될까?&lt;/h4>
+&lt;ul>
+&lt;li>2개의 버퍼 이외에도, 일반적인 메모리 영역을 하나더 가지고 있다&lt;/li>
+&lt;li>정렬 또는 해시 관련 처리에 사용되는 작업용 영역이다.&lt;/li>
+&lt;li>정렬은 ORDER BY, 집합 연산, 원도우 함수&lt;/li>
+&lt;li>해시는 테이블 결합시&lt;/li>
+&lt;li>MySQL 에서는 정렬 버퍼, sort_buffuer_size = 257kb&lt;/li>
+&lt;li>이 영역이 성능적으로 중요한 이뉴는, 이 영역의 양이 부족하며 저장소를 사용하기 때문이다(Swap)&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-부족하면-무슨일이-일어-날까">(2) 부족하면 무슨일이 일어 날까?&lt;/h4>
+&lt;h2 id="ch-3-dbms와-실행-계획">ch 3. DBMS와 실행 계획&lt;/h2>
+&lt;h3 id="1-권한-이양의-죄악">1) 권한 이양의 죄악&lt;/h3>
+&lt;ul>
+&lt;li>절차가 기초가 되는 언어는 (C, 자바, 루비)는 절차를 책임지고 기술하지만, RDB는 대상(what)을 기술하기 때문에 그 외 작업은 DBMS에 맡겼다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-데이터에-접근하는-방법은-어떻게-결정할까">2) 데이터에 접근하는 방법은 어떻게 결정할까?&lt;/h3>
+&lt;p>&lt;img loading="lazy" src="https://jaejin0me.github.io/posts102_2.jpg" alt="Fig" title="쿼리 처리 흐름" />
+&lt;/p></description></item></channel></rss>

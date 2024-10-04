@@ -1,1 +1,191 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>피보나치수 on Jaejin's blog</title><link>https://jaejin0me.github.io/tags/%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98%EC%88%98/</link><description>Recent content in 피보나치수 on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Fri, 26 Jan 2018 12:20:42 +0800</lastBuildDate><atom:link href="https://jaejin0me.github.io/tags/%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98%EC%88%98/index.xml" rel="self" type="application/rss+xml"/><item><title>백준알고리즘 2747번 - 피보나치 수</title><link>https://jaejin0me.github.io/post/posts54/</link><pubDate>Fri, 26 Jan 2018 12:20:42 +0800</pubDate><guid>https://jaejin0me.github.io/post/posts54/</guid><description>피보나치 수를 구하는 가장 기초적인 알고리즘입니다. $$ F_n = F_{n-1} + F_{n-2} (n&amp;gt;=2) $$ 점화식을 그대로 구현하여 재귀적으로 풀어내면 됩니다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15</description></item><item><title>백준알고리즘 2748번 - 피보나치 수 2</title><link>https://jaejin0me.github.io/post/posts55/</link><pubDate>Fri, 26 Jan 2018 12:20:42 +0800</pubDate><guid>https://jaejin0me.github.io/post/posts55/</guid><description>피보나치 수 두번째 입니다. DP로 푸는 문제입니다. 점화식으로 풀때는 Top-down 방식이지만 DP로 풀때는 Bottom-up 방식입니다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>피보나치수 on Jaejin's blog</title><link>https://jaejin0me.github.io/tags/%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98%EC%88%98/</link><description>Recent content in 피보나치수 on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Fri, 26 Jan 2018 12:20:42 +0800</lastBuildDate><atom:link href="https://jaejin0me.github.io/tags/%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98%EC%88%98/index.xml" rel="self" type="application/rss+xml"/><item><title>백준알고리즘 2747번 - 피보나치 수</title><link>https://jaejin0me.github.io/post/posts54/</link><pubDate>Fri, 26 Jan 2018 12:20:42 +0800</pubDate><guid>https://jaejin0me.github.io/post/posts54/</guid><description>&lt;p>피보나치 수를 구하는 가장 기초적인 알고리즘입니다.&lt;/p>
+&lt;p>$$ F_n = F_{n-1} + F_{n-2} (n&amp;gt;=2) $$&lt;/p>
+&lt;p>점화식을 그대로 구현하여 재귀적으로 풀어내면 됩니다.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">/**
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> *
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import java.io.BufferedReader;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import java.io.FileReader;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import java.io.IOException;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import java.io.InputStreamReader;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import java.util.ArrayList;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import java.util.Arrays;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import java.util.LinkedList;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import java.util.Queue;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import java.util.Scanner;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import java.util.StringTokenizer;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/**
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> * @author jaeji
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> *
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">public class Main {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> static int fibonacci(int no) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(no==0)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return 0;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else if(no==1)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return 1;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return fibonacci(no-1)+fibonacci(no-2);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> public static void main(String[] args) throws IOException {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> BufferedReader br = new BufferedReader( new InputStreamReader( System.in ) );
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //BufferedReader br = new BufferedReader( new FileReader(&amp;#34;input.txt&amp;#34; ) );
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> StringTokenizer st = new StringTokenizer(br.readLine());
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int n = Integer.parseInt(st.nextToken());
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int result = fibonacci(n);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> System.out.println(result);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>백준알고리즘 2748번 - 피보나치 수 2</title><link>https://jaejin0me.github.io/post/posts55/</link><pubDate>Fri, 26 Jan 2018 12:20:42 +0800</pubDate><guid>https://jaejin0me.github.io/post/posts55/</guid><description>&lt;p>피보나치 수 두번째 입니다.&lt;/p>
+&lt;p>DP로 푸는 문제입니다.&lt;/p>
+&lt;p>점화식으로 풀때는 Top-down 방식이지만 DP로 풀때는 Bottom-up 방식입니다.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import java.io.BufferedReader;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import java.io.FileReader;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import java.io.IOException;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import java.io.InputStreamReader;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import java.util.ArrayList;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import java.util.Arrays;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import java.util.LinkedList;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import java.util.Queue;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import java.util.Scanner;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import java.util.StringTokenizer;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/**
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> * @author jaeji
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> *
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">public class Main {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> static long[] arr = new long[91];
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> public static void main(String[] args) throws IOException {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> BufferedReader br = new BufferedReader( new InputStreamReader( System.in ) );
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //BufferedReader br = new BufferedReader( new FileReader(&amp;#34;input.txt&amp;#34; ) );
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> StringTokenizer st = new StringTokenizer(br.readLine());
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int n = Integer.parseInt(st.nextToken());
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> arr[1] = 1;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> for(int i=2;i&amp;lt;=n;i++) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> arr[i] = arr[i-1] + arr[i-2];
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> System.out.println(arr[n]);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

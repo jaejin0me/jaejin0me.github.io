@@ -1,1 +1,53 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Hugo on Jaejin's blog</title><link>https://jaejin0me.github.io/categories/hugo/</link><description>Recent content in Hugo on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Tue, 09 Jul 2024 21:30:02 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>수식 표현을 위해 PaperMod 테마 수정하기</title><link>https://jaejin0me.github.io/post/20240709/</link><pubDate>Tue, 09 Jul 2024 21:30:02 +0900</pubDate><guid>https://jaejin0me.github.io/post/20240709/</guid><description>1. layouts/partials/extend_head.html 수정하기 1 2 3 4 5 6 7 8 9 {{- /* Insert any custom code (web-analytics, resources, etc.) - it will appear in the &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; section of every page. */ -}} {{- /* Can be overwritten by partial with the same name in the global layouts. */ -}} {{- /* Head custom content area end */ -}} + {{ if or .Params.math .Site.Params.math }}</description></item><item><title>Hugo 구글 애널리틱스 GA4 설정하기 (Google analytics)</title><link>https://jaejin0me.github.io/post/20230509/</link><pubDate>Wed, 10 May 2023 01:06:02 +0900</pubDate><guid>https://jaejin0me.github.io/post/20230509/</guid><description>7월 1일부터 유니버셜 애널리틱스(UA-xxx)가 더 이상 데이터를 수집하지 않습니다. 아래와 같은 경고문을 한 1년간 보기만 하다가 일찍 깬 오늘(어제 축구를</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Hugo on Jaejin's blog</title><link>https://jaejin0me.github.io/categories/hugo/</link><description>Recent content in Hugo on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Tue, 09 Jul 2024 21:30:02 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>수식 표현을 위해 PaperMod 테마 수정하기</title><link>https://jaejin0me.github.io/post/20240709/</link><pubDate>Tue, 09 Jul 2024 21:30:02 +0900</pubDate><guid>https://jaejin0me.github.io/post/20240709/</guid><description>&lt;h3 id="1-layoutspartialsextend_headhtml-수정하기">1. layouts/partials/extend_head.html 수정하기&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl">{{- /* Insert any custom code (web-analytics, resources, etc.) - it will appear in the &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; section of every page. */ -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{- /* Can be overwritten by partial with the same name in the global layouts. */ -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{- /* Head custom content area end */ -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ {{ if or .Params.math .Site.Params.math }}
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css&amp;#34; integrity=&amp;#34;sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ &amp;lt;script defer src=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js&amp;#34; integrity=&amp;#34;sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ &amp;lt;script defer src=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js&amp;#34; integrity=&amp;#34;sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ onload=&amp;#34;renderMathInElement(document.body);&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ {{ end }}
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="2-math-config-수정하기">2. math config 수정하기&lt;/h3>
+&lt;ul>
+&lt;li>1의 코드를 보시면 아시겠지만 params 하위에 math가 위치되어야 합니다.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl">[params]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> version = &amp;#34;4.x&amp;#34; # Used to give a friendly message when you have an incompatible update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> debug = false # If true, load `eruda.min.js`. See https://github.com/liriliri/eruda
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ math = true
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> since = &amp;#34;2017&amp;#34; # Site creation time # 站点建立时间
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="3-참고">3. 참고&lt;/h3>
+&lt;p>&lt;a href="https://github.com/adityatelange/hugo-PaperMod/issues/236">https://github.com/adityatelange/hugo-PaperMod/issues/236&lt;/a>&lt;/p></description></item><item><title>Hugo 구글 애널리틱스 GA4 설정하기 (Google analytics)</title><link>https://jaejin0me.github.io/post/20230509/</link><pubDate>Wed, 10 May 2023 01:06:02 +0900</pubDate><guid>https://jaejin0me.github.io/post/20230509/</guid><description>&lt;p>7월 1일부터 유니버셜 애널리틱스(UA-xxx)가 더 이상 데이터를 수집하지 않습니다.&lt;br>
+아래와 같은 경고문을 한 1년간 보기만 하다가&lt;br>
+일찍 깬 오늘(어제 축구를 너무 빡세게 했나..) 구글 애널리틱스 4로 변경했습니다.&lt;/p></description></item></channel></rss>

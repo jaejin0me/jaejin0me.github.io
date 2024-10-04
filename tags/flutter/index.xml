@@ -1,1 +1,712 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Flutter on Jaejin's blog</title><link>https://jaejin0me.github.io/tags/flutter/</link><description>Recent content in Flutter on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Tue, 20 Apr 2021 23:12:52 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/tags/flutter/index.xml" rel="self" type="application/rss+xml"/><item><title>플러터 이미지와 폰트 추가하기</title><link>https://jaejin0me.github.io/post/posts200/</link><pubDate>Tue, 20 Apr 2021 23:12:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts200/</guid><description>이미지 추가하기 적당한 폴더에 이미지를 저장한다. pubspec.yaml 의 aseets 에 이미지를 추가한다. 이미지를 호출하는 방법은 크게 3가지 file : 외부의 파일을 사용 asset : 앱에 미리 넣어놓</description></item><item><title>플러터 위젯 사용법</title><link>https://jaejin0me.github.io/post/posts199/</link><pubDate>Mon, 19 Apr 2021 00:12:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts199/</guid><description>머티리얼 디자인을 통해 일관된 디자인을 제공할 수 있음 스캐폴드(scaffold) 클래스를 통해 머티리얼 디자인 레이아웃으로 개발 가능함 Scaffold 클래스 더 활용해보</description></item><item><title>플러터 위젯의 생명주기</title><link>https://jaejin0me.github.io/post/posts198/</link><pubDate>Fri, 16 Apr 2021 00:05:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts198/</guid><description>StatelessWidget - 생명주기 없음 StatefulWidget - 10단계의 생명주기를 가짐 출처: https://www.raywenderlich.com/books/flutter-apprentice/v1.0.ea3/chapters/4-understanding-widgets 1. createState() - 상태생성 StatefulWidget이 State를 생성하기 위해 무조건 호출해야 하는 함</description></item><item><title>플러터 기본적인 위젯 사용해보기</title><link>https://jaejin0me.github.io/post/posts197/</link><pubDate>Tue, 13 Apr 2021 20:05:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts197/</guid><description>사용하는 위젯 설명 MaterialApp - Material 디자인 제공 Scaffold - 기본적인 Material 디자인 레이아웃 제공 Center - 상하 가운데 정렬 Swich - 토글스위치 제공 Text - 텍스트 Column - chlidren 속성이 있어 여러개의 하위 위</description></item><item><title>Dart 연습</title><link>https://jaejin0me.github.io/post/posts196/</link><pubDate>Tue, 13 Apr 2021 19:05:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts196/</guid><description>구구단 1 2 3 4 5 6 7 void main() { for (int i = 2; i &amp;lt; 10; i++) { for (int j = 1; j &amp;lt; 10; j++) { print(&amp;#39;${i} * ${j} = ${i * j}&amp;#39;); } } } 자동차 클래스 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Flutter on Jaejin's blog</title><link>https://jaejin0me.github.io/tags/flutter/</link><description>Recent content in Flutter on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Tue, 20 Apr 2021 23:12:52 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/tags/flutter/index.xml" rel="self" type="application/rss+xml"/><item><title>플러터 이미지와 폰트 추가하기</title><link>https://jaejin0me.github.io/post/posts200/</link><pubDate>Tue, 20 Apr 2021 23:12:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts200/</guid><description>&lt;h3 id="이미지-추가하기">이미지 추가하기&lt;/h3>
+&lt;ul>
+&lt;li>적당한 폴더에 이미지를 저장한다.&lt;/li>
+&lt;li>pubspec.yaml 의 aseets 에 이미지를 추가한다.&lt;/li>
+&lt;li>이미지를 호출하는 방법은 크게 3가지
+&lt;ul>
+&lt;li>file : 외부의 파일을 사용&lt;/li>
+&lt;li>asset : 앱에 미리 넣어놓은 파일 사용(지금 사용하는 방식)&lt;/li>
+&lt;li>memory : 메모리에 올라와있는 이미지 데이터 사용&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">flutter&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># The following line ensures that the Material Icons font is&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># included with your application, so that you can use the icons in&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># the material Icons class.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses-material-design&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># To add assets to your application, add an assets section, like this:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">assets&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">image/dog.jpg&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="폰트-추가하기">폰트 추가하기&lt;/h3>
+&lt;ul>
+&lt;li>적당한 폴더에 폰트를 저장한다.&lt;/li>
+&lt;li>pubspec.yaml 의 fonts 에 이미지를 추가한다.&lt;/li>
+&lt;li>폰트파일이름은 영어만 가능하다.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">fonts&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">family&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Pacifico&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">fonts&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">asset&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">font/Pacifico-Regular.ttf&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="위젯에서-이미지와-폰트-사용해보기">위젯에서 이미지와 폰트 사용해보기&lt;/h3>
+&lt;ul>
+&lt;li>이전 포스트에서 사용한 위젯에서 추가한 이미지와 폰트를 사용해봅니다.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;span class="lnt">68
+&lt;/span>&lt;span class="lnt">69
+&lt;/span>&lt;span class="lnt">70
+&lt;/span>&lt;span class="lnt">71
+&lt;/span>&lt;span class="lnt">72
+&lt;/span>&lt;span class="lnt">73
+&lt;/span>&lt;span class="lnt">74
+&lt;/span>&lt;span class="lnt">75
+&lt;/span>&lt;span class="lnt">76
+&lt;/span>&lt;span class="lnt">77
+&lt;/span>&lt;span class="lnt">78
+&lt;/span>&lt;span class="lnt">79
+&lt;/span>&lt;span class="lnt">80
+&lt;/span>&lt;span class="lnt">81
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="k">import&lt;/span> &lt;span class="s1">&amp;#39;package:flutter/material.dart&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">class&lt;/span> &lt;span class="nc">ChangeTextByButton&lt;/span> &lt;span class="kd">extends&lt;/span> &lt;span class="n">StatefulWidget&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">@&lt;/span>&lt;span class="n">override&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">State&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">StatefulWidget&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">createState&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;createState()&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 여기 출력!
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="n">_ChangeTextByButton&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">class&lt;/span> &lt;span class="nc">_ChangeTextByButton&lt;/span> &lt;span class="kd">extends&lt;/span> &lt;span class="n">State&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">ChangeTextByButton&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="n">swVal&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="n">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;Jaejin Jang off&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">@&lt;/span>&lt;span class="n">override&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="n">initState&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">super&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">initState&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">// 여기 출력!
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="n">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;initState()&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">@&lt;/span>&lt;span class="n">override&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Widget&lt;/span> &lt;span class="n">build&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">BuildContext&lt;/span> &lt;span class="n">context&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;build&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 여기 출력!
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="n">MaterialApp&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">title:&lt;/span> &lt;span class="s1">&amp;#39;ChangeTextByButton&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">theme:&lt;/span> &lt;span class="n">ThemeData&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">primaryColor:&lt;/span> &lt;span class="n">Colors&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">blue&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">visualDensity:&lt;/span> &lt;span class="n">VisualDensity&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">adaptivePlatformDensity&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">darkTheme:&lt;/span> &lt;span class="n">ThemeData&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">light&lt;/span>&lt;span class="p">(),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">home:&lt;/span> &lt;span class="n">Scaffold&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">appBar:&lt;/span> &lt;span class="n">AppBar&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// appbar 추가
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nl">title:&lt;/span> &lt;span class="n">Text&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;App Bar 추가해보기&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">body:&lt;/span> &lt;span class="n">Center&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">child:&lt;/span> &lt;span class="n">Column&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">mainAxisAlignment:&lt;/span> &lt;span class="n">MainAxisAlignment&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">center&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">children:&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Widget&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Text&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">str&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">style:&lt;/span> &lt;span class="n">TextStyle&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">fontFamily:&lt;/span> &lt;span class="s1">&amp;#39;Pacifico&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nl">color:&lt;/span> &lt;span class="n">Colors&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">blue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nl">fontSize:&lt;/span> &lt;span class="m">20&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="c1">//내가 추가한 폰트 지정!
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Switch&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">value:&lt;/span> &lt;span class="n">swVal&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">onChanged:&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">setState&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;setState&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 여기 출력!
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="n">swVal&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">value&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">value&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="s1">&amp;#39;Jaejin Jang On&amp;#39;&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Jaejin Jang off&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Row&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 가로위젯 여러개 넣어보기
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nl">mainAxisAlignment:&lt;/span> &lt;span class="n">MainAxisAlignment&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">center&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">children:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Text&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;가로로 위젯 추가해보기 1&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">style:&lt;/span> &lt;span class="n">TextStyle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nl">color:&lt;/span> &lt;span class="n">Colors&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">orange&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nl">fontSize:&lt;/span> &lt;span class="m">20&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Icon&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Icons&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">access_alarm&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Icon&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Icons&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">access_time&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Icon&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Icons&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">account_tree&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Icon&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Icons&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_to_drive&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Icon&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Icons&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">laptop&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Image&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">asset&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;image/dog.jpg&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 그림 나타내기!
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nl">height:&lt;/span> &lt;span class="m">300&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">width:&lt;/span> &lt;span class="m">400&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">fit:&lt;/span> &lt;span class="n">BoxFit&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">contain&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">])),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">floatingActionButton:&lt;/span> &lt;span class="n">FloatingActionButton&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 플로팅버튼 추가
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nl">child:&lt;/span> &lt;span class="n">Icon&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Icons&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">onPressed:&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>플러터 위젯 사용법</title><link>https://jaejin0me.github.io/post/posts199/</link><pubDate>Mon, 19 Apr 2021 00:12:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts199/</guid><description>&lt;ul>
+&lt;li>머티리얼 디자인을 통해 일관된 디자인을 제공할 수 있음&lt;/li>
+&lt;li>스캐폴드(scaffold) 클래스를 통해 머티리얼 디자인 레이아웃으로 개발 가능함&lt;/li>
+&lt;/ul>
+&lt;h3 id="scaffold-클래스-더-활용해보기">Scaffold 클래스 더 활용해보기&lt;/h3>
+&lt;ul>
+&lt;li>이전 포스트에서 만들 었던 버튼누르면 글자바뀌는 위젯을 계속해서 사용하겠습니다.&lt;/li>
+&lt;li>appBar 추가하기&lt;/li>
+&lt;li>floatingActionButton 추가하기&lt;/li>
+&lt;li>Row, Column 클래스 이용해 가로 또는 세로로 여러 위젯 추가하기&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;span class="lnt">68
+&lt;/span>&lt;span class="lnt">69
+&lt;/span>&lt;span class="lnt">70
+&lt;/span>&lt;span class="lnt">71
+&lt;/span>&lt;span class="lnt">72
+&lt;/span>&lt;span class="lnt">73
+&lt;/span>&lt;span class="lnt">74
+&lt;/span>&lt;span class="lnt">75
+&lt;/span>&lt;span class="lnt">76
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="k">import&lt;/span> &lt;span class="s1">&amp;#39;package:flutter/material.dart&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">class&lt;/span> &lt;span class="nc">ChangeTextByButton&lt;/span> &lt;span class="kd">extends&lt;/span> &lt;span class="n">StatefulWidget&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">@&lt;/span>&lt;span class="n">override&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">State&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">StatefulWidget&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">createState&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;createState()&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 여기 출력!
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="n">_ChangeTextByButton&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">class&lt;/span> &lt;span class="nc">_ChangeTextByButton&lt;/span> &lt;span class="kd">extends&lt;/span> &lt;span class="n">State&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">ChangeTextByButton&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="n">swVal&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="n">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;Jaejin Jang off&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">@&lt;/span>&lt;span class="n">override&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="n">initState&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">super&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">initState&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">// 여기 출력!
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="n">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;initState()&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">@&lt;/span>&lt;span class="n">override&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Widget&lt;/span> &lt;span class="n">build&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">BuildContext&lt;/span> &lt;span class="n">context&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;build&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 여기 출력!
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="n">MaterialApp&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">title:&lt;/span> &lt;span class="s1">&amp;#39;ChangeTextByButton&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">theme:&lt;/span> &lt;span class="n">ThemeData&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">primaryColor:&lt;/span> &lt;span class="n">Colors&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">blue&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">visualDensity:&lt;/span> &lt;span class="n">VisualDensity&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">adaptivePlatformDensity&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">darkTheme:&lt;/span> &lt;span class="n">ThemeData&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">light&lt;/span>&lt;span class="p">(),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">home:&lt;/span> &lt;span class="n">Scaffold&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">appBar:&lt;/span> &lt;span class="n">AppBar&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// appbar 추가
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nl">title:&lt;/span> &lt;span class="n">Text&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;App Bar 추가해보기&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">body:&lt;/span> &lt;span class="n">Center&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">child:&lt;/span> &lt;span class="n">Column&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">mainAxisAlignment:&lt;/span> &lt;span class="n">MainAxisAlignment&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">center&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">children:&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Widget&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Text&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">str&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">style:&lt;/span> &lt;span class="n">TextStyle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nl">color:&lt;/span> &lt;span class="n">Colors&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">blue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nl">fontSize:&lt;/span> &lt;span class="m">20&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Switch&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">value:&lt;/span> &lt;span class="n">swVal&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">onChanged:&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">setState&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;setState&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 여기 출력!
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="n">swVal&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">value&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">value&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="s1">&amp;#39;Jaejin Jang On&amp;#39;&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Jaejin Jang off&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Row&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 가로위젯 여러개 넣어보기
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nl">mainAxisAlignment:&lt;/span> &lt;span class="n">MainAxisAlignment&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">center&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">children:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Text&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;가로로 위젯 추가해보기 1&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">style:&lt;/span> &lt;span class="n">TextStyle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nl">color:&lt;/span> &lt;span class="n">Colors&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">orange&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nl">fontSize:&lt;/span> &lt;span class="m">20&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Icon&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Icons&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">access_alarm&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Icon&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Icons&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">access_time&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Icon&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Icons&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">account_tree&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Icon&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Icons&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_to_drive&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Icon&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Icons&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">laptop&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">])),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">floatingActionButton:&lt;/span> &lt;span class="n">FloatingActionButton&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 플로팅버튼 추가
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nl">child:&lt;/span> &lt;span class="n">Icon&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Icons&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">onPressed:&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>플러터 위젯의 생명주기</title><link>https://jaejin0me.github.io/post/posts198/</link><pubDate>Fri, 16 Apr 2021 00:05:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts198/</guid><description>&lt;ul>
+&lt;li>StatelessWidget - 생명주기 없음&lt;/li>
+&lt;li>StatefulWidget - 10단계의 생명주기를 가짐&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img loading="lazy" src="https://jaejin0me.github.io/posts198_1.png" alt="Fig" title="posts198_1.png" />
+&lt;/p>
+&lt;ul>
+&lt;li>출처: &lt;a href="https://www.raywenderlich.com/books/flutter-apprentice/v1.0.ea3/chapters/4-understanding-widgets">https://www.raywenderlich.com/books/flutter-apprentice/v1.0.ea3/chapters/4-understanding-widgets&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="1-createstate---상태생성">1. createState() - 상태생성&lt;/h3>
+&lt;ul>
+&lt;li>StatefulWidget이 State를 생성하기 위해 무조건 호출해야 하는 함수&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-mounted--true---setstate-호출가능">2. mounted == true - setState() 호출가능&lt;/h3>
+&lt;ul>
+&lt;li>State가 생성되면 mounted property가 true로 설정됨&lt;/li>
+&lt;li>위젯을 제어할 수 있는 buildContext 클래스에 접근 가능해지며 setState()를 호출할 수 있게 된다.&lt;/li>
+&lt;li>setState() 호출전에 mounted property를 체크하면 더 안전한 코드를 작성할 수 있다.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">mounted&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">setState&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="3-initstate---위젯초기화">3. initState() - 위젯초기화&lt;/h3>
+&lt;ul>
+&lt;li>위젯 초기화시 1번 호출한다.&lt;/li>
+&lt;li>위젯에 필요한 데이터를 준비하기 좋은 구간&lt;/li>
+&lt;/ul>
+&lt;h3 id="4-didchangedependencies---의존성-변경시-호출">4. didChangeDependencies() - 의존성 변경시 호출&lt;/h3>
+&lt;ul>
+&lt;li>initState() 이후에 호출된다.&lt;/li>
+&lt;li>데이터에 의존하는 위젯이라면 화면에 표시하기 전에 꼭 호출해야함&lt;/li>
+&lt;li>상속받은 위젯을 사용할때 Super(Parent)가 변경되면 호출함&lt;/li>
+&lt;/ul>
+&lt;h3 id="5-build---위젯-반환">5. build() - 위젯 반환&lt;/h3>
+&lt;ul>
+&lt;li>위젯을 반환한다. 반환된 위젯이 렌더링되어 화면에 표시된다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="6-didupdatewidget---위젯-갱신시">6. didUpdateWidget() - 위젯 갱신시&lt;/h3>
+&lt;ul>
+&lt;li>Parent 위젯이나 데이터가 변경되어 위젯을 갱신해야 할 때 호출한다.&lt;/li>
+&lt;li>위젯이 생성되고 나서 갱신을 해야 할때는 initState()가 아니라 didUpdateWidget()을 호출해야 함&lt;/li>
+&lt;/ul>
+&lt;h3 id="7-setstate---상태-갱신시">7. setState() - 상태 갱신시&lt;/h3>
+&lt;ul>
+&lt;li>데이터가 변경되었다는 것을 알리고 UI를 갱신함&lt;/li>
+&lt;/ul>
+&lt;h3 id="8-deactivate---상태-관리-멈춰">8. deactivate() - 상태 관리 멈춰!&lt;/h3>
+&lt;ul>
+&lt;li>State가 플러터의 구성 트리로부터 제거됨&lt;/li>
+&lt;li>따라서, 관리는 되지 않으나 메모리 해제까지 한것은 아니라 사용가능함&lt;/li>
+&lt;/ul>
+&lt;h3 id="9-dispose---상태-관리-끝">9. dispose() - 상태 관리 끝&lt;/h3>
+&lt;ul>
+&lt;li>State를 소멸함&lt;/li>
+&lt;li>위젯을 없앨때 해줘야하는 작업이 있다면 여기에 작성&lt;/li>
+&lt;li>deactivate() 된 위젯을 다른 트리에서 재사용하는 경우 dispose()하 호출되지 않을 수 있음&lt;/li>
+&lt;/ul>
+&lt;h3 id="10-mounted--false---setstate-호출가능">10. mounted == false - setState() 호출가능&lt;/h3>
+&lt;h3 id="생명주기-출력해보기">생명주기 출력해보기&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="k">import&lt;/span> &lt;span class="s1">&amp;#39;package:flutter/material.dart&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">class&lt;/span> &lt;span class="nc">ChangeTextByButton&lt;/span> &lt;span class="kd">extends&lt;/span> &lt;span class="n">StatefulWidget&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">@&lt;/span>&lt;span class="n">override&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">State&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">StatefulWidget&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">createState&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;createState()&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 여기 출력!
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="n">_ChangeTextByButton&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">class&lt;/span> &lt;span class="nc">_ChangeTextByButton&lt;/span> &lt;span class="kd">extends&lt;/span> &lt;span class="n">State&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">ChangeTextByButton&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="n">swVal&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="n">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;Jaejin Jang off&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">@&lt;/span>&lt;span class="n">override&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="n">initState&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">super&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">initState&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;initState()&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 여기 출력!
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="n">didChangeDependencies&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">super&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">didChangeDependencies&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;didChangeDependencies()&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 여기 출력!
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">@&lt;/span>&lt;span class="n">override&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Widget&lt;/span> &lt;span class="n">build&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">BuildContext&lt;/span> &lt;span class="n">context&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;build&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 여기 출력!
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="n">MaterialApp&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">title:&lt;/span> &lt;span class="s1">&amp;#39;ChangeTextByButton&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">theme:&lt;/span> &lt;span class="n">ThemeData&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">primaryColor:&lt;/span> &lt;span class="n">Colors&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">blue&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">visualDensity:&lt;/span> &lt;span class="n">VisualDensity&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">adaptivePlatformDensity&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">darkTheme:&lt;/span> &lt;span class="n">ThemeData&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">light&lt;/span>&lt;span class="p">(),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">home:&lt;/span> &lt;span class="n">Scaffold&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">body:&lt;/span> &lt;span class="n">Center&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">child:&lt;/span> &lt;span class="n">Column&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">mainAxisAlignment:&lt;/span> &lt;span class="n">MainAxisAlignment&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">center&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">children:&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Widget&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Text&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">str&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">style:&lt;/span> &lt;span class="n">TextStyle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nl">color:&lt;/span> &lt;span class="n">Colors&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">blue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nl">fontSize:&lt;/span> &lt;span class="m">20&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Switch&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">value:&lt;/span> &lt;span class="n">swVal&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">onChanged:&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">setState&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">swVal&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">value&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">value&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="s1">&amp;#39;Jaejin Jang On&amp;#39;&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Jaejin Jang off&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]))),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>플러터 기본적인 위젯 사용해보기</title><link>https://jaejin0me.github.io/post/posts197/</link><pubDate>Tue, 13 Apr 2021 20:05:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts197/</guid><description>&lt;h2 id="사용하는-위젯-설명">사용하는 위젯 설명&lt;/h2>
+&lt;blockquote>
+&lt;p>MaterialApp - Material 디자인 제공&lt;br>
+Scaffold - 기본적인 Material 디자인 레이아웃 제공&lt;br>
+Center - 상하 가운데 정렬&lt;br>
+Swich - 토글스위치 제공&lt;br>
+Text - 텍스트&lt;br>
+Column - chlidren 속성이 있어 여러개의 하위 위젯을 배치가능&lt;/p></description></item><item><title>Dart 연습</title><link>https://jaejin0me.github.io/post/posts196/</link><pubDate>Tue, 13 Apr 2021 19:05:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts196/</guid><description>&lt;ul>
+&lt;li>구구단&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">void&lt;/span> &lt;span class="n">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">2&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="m">10&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">j&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">j&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="m">10&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">j&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s1"> * &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s1"> = &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">j&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s1">&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>자동차 클래스&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">class&lt;/span> &lt;span class="nc">Car&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">maxSpeed&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">num&lt;/span> &lt;span class="n">price&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">String&lt;/span> &lt;span class="n">name&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Car&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">maxSpeed&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">num&lt;/span> &lt;span class="n">price&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">String&lt;/span> &lt;span class="n">name&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">maxSpeed&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">maxSpeed&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">price&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">price&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">name&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">num&lt;/span> &lt;span class="n">saleCar&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">price&lt;/span> &lt;span class="o">*=&lt;/span> &lt;span class="m">0.9&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">price&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">void&lt;/span> &lt;span class="n">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Car&lt;/span> &lt;span class="n">bmw&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">Car&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="m">320&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="m">100000&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;BMW&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Car&lt;/span> &lt;span class="n">benz&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">Car&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="m">250&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="m">70000&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;BENZ&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Car&lt;/span> &lt;span class="n">ford&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">Car&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="m">200&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="m">80000&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;FORD&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">bmw&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">saleCar&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">bmw&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">saleCar&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">bmw&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">saleCar&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">bmw&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">price&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>로또 번호 생성&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="k">import&lt;/span> &lt;span class="s1">&amp;#39;dart:math&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">void&lt;/span> &lt;span class="n">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Random&lt;/span> &lt;span class="n">r&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Random&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Set&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">s&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">length&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="m">6&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">s&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">r&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">nextInt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="m">45&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="m">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

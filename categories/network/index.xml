@@ -1,1 +1,64 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Network on Jaejin's blog</title><link>https://jaejin0me.github.io/categories/network/</link><description>Recent content in Network on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Mon, 31 Dec 2018 00:50:56 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/categories/network/index.xml" rel="self" type="application/rss+xml"/><item><title>책뿌수기 - 현대 네트워크 기초 이론 1-2</title><link>https://jaejin0me.github.io/post/posts132/</link><pubDate>Mon, 31 Dec 2018 00:50:56 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts132/</guid><description>공부목적으로 정리합니다. 내용이 많아서 남은 부분은 다음 포스팅에.. * 1.8 네트워크 융합 전화와 정보 기술의 통합을 의미 애플리케이션 융합 기업의 최종 사용자 관점</description></item><item><title>책뿌수기 - 현대 네트워크 기초 이론 1-1</title><link>https://jaejin0me.github.io/post/posts131/</link><pubDate>Wed, 26 Dec 2018 00:05:56 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts131/</guid><description>공부목적으로 정리합니다. 내용이 많아서 남은 부분은 다음 포스팅에.. * Ch1. 현대 네트워킹의 요소 1.1 네트워크 생태계 궁극적으로 사용자는 애플리케이션과 콘텐츠에</description></item><item><title>네트워크 정리</title><link>https://jaejin0me.github.io/post/posts130/</link><pubDate>Sat, 23 Dec 2017 01:37:56 +0800</pubDate><guid>https://jaejin0me.github.io/post/posts130/</guid><description>중요하거나 모르는 내용 위주로 정리합니다. 1장. 개요 네트워킹 기술을 경로로 구분하면, 서킷 스위칭과 패킷 스위칭을 나뉜다. 서킷 스위칭으로 경로를 모두 정하여</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Network on Jaejin's blog</title><link>https://jaejin0me.github.io/categories/network/</link><description>Recent content in Network on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Mon, 31 Dec 2018 00:50:56 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/categories/network/index.xml" rel="self" type="application/rss+xml"/><item><title>책뿌수기 - 현대 네트워크 기초 이론 1-2</title><link>https://jaejin0me.github.io/post/posts132/</link><pubDate>Mon, 31 Dec 2018 00:50:56 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts132/</guid><description>&lt;ul>
+&lt;li>공부목적으로 정리합니다. 내용이 많아서 남은 부분은 다음 포스팅에.. *&lt;/li>
+&lt;/ul>
+&lt;h2 id="18-네트워크-융합">1.8 네트워크 융합&lt;/h2>
+&lt;p>&lt;img loading="lazy" src="https://jaejin0me.github.io/posts132_1.jpg" alt="Fig" title="비즈니스 기업 주도의 네트워크 융합" />
+&lt;/p>
+&lt;ul>
+&lt;li>전화와 정보 기술의 통합을 의미&lt;/li>
+&lt;li>애플리케이션 융합&lt;/li>
+&lt;li>기업의 최종 사용자 관점이다.&lt;/li>
+&lt;li>음성 통화, 음성 메일, 이메일, 인스터스 메신저와 같은 통신 애플리케이션을 작업 그룹 공동 작업, 고객 관계 관리(CRM : Customer Relationship Manager), 백오피스 (금융 기관의 후선 지원 입무) 기능 등의 비즈니스 애플리케이션과 통합한다.&lt;/li>
+&lt;li>융합된 애플리케이션은 체계적으로 통합한 음성, 데이터, 동영상에서 부가가치를 만드는 다채로운 기능을 제공한다. ex) 멀티미디어 메신저&lt;/li>
+&lt;li>기업 서비스&lt;/li>
+&lt;li>정보 네트워크를 다루는 관리자의 관점이다.&lt;/li>
+&lt;li>네트워크 관리자는 융합 애플리케이션을 위한 개인 인즉 정보 정책과 인증서비스를 제공한다.&lt;/li>
+&lt;li>모바일 사용자의 원격 프린트와 네트워크 저장 장치 서비스를 위해 사용자 위치 파악&lt;/li>
+&lt;li>애플리케이션 서비스를 위한 공동 환경 설정, QoS&lt;/li>
+&lt;li>인프라 스트럭처&lt;/li>
+&lt;li>기업의 통신 선로, LAN, WAN, 인터넷 회선 등으로 구성된다&lt;/li>
+&lt;li>사설/공용 클라우드로부터 대용량 데이터 스토리지와 웹 서비스를 호스팅 하는 데이터 센터까지의 연결도 포함하는 추세이다&lt;/li>
+&lt;li>핵심은 데이터 트래픽을 보내도록 설계된 네트워크와 음석 트래픽용 네트워크 간의 융합이다&lt;/li>
+&lt;li>간단히 기업의 음성, 동영상, 이미지 트래픽을 단일 네트워크 인프라 스트럭처로 보내는 것이다&lt;/li>
+&lt;li>융합의 기반은 IP 패킷 전송 기술이다&lt;/li>
+&lt;li>이점으로는 네트워크 관리의 단순화, 효율성의 증가, 애플리케이션의 유연성 증가(동영상, 데이터, 음성을 활용한 새로운 애플리케이션 발견 가능) 등이 있다&lt;/li>
+&lt;li>비용 절감&lt;/li>
+&lt;li>효율성&lt;/li>
+&lt;li>변화하기 쉬움&lt;/li>
+&lt;li>단일 장애점을 같는 문제가 있다. 이를 보완하기 위해 각 구성 요소와 백업 시스템을 다중화한다.&lt;/li>
+&lt;/ul>
+&lt;h2 id="19-통합-커뮤니케이션uc-unified-communication">1.9 통합 커뮤니케이션(UC Unified Communication)&lt;/h2>
+&lt;ul>
+&lt;li>네트워크 통합에 연관된 개념&lt;/li>
+&lt;li>UC는 비즈니스 프로세스 최적화를 위한 실시간 커뮤니케이션 서비스의 통합에 초점을 둔다&lt;/li>
+&lt;li>마찬가지로 IP기술이 기초가 된다&lt;/li>
+&lt;li>핵심&lt;/li>
+&lt;li>
+&lt;ol>
+&lt;li>다양한 장비와 미디어에 통합된 UI/UX를 제공&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;ol start="2">
+&lt;li>실시간 커뮤니케이션 서비스와 비실시간 서비스 및 비즈니스 프로세스 애플리케이션을 통합한다.&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>장점&lt;/li>
+&lt;li>개인 생산성 향상&lt;/li>
+&lt;li>작업 그룹성과 개선&lt;/li>
+&lt;li>기업 프로세스 개선&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img loading="lazy" src="https://jaejin0me.github.io/posts132_2.jpg" alt="Fig" title="통합 커뮤니케이션의 구성 요소" />
+&lt;/p></description></item><item><title>책뿌수기 - 현대 네트워크 기초 이론 1-1</title><link>https://jaejin0me.github.io/post/posts131/</link><pubDate>Wed, 26 Dec 2018 00:05:56 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts131/</guid><description>&lt;ul>
+&lt;li>공부목적으로 정리합니다. 내용이 많아서 남은 부분은 다음 포스팅에.. *&lt;/li>
+&lt;/ul>
+&lt;h1 id="ch1-현대-네트워킹의-요소">Ch1. 현대 네트워킹의 요소&lt;/h1>
+&lt;h2 id="11-네트워크-생태계">1.1 네트워크 생태계&lt;/h2>
+&lt;p>&lt;img loading="lazy" src="https://jaejin0me.github.io/posts131_1.jpg" alt="Fig" title="네트워크 생태계" />
+&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>궁극적으로 사용자는 애플리케이션과 콘텐츠에 접근하기 위해 네트워크 장비를 사용한다.&lt;/p></description></item><item><title>네트워크 정리</title><link>https://jaejin0me.github.io/post/posts130/</link><pubDate>Sat, 23 Dec 2017 01:37:56 +0800</pubDate><guid>https://jaejin0me.github.io/post/posts130/</guid><description>&lt;p>중요하거나 모르는 내용 위주로 정리합니다.&lt;/p>
+&lt;p>1장. 개요
+네트워킹 기술을 경로로 구분하면, 서킷 스위칭과 패킷 스위칭을 나뉜다. 서킷 스위칭으로 경로를 모두 정하여 전용회선으로 사용하는 것이다. 전화가 해당된다.
+패킷 스위칭은 우편 배달과 비슷하다. 데이터그램 방식과 가상회선 파빙식이 있는데, 가상회서 방식은 패킷 스위칭기반으로 서킷 스위칭처럼 움직이는 것이다.&lt;/p></description></item></channel></rss>

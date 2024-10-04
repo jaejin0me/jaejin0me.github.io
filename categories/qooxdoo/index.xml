@@ -1,1 +1,55 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Qooxdoo on Jaejin's blog</title><link>https://jaejin0me.github.io/categories/qooxdoo/</link><description>Recent content in Qooxdoo on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Sun, 01 Oct 2023 10:40:02 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/categories/qooxdoo/index.xml" rel="self" type="application/rss+xml"/><item><title>qooxdoo V6.x -> V7.x 버전 업 이슈 - 2. UI가 완성된 후 작업하기</title><link>https://jaejin0me.github.io/post/20231001/</link><pubDate>Sun, 01 Oct 2023 10:40:02 +0900</pubDate><guid>https://jaejin0me.github.io/post/20231001/</guid><description>시작.. qooxdoo는 자바스크립트 하나로 UI도 그리고 데이터도 처리하는 프레임워크입니다. 해당 프레임워크를 사용하면서 한 번씩, &amp;ldquo;UI</description></item><item><title>qooxdoo V6.x -> V7.x 버전 업 이슈 - 1. deprecated defer() method</title><link>https://jaejin0me.github.io/post/20230930/</link><pubDate>Sat, 30 Sep 2023 15:52:02 +0900</pubDate><guid>https://jaejin0me.github.io/post/20230930/</guid><description>시작.. 두 달 정도 전에 qooxdoo 버전을 6에서 7로 올렸습니다. npm 버전만 올리면 되는 거라 큰 어려움은 없었지만, 업데이트 이후에 이상한 문제 2가지가 발생했습니다. 오</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Qooxdoo on Jaejin's blog</title><link>https://jaejin0me.github.io/categories/qooxdoo/</link><description>Recent content in Qooxdoo on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Sun, 01 Oct 2023 10:40:02 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/categories/qooxdoo/index.xml" rel="self" type="application/rss+xml"/><item><title>qooxdoo V6.x -> V7.x 버전 업 이슈 - 2. UI가 완성된 후 작업하기</title><link>https://jaejin0me.github.io/post/20231001/</link><pubDate>Sun, 01 Oct 2023 10:40:02 +0900</pubDate><guid>https://jaejin0me.github.io/post/20231001/</guid><description>&lt;h3 id="시작">시작..&lt;/h3>
+&lt;ul>
+&lt;li>qooxdoo는 자바스크립트 하나로 UI도 그리고 데이터도 처리하는 프레임워크입니다.&lt;/li>
+&lt;li>해당 프레임워크를 사용하면서 한 번씩, &amp;ldquo;&lt;strong>UI가 다 완성되고 난 후 처리되어야 하는 작업은 어떻게 처리하지?&lt;/strong>&amp;ldquo;에 대한 고민이 있었습니다.&lt;/li>
+&lt;li>이벤트로 처리 가능한 상황들은 문제가 없지만, 그렇지 못한 상황들도 존재하고 있었거든요.&lt;/li>
+&lt;li>이 이슈는 그런 상황에서 사용가능한 &lt;strong>qx.util.DeferredCall()&lt;/strong> 에 관한 이야기입니다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="문제점">문제점&lt;/h3>
+&lt;ul>
+&lt;li>기존에는 테이블 UI가 그려질 때 특정 컬럼에 필터(원하는 조건의 데이터만 보여줌)가 적용되어 있으면, 필터가 적용된 것을 표시하기 위해 색상을 변경하는 작업이 있었습니다.&lt;/li>
+&lt;li>하지만 버전이 업데이트되고 나서부터, 처음 테이블 UI가 그려지는 경우에는 해당 기능이 동작하지 않는 이슈가 발생했습니다. 한 번 그려진 이후에는 필터를 걸면 색상 표시가 잘 됐고요.&lt;/li>
+&lt;/ul>
+&lt;h3 id="원인">원인&lt;/h3>
+&lt;ul>
+&lt;li>우선 테이블 헤더 셀은 table - pane scroller - header - headerCell의 구조로 이루어져 있습니다.&lt;/li>
+&lt;li>테이블 컬럼 필터 정보를 표시하기 위해 header cell에 폰트 색상을 적용하고 있습니다.&lt;/li>
+&lt;li>디버깅을 해보니, 처음에 테이블을 그리고 폰트 색상을 변경하였으나 이후에 &lt;strong>pane의 modelChanged 이벤트로 header가 새로 그려지면서 header cell 폰트 정보가 초기화&lt;/strong>되고 있었습니다.&lt;/li>
+&lt;li>&lt;strong>pane의 modelChanged 이벤트가 왜 발생했는지는 알아보지를 알았네요. 그냥 프레임워크의 변경이겠거니 생각만 하고 있었습니다. 추후에 찾아서 추가적으로 포스팅하겠습니다.&lt;/strong>&lt;/li>
+&lt;li>무튼 이것을 해결하기 위해, 클래스의 작업이 모두 끝난 이후에 수행할 작업을 스케줄링할 수 있는 qx.util.DeferredCall() 메소드를 사용했습니다.&lt;/li>
+&lt;li>V7.6에 새롭게 추가된 메소드가 아니라 예전부터 존재하던 메소드였는데, 이제 알았다니.. 아주 개탄스럽네요.&lt;/li>
+&lt;li>&lt;strong>header cell에 폰트를 적용하는 로직을 qx.util.DeferredCall()에 추가함으로써 문제를 해결&lt;/strong>했습니다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="느낀-점">느낀 점&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>디버깅을 잘하자&lt;/strong>? 입니다. 이상한 문제가 발생하는 경우, 디버깅도 중구난방으로 하게 되는 경우가 있는데, 컴퓨터는 역시나 거짓말을 하지 않기 때문에 차근차근 따라가다보면 풀리는 문제였습니다.&lt;/li>
+&lt;li>그리고 &lt;strong>매뉴얼을 잘 읽자&lt;/strong> 입니다. 어떤 메소드들을 제공하는지 유심히 살펴볼 필요를 느꼈습니다.&lt;/li>
+&lt;/ul></description></item><item><title>qooxdoo V6.x -> V7.x 버전 업 이슈 - 1. deprecated defer() method</title><link>https://jaejin0me.github.io/post/20230930/</link><pubDate>Sat, 30 Sep 2023 15:52:02 +0900</pubDate><guid>https://jaejin0me.github.io/post/20230930/</guid><description>&lt;h3 id="시작">시작..&lt;/h3>
+&lt;ul>
+&lt;li>두 달 정도 전에 qooxdoo 버전을 6에서 7로 올렸습니다.&lt;/li>
+&lt;li>npm 버전만 올리면 되는 거라 큰 어려움은 없었지만, 업데이트 이후에 이상한 문제 2가지가 발생했습니다.&lt;/li>
+&lt;li>오늘은 그중에 하나를 포스팅하려고 합니다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="문제점">문제점&lt;/h3>
+&lt;ul>
+&lt;li>프레임워크에서 제공하는 다른 클래스의 public 메소드를 호출했는데, 개발자가 추가한 protected 메소드가 호출되는 현상이 발생했습니다.&lt;/li>
+&lt;li>동일한 함수명을 사용하는 클래스들이 몇 개 있어서 &amp;ldquo;업데이트 이후에 &lt;strong>오버라이딩하는 과정에 문제&lt;/strong>가 생겼구나&amp;quot;라고 판단하고 디버깅을 시작했습니다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="원인">원인&lt;/h3>
+&lt;ul>
+&lt;li>원인은 qooxdoo에서 자주 사용되는 Composite 클래스에서 defer 메소드가 사라졌기 때문이었습니다.&lt;/li>
+&lt;li>기존의 qx.ui.container.Composite는 defer라는 메소드를 이용해 부모 클래스인 qx.ui.core.Widget의 protected 함수를 public으로 설정해 주는 코드가 존재했었으나 삭제되면서 문제가 발생했습니다.
+&lt;img loading="lazy" src="https://jaejin0me.github.io/20230930_image_1.png" alt="" />
+&lt;/li>
+&lt;li>문제가 되는 대상 메소드 중에서 겹치는 메소드 _add()였고, 해당 메소드를 _addItem()으로 바꿔 문제를 해결했습니다.
+&lt;img loading="lazy" src="https://jaejin0me.github.io/20230930_image_2.png" alt="" />
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="느낀-점">느낀 점&lt;/h3>
+&lt;ul>
+&lt;li>음.. 릴리즈 노트를 잘 읽자? 입니다.&lt;/li>
+&lt;li>사실 릴리즈 노트에 나와있는데, 대~충 읽은 저의 탓이더라고요^^
+&lt;img loading="lazy" src="https://jaejin0me.github.io/20230930_image_3.png" alt="" />
+&lt;/li>
+&lt;li>qooxdoo 라는 프레임워크를 사용하시는 분들은 극소수겠지만, 혹시나 도움이 될까 싶어서 올립니다.&lt;/li>
+&lt;/ul></description></item></channel></rss>

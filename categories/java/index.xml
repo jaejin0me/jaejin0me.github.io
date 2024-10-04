@@ -1,1 +1,46 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Java on Jaejin's blog</title><link>https://jaejin0me.github.io/categories/java/</link><description>Recent content in Java on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Sat, 23 Dec 2017 01:37:56 +0800</lastBuildDate><atom:link href="https://jaejin0me.github.io/categories/java/index.xml" rel="self" type="application/rss+xml"/><item><title>java.lang.Integer parseInt 메소드 분석</title><link>https://jaejin0me.github.io/post/posts124/</link><pubDate>Sat, 23 Dec 2017 01:37:56 +0800</pubDate><guid>https://jaejin0me.github.io/post/posts124/</guid><description>스트링을 숫자로 변화해주는 parseInt 메소드는 parseInt(String) parseInt(String, int) 2가지가 존재합니다. 하지만 parseInt(String)의 경우 내부를 보면 parseInt(Stri</description></item><item><title>자바 Set, Map</title><link>https://jaejin0me.github.io/post/posts125/</link><pubDate>Sat, 23 Dec 2017 01:37:56 +0800</pubDate><guid>https://jaejin0me.github.io/post/posts125/</guid><description>1.Set 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 HashSet&amp;lt;Integer&amp;gt; abc = new HashSet&amp;lt;Integer&amp;gt;(); abc.add(1); abc.add(2); abc.add(3); Iterator it = abc.iterator(); Integer temp = 0; while(it.hasNext()) { temp = (Integer) it.next(); System.out.println(temp); } for(Integer item : abc) { System.out.println(item); } 2.Map 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 HashMap&amp;lt;String,Integer&amp;gt; abc = new HashMap&amp;lt;String,Integer&amp;gt;(); abc.put(&amp;#34;a&amp;#34;, 0);</description></item><item><title>자바 쓰레드 관련 정리</title><link>https://jaejin0me.github.io/post/posts122/</link><pubDate>Sat, 23 Dec 2017 01:37:56 +0800</pubDate><guid>https://jaejin0me.github.io/post/posts122/</guid><description>자바에서 쓰레드를 사용하는 건 참 쉽죠잉~. 쓰레드 관련 공부한 내용 정리합니다. 쓰레드란 ? 하나의 프로세스 안에서 실제적으로 작업을 처리하는 단위이다 main</description></item><item><title>자바 클래스 관련 정리</title><link>https://jaejin0me.github.io/post/posts123/</link><pubDate>Sat, 23 Dec 2017 01:37:56 +0800</pubDate><guid>https://jaejin0me.github.io/post/posts123/</guid><description>문제를 풀다가 틀린 부분이나 새로 알게된 것들을 기술합니다. 시간날때 깔끔하게 정리하겠습니다. 매개변수가 없는 기본 생성자를 작성할 때, 매개변수가 있는 생성자</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Java on Jaejin's blog</title><link>https://jaejin0me.github.io/categories/java/</link><description>Recent content in Java on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Sat, 23 Dec 2017 01:37:56 +0800</lastBuildDate><atom:link href="https://jaejin0me.github.io/categories/java/index.xml" rel="self" type="application/rss+xml"/><item><title>java.lang.Integer parseInt 메소드 분석</title><link>https://jaejin0me.github.io/post/posts124/</link><pubDate>Sat, 23 Dec 2017 01:37:56 +0800</pubDate><guid>https://jaejin0me.github.io/post/posts124/</guid><description>&lt;p>스트링을 숫자로 변화해주는 parseInt 메소드는&lt;/p>
+&lt;p>parseInt(String)
+parseInt(String, int)&lt;/p>
+&lt;p>2가지가 존재합니다. 하지만 parseInt(String)의 경우 내부를 보면 parseInt(String,10)으로 구현되어 있기 때문에 parseInt(String, int)만 분석하면 됩니다.
+변환할 문자열이 null이면 NumberFormatException이 납니다.
+int형의 인자로 진법을 설정할 수가 있습니다. 최소 2진법에서 최대 36진법까지 변환할 수 있습니다. 범위를 넘어가게 되면 NumberFormatException 이 납니다.&lt;/p></description></item><item><title>자바 Set, Map</title><link>https://jaejin0me.github.io/post/posts125/</link><pubDate>Sat, 23 Dec 2017 01:37:56 +0800</pubDate><guid>https://jaejin0me.github.io/post/posts125/</guid><description>&lt;p>1.Set&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> HashSet&amp;lt;Integer&amp;gt; abc = new HashSet&amp;lt;Integer&amp;gt;();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> abc.add(1);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> abc.add(2);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> abc.add(3);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Iterator it = abc.iterator();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Integer temp = 0;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> while(it.hasNext()) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> temp = (Integer) it.next();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> System.out.println(temp);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> for(Integer item : abc) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> System.out.println(item);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>2.Map&lt;/p></description></item><item><title>자바 쓰레드 관련 정리</title><link>https://jaejin0me.github.io/post/posts122/</link><pubDate>Sat, 23 Dec 2017 01:37:56 +0800</pubDate><guid>https://jaejin0me.github.io/post/posts122/</guid><description>&lt;p>자바에서 쓰레드를 사용하는 건 참 쉽죠잉~. 쓰레드 관련 공부한 내용 정리합니다.&lt;/p>
+&lt;p>쓰레드란 ? 하나의 프로세스 안에서 실제적으로 작업을 처리하는 단위이다&lt;/p>
+&lt;p>main인 메솓를 실행하는 스레드가 기본적으로 존재한다.&lt;/p></description></item><item><title>자바 클래스 관련 정리</title><link>https://jaejin0me.github.io/post/posts123/</link><pubDate>Sat, 23 Dec 2017 01:37:56 +0800</pubDate><guid>https://jaejin0me.github.io/post/posts123/</guid><description>&lt;p>문제를 풀다가 틀린 부분이나 새로 알게된 것들을 기술합니다. 시간날때 깔끔하게 정리하겠습니다.&lt;/p>
+&lt;p>매개변수가 없는 기본 생성자를 작성할 때, 매개변수가 있는 생성자를 사용하는 것이 재사용성이 좋다.&lt;/p></description></item></channel></rss>

@@ -1,1 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Coupangpartners on Jaejin's blog</title><link>https://jaejin0me.github.io/tags/coupangpartners/</link><description>Recent content in Coupangpartners on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Sun, 02 Feb 2020 07:12:52 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/tags/coupangpartners/index.xml" rel="self" type="application/rss+xml"/><item><title>파이썬으로 쿠팡 파트너스 API 활용하기 - 3 네이버 블로그 API로 글올리기</title><link>https://jaejin0me.github.io/post/20200202/</link><pubDate>Sun, 02 Feb 2020 07:12:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/20200202/</guid><description>이력 2020.02.02 포스팅 안녕하세요. 많이 늦었죠? ㅎㅎ, 쓰기가 너무 귀찮아요..ㅋㅋ 사실 요즘에는 쿠팡 상품도 안올리고 있어요. 귀찬쓰.. 아무튼 오늘도 시작하겠습니</description></item><item><title>파이썬으로 쿠팡 파트너스 API 활용하기 - 2 상품 이미지 가져오기</title><link>https://jaejin0me.github.io/post/20200101/</link><pubDate>Wed, 01 Jan 2020 07:12:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/20200101/</guid><description>안녕하세요. 저번 시간에 파트너스 API를 통해서 상품정보를 가져오는 것까지 했습니다. 오늘은 쿠팡에 있는 상품 이미지 가져오는 방법에 대해서 설명하겠습니다.</description></item><item><title>파이썬으로 쿠팡 파트너스 API 활용하기 - 1</title><link>https://jaejin0me.github.io/post/20191230/</link><pubDate>Mon, 30 Dec 2019 07:12:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/20191230/</guid><description>이력 2019.12.30 포스팅 2020.01.01 수정 - API 호출 횟수 설명 추가 안녕하세요. 쿠팡 파트너스 활동을 시작하면서 파이썬으로 쿠팡 파트너스 API, 네이버 블로그 API를 활용하여 포스팅을 자</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Coupangpartners on Jaejin's blog</title><link>https://jaejin0me.github.io/tags/coupangpartners/</link><description>Recent content in Coupangpartners on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Sun, 02 Feb 2020 07:12:52 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/tags/coupangpartners/index.xml" rel="self" type="application/rss+xml"/><item><title>파이썬으로 쿠팡 파트너스 API 활용하기 - 3 네이버 블로그 API로 글올리기</title><link>https://jaejin0me.github.io/post/20200202/</link><pubDate>Sun, 02 Feb 2020 07:12:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/20200202/</guid><description>&lt;p>이력&lt;/p>
+&lt;ul>
+&lt;li>2020.02.02 포스팅&lt;/li>
+&lt;/ul>
+&lt;p>&lt;em>안녕하세요.&lt;br>
+많이 늦었죠? ㅎㅎ, 쓰기가 너무 귀찮아요..ㅋㅋ&lt;br>
+사실 요즘에는 쿠팡 상품도 안올리고 있어요. 귀찬쓰..&lt;br>
+아무튼 오늘도 시작하겠습니다. 과정이 길게 느껴질수도 있는데,&lt;br>
+어렵지는 않아요. 하나하나 따라 하시면 금방하실 수 있어요.&lt;/em>&lt;/p></description></item><item><title>파이썬으로 쿠팡 파트너스 API 활용하기 - 2 상품 이미지 가져오기</title><link>https://jaejin0me.github.io/post/20200101/</link><pubDate>Wed, 01 Jan 2020 07:12:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/20200101/</guid><description>&lt;p>&lt;em>안녕하세요.&lt;br>
+저번 시간에 파트너스 API를 통해서 상품정보를 가져오는 것까지 했습니다.&lt;br>
+오늘은 쿠팡에 있는 상품 이미지 가져오는 방법에 대해서 설명하겠습니다.&lt;br>
+API를 호출해 가져온 상품정보에 접속할 수 있는 URL이 있었는데요.&lt;br>
+그 URL를 통해 상품페이지로 접속해서 이미지를 가져올꺼에요. 오늘꺼 조금 깁니다&amp;hellip;&lt;/em>&lt;/p></description></item><item><title>파이썬으로 쿠팡 파트너스 API 활용하기 - 1</title><link>https://jaejin0me.github.io/post/20191230/</link><pubDate>Mon, 30 Dec 2019 07:12:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/20191230/</guid><description>&lt;p>이력&lt;/p>
+&lt;ul>
+&lt;li>2019.12.30 포스팅&lt;/li>
+&lt;li>2020.01.01 수정 - API 호출 횟수 설명 추가&lt;/li>
+&lt;/ul>
+&lt;p>&lt;em>안녕하세요.&lt;br>
+쿠팡 파트너스 활동을 시작하면서 파이썬으로 쿠팡 파트너스 API,&lt;br>
+네이버 블로그 API를 활용하여 포스팅을 자동화 하는 프로그램을 만들었습니다.&lt;br>
+API 활용이 어려운건 아니지만 확실한 가이드가 될만한 포스트가 없어서 적어보려고 합니다.&lt;br>
+이 포스팅 시리즈가 끝날때면 기본적인 UI를 갖춘 자동화 프로그램을 완성하는 것을 목표로 하고있습니다.&lt;/em>&lt;/p></description></item></channel></rss>

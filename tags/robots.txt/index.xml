@@ -1,1 +1,60 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Robots.txt on Jaejin's blog</title><link>https://jaejin0me.github.io/tags/robots.txt/</link><description>Recent content in Robots.txt on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Fri, 10 Jun 2022 16:19:52 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/tags/robots.txt/index.xml" rel="self" type="application/rss+xml"/><item><title>gh-pages 검색 엔진(크롤러)에게 노출시키기 (feat. robots.txt)</title><link>https://jaejin0me.github.io/post/20220610/</link><pubDate>Fri, 10 Jun 2022 16:19:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/20220610/</guid><description>robots.txt 현재 저의 gh-pages는 even 테마를 submodule로 관리하고 있고, 빌드시에 생성되는 public 폴더를 deploy하는 구조로 되어 있습니다. 테마의 default r</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Robots.txt on Jaejin's blog</title><link>https://jaejin0me.github.io/tags/robots.txt/</link><description>Recent content in Robots.txt on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Fri, 10 Jun 2022 16:19:52 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/tags/robots.txt/index.xml" rel="self" type="application/rss+xml"/><item><title>gh-pages 검색 엔진(크롤러)에게 노출시키기 (feat. robots.txt)</title><link>https://jaejin0me.github.io/post/20220610/</link><pubDate>Fri, 10 Jun 2022 16:19:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/20220610/</guid><description>&lt;h1 id="robotstxt">robots.txt&lt;/h1>
+&lt;ul>
+&lt;li>현재 저의 gh-pages는 even 테마를 submodule로 관리하고 있고, 빌드시에 생성되는 public 폴더를 deploy하는 구조로 되어 있습니다.&lt;/li>
+&lt;li>테마의 default robots.txt를 사용하게 되는데 기본 robots.txt에는 아래와 같이 Allow 설정이 없습니다.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">User-agent: *
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Sitemap: https://jaejin0me.github.io/sitemap.xml
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>저것때문인지 최근에 올린 글들이 검색엔진에 인덱싱이 안되는거 같아 Allow를 추가한 robots.txt를 만들고 GitAction 스크립트를 수정하여 복사하여 사용하도록 했습니다.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">User-agent: *
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Allow: /
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Sitemap: https://jaejin0me.github.io/sitemap.xml
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-Diff" data-lang="Diff">&lt;span class="line">&lt;span class="cl"> - name: Build
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> run: hugo --minify
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ - name: Copy robots.txt
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ run: |
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ cp -f ./robots.txt ./public/robots.txt
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">&lt;/span> - name: Deploy
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: peaceiris/actions-gh-pages@v3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if: github.ref == &amp;#39;refs/heads/master&amp;#39;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>링크에 들어가 보시면 Allow가 추가된걸 확인할 수 있습니다. &lt;a href="https://jaejin0me.github.io/robots.txt">https://jaejin0me.github.io/robots.txt&lt;/a>&lt;/li>
+&lt;li>조회수 좀 늘었으면 좋겠네요ㅎㅎ &lt;a href="https://jaejin0me.github.io/post/20220521/">Go 3 우분투에서 LTE 잡는거&lt;/a> 꿀팁인데 진짜..&lt;/li>
+&lt;/ul></description></item></channel></rss>

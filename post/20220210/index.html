@@ -1,5 +1,635 @@
 <!doctype html><html lang=ko dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>몰입! 자바스크립트 - 24장 렉시컬 환경 | Jaejin's blog</title>
-<meta name=keywords content="javascript"><meta name=description content="이력 2022.02.10 포스팅 ​ ​모든 내용을 상세히 담으려 하지 않았습니다. 제가 모르는 부분이나, &ldquo;이런 것도 있었어?&rdquo; 하는 부분, 중요하다고 생"><meta name=author content="Jaejin Jang"><link rel=canonical href=https://jaejin0me.github.io/post/20220210/><link crossorigin=anonymous href=/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z+V9+cO1A=" rel="preload stylesheet" as=style><link rel=icon href=https://jaejin0me.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://jaejin0me.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://jaejin0me.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://jaejin0me.github.io/apple-touch-icon.png><link rel=mask-icon href=https://jaejin0me.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=ko href=https://jaejin0me.github.io/post/20220210/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css integrity=sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js integrity=sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4 crossorigin=anonymous></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js integrity=sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa crossorigin=anonymous onload=renderMathInElement(document.body)></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-F8504X956T"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-F8504X956T")}</script><meta property="og:title" content="몰입! 자바스크립트 - 24장 렉시컬 환경"><meta property="og:description" content="이력 2022.02.10 포스팅 ​ ​모든 내용을 상세히 담으려 하지 않았습니다. 제가 모르는 부분이나, &ldquo;이런 것도 있었어?&rdquo; 하는 부분, 중요하다고 생"><meta property="og:type" content="article"><meta property="og:url" content="https://jaejin0me.github.io/post/20220210/"><meta property="article:section" content="post"><meta property="article:published_time" content="2022-02-10T17:20:52+09:00"><meta property="article:modified_time" content="2022-02-10T17:20:52+09:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="몰입! 자바스크립트 - 24장 렉시컬 환경"><meta name=twitter:description content="이력 2022.02.10 포스팅 ​ ​모든 내용을 상세히 담으려 하지 않았습니다. 제가 모르는 부분이나, &ldquo;이런 것도 있었어?&rdquo; 하는 부분, 중요하다고 생"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://jaejin0me.github.io/post/"},{"@type":"ListItem","position":2,"name":"몰입! 자바스크립트 - 24장 렉시컬 환경","item":"https://jaejin0me.github.io/post/20220210/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"몰입! 자바스크립트 - 24장 렉시컬 환경","name":"몰입! 자바스크립트 - 24장 렉시컬 환경","description":"이력 2022.02.10 포스팅 ​ ​모든 내용을 상세히 담으려 하지 않았습니다. 제가 모르는 부분이나, \u0026ldquo;이런 것도 있었어?\u0026rdquo; 하는 부분, 중요하다고 생","keywords":["javascript"],"articleBody":"이력\n2022.02.10 포스팅 ​ ​모든 내용을 상세히 담으려 하지 않았습니다.\n제가 모르는 부분이나, “이런 것도 있었어?” 하는 부분, 중요하다고 생각되는 부분,\n다시 한번 되새기고 싶은 부분만 기록했습니다.\n읽어주셔서 감사합니다. 24.1 아키텍처, 메커니즘 접근 이 장에서는 js 엔진이 코드를 어떻게 처리하는지 다룹니다. 함수가 호출되면 함수 안으로 js 엔진이 이동한다. 이때 엔진은 준비, 초기화, 실행 단계로 나누어 처리합니다. 렉시컬 환경이 준비 단계이고, 실행 컨텍스트(Execution Context)가 초기화 단계와 실행단계 입니다. 렉시컬 환경이 개념 중심의 메커니즘이고 다음 장의 실행 컨텍스트가 구현 중심의 메커니즘 입니다. 24.2 실행 컨텍스트 개요 함수가 호출되면 js 엔진은 호출된 함수 안으로 들어가 코드를 해석하고 실행합니다. 해석한 결과를 저장하고 함수 코드를 실행할 영역이 필요한데, 이 영역은 실행 컨텍스트(Execution Contexts)라고 합니다. 함수가 호출되면 우선 EC를 이 안에서 함수 안의 코드를 해석하고 실행합니다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 실행 컨텍스트 처리 1. 함수를 호출 2. 실행 컨텍스트 생성 3. 렉시컬 환경 컴포넌트 생섬 4. 변수 환경 컴포넌트 생성 5. this 컴포넌트 생성 6. 호출한 함수 앞에 작성한 오브젝트(없으면 글로벌 오브젝트)를 this 바인딩 컴포넌트에 설정한다. this.xxx 호출이 가능해진다. 7. 렉시컬 환경을 생성한다. 8. 환경 레코드를 생성하여 렉시컬 환경에 첨부한다. 9. 외부 렉시컬 환경 참조를 생성하여 렉시컬 환경에 첨부한다. 10. Function 오브젝트의 [[Scope]]를 외부 렉시컬 환경 참조에 첨부한다. 11. 렉시컬 환경을 렉시컬 환경 컴포넌트와 변수 환경 컴포넌트에 설정한다. 12. 호출한 함수의 파라미터 값을 호출된 함수의 파라미터 이름에 매핑한다. 13. 함수 선언문을 Function 오브젝트로 생성 14. 함수 표현식과 변수에 초깃값을 설정 15. 함수 안의 자바스크립트 코드를 실행한다. 24.3 렉시컬 환경 Lexical Env. 는 js 코드의 실행환경, 범위를 구조적으로 엮으면서 독립적으로 실행하기 위한 메커니즘으로 ES5 스펙상의 입니다. { name: value } 형태로 저장하여 이름과 값을 묶어줍니다. js 엔진은 함수의 초기화 단계에서 해석한 함수가 변수를 식별할 수 있도록 {name: value} 형태로 기록하며 그곳이 LE 입니다. 이름이 없으면 기록할 수 없으므로 이름이 없는 함수는 바로 실행되도록 해야 하며 자바스크립트는 이를 위한 메커니즘을 제공합니다. 1 2 3 4 LE = { ER: 값, // 함수, 변수 기록 OLDER: 값, // caller의 Scope } 이름을 찾을 때 ER에서 찾고 없으면 OLER에서 찾습니다. 외부의 스코프에 바로 접근할 수 있으므로 속도가 빠릅니다. 24.4 외부 렉시컬 환경참조 1 2 3 4 5 6 7 형성과정 1. 함수를 호출한다. 2. EC를 생성한다. 3. LE를 생성한다. 4. ER을 생성하여 LE에 첨부한다. (함수 코드를 해석하기 전이기 때문에 값을 설정하지는 못한다.) 5. OLER 생성하여 LE에 첨부한다. 6. OLER에 참조값을 설정한다. (이 시점에 Function 오브젝트의 [[Scope]]에 접근가능하기 떄문에 설정가능) ES3에서는 식별자를 찾지 못하면 스코프 체인을 통해 근접한 스코프에서 찾았으나, ES5는 LE를 통해 근접한 스코프에 바로 접근가능하기 때문에 빠르다. 24.5 스코프와 외부 렉시컬 환경 참조 24.6 환경레코드(ER) 함수안에 작성한 함수와 변수를 사용하기 위해서는 js 엔진이 인식할 수 있는 영역에 기록해야 한다. 기록하는 곳이 LE의 ER이다. 함수, 변수 이름을 식별자라고 하며 ER에 식별자를 기록하는 것을 바인딩이라고 한다. ER에서 식별자를 찾는 것을 식별자 해결(Identifier Resolution)이라고 하며 해결의 전반적인 규칙을 Rules라고 한다. 1 2 3 4 5 6 7 LE = { ER: { DER(Declarative Env. Record): {}, // Function, 변수, catch OER(Object Env. Record): {}, // 글로벌 오브젝트의 변수, 함수, with } OLDER: {} } 24.7 선언적 환경 레코드 DER 함수, 변수, catch 문이 대상입니다. 함수안의 코드를 해석하기 전에 먼저 DER을 생성한다. 함수코드를 실행하기 위한 준비입니다. 함수를 호출하면 엔진은 우선 EC를 생성한다. 그리고 LE를 생성하며 ER, DER, OER, OLER을 생성하여 첨부합니다. 함수와 변수는 DER에 바인딩 되지만 코드해석 전이기 때문에 값이 설정되진 않습니다. 24.8 오브젝트 환경 레코드 글로벌 오브젝트와 with문이 OER의 대상입니다. 글로벌 오브젝트와 with문의 처리가 달라 분리하여 다룹니다. 이번 장에서는 with문을 다룹니다. 1 2 3 4 5 6 LE = { ER: { OER(Object Env. Record): {}, // 글로벌 오브젝트의 변수, 함수, with } OLER: {} // 처음 실행할 때의 LE, with문을 여러번 실행하더라도 동일한 OLER을 참조한다 } strict모드 사용시 with문을 에러가 발생합니다. with문은 OLER은 동일하나 with 문을 실행할때 마다 EC, LE를 생성하기 때문에 ES5가 추구하는바에 맞지 않기 때문입니다. 23.9 글로벌 환경 글로벌 환경은 글로벌 오브젝트를 위한 LE입니다. 프로그램 전체를 통해 하나만 존재하며 함수로 생성하는 LE와 형태가 같습니다. 1 2 3 4 5 6 LE = { ER: { OER(Object Env. Record): 글로벌 오브젝트 바인딩 } OLER: null // 처음 실행할 때의 LE, with문을 여러번 실행하더라도 동일한 OLER을 참조한다 } 자바스크립트가 렌더링을 시작하면 자바스크립트 실행 환경(빌트인 오브젝트, 빌트인 타입 등)을 설정한 후 글로벌 환경을 생성합니다. 1 2 3 4 5 6 7 글로벌 환경 형성 과정 1. 글로벌 환경을 생성합니다. LE = {} 형태입니다. 2. ER를 생성하여 첨부합니다. 3. OER을 생성하여 첨부합니다. 4. OLER을 생성하여 첨부합니다. 5. 글로벌 오브젝트를 생성합니다. 6. 글로벌 오브젝트의 함수와 변수를 OER에 바인딩합니다. 글로벌 환경운 동적으로 함수와 변수를 바인딩합니다. 함수와 변수의 추가, 변경이 수시로 발생할 수 있으므로 OER을 사용합니다. ","wordCount":"2206","inLanguage":"ko","datePublished":"2022-02-10T17:20:52+09:00","dateModified":"2022-02-10T17:20:52+09:00","author":{"@type":"Person","name":"Jaejin Jang"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://jaejin0me.github.io/post/20220210/"},"publisher":{"@type":"Organization","name":"Jaejin's blog","logo":{"@type":"ImageObject","url":"https://jaejin0me.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://jaejin0me.github.io/ accesskey=h title="Jaejin's blog (Alt + H)">Jaejin's blog</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://jaejin0me.github.io/ title=Home><span>Home</span></a></li><li><a href=https://jaejin0me.github.io/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li><li><a href=https://jaejin0me.github.io/post/ title=Posts><span>Posts</span></a></li><li><a href=https://jaejin0me.github.io/tags/ title=Tags><span>Tags</span></a></li><li><a href=https://jaejin0me.github.io/categories/ title=Categories><span>Categories</span></a></li><li><a href=https://jaejin0me.github.io/about/ title="About Me"><span>About Me</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">몰입! 자바스크립트 - 24장 렉시컬 환경</h1><div class=post-meta><span title='2022-02-10 17:20:52 +0900 +0900'>2월 10, 2022</span>&nbsp;·&nbsp;Jaejin Jang</div></header><div class=post-content><p>이력</p><ul><li>2022.02.10 포스팅
+<meta name=keywords content="javascript"><meta name=description content="이력
+
+2022.02.10 포스팅
+​
+​모든 내용을 상세히 담으려 하지 않았습니다.
+제가 모르는 부분이나, &ldquo;이런 것도 있었어?&rdquo; 하는 부분, 중요하다고 생각되는 부분,
+다시 한번 되새기고 싶은 부분만 기록했습니다.
+읽어주셔서 감사합니다.
+
+24.1 아키텍처, 메커니즘 접근
+
+이 장에서는 js 엔진이 코드를 어떻게 처리하는지 다룹니다.
+함수가 호출되면 함수 안으로 js 엔진이 이동한다. 이때 엔진은 준비, 초기화, 실행 단계로 나누어 처리합니다. 렉시컬 환경이 준비 단계이고, 실행 컨텍스트(Execution Context)가 초기화 단계와 실행단계 입니다.
+렉시컬 환경이 개념 중심의 메커니즘이고 다음 장의 실행 컨텍스트가 구현 중심의 메커니즘 입니다.
+
+24.2 실행 컨텍스트 개요
+
+함수가 호출되면 js 엔진은 호출된 함수 안으로 들어가 코드를 해석하고 실행합니다. 해석한 결과를 저장하고 함수 코드를 실행할 영역이 필요한데, 이 영역은 실행 컨텍스트(Execution Contexts)라고 합니다. 함수가 호출되면 우선 EC를 이 안에서 함수 안의 코드를 해석하고 실행합니다.
+
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+
+
+실행 컨텍스트 처리
+1. 함수를 호출
+2. 실행 컨텍스트 생성
+3. 렉시컬 환경 컴포넌트 생섬
+4. 변수 환경 컴포넌트 생성
+5. this 컴포넌트 생성
+6. 호출한 함수 앞에 작성한 오브젝트(없으면 글로벌 오브젝트)를 this 바인딩 컴포넌트에 설정한다.
+   this.xxx 호출이 가능해진다.
+7. 렉시컬 환경을 생성한다.
+8. 환경 레코드를 생성하여 렉시컬 환경에 첨부한다.
+9. 외부 렉시컬 환경 참조를 생성하여 렉시컬 환경에 첨부한다.
+10. Function 오브젝트의 [[Scope]]를 외부 렉시컬 환경 참조에 첨부한다.
+11. 렉시컬 환경을 렉시컬 환경 컴포넌트와 변수 환경 컴포넌트에 설정한다.
+12. 호출한 함수의 파라미터 값을 호출된 함수의 파라미터 이름에 매핑한다.
+13. 함수 선언문을 Function 오브젝트로 생성
+14. 함수 표현식과 변수에 초깃값을 설정
+15. 함수 안의 자바스크립트 코드를 실행한다.
+
+
+24.3 렉시컬 환경
+
+Lexical Env. 는 js 코드의 실행환경, 범위를 구조적으로 엮으면서 독립적으로 실행하기 위한 메커니즘으로 ES5 스펙상의 입니다.
+{ name: value } 형태로 저장하여 이름과 값을 묶어줍니다. js 엔진은 함수의 초기화 단계에서 해석한 함수가 변수를 식별할 수 있도록 {name: value} 형태로 기록하며 그곳이 LE 입니다.
+이름이 없으면 기록할 수 없으므로 이름이 없는 함수는 바로 실행되도록 해야 하며 자바스크립트는 이를 위한 메커니즘을 제공합니다.
+
+
+
+1
+2
+3
+4
+
+
+LE = {
+  ER: 값, // 함수, 변수 기록
+  OLDER: 값,  // caller의 Scope
+}
+
+
+
+이름을 찾을 때 ER에서 찾고 없으면 OLER에서 찾습니다. 외부의 스코프에 바로 접근할 수 있으므로 속도가 빠릅니다.
+
+24.4 외부 렉시컬 환경참조
+
+
+1
+2
+3
+4
+5
+6
+7
+
+
+형성과정
+1. 함수를 호출한다.
+2. EC를 생성한다.
+3. LE를 생성한다.
+4. ER을 생성하여 LE에 첨부한다. (함수 코드를 해석하기 전이기 때문에 값을 설정하지는 못한다.)
+5. OLER 생성하여 LE에 첨부한다.
+6. OLER에 참조값을 설정한다. (이 시점에 Function 오브젝트의 [[Scope]]에 접근가능하기 떄문에 설정가능)
+
+
+
+ES3에서는 식별자를 찾지 못하면 스코프 체인을 통해 근접한 스코프에서 찾았으나, ES5는 LE를 통해 근접한 스코프에 바로 접근가능하기 때문에 빠르다.
+
+24.5 스코프와 외부 렉시컬 환경 참조
+24.6 환경레코드(ER)
+
+함수안에 작성한 함수와 변수를 사용하기 위해서는 js 엔진이 인식할 수 있는 영역에 기록해야 한다. 기록하는 곳이 LE의 ER이다.
+함수, 변수 이름을 식별자라고 하며 ER에 식별자를 기록하는 것을 바인딩이라고 한다. ER에서 식별자를 찾는 것을 식별자 해결(Identifier Resolution)이라고 하며 해결의 전반적인 규칙을 Rules라고 한다.
+
+
+
+1
+2
+3
+4
+5
+6
+7
+
+
+LE = {
+  ER: {
+    DER(Declarative Env. Record): {}, // Function, 변수, catch
+    OER(Object Env. Record): {}, // 글로벌 오브젝트의 변수, 함수, with
+  }
+  OLDER: {}
+}
+
+
+24.7 선언적 환경 레코드 DER
+
+함수, 변수, catch 문이 대상입니다. 함수안의 코드를 해석하기 전에 먼저 DER을 생성한다. 함수코드를 실행하기 위한 준비입니다.
+함수를 호출하면 엔진은 우선 EC를 생성한다. 그리고 LE를 생성하며 ER, DER, OER, OLER을 생성하여 첨부합니다.
+함수와 변수는 DER에 바인딩 되지만 코드해석 전이기 때문에 값이 설정되진 않습니다.
+
+24.8 오브젝트 환경 레코드
+
+글로벌 오브젝트와 with문이 OER의 대상입니다. 글로벌 오브젝트와 with문의 처리가 달라 분리하여 다룹니다. 이번 장에서는 with문을 다룹니다.
+
+
+
+1
+2
+3
+4
+5
+6
+
+
+LE = {
+  ER: {
+    OER(Object Env. Record): {}, // 글로벌 오브젝트의 변수, 함수, with
+  }
+  OLER: {}  // 처음 실행할 때의 LE, with문을 여러번 실행하더라도 동일한 OLER을 참조한다
+}
+
+
+
+strict모드 사용시 with문을 에러가 발생합니다. with문은 OLER은 동일하나 with 문을 실행할때 마다 EC, LE를 생성하기 때문에 ES5가 추구하는바에 맞지 않기 때문입니다.
+
+23.9 글로벌 환경
+
+글로벌 환경은 글로벌 오브젝트를 위한 LE입니다. 프로그램 전체를 통해 하나만 존재하며 함수로 생성하는 LE와 형태가 같습니다.
+
+
+
+1
+2
+3
+4
+5
+6
+
+
+LE = {
+  ER: {
+    OER(Object Env. Record): 글로벌 오브젝트 바인딩
+  }
+  OLER: null // 처음 실행할 때의 LE, with문을 여러번 실행하더라도 동일한 OLER을 참조한다
+}
+
+
+
+자바스크립트가 렌더링을 시작하면 자바스크립트 실행 환경(빌트인 오브젝트, 빌트인 타입 등)을 설정한 후 글로벌 환경을 생성합니다.
+
+
+
+1
+2
+3
+4
+5
+6
+7
+
+
+글로벌 환경 형성 과정
+1. 글로벌 환경을 생성합니다. LE = {} 형태입니다.
+2. ER를 생성하여 첨부합니다.
+3. OER을 생성하여 첨부합니다.
+4. OLER을 생성하여 첨부합니다.
+5. 글로벌 오브젝트를 생성합니다.
+6. 글로벌 오브젝트의 함수와 변수를 OER에 바인딩합니다.
+
+
+
+글로벌 환경운 동적으로 함수와 변수를 바인딩합니다. 함수와 변수의 추가, 변경이 수시로 발생할 수 있으므로 OER을 사용합니다.
+"><meta name=author content="Jaejin Jang"><link rel=canonical href=https://jaejin0me.github.io/post/20220210/><link crossorigin=anonymous href=/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z+V9+cO1A=" rel="preload stylesheet" as=style><link rel=icon href=https://jaejin0me.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://jaejin0me.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://jaejin0me.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://jaejin0me.github.io/apple-touch-icon.png><link rel=mask-icon href=https://jaejin0me.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=ko href=https://jaejin0me.github.io/post/20220210/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css integrity=sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js integrity=sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4 crossorigin=anonymous></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js integrity=sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa crossorigin=anonymous onload=renderMathInElement(document.body)></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-F8504X956T"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-F8504X956T")}</script><meta property="og:title" content="몰입! 자바스크립트 - 24장 렉시컬 환경"><meta property="og:description" content="이력
+
+2022.02.10 포스팅
+​
+​모든 내용을 상세히 담으려 하지 않았습니다.
+제가 모르는 부분이나, &ldquo;이런 것도 있었어?&rdquo; 하는 부분, 중요하다고 생각되는 부분,
+다시 한번 되새기고 싶은 부분만 기록했습니다.
+읽어주셔서 감사합니다.
+
+24.1 아키텍처, 메커니즘 접근
+
+이 장에서는 js 엔진이 코드를 어떻게 처리하는지 다룹니다.
+함수가 호출되면 함수 안으로 js 엔진이 이동한다. 이때 엔진은 준비, 초기화, 실행 단계로 나누어 처리합니다. 렉시컬 환경이 준비 단계이고, 실행 컨텍스트(Execution Context)가 초기화 단계와 실행단계 입니다.
+렉시컬 환경이 개념 중심의 메커니즘이고 다음 장의 실행 컨텍스트가 구현 중심의 메커니즘 입니다.
+
+24.2 실행 컨텍스트 개요
+
+함수가 호출되면 js 엔진은 호출된 함수 안으로 들어가 코드를 해석하고 실행합니다. 해석한 결과를 저장하고 함수 코드를 실행할 영역이 필요한데, 이 영역은 실행 컨텍스트(Execution Contexts)라고 합니다. 함수가 호출되면 우선 EC를 이 안에서 함수 안의 코드를 해석하고 실행합니다.
+
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+
+
+실행 컨텍스트 처리
+1. 함수를 호출
+2. 실행 컨텍스트 생성
+3. 렉시컬 환경 컴포넌트 생섬
+4. 변수 환경 컴포넌트 생성
+5. this 컴포넌트 생성
+6. 호출한 함수 앞에 작성한 오브젝트(없으면 글로벌 오브젝트)를 this 바인딩 컴포넌트에 설정한다.
+   this.xxx 호출이 가능해진다.
+7. 렉시컬 환경을 생성한다.
+8. 환경 레코드를 생성하여 렉시컬 환경에 첨부한다.
+9. 외부 렉시컬 환경 참조를 생성하여 렉시컬 환경에 첨부한다.
+10. Function 오브젝트의 [[Scope]]를 외부 렉시컬 환경 참조에 첨부한다.
+11. 렉시컬 환경을 렉시컬 환경 컴포넌트와 변수 환경 컴포넌트에 설정한다.
+12. 호출한 함수의 파라미터 값을 호출된 함수의 파라미터 이름에 매핑한다.
+13. 함수 선언문을 Function 오브젝트로 생성
+14. 함수 표현식과 변수에 초깃값을 설정
+15. 함수 안의 자바스크립트 코드를 실행한다.
+
+
+24.3 렉시컬 환경
+
+Lexical Env. 는 js 코드의 실행환경, 범위를 구조적으로 엮으면서 독립적으로 실행하기 위한 메커니즘으로 ES5 스펙상의 입니다.
+{ name: value } 형태로 저장하여 이름과 값을 묶어줍니다. js 엔진은 함수의 초기화 단계에서 해석한 함수가 변수를 식별할 수 있도록 {name: value} 형태로 기록하며 그곳이 LE 입니다.
+이름이 없으면 기록할 수 없으므로 이름이 없는 함수는 바로 실행되도록 해야 하며 자바스크립트는 이를 위한 메커니즘을 제공합니다.
+
+
+
+1
+2
+3
+4
+
+
+LE = {
+  ER: 값, // 함수, 변수 기록
+  OLDER: 값,  // caller의 Scope
+}
+
+
+
+이름을 찾을 때 ER에서 찾고 없으면 OLER에서 찾습니다. 외부의 스코프에 바로 접근할 수 있으므로 속도가 빠릅니다.
+
+24.4 외부 렉시컬 환경참조
+
+
+1
+2
+3
+4
+5
+6
+7
+
+
+형성과정
+1. 함수를 호출한다.
+2. EC를 생성한다.
+3. LE를 생성한다.
+4. ER을 생성하여 LE에 첨부한다. (함수 코드를 해석하기 전이기 때문에 값을 설정하지는 못한다.)
+5. OLER 생성하여 LE에 첨부한다.
+6. OLER에 참조값을 설정한다. (이 시점에 Function 오브젝트의 [[Scope]]에 접근가능하기 떄문에 설정가능)
+
+
+
+ES3에서는 식별자를 찾지 못하면 스코프 체인을 통해 근접한 스코프에서 찾았으나, ES5는 LE를 통해 근접한 스코프에 바로 접근가능하기 때문에 빠르다.
+
+24.5 스코프와 외부 렉시컬 환경 참조
+24.6 환경레코드(ER)
+
+함수안에 작성한 함수와 변수를 사용하기 위해서는 js 엔진이 인식할 수 있는 영역에 기록해야 한다. 기록하는 곳이 LE의 ER이다.
+함수, 변수 이름을 식별자라고 하며 ER에 식별자를 기록하는 것을 바인딩이라고 한다. ER에서 식별자를 찾는 것을 식별자 해결(Identifier Resolution)이라고 하며 해결의 전반적인 규칙을 Rules라고 한다.
+
+
+
+1
+2
+3
+4
+5
+6
+7
+
+
+LE = {
+  ER: {
+    DER(Declarative Env. Record): {}, // Function, 변수, catch
+    OER(Object Env. Record): {}, // 글로벌 오브젝트의 변수, 함수, with
+  }
+  OLDER: {}
+}
+
+
+24.7 선언적 환경 레코드 DER
+
+함수, 변수, catch 문이 대상입니다. 함수안의 코드를 해석하기 전에 먼저 DER을 생성한다. 함수코드를 실행하기 위한 준비입니다.
+함수를 호출하면 엔진은 우선 EC를 생성한다. 그리고 LE를 생성하며 ER, DER, OER, OLER을 생성하여 첨부합니다.
+함수와 변수는 DER에 바인딩 되지만 코드해석 전이기 때문에 값이 설정되진 않습니다.
+
+24.8 오브젝트 환경 레코드
+
+글로벌 오브젝트와 with문이 OER의 대상입니다. 글로벌 오브젝트와 with문의 처리가 달라 분리하여 다룹니다. 이번 장에서는 with문을 다룹니다.
+
+
+
+1
+2
+3
+4
+5
+6
+
+
+LE = {
+  ER: {
+    OER(Object Env. Record): {}, // 글로벌 오브젝트의 변수, 함수, with
+  }
+  OLER: {}  // 처음 실행할 때의 LE, with문을 여러번 실행하더라도 동일한 OLER을 참조한다
+}
+
+
+
+strict모드 사용시 with문을 에러가 발생합니다. with문은 OLER은 동일하나 with 문을 실행할때 마다 EC, LE를 생성하기 때문에 ES5가 추구하는바에 맞지 않기 때문입니다.
+
+23.9 글로벌 환경
+
+글로벌 환경은 글로벌 오브젝트를 위한 LE입니다. 프로그램 전체를 통해 하나만 존재하며 함수로 생성하는 LE와 형태가 같습니다.
+
+
+
+1
+2
+3
+4
+5
+6
+
+
+LE = {
+  ER: {
+    OER(Object Env. Record): 글로벌 오브젝트 바인딩
+  }
+  OLER: null // 처음 실행할 때의 LE, with문을 여러번 실행하더라도 동일한 OLER을 참조한다
+}
+
+
+
+자바스크립트가 렌더링을 시작하면 자바스크립트 실행 환경(빌트인 오브젝트, 빌트인 타입 등)을 설정한 후 글로벌 환경을 생성합니다.
+
+
+
+1
+2
+3
+4
+5
+6
+7
+
+
+글로벌 환경 형성 과정
+1. 글로벌 환경을 생성합니다. LE = {} 형태입니다.
+2. ER를 생성하여 첨부합니다.
+3. OER을 생성하여 첨부합니다.
+4. OLER을 생성하여 첨부합니다.
+5. 글로벌 오브젝트를 생성합니다.
+6. 글로벌 오브젝트의 함수와 변수를 OER에 바인딩합니다.
+
+
+
+글로벌 환경운 동적으로 함수와 변수를 바인딩합니다. 함수와 변수의 추가, 변경이 수시로 발생할 수 있으므로 OER을 사용합니다.
+"><meta property="og:type" content="article"><meta property="og:url" content="https://jaejin0me.github.io/post/20220210/"><meta property="article:section" content="post"><meta property="article:published_time" content="2022-02-10T17:20:52+09:00"><meta property="article:modified_time" content="2022-02-10T17:20:52+09:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="몰입! 자바스크립트 - 24장 렉시컬 환경"><meta name=twitter:description content="이력
+
+2022.02.10 포스팅
+​
+​모든 내용을 상세히 담으려 하지 않았습니다.
+제가 모르는 부분이나, &ldquo;이런 것도 있었어?&rdquo; 하는 부분, 중요하다고 생각되는 부분,
+다시 한번 되새기고 싶은 부분만 기록했습니다.
+읽어주셔서 감사합니다.
+
+24.1 아키텍처, 메커니즘 접근
+
+이 장에서는 js 엔진이 코드를 어떻게 처리하는지 다룹니다.
+함수가 호출되면 함수 안으로 js 엔진이 이동한다. 이때 엔진은 준비, 초기화, 실행 단계로 나누어 처리합니다. 렉시컬 환경이 준비 단계이고, 실행 컨텍스트(Execution Context)가 초기화 단계와 실행단계 입니다.
+렉시컬 환경이 개념 중심의 메커니즘이고 다음 장의 실행 컨텍스트가 구현 중심의 메커니즘 입니다.
+
+24.2 실행 컨텍스트 개요
+
+함수가 호출되면 js 엔진은 호출된 함수 안으로 들어가 코드를 해석하고 실행합니다. 해석한 결과를 저장하고 함수 코드를 실행할 영역이 필요한데, 이 영역은 실행 컨텍스트(Execution Contexts)라고 합니다. 함수가 호출되면 우선 EC를 이 안에서 함수 안의 코드를 해석하고 실행합니다.
+
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+
+
+실행 컨텍스트 처리
+1. 함수를 호출
+2. 실행 컨텍스트 생성
+3. 렉시컬 환경 컴포넌트 생섬
+4. 변수 환경 컴포넌트 생성
+5. this 컴포넌트 생성
+6. 호출한 함수 앞에 작성한 오브젝트(없으면 글로벌 오브젝트)를 this 바인딩 컴포넌트에 설정한다.
+   this.xxx 호출이 가능해진다.
+7. 렉시컬 환경을 생성한다.
+8. 환경 레코드를 생성하여 렉시컬 환경에 첨부한다.
+9. 외부 렉시컬 환경 참조를 생성하여 렉시컬 환경에 첨부한다.
+10. Function 오브젝트의 [[Scope]]를 외부 렉시컬 환경 참조에 첨부한다.
+11. 렉시컬 환경을 렉시컬 환경 컴포넌트와 변수 환경 컴포넌트에 설정한다.
+12. 호출한 함수의 파라미터 값을 호출된 함수의 파라미터 이름에 매핑한다.
+13. 함수 선언문을 Function 오브젝트로 생성
+14. 함수 표현식과 변수에 초깃값을 설정
+15. 함수 안의 자바스크립트 코드를 실행한다.
+
+
+24.3 렉시컬 환경
+
+Lexical Env. 는 js 코드의 실행환경, 범위를 구조적으로 엮으면서 독립적으로 실행하기 위한 메커니즘으로 ES5 스펙상의 입니다.
+{ name: value } 형태로 저장하여 이름과 값을 묶어줍니다. js 엔진은 함수의 초기화 단계에서 해석한 함수가 변수를 식별할 수 있도록 {name: value} 형태로 기록하며 그곳이 LE 입니다.
+이름이 없으면 기록할 수 없으므로 이름이 없는 함수는 바로 실행되도록 해야 하며 자바스크립트는 이를 위한 메커니즘을 제공합니다.
+
+
+
+1
+2
+3
+4
+
+
+LE = {
+  ER: 값, // 함수, 변수 기록
+  OLDER: 값,  // caller의 Scope
+}
+
+
+
+이름을 찾을 때 ER에서 찾고 없으면 OLER에서 찾습니다. 외부의 스코프에 바로 접근할 수 있으므로 속도가 빠릅니다.
+
+24.4 외부 렉시컬 환경참조
+
+
+1
+2
+3
+4
+5
+6
+7
+
+
+형성과정
+1. 함수를 호출한다.
+2. EC를 생성한다.
+3. LE를 생성한다.
+4. ER을 생성하여 LE에 첨부한다. (함수 코드를 해석하기 전이기 때문에 값을 설정하지는 못한다.)
+5. OLER 생성하여 LE에 첨부한다.
+6. OLER에 참조값을 설정한다. (이 시점에 Function 오브젝트의 [[Scope]]에 접근가능하기 떄문에 설정가능)
+
+
+
+ES3에서는 식별자를 찾지 못하면 스코프 체인을 통해 근접한 스코프에서 찾았으나, ES5는 LE를 통해 근접한 스코프에 바로 접근가능하기 때문에 빠르다.
+
+24.5 스코프와 외부 렉시컬 환경 참조
+24.6 환경레코드(ER)
+
+함수안에 작성한 함수와 변수를 사용하기 위해서는 js 엔진이 인식할 수 있는 영역에 기록해야 한다. 기록하는 곳이 LE의 ER이다.
+함수, 변수 이름을 식별자라고 하며 ER에 식별자를 기록하는 것을 바인딩이라고 한다. ER에서 식별자를 찾는 것을 식별자 해결(Identifier Resolution)이라고 하며 해결의 전반적인 규칙을 Rules라고 한다.
+
+
+
+1
+2
+3
+4
+5
+6
+7
+
+
+LE = {
+  ER: {
+    DER(Declarative Env. Record): {}, // Function, 변수, catch
+    OER(Object Env. Record): {}, // 글로벌 오브젝트의 변수, 함수, with
+  }
+  OLDER: {}
+}
+
+
+24.7 선언적 환경 레코드 DER
+
+함수, 변수, catch 문이 대상입니다. 함수안의 코드를 해석하기 전에 먼저 DER을 생성한다. 함수코드를 실행하기 위한 준비입니다.
+함수를 호출하면 엔진은 우선 EC를 생성한다. 그리고 LE를 생성하며 ER, DER, OER, OLER을 생성하여 첨부합니다.
+함수와 변수는 DER에 바인딩 되지만 코드해석 전이기 때문에 값이 설정되진 않습니다.
+
+24.8 오브젝트 환경 레코드
+
+글로벌 오브젝트와 with문이 OER의 대상입니다. 글로벌 오브젝트와 with문의 처리가 달라 분리하여 다룹니다. 이번 장에서는 with문을 다룹니다.
+
+
+
+1
+2
+3
+4
+5
+6
+
+
+LE = {
+  ER: {
+    OER(Object Env. Record): {}, // 글로벌 오브젝트의 변수, 함수, with
+  }
+  OLER: {}  // 처음 실행할 때의 LE, with문을 여러번 실행하더라도 동일한 OLER을 참조한다
+}
+
+
+
+strict모드 사용시 with문을 에러가 발생합니다. with문은 OLER은 동일하나 with 문을 실행할때 마다 EC, LE를 생성하기 때문에 ES5가 추구하는바에 맞지 않기 때문입니다.
+
+23.9 글로벌 환경
+
+글로벌 환경은 글로벌 오브젝트를 위한 LE입니다. 프로그램 전체를 통해 하나만 존재하며 함수로 생성하는 LE와 형태가 같습니다.
+
+
+
+1
+2
+3
+4
+5
+6
+
+
+LE = {
+  ER: {
+    OER(Object Env. Record): 글로벌 오브젝트 바인딩
+  }
+  OLER: null // 처음 실행할 때의 LE, with문을 여러번 실행하더라도 동일한 OLER을 참조한다
+}
+
+
+
+자바스크립트가 렌더링을 시작하면 자바스크립트 실행 환경(빌트인 오브젝트, 빌트인 타입 등)을 설정한 후 글로벌 환경을 생성합니다.
+
+
+
+1
+2
+3
+4
+5
+6
+7
+
+
+글로벌 환경 형성 과정
+1. 글로벌 환경을 생성합니다. LE = {} 형태입니다.
+2. ER를 생성하여 첨부합니다.
+3. OER을 생성하여 첨부합니다.
+4. OLER을 생성하여 첨부합니다.
+5. 글로벌 오브젝트를 생성합니다.
+6. 글로벌 오브젝트의 함수와 변수를 OER에 바인딩합니다.
+
+
+
+글로벌 환경운 동적으로 함수와 변수를 바인딩합니다. 함수와 변수의 추가, 변경이 수시로 발생할 수 있으므로 OER을 사용합니다.
+"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://jaejin0me.github.io/post/"},{"@type":"ListItem","position":2,"name":"몰입! 자바스크립트 - 24장 렉시컬 환경","item":"https://jaejin0me.github.io/post/20220210/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"몰입! 자바스크립트 - 24장 렉시컬 환경","name":"몰입! 자바스크립트 - 24장 렉시컬 환경","description":"이력\n2022.02.10 포스팅 ​ ​모든 내용을 상세히 담으려 하지 않았습니다.\n제가 모르는 부분이나, \u0026ldquo;이런 것도 있었어?\u0026rdquo; 하는 부분, 중요하다고 생각되는 부분,\n다시 한번 되새기고 싶은 부분만 기록했습니다.\n읽어주셔서 감사합니다. 24.1 아키텍처, 메커니즘 접근 이 장에서는 js 엔진이 코드를 어떻게 처리하는지 다룹니다. 함수가 호출되면 함수 안으로 js 엔진이 이동한다. 이때 엔진은 준비, 초기화, 실행 단계로 나누어 처리합니다. 렉시컬 환경이 준비 단계이고, 실행 컨텍스트(Execution Context)가 초기화 단계와 실행단계 입니다. 렉시컬 환경이 개념 중심의 메커니즘이고 다음 장의 실행 컨텍스트가 구현 중심의 메커니즘 입니다. 24.2 실행 컨텍스트 개요 함수가 호출되면 js 엔진은 호출된 함수 안으로 들어가 코드를 해석하고 실행합니다. 해석한 결과를 저장하고 함수 코드를 실행할 영역이 필요한데, 이 영역은 실행 컨텍스트(Execution Contexts)라고 합니다. 함수가 호출되면 우선 EC를 이 안에서 함수 안의 코드를 해석하고 실행합니다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 실행 컨텍스트 처리 1. 함수를 호출 2. 실행 컨텍스트 생성 3. 렉시컬 환경 컴포넌트 생섬 4. 변수 환경 컴포넌트 생성 5. this 컴포넌트 생성 6. 호출한 함수 앞에 작성한 오브젝트(없으면 글로벌 오브젝트)를 this 바인딩 컴포넌트에 설정한다. this.xxx 호출이 가능해진다. 7. 렉시컬 환경을 생성한다. 8. 환경 레코드를 생성하여 렉시컬 환경에 첨부한다. 9. 외부 렉시컬 환경 참조를 생성하여 렉시컬 환경에 첨부한다. 10. Function 오브젝트의 [[Scope]]를 외부 렉시컬 환경 참조에 첨부한다. 11. 렉시컬 환경을 렉시컬 환경 컴포넌트와 변수 환경 컴포넌트에 설정한다. 12. 호출한 함수의 파라미터 값을 호출된 함수의 파라미터 이름에 매핑한다. 13. 함수 선언문을 Function 오브젝트로 생성 14. 함수 표현식과 변수에 초깃값을 설정 15. 함수 안의 자바스크립트 코드를 실행한다. 24.3 렉시컬 환경 Lexical Env. 는 js 코드의 실행환경, 범위를 구조적으로 엮으면서 독립적으로 실행하기 위한 메커니즘으로 ES5 스펙상의 입니다. { name: value } 형태로 저장하여 이름과 값을 묶어줍니다. js 엔진은 함수의 초기화 단계에서 해석한 함수가 변수를 식별할 수 있도록 {name: value} 형태로 기록하며 그곳이 LE 입니다. 이름이 없으면 기록할 수 없으므로 이름이 없는 함수는 바로 실행되도록 해야 하며 자바스크립트는 이를 위한 메커니즘을 제공합니다. 1 2 3 4 LE = { ER: 값, // 함수, 변수 기록 OLDER: 값, // caller의 Scope } 이름을 찾을 때 ER에서 찾고 없으면 OLER에서 찾습니다. 외부의 스코프에 바로 접근할 수 있으므로 속도가 빠릅니다. 24.4 외부 렉시컬 환경참조 1 2 3 4 5 6 7 형성과정 1. 함수를 호출한다. 2. EC를 생성한다. 3. LE를 생성한다. 4. ER을 생성하여 LE에 첨부한다. (함수 코드를 해석하기 전이기 때문에 값을 설정하지는 못한다.) 5. OLER 생성하여 LE에 첨부한다. 6. OLER에 참조값을 설정한다. (이 시점에 Function 오브젝트의 [[Scope]]에 접근가능하기 떄문에 설정가능) ES3에서는 식별자를 찾지 못하면 스코프 체인을 통해 근접한 스코프에서 찾았으나, ES5는 LE를 통해 근접한 스코프에 바로 접근가능하기 때문에 빠르다. 24.5 스코프와 외부 렉시컬 환경 참조 24.6 환경레코드(ER) 함수안에 작성한 함수와 변수를 사용하기 위해서는 js 엔진이 인식할 수 있는 영역에 기록해야 한다. 기록하는 곳이 LE의 ER이다. 함수, 변수 이름을 식별자라고 하며 ER에 식별자를 기록하는 것을 바인딩이라고 한다. ER에서 식별자를 찾는 것을 식별자 해결(Identifier Resolution)이라고 하며 해결의 전반적인 규칙을 Rules라고 한다. 1 2 3 4 5 6 7 LE = { ER: { DER(Declarative Env. Record): {}, // Function, 변수, catch OER(Object Env. Record): {}, // 글로벌 오브젝트의 변수, 함수, with } OLDER: {} } 24.7 선언적 환경 레코드 DER 함수, 변수, catch 문이 대상입니다. 함수안의 코드를 해석하기 전에 먼저 DER을 생성한다. 함수코드를 실행하기 위한 준비입니다. 함수를 호출하면 엔진은 우선 EC를 생성한다. 그리고 LE를 생성하며 ER, DER, OER, OLER을 생성하여 첨부합니다. 함수와 변수는 DER에 바인딩 되지만 코드해석 전이기 때문에 값이 설정되진 않습니다. 24.8 오브젝트 환경 레코드 글로벌 오브젝트와 with문이 OER의 대상입니다. 글로벌 오브젝트와 with문의 처리가 달라 분리하여 다룹니다. 이번 장에서는 with문을 다룹니다. 1 2 3 4 5 6 LE = { ER: { OER(Object Env. Record): {}, // 글로벌 오브젝트의 변수, 함수, with } OLER: {} // 처음 실행할 때의 LE, with문을 여러번 실행하더라도 동일한 OLER을 참조한다 } strict모드 사용시 with문을 에러가 발생합니다. with문은 OLER은 동일하나 with 문을 실행할때 마다 EC, LE를 생성하기 때문에 ES5가 추구하는바에 맞지 않기 때문입니다. 23.9 글로벌 환경 글로벌 환경은 글로벌 오브젝트를 위한 LE입니다. 프로그램 전체를 통해 하나만 존재하며 함수로 생성하는 LE와 형태가 같습니다. 1 2 3 4 5 6 LE = { ER: { OER(Object Env. Record): 글로벌 오브젝트 바인딩 } OLER: null // 처음 실행할 때의 LE, with문을 여러번 실행하더라도 동일한 OLER을 참조한다 } 자바스크립트가 렌더링을 시작하면 자바스크립트 실행 환경(빌트인 오브젝트, 빌트인 타입 등)을 설정한 후 글로벌 환경을 생성합니다. 1 2 3 4 5 6 7 글로벌 환경 형성 과정 1. 글로벌 환경을 생성합니다. LE = {} 형태입니다. 2. ER를 생성하여 첨부합니다. 3. OER을 생성하여 첨부합니다. 4. OLER을 생성하여 첨부합니다. 5. 글로벌 오브젝트를 생성합니다. 6. 글로벌 오브젝트의 함수와 변수를 OER에 바인딩합니다. 글로벌 환경운 동적으로 함수와 변수를 바인딩합니다. 함수와 변수의 추가, 변경이 수시로 발생할 수 있으므로 OER을 사용합니다. ","keywords":["javascript"],"articleBody":"이력\n2022.02.10 포스팅 ​ ​모든 내용을 상세히 담으려 하지 않았습니다.\n제가 모르는 부분이나, “이런 것도 있었어?” 하는 부분, 중요하다고 생각되는 부분,\n다시 한번 되새기고 싶은 부분만 기록했습니다.\n읽어주셔서 감사합니다. 24.1 아키텍처, 메커니즘 접근 이 장에서는 js 엔진이 코드를 어떻게 처리하는지 다룹니다. 함수가 호출되면 함수 안으로 js 엔진이 이동한다. 이때 엔진은 준비, 초기화, 실행 단계로 나누어 처리합니다. 렉시컬 환경이 준비 단계이고, 실행 컨텍스트(Execution Context)가 초기화 단계와 실행단계 입니다. 렉시컬 환경이 개념 중심의 메커니즘이고 다음 장의 실행 컨텍스트가 구현 중심의 메커니즘 입니다. 24.2 실행 컨텍스트 개요 함수가 호출되면 js 엔진은 호출된 함수 안으로 들어가 코드를 해석하고 실행합니다. 해석한 결과를 저장하고 함수 코드를 실행할 영역이 필요한데, 이 영역은 실행 컨텍스트(Execution Contexts)라고 합니다. 함수가 호출되면 우선 EC를 이 안에서 함수 안의 코드를 해석하고 실행합니다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 실행 컨텍스트 처리 1. 함수를 호출 2. 실행 컨텍스트 생성 3. 렉시컬 환경 컴포넌트 생섬 4. 변수 환경 컴포넌트 생성 5. this 컴포넌트 생성 6. 호출한 함수 앞에 작성한 오브젝트(없으면 글로벌 오브젝트)를 this 바인딩 컴포넌트에 설정한다. this.xxx 호출이 가능해진다. 7. 렉시컬 환경을 생성한다. 8. 환경 레코드를 생성하여 렉시컬 환경에 첨부한다. 9. 외부 렉시컬 환경 참조를 생성하여 렉시컬 환경에 첨부한다. 10. Function 오브젝트의 [[Scope]]를 외부 렉시컬 환경 참조에 첨부한다. 11. 렉시컬 환경을 렉시컬 환경 컴포넌트와 변수 환경 컴포넌트에 설정한다. 12. 호출한 함수의 파라미터 값을 호출된 함수의 파라미터 이름에 매핑한다. 13. 함수 선언문을 Function 오브젝트로 생성 14. 함수 표현식과 변수에 초깃값을 설정 15. 함수 안의 자바스크립트 코드를 실행한다. 24.3 렉시컬 환경 Lexical Env. 는 js 코드의 실행환경, 범위를 구조적으로 엮으면서 독립적으로 실행하기 위한 메커니즘으로 ES5 스펙상의 입니다. { name: value } 형태로 저장하여 이름과 값을 묶어줍니다. js 엔진은 함수의 초기화 단계에서 해석한 함수가 변수를 식별할 수 있도록 {name: value} 형태로 기록하며 그곳이 LE 입니다. 이름이 없으면 기록할 수 없으므로 이름이 없는 함수는 바로 실행되도록 해야 하며 자바스크립트는 이를 위한 메커니즘을 제공합니다. 1 2 3 4 LE = { ER: 값, // 함수, 변수 기록 OLDER: 값, // caller의 Scope } 이름을 찾을 때 ER에서 찾고 없으면 OLER에서 찾습니다. 외부의 스코프에 바로 접근할 수 있으므로 속도가 빠릅니다. 24.4 외부 렉시컬 환경참조 1 2 3 4 5 6 7 형성과정 1. 함수를 호출한다. 2. EC를 생성한다. 3. LE를 생성한다. 4. ER을 생성하여 LE에 첨부한다. (함수 코드를 해석하기 전이기 때문에 값을 설정하지는 못한다.) 5. OLER 생성하여 LE에 첨부한다. 6. OLER에 참조값을 설정한다. (이 시점에 Function 오브젝트의 [[Scope]]에 접근가능하기 떄문에 설정가능) ES3에서는 식별자를 찾지 못하면 스코프 체인을 통해 근접한 스코프에서 찾았으나, ES5는 LE를 통해 근접한 스코프에 바로 접근가능하기 때문에 빠르다. 24.5 스코프와 외부 렉시컬 환경 참조 24.6 환경레코드(ER) 함수안에 작성한 함수와 변수를 사용하기 위해서는 js 엔진이 인식할 수 있는 영역에 기록해야 한다. 기록하는 곳이 LE의 ER이다. 함수, 변수 이름을 식별자라고 하며 ER에 식별자를 기록하는 것을 바인딩이라고 한다. ER에서 식별자를 찾는 것을 식별자 해결(Identifier Resolution)이라고 하며 해결의 전반적인 규칙을 Rules라고 한다. 1 2 3 4 5 6 7 LE = { ER: { DER(Declarative Env. Record): {}, // Function, 변수, catch OER(Object Env. Record): {}, // 글로벌 오브젝트의 변수, 함수, with } OLDER: {} } 24.7 선언적 환경 레코드 DER 함수, 변수, catch 문이 대상입니다. 함수안의 코드를 해석하기 전에 먼저 DER을 생성한다. 함수코드를 실행하기 위한 준비입니다. 함수를 호출하면 엔진은 우선 EC를 생성한다. 그리고 LE를 생성하며 ER, DER, OER, OLER을 생성하여 첨부합니다. 함수와 변수는 DER에 바인딩 되지만 코드해석 전이기 때문에 값이 설정되진 않습니다. 24.8 오브젝트 환경 레코드 글로벌 오브젝트와 with문이 OER의 대상입니다. 글로벌 오브젝트와 with문의 처리가 달라 분리하여 다룹니다. 이번 장에서는 with문을 다룹니다. 1 2 3 4 5 6 LE = { ER: { OER(Object Env. Record): {}, // 글로벌 오브젝트의 변수, 함수, with } OLER: {} // 처음 실행할 때의 LE, with문을 여러번 실행하더라도 동일한 OLER을 참조한다 } strict모드 사용시 with문을 에러가 발생합니다. with문은 OLER은 동일하나 with 문을 실행할때 마다 EC, LE를 생성하기 때문에 ES5가 추구하는바에 맞지 않기 때문입니다. 23.9 글로벌 환경 글로벌 환경은 글로벌 오브젝트를 위한 LE입니다. 프로그램 전체를 통해 하나만 존재하며 함수로 생성하는 LE와 형태가 같습니다. 1 2 3 4 5 6 LE = { ER: { OER(Object Env. Record): 글로벌 오브젝트 바인딩 } OLER: null // 처음 실행할 때의 LE, with문을 여러번 실행하더라도 동일한 OLER을 참조한다 } 자바스크립트가 렌더링을 시작하면 자바스크립트 실행 환경(빌트인 오브젝트, 빌트인 타입 등)을 설정한 후 글로벌 환경을 생성합니다. 1 2 3 4 5 6 7 글로벌 환경 형성 과정 1. 글로벌 환경을 생성합니다. LE = {} 형태입니다. 2. ER를 생성하여 첨부합니다. 3. OER을 생성하여 첨부합니다. 4. OLER을 생성하여 첨부합니다. 5. 글로벌 오브젝트를 생성합니다. 6. 글로벌 오브젝트의 함수와 변수를 OER에 바인딩합니다. 글로벌 환경운 동적으로 함수와 변수를 바인딩합니다. 함수와 변수의 추가, 변경이 수시로 발생할 수 있으므로 OER을 사용합니다. ","wordCount":"2206","inLanguage":"ko","datePublished":"2022-02-10T17:20:52+09:00","dateModified":"2022-02-10T17:20:52+09:00","author":{"@type":"Person","name":"Jaejin Jang"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://jaejin0me.github.io/post/20220210/"},"publisher":{"@type":"Organization","name":"Jaejin's blog","logo":{"@type":"ImageObject","url":"https://jaejin0me.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://jaejin0me.github.io/ accesskey=h title="Jaejin's blog (Alt + H)">Jaejin's blog</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://jaejin0me.github.io/ title=Home><span>Home</span></a></li><li><a href=https://jaejin0me.github.io/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li><li><a href=https://jaejin0me.github.io/post/ title=Posts><span>Posts</span></a></li><li><a href=https://jaejin0me.github.io/tags/ title=Tags><span>Tags</span></a></li><li><a href=https://jaejin0me.github.io/categories/ title=Categories><span>Categories</span></a></li><li><a href=https://jaejin0me.github.io/about/ title="About Me"><span>About Me</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">몰입! 자바스크립트 - 24장 렉시컬 환경</h1><div class=post-meta><span title='2022-02-10 17:20:52 +0900 +0900'>2월 10, 2022</span>&nbsp;·&nbsp;Jaejin Jang</div></header><div class=post-content><p>이력</p><ul><li>2022.02.10 포스팅
 ​
 <em>​모든 내용을 상세히 담으려 하지 않았습니다.<br>제가 모르는 부분이나, &ldquo;이런 것도 있었어?&rdquo; 하는 부분, 중요하다고 생각되는 부분,<br>다시 한번 되새기고 싶은 부분만 기록했습니다.<br>읽어주셔서 감사합니다.</em></li></ul><h2 id=241-아키텍처-메커니즘-접근>24.1 아키텍처, 메커니즘 접근<a hidden class=anchor aria-hidden=true href=#241-아키텍처-메커니즘-접근>#</a></h2><ul><li>이 장에서는 js 엔진이 코드를 어떻게 처리하는지 다룹니다.</li><li>함수가 호출되면 함수 안으로 js 엔진이 이동한다. 이때 엔진은 준비, 초기화, 실행 단계로 나누어 처리합니다. 렉시컬 환경이 준비 단계이고, 실행 컨텍스트(Execution Context)가 초기화 단계와 실행단계 입니다.</li><li>렉시컬 환경이 개념 중심의 메커니즘이고 다음 장의 실행 컨텍스트가 구현 중심의 메커니즘 입니다.</li></ul><h2 id=242-실행-컨텍스트-개요>24.2 실행 컨텍스트 개요<a hidden class=anchor aria-hidden=true href=#242-실행-컨텍스트-개요>#</a></h2><ul><li>함수가 호출되면 js 엔진은 호출된 함수 안으로 들어가 코드를 해석하고 실행합니다. 해석한 결과를 저장하고 함수 코드를 실행할 영역이 필요한데, 이 영역은 실행 컨텍스트(Execution Contexts)라고 합니다. 함수가 호출되면 우선 EC를 이 안에서 함수 안의 코드를 해석하고 실행합니다.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2

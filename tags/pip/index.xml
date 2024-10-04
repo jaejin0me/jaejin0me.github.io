@@ -1,1 +1,91 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Pip on Jaejin's blog</title><link>https://jaejin0me.github.io/tags/pip/</link><description>Recent content in Pip on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Mon, 04 Jul 2022 23:30:52 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/tags/pip/index.xml" rel="self" type="application/rss+xml"/><item><title>Package libffi was not found in the pkg-config search path</title><link>https://jaejin0me.github.io/post/20220704_2/</link><pubDate>Mon, 04 Jul 2022 23:30:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/20220704_2/</guid><description>Package libffi was not found in the pkg-config search path 본인 개발 환경에서는 docker-compose build시 아무런 문제가 없는데, 막상 가상서버에서 docker-compose build를 하면 cffi 빌드 문제가 발생하는 경우가 있습니다</description></item><item><title>pkg-resources==0.0.0 not found 해결하기</title><link>https://jaejin0me.github.io/post/20220704/</link><pubDate>Mon, 04 Jul 2022 23:03:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/20220704/</guid><description>pkg-resources==0.0.0 파이썬 패키지 관리를 위해 freeze를 이용하여 requirements.txt를 만들고 이 파일을 이용해 패키지를 설치하다 보면 만나게 되는 이슈입니다</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Pip on Jaejin's blog</title><link>https://jaejin0me.github.io/tags/pip/</link><description>Recent content in Pip on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Mon, 04 Jul 2022 23:30:52 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/tags/pip/index.xml" rel="self" type="application/rss+xml"/><item><title>Package libffi was not found in the pkg-config search path</title><link>https://jaejin0me.github.io/post/20220704_2/</link><pubDate>Mon, 04 Jul 2022 23:30:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/20220704_2/</guid><description>&lt;h2 id="package-libffi-was-not-found-in-the-pkg-config-search-path">Package libffi was not found in the pkg-config search path&lt;/h2>
+&lt;ul>
+&lt;li>본인 개발 환경에서는 docker-compose build시 아무런 문제가 없는데, 막상 가상서버에서 docker-compose build를 하면 cffi 빌드 문제가 발생하는 경우가 있습니다.&lt;/li>
+&lt;li>에러 메시지는 아래와 같습니다.&lt;/li>
+&lt;/ul>
+&lt;h2 id="debug-log">debug log&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#11 10.05 Building wheels for collected packages: cffi&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#11 10.05 Building wheel for cffi (setup.py): started&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#11 10.05 Building wheel for cffi (setup.py): finished with status &amp;#39;error&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#11 10.05 ERROR: Command errored out with exit status 1:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#11 10.05 command: /usr/local/bin/python -u -c &amp;#39;import sys, setuptools, tokenize; sys.argv[0] = &amp;#39;&amp;#34;&amp;#39;&amp;#34;&amp;#39;/tmp/pip-install-lt5a4gm7/cffi_f02ff5d2648d42c398bfaa5f9587d9a1/setup.py&amp;#39;&amp;#34;&amp;#39;&amp;#34;&amp;#39;; __file__=&amp;#39;&amp;#34;&amp;#39;&amp;#34;&amp;#39;/tmp/pip-install-lt5a4gm7/cffi_f02ff5d2648d42c398bfaa5f9587d9a1/setup.py&amp;#39;&amp;#34;&amp;#39;&amp;#34;&amp;#39;;f=getattr(tokenize, &amp;#39;&amp;#34;&amp;#39;&amp;#34;&amp;#39;open&amp;#39;&amp;#34;&amp;#39;&amp;#34;&amp;#39;, open)(__file__);code=f.read().replace(&amp;#39;&amp;#34;&amp;#39;&amp;#34;&amp;#39;\r\n&amp;#39;&amp;#34;&amp;#39;&amp;#34;&amp;#39;, &amp;#39;&amp;#34;&amp;#39;&amp;#34;&amp;#39;\n&amp;#39;&amp;#34;&amp;#39;&amp;#34;&amp;#39;);f.close();exec(compile(code, __file__, &amp;#39;&amp;#34;&amp;#39;&amp;#34;&amp;#39;exec&amp;#39;&amp;#34;&amp;#39;&amp;#34;&amp;#39;))&amp;#39; bdist_wheel -d /tmp/pip-wheel-m5z8su85&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#11 10.05 cwd: /tmp/pip-install-lt5a4gm7/cffi_f02ff5d2648d42c398bfaa5f9587d9a1/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#11 10.05 Complete output (58 lines):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#11 10.05 Package libffi was not found in the pkg-config search path.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#11 10.05 Perhaps you should add the directory containing `libffi.pc&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#11 10.05 to the PKG_CONFIG_PATH environment variable&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#11 10.05 Package &amp;#39;libffi&amp;#39;, required by &amp;#39;virtual:world&amp;#39;, not found&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#11 10.05 Package libffi was not found in the pkg-config search path.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#11 10.05 Perhaps you should add the directory containing `libffi.pc&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="해결">해결&lt;/h2>
+&lt;ul>
+&lt;li>가상 서버에는 libffi-dev가 설치되어 있지 않아서 그렇습니다.&lt;/li>
+&lt;li>Dockerfile 패키지 설치작업에 libffi-dev 를 추가하면 해결됩니다.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-Dockerfile" data-lang="Dockerfile">&lt;span class="line">&lt;span class="cl">&lt;span class="k">RUN&lt;/span> apk add postgresql-dev gcc python3-dev musl-dev zlib-dev jpeg-dev libffi-dev&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>pkg-resources==0.0.0 not found 해결하기</title><link>https://jaejin0me.github.io/post/20220704/</link><pubDate>Mon, 04 Jul 2022 23:03:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/20220704/</guid><description>&lt;h2 id="pkg-resources000">pkg-resources==0.0.0&lt;/h2>
+&lt;ul>
+&lt;li>파이썬 패키지 관리를 위해 freeze를 이용하여 requirements.txt를 만들고 이 파일을 이용해 패키지를 설치하다 보면 만나게 되는 이슈입니다.&lt;/li>
+&lt;li>보통 아래와 같은 명령어 실행중에 만나게 되겠죠?&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ pip freeze &amp;gt; requirements.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ pip install -r requirements.txt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="debug-log">debug log&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Could not find a version that satisfies the requirement pkg-resources==0.0.0 (from -r requirements.txt (line 24)) (from versions: )
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">No matching distribution found for pkg-resources==0.0.0 (from -r requirements.txt (line 24))
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="해결">해결&lt;/h2>
+&lt;ul>
+&lt;li>원인을 찾아보고자 pkg-resources==0.0.0 의 용도가 무엇인지 찾아봤는데, 그냥 버그라네요;; &lt;a href="https://askubuntu.com/questions/854249/pkg-resources-0-0-0-in-pip-freeze-bug">askubuntu 링크&lt;/a>&lt;/li>
+&lt;li>무튼 그냥 패키지에서 제거하셔도 무방합니다.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ pip uninstall pkg-resources&lt;span class="o">==&lt;/span>0.0.0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

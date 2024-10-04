@@ -1,1 +1,102 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Django on Jaejin's blog</title><link>https://jaejin0me.github.io/tags/django/</link><description>Recent content in Django on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Sun, 24 Jul 2022 17:15:52 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/tags/django/index.xml" rel="self" type="application/rss+xml"/><item><title>장고+부트스트랩 파이썬 웹 개발의 정석 - 5</title><link>https://jaejin0me.github.io/post/20220724_2/</link><pubDate>Sun, 24 Jul 2022 17:15:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/20220724_2/</guid><description>FitYourEarPlug 개발을 위해 공부한 책 내용 정리입니다. 제가 모르는 부분만 적었어요. 18장. 기타 편의 기능 구현하기 19장. 대문 페이지와 자기소개 페이지 완성하기 20장.</description></item><item><title>장고+부트스트랩 파이썬 웹 개발의 정석 - 4</title><link>https://jaejin0me.github.io/post/20220626/</link><pubDate>Sun, 26 Jun 2022 13:03:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/20220626/</guid><description>FitYourEarPlug 개발을 위해 공부한 책 내용 정리입니다. 제가 모르는 부분만 적었어요. 11장. 다대다 관계 구현하기 ManyToManyField를 사용한다. 기본적으로</description></item><item><title>장고+부트스트랩 파이썬 웹 개발의 정석 - 3</title><link>https://jaejin0me.github.io/post/20220618/</link><pubDate>Sat, 18 Jun 2022 00:03:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/20220618/</guid><description>FitYourEarPlug 개발을 위해 공부한 책 내용 정리입니다. 제가 모르는 부분만 적었어요. 11장. 테스트 주도 개발 적용하기 12장. 템플릿 모듈화하기 13장. 다대일 관계 구현하</description></item><item><title>장고+부트스트랩 파이썬 웹 개발의 정석 - 2</title><link>https://jaejin0me.github.io/post/20220611_1/</link><pubDate>Sat, 11 Jun 2022 12:03:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/20220611_1/</guid><description>FitYourEarPlug 개발을 위해 공부한 책 내용 정리입니다. 제가 모르는 부분만 적었어요. 8장. 웹 페이지 만들기 9장. 정적 파일과 미디어 파일 관리하기 10장. 페이지 구성 개선하</description></item><item><title>장고+부트스트랩 파이썬 웹 개발의 정석 - 1</title><link>https://jaejin0me.github.io/post/20220610_1/</link><pubDate>Fri, 10 Jun 2022 16:39:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/20220610_1/</guid><description>FitYourEarPlug 개발을 위해 공부한 책 내용 정리입니다. 제가 모르는 부분만 적었어요. 1장. 왜 이 책을 읽어야 하나요? 2장. 웹 개발 준비하기 3장. 웹 프런트엔드 기초 다지기 4</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Django on Jaejin's blog</title><link>https://jaejin0me.github.io/tags/django/</link><description>Recent content in Django on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Sun, 24 Jul 2022 17:15:52 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/tags/django/index.xml" rel="self" type="application/rss+xml"/><item><title>장고+부트스트랩 파이썬 웹 개발의 정석 - 5</title><link>https://jaejin0me.github.io/post/20220724_2/</link><pubDate>Sun, 24 Jul 2022 17:15:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/20220724_2/</guid><description>&lt;p>&lt;em>FitYourEarPlug 개발을 위해 공부한 책 내용 정리입니다.
+제가 모르는 부분만 적었어요.&lt;/em>&lt;/p>
+&lt;h2 id="18장-기타-편의-기능-구현하기">18장. 기타 편의 기능 구현하기&lt;/h2>
+&lt;h2 id="19장-대문-페이지와-자기소개-페이지-완성하기">19장. 대문 페이지와 자기소개 페이지 완성하기&lt;/h2>
+&lt;h2 id="20장-도커로-이사-준비하기">20장. 도커로 이사 준비하기&lt;/h2>
+&lt;ul>
+&lt;li>도커: 문서프로그램의 &amp;ldquo;폰트 포함 저장&amp;rdquo; 기능과 유사(= 의존성 있는 파일들을 포함하여 다른 환경에서 실행가능)&lt;/li>
+&lt;/ul>
+&lt;h2 id="21장-amazone-lightsail에-배포하기">21장. Amazone Lightsail에 배포하기&lt;/h2>
+&lt;ul>
+&lt;li>let&amp;rsquo;s encrypt 인증서 발행 시, 방화벽에 80포트를 허용해놔야 하고 웹서버(nginx)를 up 시킨상태로 진행해야 함.&lt;/li>
+&lt;/ul>
+&lt;h2 id="22장-도메인-연결하기">22장. 도메인 연결하기&lt;/h2>
+&lt;hr>
+&lt;p>끝.&lt;/p></description></item><item><title>장고+부트스트랩 파이썬 웹 개발의 정석 - 4</title><link>https://jaejin0me.github.io/post/20220626/</link><pubDate>Sun, 26 Jun 2022 13:03:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/20220626/</guid><description>&lt;p>&lt;em>FitYourEarPlug 개발을 위해 공부한 책 내용 정리입니다.
+제가 모르는 부분만 적었어요.&lt;/em>&lt;/p>
+&lt;h2 id="11장-다대다-관계-구현하기">11장. 다대다 관계 구현하기&lt;/h2>
+&lt;ul>
+&lt;li>ManyToManyField를 사용한다. 기본적으로 null=Ture가 설정되어 있다.&lt;/li>
+&lt;/ul>
+&lt;h2 id="15장-폼으로-포스트-작성과-수정기능-구현하기">15장. 폼으로 포스트 작성과 수정기능 구현하기&lt;/h2>
+&lt;ul>
+&lt;li>웹 개발에서는 입력 빈 칸을 폼(form)이라고 한다.&lt;/li>
+&lt;li>CreateView을 사용하면 xxx_form.html 템플릿을 찾는다.&lt;/li>
+&lt;li>장고는 &lt;!-- raw HTML omitted --> 태그의 action 속성(입력한 데이터를 전송할 url 설정)을 설정하지 않아도 알아서 처리해 준다.&lt;/li>
+&lt;li>로그인안 사용자에게만 허용하려면 LoginRequiredMixin 클래스 사용&lt;/li>
+&lt;li>UserPassesTestMixin 클래스를 사용하여 유저의 속성을 확인하는 메소드를 사용할 수 있다.&lt;/li>
+&lt;/ul>
+&lt;h2 id="16장-외부-라이브러리를-블로그에-활용하기">16장. 외부 라이브러리를 블로그에 활용하기&lt;/h2>
+&lt;ul>
+&lt;li>django-xxx 형태의 패키지를 찾아서 사용하면됨&lt;/li>
+&lt;/ul>
+&lt;h2 id="17장-폼으로-댓글-기능-구현하기">17장. 폼으로 댓글 기능 구현하기&lt;/h2>
+&lt;ul>
+&lt;li>url 뒤에 #comment-1 과 같이 표기하면 해당 id의 요소로 바로 링크 가능&lt;/li>
+&lt;/ul></description></item><item><title>장고+부트스트랩 파이썬 웹 개발의 정석 - 3</title><link>https://jaejin0me.github.io/post/20220618/</link><pubDate>Sat, 18 Jun 2022 00:03:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/20220618/</guid><description>&lt;p>&lt;em>FitYourEarPlug 개발을 위해 공부한 책 내용 정리입니다.
+제가 모르는 부분만 적었어요.&lt;/em>&lt;/p>
+&lt;h2 id="11장-테스트-주도-개발-적용하기">11장. 테스트 주도 개발 적용하기&lt;/h2>
+&lt;h2 id="12장-템플릿-모듈화하기">12장. 템플릿 모듈화하기&lt;/h2>
+&lt;h2 id="13장-다대일-관계-구현하기">13장. 다대일 관계 구현하기&lt;/h2>
+&lt;ul>
+&lt;li>SlugField 사람이 읽을 수 있는 텍스트로 고유 URL을 만들고 싶을 때 사용한다.&lt;/li>
+&lt;li>ForeignKey로 연결되어 있는 레코드를 불러 올 수 있다. 모델명을 소문자로 쓰고 뒤에 _set을 붙이는게 기본 설정이다.&lt;/li>
+&lt;/ul></description></item><item><title>장고+부트스트랩 파이썬 웹 개발의 정석 - 2</title><link>https://jaejin0me.github.io/post/20220611_1/</link><pubDate>Sat, 11 Jun 2022 12:03:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/20220611_1/</guid><description>&lt;p>&lt;em>FitYourEarPlug 개발을 위해 공부한 책 내용 정리입니다.
+제가 모르는 부분만 적었어요.&lt;/em>&lt;/p>
+&lt;h2 id="8장-웹-페이지-만들기">8장. 웹 페이지 만들기&lt;/h2>
+&lt;h2 id="9장-정적-파일과-미디어-파일-관리하기">9장. 정적 파일과 미디어 파일 관리하기&lt;/h2>
+&lt;h2 id="10장-페이지-구성-개선하기">10장. 페이지 구성 개선하기&lt;/h2>
+&lt;ul>
+&lt;li>장고의 모델을 만들면 기본적으로 pk 필드가 만들어 진다.&lt;/li>
+&lt;li>일반적인 기능 개발이라면 CBV 방식을 추천한다.&lt;/li>
+&lt;li>ListView는 모델명 뒤에 &amp;lsquo;_list&amp;rsquo;가 붙은 html 파일을 기본 템플릿으로 사용한다.&lt;/li>
+&lt;li>장고 templates 폴더의 html 파일은 정적인 파일이 아니다.&lt;/li>
+&lt;li>Pillow: 파이썬 이미지 처리 라이브러리&lt;/li>
+&lt;/ul></description></item><item><title>장고+부트스트랩 파이썬 웹 개발의 정석 - 1</title><link>https://jaejin0me.github.io/post/20220610_1/</link><pubDate>Fri, 10 Jun 2022 16:39:52 +0900</pubDate><guid>https://jaejin0me.github.io/post/20220610_1/</guid><description>&lt;p>&lt;em>FitYourEarPlug 개발을 위해 공부한 책 내용 정리입니다.
+제가 모르는 부분만 적었어요.&lt;/em>&lt;/p>
+&lt;h2 id="1장-왜-이-책을-읽어야-하나요">1장. 왜 이 책을 읽어야 하나요?&lt;/h2>
+&lt;h2 id="2장-웹-개발-준비하기">2장. 웹 개발 준비하기&lt;/h2>
+&lt;h2 id="3장-웹-프런트엔드-기초-다지기">3장. 웹 프런트엔드 기초 다지기&lt;/h2>
+&lt;h2 id="4장-부트스트랩-적용하기">4장. 부트스트랩 적용하기&lt;/h2>
+&lt;h2 id="5장-장고의-역할-이해하기">5장. 장고의 역할 이해하기&lt;/h2>
+&lt;h2 id="6장-장고-프로젝트-만들기">6장. 장고 프로젝트 만들기&lt;/h2>
+&lt;h2 id="7장-장고-프로젝트에서-앱-개발하기">7장. 장고 프로젝트에서 앱 개발하기&lt;/h2>
+&lt;ul>
+&lt;li>HTML
+&lt;ul>
+&lt;li>html에서 사용하는 기능은 태그를 의미하고 속성은 태그안의 속성을 의미.&lt;/li>
+&lt;li>스타일은 태그 개별로 속성을 설정할 수도 있고, 태그 자체에 설정할 수도 있음.&lt;/li>
+&lt;li>하나의 웹사이트를 만드는 경우 일관된 디자인을 적용할 텐데 하나의 html 파일 내에서는 태그에 스타일을 설정하면 되지만 파일이 여러개인
+경우는 스타일을 복사, 붙여넣기 해가며 관리하는 것은 비효율적이다. 그래서 CSS를 사용한다. CSS는 웹 문선의 디자인을 구현하기 위한 언어이다. CSS 하나만 관리하면 웹사이트 전체 디자인을 제어할 수 있다.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;hr/&amp;gt; - 수평선 태그
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;span&amp;gt; - 별 기능 없음, div와 비슷
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>부트스트랩
+&lt;ul>
+&lt;li>웹 개발에 사용되는 구성요소들을 미리 디자인 해놓은 툴킷&lt;/li>
+&lt;li>템플릿을 다운 받은 후 index.html 등의 소스코드를 복사하여 필요한 기능을 가져다 쓰면 된다.&lt;/li>
+&lt;li>다양한 컴포넌트 등을 검색하하여 복붙해서 쓰면 된다.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>CDN(Contents Delivery Network)&lt;/li>
+&lt;/ul>
+&lt;h1 id="장고">장고&lt;/h1>
+&lt;ul>
+&lt;li>동작 구조 (출처 &lt;a href="https://lazy-cloud.tistory.com/95">https://lazy-cloud.tistory.com/95&lt;/a>)
+&lt;img loading="lazy" src="https://t1.daumcdn.net/cfile/tistory/991057335AB90C933A" alt="장고의 동작 구조" />
+&lt;/li>
+&lt;li>MTV(Model, Template, View) 패턴&lt;/li>
+&lt;li>대문 페이지 = Landing Page&lt;/li>
+&lt;li>모델 변경하면 Migration 해줘야함&lt;/li>
+&lt;/ul></description></item></channel></rss>

@@ -1,1 +1,349 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>영상처리 on Jaejin's blog</title><link>https://jaejin0me.github.io/tags/%EC%98%81%EC%83%81%EC%B2%98%EB%A6%AC/</link><description>Recent content in 영상처리 on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Wed, 24 Jan 2018 16:42:42 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/tags/%EC%98%81%EC%83%81%EC%B2%98%EB%A6%AC/index.xml" rel="self" type="application/rss+xml"/><item><title>영상처리 기초 - 2</title><link>https://jaejin0me.github.io/post/posts121/</link><pubDate>Wed, 24 Jan 2018 16:42:42 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts121/</guid><description>4. 화소값 기본 처리 1) 공간영역의 정의 (1) 공간 영역 화소들의 집단 또는 공간적 배열 (2) 주파수 영역 저주파 또는 고주파 (3) 마스크 기반 처리 마스크의 다른 이름 템플릿, 윈도</description></item><item><title>영상처리 기초 - 1</title><link>https://jaejin0me.github.io/post/posts120/</link><pubDate>Tue, 23 Jan 2018 16:42:42 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts120/</guid><description>1. 영상처리 기본 1) 영상처리의 개념 (1) 영상처리의 예 sharpening Image segmentation Noise filtering special effect(Sepia tone effect (2) 영상처리 기술 Image Transforms Image Transmissions Image Enhancement Image Restoration Image Compression Image Segmentation Representation and Description Recognition and Interpretation 1) 영상처리의 응용 분야 의료 영상</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>영상처리 on Jaejin's blog</title><link>https://jaejin0me.github.io/tags/%EC%98%81%EC%83%81%EC%B2%98%EB%A6%AC/</link><description>Recent content in 영상처리 on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Wed, 24 Jan 2018 16:42:42 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/tags/%EC%98%81%EC%83%81%EC%B2%98%EB%A6%AC/index.xml" rel="self" type="application/rss+xml"/><item><title>영상처리 기초 - 2</title><link>https://jaejin0me.github.io/post/posts121/</link><pubDate>Wed, 24 Jan 2018 16:42:42 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts121/</guid><description>&lt;h1 id="4-화소값-기본-처리">4. 화소값 기본 처리&lt;/h1>
+&lt;h2 id="1-공간영역의-정의">1) 공간영역의 정의&lt;/h2>
+&lt;h3 id="1-공간-영역">(1) 공간 영역&lt;/h3>
+&lt;ul>
+&lt;li>화소들의 집단 또는 공간적 배열&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-주파수-영역">(2) 주파수 영역&lt;/h3>
+&lt;ul>
+&lt;li>저주파 또는 고주파&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-마스크-기반-처리">(3) 마스크 기반 처리&lt;/h3>
+&lt;ul>
+&lt;li>마스크의 다른 이름&lt;/li>
+&lt;/ul>
+&lt;ul>
+&lt;li>템플릿, 윈도우, 필터, 커널 등&lt;/li>
+&lt;/ul>
+&lt;ul>
+&lt;li>Convolution(회선)
+&lt;ul>
+&lt;li>공간 영역 내에 있는 입력 화소값들과 마스크 내의 값을 곱하여 새로운 출력 화소값을 얻는 것이다.&lt;/li>
+&lt;li>공간 필터링이라 표현됨&lt;/li>
+&lt;li>$$Output(i,j) = \sum_{s=-k}^k \sum_{t=-k}^k m(s,t)p(i+s,j+t)$$&lt;/li>
+&lt;li>output(i,j) : Convolution(회선) 처리로 출력한 화소&lt;/li>
+&lt;li>p(i,j) : 입력 영상의 화소&lt;/li>
+&lt;li>m(i,j) : 입력 영상의 화소에 대응하는 가중치&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align: left">1&lt;/th>
+&lt;th style="text-align: left">2&lt;/th>
+&lt;th style="text-align: left">3&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align: left">4&lt;/td>
+&lt;td style="text-align: left">5&lt;/td>
+&lt;td style="text-align: left">6&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">7&lt;/td>
+&lt;td style="text-align: left">8&lt;/td>
+&lt;td style="text-align: left">9&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="4-convolution회선">(4) Convolution(회선)&lt;/h3>
+&lt;ul>
+&lt;li>Convolution
+&lt;ul>
+&lt;li>$$ f*g(t) = \int_{-inf}^{+inf}f(τ)g(t-τ)dτ $$&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="5-spatial-convolution공간-회선">(5) Spatial Convolution(공간 회선)&lt;/h3>
+&lt;ul>
+&lt;li>Convolution과정 유무에 따라 선형/비선형으로 구분된다.&lt;/li>
+&lt;li>선형 공간 필터링(출력:y=m1x1+m2x2+ ~~~ mnsx)
+&lt;ul>
+&lt;li>Embossing:양각효과를 만드는 것&lt;/li>
+&lt;li>Bluring : 영상을 부드럽게&lt;/li>
+&lt;li>Shparpening : 세세한 부분을 두드러지게 또는 강조&lt;/li>
+&lt;li>Edge Detection : 방향성 검출&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>비선형 공간 필터링
+&lt;ul>
+&lt;li>Convolution 과정 대신 블록 내 일정 값만 추출하여 출력하는 형식&lt;/li>
+&lt;li>미디언, 평균값, 최대/최소 필터링&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="2-양각-효과">2) 양각 효과&lt;/h2>
+&lt;h3 id="1양각-효과">(1)양각 효과&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>중앙값이 0이고, 마스크 내의 핪이 0인 마스크를 이용&lt;/p></description></item><item><title>영상처리 기초 - 1</title><link>https://jaejin0me.github.io/post/posts120/</link><pubDate>Tue, 23 Jan 2018 16:42:42 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts120/</guid><description>&lt;h1 id="1-영상처리-기본">1. 영상처리 기본&lt;/h1>
+&lt;h2 id="1-영상처리의-개념">1) 영상처리의 개념&lt;/h2>
+&lt;h3 id="1-영상처리의-예">(1) 영상처리의 예&lt;/h3>
+&lt;ul>
+&lt;li>sharpening&lt;/li>
+&lt;li>Image segmentation&lt;/li>
+&lt;li>Noise filtering&lt;/li>
+&lt;li>special effect(Sepia tone effect&lt;/li>
+&lt;/ul>
+&lt;h2 id="2-영상처리-기술">(2) 영상처리 기술&lt;/h2>
+&lt;ul>
+&lt;li>Image Transforms&lt;/li>
+&lt;li>Image Transmissions&lt;/li>
+&lt;li>Image Enhancement&lt;/li>
+&lt;li>Image Restoration&lt;/li>
+&lt;li>Image Compression&lt;/li>
+&lt;li>Image Segmentation&lt;/li>
+&lt;li>Representation and Description&lt;/li>
+&lt;li>Recognition and Interpretation&lt;/li>
+&lt;/ul>
+&lt;h2 id="1-영상처리의-응용-분야">1) 영상처리의 응용 분야&lt;/h2>
+&lt;ul>
+&lt;li>의료 영상처리 : 신경망 활용&lt;/li>
+&lt;li>문자인식&lt;/li>
+&lt;li>영상 검색 : 영상처리 기술들의 집약체&lt;/li>
+&lt;li>컴퓨터 비전 : 인간의 눈으로 확인할 수 없는 제품 결함 판단&lt;/li>
+&lt;li>인터넷에 기반한 스트리밍 기술&lt;/li>
+&lt;li>영상 압축 기술 : MPEG&lt;/li>
+&lt;li>영상 처리 관련 SW 개발&lt;/li>
+&lt;li>생물학/군사학&lt;/li>
+&lt;li>디스플레이&lt;/li>
+&lt;/ul>
+&lt;h1 id="2-컬러-공간-분석">2. 컬러 공간 분석&lt;/h1>
+&lt;h2 id="1-image-basics">1) Image Basics&lt;/h2>
+&lt;h3 id="1-pexels">(1) Pexels&lt;/h3>
+&lt;ul>
+&lt;li>rectangular&lt;/li>
+&lt;li>triangular&lt;/li>
+&lt;li>hexagonal&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-n-connected-neighbors">(2) N-connected neighbors&lt;/h3>
+&lt;ul>
+&lt;li>4-connected&lt;/li>
+&lt;li>8-connected&lt;/li>
+&lt;li>ambiguous&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-distance-metrics">(3) Distance metrics&lt;/h3>
+&lt;ul>
+&lt;li>Euclidean : De(X,Y) = ((x2-y2)^2 + (y2-y1)^2)^1/2&lt;/li>
+&lt;li>City Block : Dcb(X,Y) = |x1-x2| + |y1-y2|&lt;/li>
+&lt;li>Chessboard : Dcb(X,y) = max{|x1-x2|,|y1-y2|}&lt;/li>
+&lt;/ul>
+&lt;h3 id="4-명암도-영상gray-image">(4) 명암도 영상(gray image)&lt;/h3>
+&lt;h3 id="5-rgb-영상--각-채널별-8비트-24비트-개의-색-표현-가능">(5) RGB 영상 : 각 채널별 8비트, 24비트 개의 색 표현 가능&lt;/h3>
+&lt;h3 id="6-이진-영상">(6) 이진 영상&lt;/h3>
+&lt;h3 id="7-영상의-용량--시간s프레임fs화소의-수화소당-비트">(7) 영상의 용량 : 시간(s)*프레임(f/s)&lt;em>화소의 수&lt;/em>화소당 비트&lt;/h3>
+&lt;h2 id="2-컬러-공간에-대한-이해">2) 컬러 공간에 대한 이해&lt;/h2>
+&lt;h3 id="1-컬러는-인가의-눈에-보이는-가시-광선">(1) 컬러는 인가의 눈에 보이는 가시 광선&lt;/h3>
+&lt;h3 id="2-빛의-3원색--r-g-b-간의-가산-혼합">(2) 빛의 3원색 : R, G, B 간의 가산 혼합&lt;/h3>
+&lt;h3 id="3-모니터에서는-rgb를-조합해-사용함">(3) 모니터에서는 RGB를 조합해 사용함&lt;/h3>
+&lt;h3 id="4-영상의-정의">(4) 영상의 정의&lt;/h3>
+&lt;ul>
+&lt;li>컬러를 표현하는 화소값의 배열&lt;/li>
+&lt;/ul>
+&lt;h3 id="5-흑백-영상-분리">(5) 흑백 영상 분리&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;ol>
+&lt;li>RGB 컬러 공간 : 0.333R+0.333B+0.333G&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>NTSC 제안&lt;/li>
+&lt;li>각 RGB값 중 하나만 사용&lt;/li>
+&lt;li>Green만 사용&lt;/li>
+&lt;li>Gray level = (R^2+B^2+G^2)^1/2 / 3^1/2&lt;/li>
+&lt;li>Gray level = 0.212671R + 0.715160G + 0.071169B&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="6-다른-영상-처리-응용에-한계">(6) 다른 영상 처리 응용에 한계&lt;/h3>
+&lt;ul>
+&lt;li>RGB 컬러 요소들은 상호 관계가 너무 커서 특정 생성만 분리하기 어려움&lt;/li>
+&lt;/ul>
+&lt;h3 id="7-hsi-컬러-공간">(7) HSI 컬러 공간&lt;/h3>
+&lt;ul>
+&lt;li>색상, 채도, 명도로 구분한 컬러 공간으로 인간의 시각 시스템과 유사&lt;/li>
+&lt;/ul>
+&lt;h2 id="3-hsi-컬러-공간">3) HSI 컬러 공간&lt;/h2>
+&lt;h3 id="1-색의-3-요소">(1) 색의 3 요소&lt;/h3>
+&lt;ul>
+&lt;li>색상(hue) : pure colore&lt;/li>
+&lt;li>채도(saturation) : white 와 pure color 와의 혼합 비율&lt;/li>
+&lt;li>명도(Intensity) : 색의 밝고 어두운 정도&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-색입체">(2) 색입체&lt;/h3>
+&lt;ul>
+&lt;li>먼셀, 오스왈드, P.G.C.S 등&lt;/li>
+&lt;li>Hue : 원통모양의 주변, 0 ~ 360&lt;/li>
+&lt;li>Satuation : 중심으로부터의 거리, 0 ~ 1&lt;/li>
+&lt;li>Intensity : 하단 꼭지점에서 최상부 까지의 거리, 0 ~ 1, 색의 표현 범위가 달라짐&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-rgb---hsi">(3) RGB -&amp;gt; HSI&lt;/h3>
+&lt;ul>
+&lt;li>H = { Θ if B&amp;lt;=G&lt;/li>
+&lt;li>ㅤㅤ{ 360 - 0 if B&amp;lt;=G&lt;/li>
+&lt;li>Θ = cos^-1[1/2*[(R-G)+(R+B)]/((R-G)^2+(R-B)(G-B))^1/2]&lt;/li>
+&lt;li>S = 1 - 3/(R+G+B)&lt;code>*&lt;/code>[min(R,G,B)]&lt;/li>
+&lt;li>I = 1/3*(R+G+B)&lt;/li>
+&lt;/ul>
+&lt;h3 id="4-cmyk-컬러-공간--printer">(4) CMYK 컬러 공간 : Printer&lt;/h3>
+&lt;ul>
+&lt;li>청록(Cyan) : C=255-R&lt;/li>
+&lt;li>자홍(Magenta) : M=255-G&lt;/li>
+&lt;li>노랑(Yellow) : Y=255-B&lt;/li>
+&lt;li>감산 혼합&lt;/li>
+&lt;li>C+M+Y= 검정&lt;/li>
+&lt;li>K = min(C,M,Y)&lt;/li>
+&lt;li>C = 기존 C - K&lt;/li>
+&lt;li>M = 기존 M - K&lt;/li>
+&lt;li>Y = 기존 Y - K&lt;/li>
+&lt;li>인쇄를 보낼 때는 CMYK 컬러 공간으로 변환해 보내는 것이 좋다&lt;/li>
+&lt;li>CMYK 컬러 공간의 한계
+&lt;ul>
+&lt;li>RGB보다 범위에 한계&lt;/li>
+&lt;li>다소 뿌옇게 인쇄&lt;/li>
+&lt;li>CMYK 형태로 직접 모니터로 불러들여 작업하지 않음&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="5-다른-컬러-공간">5) 다른 컬러 공간&lt;/h2>
+&lt;h3 id="1-yiq">(1) YIQ&lt;/h3>
+&lt;ul>
+&lt;li>인간의 시각체계와 유사하게 흉내낸 최초의 색상공간&lt;/li>
+&lt;li>Y는 명조, I는 orange-cyan, Q는 Green-Magenta&lt;/li>
+&lt;li>1950년대, 컬러 텔레비전(NTSC방식) 개발자들의 의해 구성&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-ycbcr">(2) YCbCr&lt;/h3>
+&lt;ul>
+&lt;li>색상정보로 부터 명도를 분리하는 또 하나의 다른 색상 공간&lt;/li>
+&lt;li>Y는 명도, Cb는 푸른색, Cr, 붉은색&lt;/li>
+&lt;li>JPEG, MPEG 및 디지털 TV의 표준으로 사용&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-cie-lab--uniform-color-space">(3) CIE LAB : uniform color space&lt;/h3>
+&lt;ul>
+&lt;li>L&lt;code>*&lt;/code>, a&lt;code>*&lt;/code>, b&lt;code>*&lt;/code>&lt;/li>
+&lt;li>L&lt;code>*&lt;/code> 는 명도, a&lt;code>*&lt;/code> red와 green, b&lt;code>*&lt;/code>는 yellow와 blue&lt;/li>
+&lt;/ul>
+&lt;h1 id="3-화소값-기본-처리">3. 화소값 기본 처리&lt;/h1>
+&lt;h2 id="1-영상의-밝기-조절">1) 영상의 밝기 조절&lt;/h2>
+&lt;h3 id="1-명암도-영상흑백-영상">(1) 명암도 영상(흑백 영상)&lt;/h3>
+&lt;ul>
+&lt;li>한 화소당 8비트의 데이터 크기&lt;/li>
+&lt;li>0 ~ 255의 범위&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-명암값을-더하거나-뺄-경우">(2) 명암값을 더하거나 뺄 경우&lt;/h3>
+&lt;ul>
+&lt;li>0이하 이거나 255이상일 때 문제 발생&lt;/li>
+&lt;li>클랭핌을 이용한 해결
+&lt;ul>
+&lt;li>Saturation : 0이하 -&amp;gt; 0, 255 이상 -&amp;gt; 255&lt;/li>
+&lt;li>Wrap : 256 = 1, 257 = 2, 258 = 3, 반전 시키는 방법이지만 명암 불균등을 낳는다.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-영상의-산술-연산">(3) 영상의 산술 연산&lt;/h3>
+&lt;ul>
+&lt;li>밝게 = 255에 가깝게&lt;/li>
+&lt;li>어둡게 = 0에 가깝게&lt;/li>
+&lt;/ul>
+&lt;h3 id="4-산술-연산-적용-예">(4) 산술 연산 적용 예&lt;/h3>
+&lt;ul>
+&lt;li>차영상 : 움직임 추적에 쓰임&lt;/li>
+&lt;/ul>
+&lt;h2 id="2-영상의-명암대비-조절">2) 영상의 명암대비 조절&lt;/h2>
+&lt;h3 id="1-명암-대비contrast--명암값의-분포">(1) 명암 대비(Contrast) : 명암값의 분포&lt;/h3>
+&lt;ul>
+&lt;li>낮음 명암 대비 : 명암차가 적음&lt;/li>
+&lt;li>높은 명암 대비 : 명암차가 큼&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-대비의-증가--곱셈-연산">(2) 대비의 증가 = 곱셈 연산&lt;/h3>
+&lt;h3 id="3-대비의-감소--나눗셈-연산">(3) 대비의 감소 = 나눗셈 연산&lt;/h3>
+&lt;h2 id="3-히스토그램">3) 히스토그램&lt;/h2>
+&lt;h3 id="1-히스토그램">(1) 히스토그램&lt;/h3>
+&lt;ul>
+&lt;li>각화소의 명암값의 개수&lt;/li>
+&lt;li>영상의 명암 값 프로필(profile) - &amp;gt; 히스토그램 유사도를 사용한 영상 비교에 유용하다&lt;/li>
+&lt;/ul>
+&lt;h2 id="4-히스토그램-평활화">4) 히스토그램 평활화&lt;/h2>
+&lt;ul>
+&lt;li>한 쪽에 치우친 명암 분포를 가진 히스토그램을 재분배 하는 과정을 거쳐 일정한 분포를 가지게 하는 히스토그램&lt;/li>
+&lt;li>h(i) = (H(i)/Nt)*Gmax&lt;/li>
+&lt;li>h(i) : 정규화 합 히스토그램&lt;/li>
+&lt;li>H(i) : 누적 히스토그램&lt;/li>
+&lt;li>Nt : 영상에서 픽셀의 총 개수&lt;/li>
+&lt;li>Gmax : 영상의 최대 밝기&lt;/li>
+&lt;/ul>
+&lt;h2 id="5-히스토그램-스트레칭">5) 히스토그램 스트레칭&lt;/h2>
+&lt;ul>
+&lt;li>명암 대비 확장, 명암 대비 스트레칭&lt;/li>
+&lt;li>낮은 대비의 히스토그램을 균등한 분포로 만드는 알고리즘&lt;/li>
+&lt;li>X: 기존 명암 값&lt;/li>
+&lt;li>low : 히스토그램에서 가장 작은 화소값&lt;/li>
+&lt;li>high : 히스토그램에서 가장 큰 화소값&lt;/li>
+&lt;li>새로운 명암 값 = 255*(X-low)/(high-low)&lt;/li>
+&lt;li>스트레칭 변형 : 엔드인 탐색(ends-in search)
+&lt;ul>
+&lt;li>low, high의 범위 값을 지정하여 스트레칭 한다. 히스토그램의 특정 부분에 화소들이 치우진 형상을 보정하는데 유용하다.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>새로운 명암 값 = { 0 for X&amp;lt;=low&lt;/li>
+&lt;li>ㅤㅤㅤㅤㅤㅤㅤㅤ{ 255*(x-low)/(high-low) for low&amp;lt;=X&amp;lt;high&lt;/li>
+&lt;li>ㅤㅤㅤㅤㅤㅤㅤㅤ{ 255 for high&amp;lt;=X&lt;/li>
+&lt;/ul>
+&lt;h2 id="6-명암-변환">6) 명암 변환&lt;/h2>
+&lt;h3 id="1-명암-변환intensity-transformation">(1) 명암 변환(Intensity Transformation)&lt;/h3>
+&lt;ul>
+&lt;li>미리 지정된 함수 f(x)를 바탕으로 이진 화소값을 새로운 화소값으로 바꿔주는 알고리즘&lt;/li>
+&lt;li>널 변환(Null Transforamtion) : f(x) = x , 원영상과 같음&lt;/li>
+&lt;li>역 변환(Inverse Transformation) : f(x) = 255 - x (음화 영상,negative image)&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-비트-플래너-슬라이싱bit-planner-slicing-변환">(2) 비트 플래너 슬라이싱(bit-planner slicing) 변환&lt;/h3>
+&lt;ul>
+&lt;li>각 비트에 대하여 0인지 1인지 검사하여 하나의 영상 형태로 만든 것을 비트 평면이라고 부른다&lt;/li>
+&lt;li>msb는 영상의 윤곽 정보를 가장 잘 간직하고 있다.&lt;/li>
+&lt;li>lsb는 영상의 윤곽 정보를 거의 저장하고 있지 않다.&lt;/li>
+&lt;li>비트 평면 분할은 특정 비트의 중요도를 분석하는데 중요한 정보를 제공한다. 예) 영상 압축, 워터마킹 기법에 적용&lt;/li>
+&lt;/ul>
+&lt;h2 id="7-이진-영상-변환-및-처리">7) 이진 영상 변환 및 처리&lt;/h2>
+&lt;h3 id="1-이진화">(1) 이진화&lt;/h3>
+&lt;ul>
+&lt;li>배경과 객체의 간단한 분리, 영상의 간략화 등의 목적으로 영상 분석 분야에서 필수적인 전처리 과정이다&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-경계값-설정-방법에-따른-이진-영상-생성-알고리즘">(2) 경계값 설정 방법에 따른 이진 영상 생성 알고리즘&lt;/h3>
+&lt;ul>
+&lt;li>히스토그램의 분포를 파악하여 적합한 경계값을 설정&lt;/li>
+&lt;li>블록 이진화 기법 적용 -&amp;gt; 블록으로 나뉘어 평균값을 임계로&lt;/li>
+&lt;li>이중 경계값 설정&lt;/li>
+&lt;li>적응적 경계값&lt;/li>
+&lt;li>반복적 경계값&lt;/li>
+&lt;li>난수 경계값&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-단일-경계값과-이중-경계값-설정을-이용한-이진-영상-변환">(3) 단일 경계값과 이중 경계값 설정을 이용한 이진 영상 변환&lt;/h3>
+&lt;ul>
+&lt;li>단일 경계값을 이용한 이진 영상 변환&lt;/li>
+&lt;li>Binary-image[x][y] = { 1 if Gray-image[x][y]&amp;gt;=threshold&lt;/li>
+&lt;li>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ{ 0 else Gray-image[x][y]&amp;lt;threshold&lt;/li>
+&lt;li>이중 경계값을 이용한 이진 영상 변환&lt;/li>
+&lt;li>Binary-image[x][y] = { 1 if low-threshold&amp;lt;=Gray-image[x][y]&amp;lt;high-threshold&lt;/li>
+&lt;li>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ{ 0 otherwise&lt;/li>
+&lt;/ul>
+&lt;h3 id="4-히스토그램-분포를-이용한-이진-영상-변환">(4) 히스토그램 분포를 이용한 이진 영상 변환&lt;/h3>
+&lt;ul>
+&lt;li>Otsu(온츄) Algorithm&lt;/li>
+&lt;li>영상의 히스토그램의 형태가 쌍봉형이라고 가정 했을 때 그 사이의 계곡점을 찾아 임계값으로 하고 분할 후, 분할 된 클래스 사이의 분산을 최대화 시키는 임계값을 찾는 방법&lt;/li>
+&lt;li>클래스 내의 분산과 클래스 간의 분산화 전체 구간에서의 분산을 이용하여 클래스 간의 분산이 최대가 될 때의 값(클래스 내의 분산이 가장 작을 때)을 임계값으로 한다.&lt;/li>
+&lt;li>전체 분산 : αa^2(t) = αw^2(t) + αb^2(t)&lt;/li>
+&lt;li>클래스 내의 분산 : αw^2(t) = W1(t)α1^2(t) + W2(t)α2^2(t)&lt;/li>
+&lt;li>클래스 간의 분산 : αb^2(t) = αb^2-αw^2 = W1(t)W2(t)[u1(t)-u2(t)]^2&lt;/li>
+&lt;li>Wn : 전체 클래스에 대한 각 클래스의 확률&lt;/li>
+&lt;li>un : 각 클래스에 대한 평균 명도값&lt;/li>
+&lt;/ul>
+&lt;h3 id="5-반본적-경계값-설정-을-이용한-이진-영상-변환">(5) 반본적 경계값 설정 을 이용한 이진 영상 변환&lt;/h3>
+&lt;ul>
+&lt;li>영상의 화소 평균 값을 구할 때 모든 화소의 값을 더해서 전체화소의 개수로 나누어 평균을 계산하는 것 보다 수행 속도 면에서 훨씬 빠른 것으로 알려져 있다.&lt;/li>
+&lt;li>step 1. 모든 화소값의 평균값을 계산하여 초기 임계값을 T라고 한다&lt;/li>
+&lt;li>step 2. 그레이 스케일 값이 T 보다 작은 픽셀들의 그레이 스케일 값의 평균 u1이라고 하고, T보다 큰 스케일 값의 평균을 u2라고 하여 임계 값을 다음과 같이 계산한다&lt;/li>
+&lt;li>T = (u1+u2)/2&lt;/li>
+&lt;li>step 3. T간의 변화가 없을 때 가지 반복한다.&lt;/li>
+&lt;/ul></description></item></channel></rss>

@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Subprocess on Jaejin's blog</title><link>https://jaejin0me.github.io/tags/subprocess/</link><description>Recent content in Subprocess on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Mon, 25 Dec 2017 12:47:56 +0800</lastBuildDate><atom:link href="https://jaejin0me.github.io/tags/subprocess/index.xml" rel="self" type="application/rss+xml"/><item><title>파이썬의 subprocess 모듈을 이용해 COM 메소드 확인하기</title><link>https://jaejin0me.github.io/post/posts167/</link><pubDate>Mon, 25 Dec 2017 12:47:56 +0800</pubDate><guid>https://jaejin0me.github.io/post/posts167/</guid><description>참고 파워쉘을 이용해 COM의 메소드를 확인할 수 있습니다. 파이썬에서 subprocess 모듈을 이용해서 파워쉘을 실행시키고 결과를 얻어오는 코드입니다. 1 2 3 4 5 6 7 8 import</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Subprocess on Jaejin's blog</title><link>https://jaejin0me.github.io/tags/subprocess/</link><description>Recent content in Subprocess on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Mon, 25 Dec 2017 12:47:56 +0800</lastBuildDate><atom:link href="https://jaejin0me.github.io/tags/subprocess/index.xml" rel="self" type="application/rss+xml"/><item><title>파이썬의 subprocess 모듈을 이용해 COM 메소드 확인하기</title><link>https://jaejin0me.github.io/post/posts167/</link><pubDate>Mon, 25 Dec 2017 12:47:56 +0800</pubDate><guid>https://jaejin0me.github.io/post/posts167/</guid><description>&lt;p>&lt;a href="http://hyunmini.tistory.com/105">참고&lt;/a>&lt;/p>
+&lt;p>파워쉘을 이용해 COM의 메소드를 확인할 수 있습니다. 파이썬에서 subprocess 모듈을 이용해서 파워쉘을 실행시키고 결과를 얻어오는 코드입니다.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">import subprocess
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">if __name__ == &amp;#39;__main__&amp;#39;:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> clsid = &amp;#34;2E146AEF-5879-4310-BCC9-8094E3916613&amp;#34; // CLSID 예
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> powershell = subprocess.Popen([&amp;#34;powershell.exe&amp;#34;,&amp;#34;-command&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;&amp;amp;{ $clsid = New-Object Guid &amp;#39;%s&amp;#39;;$type = [Type]::GetTypeFromCLSID($clsid);$object= [Activator]::CreateInstance($ty pe);get-member -inputObject $object; }&amp;#34; % clsid]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ,stdout=subprocess.PIPE,stderr=subprocess.PIPE) #출력을 처리하기 위해 subprocess로 보냄
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">result, err = powershell.communicate() # subprocess에 있는 출력을 가져옴
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>가져온 출력을 처리하여 사용하게 되는데, IDE에서 실행하여 디버깅하면서 확이인는 경우 출력이 콘솔에 뜨지 않을 수 있습니다.&lt;br>
+그때는 cmd나 파워쉘창을 열어서 실행하면 출력을 확인할 수 있습니다.&lt;/p></description></item></channel></rss>
