@@ -19,10 +19,12 @@ mathjax: false
 
 ### [Genians](https://www.genians.com), Software Engineer (2018.03 ~ 2020.09)  
 * Genian NAC(Network Access Control) Development, Engine  
+* 채용 연계 프로그래밍 대회, 2017 찾아라 프로그래밍 마에스터
 
 ## Education
 BSc in Electronics Engineering from [KNU](http://knu.ac.kr)  
-MEng in Electronics Engineering from [KNU](http://knu.ac.kr)
+MEng in Electronics Engineering from [KNU](http://knu.ac.kr)  
+구글 머신러닝 부트캠프 5기 (2024)
 
 
 ## Links
