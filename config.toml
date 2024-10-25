@@ -20,8 +20,8 @@ disqusShortname = ""      # disqus_shortname
 googleAnalytics = "G-F8504X956T"      # UA-XXXXXXXX-X
 copyright = "Jaejin Jang"            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
-[author]                  # essential                     # 必需
-  name = "Jaejin Jang"
+#[author]                  # essential                     # 必需
+#  name = "Jaejin Jang"
 
 [sitemap]                 # essential                     # 必需
   changefreq = "weekly"
@@ -54,6 +54,8 @@ copyright = "Jaejin Jang"            # default: author.name ↓        # 默认�
   url = "/categories/"
 
 [params]
+  Author = "Jaejin Jang"
+
   version = "4.x"           # Used to give a friendly message when you have an incompatible update
   debug = false             # If true, load `eruda.min.js`. See https://github.com/liriliri/eruda
 
