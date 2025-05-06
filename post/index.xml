@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on Jaejin's blog</title><link>https://jaejin0me.github.io/post/</link><description>Recent content in Posts on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Fri, 14 Feb 2025 20:20:00 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>워드 비교 기능 오류 해결 방법</title><link>https://jaejin0me.github.io/post/20250214_2/</link><pubDate>Fri, 14 Feb 2025 20:20:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20250214_2/</guid><description>&lt;p>워드 비교 기능을 이용하여 아주~ 나이스하게 한 문서의 작업을 끝내고&lt;br>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on Jaejin's blog</title><link>https://jaejin0me.github.io/post/</link><description>Recent content in Posts on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Tue, 06 May 2025 22:55:00 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>양귀자 - 모순</title><link>https://jaejin0me.github.io/post/20250506/</link><pubDate>Tue, 06 May 2025 22:55:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20250506/</guid><description>&lt;p>ChatGPT가 나온 이후로 포스팅할 맛이 안 나요. 왜냐하면 물어보면 다 알려주거든요~&lt;br>
+저 또한 검색하지 않고 바로 ChatGPT한테 물어보는 경우가 늘어서 이거 뭐~ 포스팅해 봐야 의미가 있나 싶더라고요.&lt;br>
+그래도 다시 적어 볼까 합니다. 그냥 제가 하던 일중에 하나니까요.&lt;br>
+인생이란 어쩌면 어떤 일(Job만의 의미가 아닌)을 할지 찾아나가는 과정일지도 모릅니다.&lt;/p></description></item><item><title>워드 비교 기능 오류 해결 방법</title><link>https://jaejin0me.github.io/post/20250214_2/</link><pubDate>Fri, 14 Feb 2025 20:20:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20250214_2/</guid><description>&lt;p>워드 비교 기능을 이용하여 아주~ 나이스하게 한 문서의 작업을 끝내고&lt;br>
 다음 문서를 비교하려고 하니 오류가 뜨더군요.&lt;/p>
 &lt;p>&lt;img loading="lazy" src="https://jaejin0me.github.io/%ec%9b%8c%eb%93%9c_3.png" alt="" />
 &lt;/p>
@@ -2910,11 +2913,11 @@ API 활용이 어려운건 아니지만 확실한 가이드가 될만한 포스�
 &lt;p>&lt;a href="https://www.youtube.com/watch?v=kB133enMYqI">좋은 프로그래밍 원리 3가지란? | 이펙티브 프로그래밍 | 스택 오버플로우 | 운동하는 개발자&lt;/a>&lt;/p></description></item><item><title>이번주는 정말 바빴네요</title><link>https://jaejin0me.github.io/post/posts190/</link><pubDate>Sun, 30 Jun 2019 23:44:15 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts190/</guid><description>&lt;p>릴리즈 패치 여러번 했네요..ㅎㅎ&lt;/p>
 &lt;p>바빴지만 그만큼 성과를 많이 냈으니 헛고생 한거는 아니라 다행이네요.&lt;/p>
 &lt;p>내일부터 다시 월요일인데, 이제 평상시로 돌아와 차분하게 하나하나 처리해나가야겠어요.&lt;/p></description></item><item><title>셀프 코드리뷰 - 06월 22일</title><link>https://jaejin0me.github.io/post/posts189/</link><pubDate>Fri, 21 Jun 2019 20:17:51 +0900</pubDate><guid>https://jaejin0me.github.io/post/posts189/</guid><description>&lt;hr>
-&lt;h4 id="span-stylecolorblue1-생성자-안에서-처리-할껄span">&lt;!-- raw HTML omitted -->1. 생성자 안에서 처리 할껄!&lt;!-- raw HTML omitted -->&lt;/h4>
+&lt;h4 id="1-생성자-안에서-처리-할껄">&lt;!-- raw HTML omitted -->1. 생성자 안에서 처리 할껄!&lt;!-- raw HTML omitted -->&lt;/h4>
 &lt;ul>
 &lt;li>생성자안에서 처리했으면 다 커버하는건데, 파라미터로 받게 처리해서 클래스만들때마다 옵션읽어야 하는 나쁜 코드!&lt;/li>
 &lt;/ul>
-&lt;h4 id="span-stylecolorblue2-grep-안해본것span">&lt;!-- raw HTML omitted -->2. grep 안해본것&lt;!-- raw HTML omitted -->&lt;/h4>
+&lt;h4 id="2-grep-안해본것">&lt;!-- raw HTML omitted -->2. grep 안해본것&lt;!-- raw HTML omitted -->&lt;/h4>
 &lt;ul>
 &lt;li>grep 해보고 같이 살펴봐야지, 오늘은 다행이 문제 없었지만 습관들이지 않으면 큰일날듯!&lt;/li>
 &lt;/ul>
@@ -4083,7 +4086,7 @@ API 활용이 어려운건 아니지만 확실한 가이드가 될만한 포스�
 &lt;li>SELECT * FROM Employees, Departments;&lt;/li>
 &lt;/ul>
 &lt;h3 id="2-내부-결합---왜-내부라는-말을-사용할까">2) 내부 결합 - 왜 ‘내부’라는 말을 사용할까?&lt;/h3>
-&lt;h4 id="httpsjaejin0megithubiopostdb251-eb82b4ebb680-eab2b0ed95a9ec9d98-ec9e91ec9aa9-1-내부-결합의-작용1-내부-결합의-작용">&lt;a href="https://jaejin0me.github.io/post/db25/#1-%EB%82%B4%EB%B6%80-%EA%B2%B0%ED%95%A9%EC%9D%98-%EC%9E%91%EC%9A%A9" title="(1) 내부 결합의 작용">&lt;/a>(1) 내부 결합의 작용&lt;/h4>
+&lt;h4 id="1-내부-결합의-작용">&lt;a href="https://jaejin0me.github.io/post/db25/#1-%EB%82%B4%EB%B6%80-%EA%B2%B0%ED%95%A9%EC%9D%98-%EC%9E%91%EC%9A%A9" title="(1) 내부 결합의 작용">&lt;/a>(1) 내부 결합의 작용&lt;/h4>
 &lt;ul>
 &lt;li>크로스 결합 결과의 부분집합&lt;/li>
 &lt;/ul>
