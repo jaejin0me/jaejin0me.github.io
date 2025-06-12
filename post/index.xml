@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on Jaejin's blog</title><link>https://jaejin0me.github.io/post/</link><description>Recent content in Posts on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Sun, 18 May 2025 14:30:00 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>디자인 패턴의 아름다움 - 1. 개요</title><link>https://jaejin0me.github.io/post/20250518/</link><pubDate>Sun, 18 May 2025 14:30:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20250518/</guid><description>&lt;h1 id="1-개요">1. 개요&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on Jaejin's blog</title><link>https://jaejin0me.github.io/post/</link><description>Recent content in Posts on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Thu, 12 Jun 2025 23:26:00 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>안드로이드 앱 프로그래밍 with 코틀린 - 2. 안드로이드 앱의 기본 구조</title><link>https://jaejin0me.github.io/post/20250612/</link><pubDate>Thu, 12 Jun 2025 23:26:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20250612/</guid><description>&lt;h2 id="2-안드로이드-앱이-기본-구조">2. 안드로이드 앱이 기본 구조&lt;/h2>
+&lt;h3 id="21-안드로이드-소개">2.1 안드로이드 소개&lt;/h3>
+&lt;ul>
+&lt;li>안드로이드 런타임(Dalvik &amp;ndash; (안드로이드 버전 5.0) &amp;ndash;&amp;gt; ART(Android RunTime))
+&lt;ul>
+&lt;li>dex파일(앱파일) 해석하여 실행
+&lt;img loading="lazy" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F308397%2F6466514a-30f9-f561-ff35-d61d55ab3bbf.png?ixlib=rb-4.0.0&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=7cedbd5436c52312beffc107c817264b" alt="" />
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="22-안드로이드-앱-개발의-특징">2.2 안드로이드 앱 개발의 특징&lt;/h3>
+&lt;ul>
+&lt;li>생명주기를 안드로이드에서 관리하면 컴포넌트, 개발자가 관리하면 일반 클래스임
+&lt;img loading="lazy" src="https://blog.kakaocdn.net/dn/cduDnu/btrmGgPet7i/5BsTVrJHenj4KdWqKy0RR0/img.png" alt="" />
+&lt;/li>
+&lt;li>안드로이드 컴포넌트는 4종류
+&lt;ul>
+&lt;li>액티비티: 화면구성(화면 1개 담당)&lt;/li>
+&lt;li>서비스: 백그라운드&lt;/li>
+&lt;li>콘텐츠 프로바이더: 앱간 데이터 공유&lt;/li>
+&lt;li>브로드캐스트 리시버: 시스템 이벤트 수신
+&lt;img loading="lazy" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FPK7FT%2FbtrmKiZSesd%2Fnlkq9YA1P61gdr7QLtoShk%2Fimg.png" alt="" />
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>애플리케이션 라이브러리를 사용할 수 있음&lt;/li>
+&lt;li>리소스 xml 파일로 등록하여 사용&lt;/li>
+&lt;/ul>
+&lt;h3 id="23-앱-구성-파일-분석">2.3 앱 구성 파일 분석&lt;/h3>
+&lt;ul>
+&lt;li>하나의 모듈 ~= 하나의 앱&lt;/li>
+&lt;/ul>
+&lt;h4 id="buildgradlekts-빌드-설정-파일">build.gradle.kts (빌드 설정 파일)&lt;/h4>
+&lt;ul>
+&lt;li>gradle: 안드로이드 빌드 도구&lt;/li>
+&lt;/ul>
+&lt;h4 id="androidmanifestxml-메인-환경-파일">AndroidManifest.xml (메인 환경 파일)&lt;/h4>
+&lt;ul>
+&lt;li>속성값이 @로 시작하면 리소스&lt;/li>
+&lt;li>시스템은 매니페스트에 있는 대로 앱을 실행 ~= 컴포넌트를 매니페스트에 등록해야 한다. (Activity, Service, Receiver, Provider, name 속성은 필수)&lt;/li>
+&lt;li>&lt;!-- raw HTML omitted --> 태그는 액션별 실행 정의&lt;/li>
+&lt;/ul>
+&lt;h4 id="res-폴더-리소스">res 폴더 (리소스)&lt;/h4>
+&lt;ul>
+&lt;li>drawable: 이미지&lt;/li>
+&lt;li>layout: UI 구성에 필요한 xml&lt;/li>
+&lt;li>mipmap: 앱 아이콘&lt;/li>
+&lt;li>values: 값 리소스&lt;/li>
+&lt;li>R.java 파일에 상수 변수로 자동등록&lt;/li>
+&lt;li>지정된 방식으로만 사용됨&lt;/li>
+&lt;/ul>
+&lt;h4 id="activity_mainxml-기본-레이아웃-파일">activity_main.xml (기본 레이아웃 파일)&lt;/h4>
+&lt;h4 id="mainactivitykt-메인-액티비티">MainActivity.kt (메인 액티비티)&lt;/h4>
+&lt;ul>
+&lt;li>MainActivity 클래스가 실행되면 onCreate() 호출됨&lt;/li>
+&lt;/ul></description></item><item><title>디자인 패턴의 아름다움 - 1. 개요</title><link>https://jaejin0me.github.io/post/20250518/</link><pubDate>Sun, 18 May 2025 14:30:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20250518/</guid><description>&lt;h1 id="1-개요">1. 개요&lt;/h1>
 &lt;h2 id="11-코드-설계를-배우는-이유">1.1 코드 설계를 배우는 이유&lt;/h2>
 &lt;ul>
 &lt;li>효율적인 코드 작성 = 데이터 구조 + 알고리즘&lt;/li>
