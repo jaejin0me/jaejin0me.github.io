@@ -1,4 +1,74 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>프로그래밍 on Jaejin's blog</title><link>https://jaejin0me.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</link><description>Recent content in 프로그래밍 on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Thu, 12 Jun 2025 23:26:00 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/index.xml" rel="self" type="application/rss+xml"/><item><title>안드로이드 앱 프로그래밍 with 코틀린 - 2. 안드로이드 앱의 기본 구조</title><link>https://jaejin0me.github.io/post/20250612/</link><pubDate>Thu, 12 Jun 2025 23:26:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20250612/</guid><description>&lt;h2 id="2-안드로이드-앱이-기본-구조">2. 안드로이드 앱이 기본 구조&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>프로그래밍 on Jaejin's blog</title><link>https://jaejin0me.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</link><description>Recent content in 프로그래밍 on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Fri, 13 Jun 2025 23:04:00 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/index.xml" rel="self" type="application/rss+xml"/><item><title>안드로이드 앱 프로그래밍 with 코틀린 - 3. 코틀린 시작하기</title><link>https://jaejin0me.github.io/post/20250613/</link><pubDate>Fri, 13 Jun 2025 23:04:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20250613/</guid><description>&lt;h2 id="3-코틀린-시작하기">3. 코틀린 시작하기&lt;/h2>
+&lt;h3 id="31-코틀린-언어-소개">3.1 코틀린 언어 소개&lt;/h3>
+&lt;ul>
+&lt;li>표현력과 간결함&lt;/li>
+&lt;li>안전한 코드
+&lt;ul>
+&lt;li>nullable, not null&lt;/li>
+&lt;li>타입뒤에 ?로 표시&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>자바와의 상호운용성&lt;/li>
+&lt;li>구조화된 동시성
+&lt;ul>
+&lt;li>coroutine&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="코틀린-파일-구성">코틀린 파일 구성&lt;/h4>
+&lt;ul>
+&lt;li>package: 컴파일시 만들어지는 클래스 파일의 경로
+&lt;ul>
+&lt;li>같은 package를 사용하면 import 없이 사용가능&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>자바와 달리 파일명도 클래스명과 일치할 필요 없음&lt;/li>
+&lt;/ul>
+&lt;h3 id="32-변수와-함수">3.2 변수와 함수&lt;/h3>
+&lt;ul>
+&lt;li>var말고 val 이라는 키워드도 존재함. 값 할당 후 수정 불가&lt;/li>
+&lt;li>타입지정 가능&lt;/li>
+&lt;li>최상위에 선언한 변수나 클래스의 멤버 변수는 선언과 동시에 초기화 해야함&lt;/li>
+&lt;li>초기화 지연 가능
+&lt;ul>
+&lt;li>lateinit: var 변수에만 가능. 숫자+Boolean 타입에는 불가&lt;/li>
+&lt;li>lazy&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-kt" data-lang="kt">&lt;span class="line">&lt;span class="cl">&lt;span class="k">val&lt;/span> &lt;span class="py">data4&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Int&lt;/span> &lt;span class="k">by&lt;/span> &lt;span class="n">lazy&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;in lazy...&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">10&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>코틀린의 모든 변수는 객체&lt;/li>
+&lt;li>삼중 따옴표에는 trimIndent()가 자동으로 적용됨&lt;/li>
+&lt;li>Unit 타입: 반환문이 없는 함수에 사용&lt;/li>
+&lt;li>Nothing: null이나 예외를 반환하는 함수&lt;/li>
+&lt;/ul>
+&lt;h4 id="함수-선언하기">함수 선언하기&lt;/h4>
+&lt;ul>
+&lt;li>함수의 매개변수는 val 키워드가 자동 적용&lt;/li>
+&lt;li>명명된 매개변수 지원&lt;/li>
+&lt;/ul>
+&lt;h4 id="컬렉션-타입">컬렉션 타입&lt;/h4>
+&lt;ul>
+&lt;li>기초 타입 Array도 별도로 존재&lt;/li>
+&lt;/ul>
+&lt;h3 id="33-조건문과-반복문">3.3 조건문과 반복문&lt;/h3>
+&lt;ul>
+&lt;li>if-else를 표현식(결과값을 반환하는 계산식)으로도 사용 가능&lt;/li>
+&lt;li>when 이라는 조건문도 존재. 마찬가지로 표현식으로 사용 가능&lt;/li>
+&lt;li>for, while이 있고, for 문에서 보통 범위 연산자 in 사용&lt;/li>
+&lt;/ul></description></item><item><title>안드로이드 앱 프로그래밍 with 코틀린 - 2. 안드로이드 앱의 기본 구조</title><link>https://jaejin0me.github.io/post/20250612/</link><pubDate>Thu, 12 Jun 2025 23:26:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20250612/</guid><description>&lt;h2 id="2-안드로이드-앱이-기본-구조">2. 안드로이드 앱이 기본 구조&lt;/h2>
 &lt;h3 id="21-안드로이드-소개">2.1 안드로이드 소개&lt;/h3>
 &lt;ul>
 &lt;li>안드로이드 런타임(Dalvik &amp;ndash; (안드로이드 버전 5.0) &amp;ndash;&amp;gt; ART(Android RunTime))
