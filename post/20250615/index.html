@@ -1,0 +1,497 @@
+<!doctype html><html lang=ko dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>안드로이드 앱 프로그래밍 with 코틀린 - 4. 코틀린 객체지향 프로그래밍 | Jaejin's blog</title>
+<meta name=keywords content="안드로이드 앱,android application"><meta name=description content='4. 코틀린 객체지향 프로그래밍
+4.1 클래스와 생성자
+
+클래스 선언만 하는 것도 가능
+
+
+
+1
+
+
+class User
+
+
+
+클래스 생성에 new 키워드 사용하지 않음
+주 생성자
+
+클래스 선언부에 선언
+constructor 생략 가능
+init 키워드를 통해 로직 수행 가능
+유일하게 매개변수에 val, var 키워드를 사용할 수 있음 ~= 그러면 자동적으로 멤버변수가됨
+객체 생성의 메인 로직을 담당하는 편
+
+
+보조 생성자
+
+본문에 constructor로 선언
+주 생성자가 있다면 무조건 호출해 주어야 함
+
+
+
+1
+2
+3
+4
+
+
+class User(name: String) {
+  constructor(name: String, count: Int): this(name) {
+  }
+}
+
+
+
+
+4.2 클래스를 재사용하는 상속
+상속과 생성자
+
+상위 클래스의 생성자를 어떻게든 호출해야한다.
+
+
+
+1
+2
+3
+4
+5
+
+
+open class Super(name: String) {
+}
+
+class Sub(name: String): Super(name) {
+}
+
+
+오버라이딩
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+
+
+open class Super {
+  open var someData = 10
+  open fun someFun() {
+    println("I am super class function: $someData")
+  }
+}
+
+class Sub: Super() {
+  override var someData =  20
+  override fun someFun() {
+    println("I am sub class function: $someData")
+  }
+}
+
+fun main() {
+  var obj = Sub()
+  obj.someFun()
+  // 출력
+  // I am sub class function: 20
+}
+
+
+접급 제한자
+
+'><meta name=author content="Jaejin Jang"><link rel=canonical href=https://jaejin0me.github.io/post/20250615/><link crossorigin=anonymous href=/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z+V9+cO1A=" rel="preload stylesheet" as=style><link rel=icon href=https://jaejin0me.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://jaejin0me.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://jaejin0me.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://jaejin0me.github.io/apple-touch-icon.png><link rel=mask-icon href=https://jaejin0me.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=ko href=https://jaejin0me.github.io/post/20250615/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css integrity=sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js integrity=sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4 crossorigin=anonymous></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js integrity=sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa crossorigin=anonymous onload=renderMathInElement(document.body)></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8691946909799297" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-F8504X956T"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-F8504X956T")}</script><meta property="og:title" content="안드로이드 앱 프로그래밍 with 코틀린 - 4. 코틀린 객체지향 프로그래밍"><meta property="og:description" content='4. 코틀린 객체지향 프로그래밍
+4.1 클래스와 생성자
+
+클래스 선언만 하는 것도 가능
+
+
+
+1
+
+
+class User
+
+
+
+클래스 생성에 new 키워드 사용하지 않음
+주 생성자
+
+클래스 선언부에 선언
+constructor 생략 가능
+init 키워드를 통해 로직 수행 가능
+유일하게 매개변수에 val, var 키워드를 사용할 수 있음 ~= 그러면 자동적으로 멤버변수가됨
+객체 생성의 메인 로직을 담당하는 편
+
+
+보조 생성자
+
+본문에 constructor로 선언
+주 생성자가 있다면 무조건 호출해 주어야 함
+
+
+
+1
+2
+3
+4
+
+
+class User(name: String) {
+  constructor(name: String, count: Int): this(name) {
+  }
+}
+
+
+
+
+4.2 클래스를 재사용하는 상속
+상속과 생성자
+
+상위 클래스의 생성자를 어떻게든 호출해야한다.
+
+
+
+1
+2
+3
+4
+5
+
+
+open class Super(name: String) {
+}
+
+class Sub(name: String): Super(name) {
+}
+
+
+오버라이딩
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+
+
+open class Super {
+  open var someData = 10
+  open fun someFun() {
+    println("I am super class function: $someData")
+  }
+}
+
+class Sub: Super() {
+  override var someData =  20
+  override fun someFun() {
+    println("I am sub class function: $someData")
+  }
+}
+
+fun main() {
+  var obj = Sub()
+  obj.someFun()
+  // 출력
+  // I am sub class function: 20
+}
+
+
+접급 제한자
+
+'><meta property="og:type" content="article"><meta property="og:url" content="https://jaejin0me.github.io/post/20250615/"><meta property="article:section" content="post"><meta property="article:published_time" content="2025-06-15T01:27:00+09:00"><meta property="article:modified_time" content="2025-06-15T01:27:00+09:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="안드로이드 앱 프로그래밍 with 코틀린 - 4. 코틀린 객체지향 프로그래밍"><meta name=twitter:description content='4. 코틀린 객체지향 프로그래밍
+4.1 클래스와 생성자
+
+클래스 선언만 하는 것도 가능
+
+
+
+1
+
+
+class User
+
+
+
+클래스 생성에 new 키워드 사용하지 않음
+주 생성자
+
+클래스 선언부에 선언
+constructor 생략 가능
+init 키워드를 통해 로직 수행 가능
+유일하게 매개변수에 val, var 키워드를 사용할 수 있음 ~= 그러면 자동적으로 멤버변수가됨
+객체 생성의 메인 로직을 담당하는 편
+
+
+보조 생성자
+
+본문에 constructor로 선언
+주 생성자가 있다면 무조건 호출해 주어야 함
+
+
+
+1
+2
+3
+4
+
+
+class User(name: String) {
+  constructor(name: String, count: Int): this(name) {
+  }
+}
+
+
+
+
+4.2 클래스를 재사용하는 상속
+상속과 생성자
+
+상위 클래스의 생성자를 어떻게든 호출해야한다.
+
+
+
+1
+2
+3
+4
+5
+
+
+open class Super(name: String) {
+}
+
+class Sub(name: String): Super(name) {
+}
+
+
+오버라이딩
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+
+
+open class Super {
+  open var someData = 10
+  open fun someFun() {
+    println("I am super class function: $someData")
+  }
+}
+
+class Sub: Super() {
+  override var someData =  20
+  override fun someFun() {
+    println("I am sub class function: $someData")
+  }
+}
+
+fun main() {
+  var obj = Sub()
+  obj.someFun()
+  // 출력
+  // I am sub class function: 20
+}
+
+
+접급 제한자
+
+'><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://jaejin0me.github.io/post/"},{"@type":"ListItem","position":2,"name":"안드로이드 앱 프로그래밍 with 코틀린 - 4. 코틀린 객체지향 프로그래밍","item":"https://jaejin0me.github.io/post/20250615/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"안드로이드 앱 프로그래밍 with 코틀린 - 4. 코틀린 객체지향 프로그래밍","name":"안드로이드 앱 프로그래밍 with 코틀린 - 4. 코틀린 객체지향 프로그래밍","description":"4. 코틀린 객체지향 프로그래밍 4.1 클래스와 생성자 클래스 선언만 하는 것도 가능 1 class User 클래스 생성에 new 키워드 사용하지 않음 주 생성자 클래스 선언부에 선언 constructor 생략 가능 init 키워드를 통해 로직 수행 가능 유일하게 매개변수에 val, var 키워드를 사용할 수 있음 ~= 그러면 자동적으로 멤버변수가됨 객체 생성의 메인 로직을 담당하는 편 보조 생성자 본문에 constructor로 선언 주 생성자가 있다면 무조건 호출해 주어야 함 1 2 3 4 class User(name: String) { constructor(name: String, count: Int): this(name) { } } 4.2 클래스를 재사용하는 상속 상속과 생성자 상위 클래스의 생성자를 어떻게든 호출해야한다. 1 2 3 4 5 open class Super(name: String) { } class Sub(name: String): Super(name) { } 오버라이딩 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 open class Super { open var someData = 10 open fun someFun() { println(\u0026#34;I am super class function: $someData\u0026#34;) } } class Sub: Super() { override var someData = 20 override fun someFun() { println(\u0026#34;I am sub class function: $someData\u0026#34;) } } fun main() { var obj = Sub() obj.someFun() // 출력 // I am sub class function: 20 } 접급 제한자 ","keywords":["안드로이드 앱","android application"],"articleBody":"4. 코틀린 객체지향 프로그래밍 4.1 클래스와 생성자 클래스 선언만 하는 것도 가능 1 class User 클래스 생성에 new 키워드 사용하지 않음 주 생성자 클래스 선언부에 선언 constructor 생략 가능 init 키워드를 통해 로직 수행 가능 유일하게 매개변수에 val, var 키워드를 사용할 수 있음 ~= 그러면 자동적으로 멤버변수가됨 객체 생성의 메인 로직을 담당하는 편 보조 생성자 본문에 constructor로 선언 주 생성자가 있다면 무조건 호출해 주어야 함 1 2 3 4 class User(name: String) { constructor(name: String, count: Int): this(name) { } } 4.2 클래스를 재사용하는 상속 상속과 생성자 상위 클래스의 생성자를 어떻게든 호출해야한다. 1 2 3 4 5 open class Super(name: String) { } class Sub(name: String): Super(name) { } 오버라이딩 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 open class Super { open var someData = 10 open fun someFun() { println(\"I am super class function: $someData\") } } class Sub: Super() { override var someData = 20 override fun someFun() { println(\"I am sub class function: $someData\") } } fun main() { var obj = Sub() obj.someFun() // 출력 // I am sub class function: 20 } 접급 제한자 같은 모듈 = Gradle이나 Maven에서 프로젝트 단위 또는 같은 세트 단위 4.3 코틀린 클래스의 종류 데이터 클래스 VO(Value Object) 클래스를 편리하게 이용할 수 있게 해줌 var, val 키워드를 사용해 멤버변수로 만들어야 의미가 있음 1 data class DataClass(val Name: String, val email: String, val age: Int) 일반 클래스는 equals() 함수 사용시 객체 자체를 비교하지만 데이터 클래스는 객체의 데이터를 비교함 멤버 변수나 함수를 선언할수도 있으나 equals() 함수는 주 생성자에 선언한 멤버 변수의 데이터만 비교함 toString() 함수는 데이터의 객체를 출력함 오브젝트 클래스 = 익명 클래스 타입을 지정하지 않으면 Any 타입이 되어 오류남 1 2 3 4 5 6 7 8 9 10 11 var obj = object { var data = 10 fun some() { println(\"data: $data\") } } fun main() { obj.data = 20 //오류 obj.some() // 오류 } 아래와 같이 클래스 또는 인터페이스를 타입으로 지정해야 함 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 open class Super { open var data = 10 open fun some() { println(\"I am super some() : $data\") } } val obj = object: Super() { override var data = 20 override var some() { printLn(\"I am object some() : $data\") } } fun main() { obj.data = 30 // 성공 obj.some() // 성공 } 컴패니언 클래스 static 대체 1 2 3 4 5 6 7 8 9 10 11 12 13 class MyClass { companion object { var data = 10 fun some() { println(data) } } } fun main() { MyClass.data = 20 MyClass.some() } ","wordCount":"756","inLanguage":"ko","datePublished":"2025-06-15T01:27:00+09:00","dateModified":"2025-06-15T01:27:00+09:00","author":{"@type":"Person","name":"Jaejin Jang"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://jaejin0me.github.io/post/20250615/"},"publisher":{"@type":"Organization","name":"Jaejin's blog","logo":{"@type":"ImageObject","url":"https://jaejin0me.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://jaejin0me.github.io/ accesskey=h title="Jaejin's blog (Alt + H)">Jaejin's blog</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://jaejin0me.github.io/ title=Home><span>Home</span></a></li><li><a href=https://jaejin0me.github.io/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li><li><a href=https://jaejin0me.github.io/post/ title=Posts><span>Posts</span></a></li><li><a href=https://jaejin0me.github.io/tags/ title=Tags><span>Tags</span></a></li><li><a href=https://jaejin0me.github.io/categories/ title=Categories><span>Categories</span></a></li><li><a href=https://jaejin0me.github.io/about/ title="About Me"><span>About Me</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">안드로이드 앱 프로그래밍 with 코틀린 - 4. 코틀린 객체지향 프로그래밍</h1><div class=post-meta><span title='2025-06-15 01:27:00 +0900 +0900'>6월 15, 2025</span>&nbsp;·&nbsp;Jaejin Jang</div></header><div class=toc><details><summary accesskey=c title="(Alt + C)"><span class=details>목차</span></summary><div class=inner><ul><li><a href=#4-%ec%bd%94%ed%8b%80%eb%a6%b0-%ea%b0%9d%ec%b2%b4%ec%a7%80%ed%96%a5-%ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%98%eb%b0%8d aria-label="4. 코틀린 객체지향 프로그래밍">4. 코틀린 객체지향 프로그래밍</a><ul><li><a href=#41-%ed%81%b4%eb%9e%98%ec%8a%a4%ec%99%80-%ec%83%9d%ec%84%b1%ec%9e%90 aria-label="4.1 클래스와 생성자">4.1 클래스와 생성자</a></li><li><a href=#42-%ed%81%b4%eb%9e%98%ec%8a%a4%eb%a5%bc-%ec%9e%ac%ec%82%ac%ec%9a%a9%ed%95%98%eb%8a%94-%ec%83%81%ec%86%8d aria-label="4.2 클래스를 재사용하는 상속">4.2 클래스를 재사용하는 상속</a><ul><ul><li><a href=#%ec%83%81%ec%86%8d%ea%b3%bc-%ec%83%9d%ec%84%b1%ec%9e%90 aria-label="상속과 생성자">상속과 생성자</a></li></ul><li><a href=#%ec%98%a4%eb%b2%84%eb%9d%bc%ec%9d%b4%eb%94%a9 aria-label=오버라이딩>오버라이딩</a></li><li><a href=#%ec%a0%91%ea%b8%89-%ec%a0%9c%ed%95%9c%ec%9e%90 aria-label="접급 제한자">접급 제한자</a></li></ul></li><li><a href=#43-%ec%bd%94%ed%8b%80%eb%a6%b0-%ed%81%b4%eb%9e%98%ec%8a%a4%ec%9d%98-%ec%a2%85%eb%a5%98 aria-label="4.3 코틀린 클래스의 종류">4.3 코틀린 클래스의 종류</a><ul><li><a href=#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ed%81%b4%eb%9e%98%ec%8a%a4 aria-label="데이터 클래스">데이터 클래스</a></li><li><a href=#%ec%98%a4%eb%b8%8c%ec%a0%9d%ed%8a%b8-%ed%81%b4%eb%9e%98%ec%8a%a4--%ec%9d%b5%eb%aa%85-%ed%81%b4%eb%9e%98%ec%8a%a4 aria-label="오브젝트 클래스 = 익명 클래스">오브젝트 클래스 = 익명 클래스</a></li><li><a href=#%ec%bb%b4%ed%8c%a8%eb%8b%88%ec%96%b8-%ed%81%b4%eb%9e%98%ec%8a%a4 aria-label="컴패니언 클래스">컴패니언 클래스</a></li></ul></li></ul></li></ul></div></details></div><div class=post-content><h2 id=4-코틀린-객체지향-프로그래밍>4. 코틀린 객체지향 프로그래밍<a hidden class=anchor aria-hidden=true href=#4-코틀린-객체지향-프로그래밍>#</a></h2><h3 id=41-클래스와-생성자>4.1 클래스와 생성자<a hidden class=anchor aria-hidden=true href=#41-클래스와-생성자>#</a></h3><ul><li>클래스 선언만 하는 것도 가능</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-kt data-lang=kt><span class=line><span class=cl><span class=k>class</span> <span class=nc>User</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>클래스 생성에 new 키워드 사용하지 않음</li><li>주 생성자<ul><li>클래스 선언부에 선언</li><li>constructor 생략 가능</li><li>init 키워드를 통해 로직 수행 가능</li><li>유일하게 매개변수에 val, var 키워드를 사용할 수 있음 ~= 그러면 자동적으로 멤버변수가됨</li><li>객체 생성의 메인 로직을 담당하는 편</li></ul></li><li>보조 생성자<ul><li>본문에 constructor로 선언</li><li>주 생성자가 있다면 무조건 호출해 주어야 함</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-kt data-lang=kt><span class=line><span class=cl><span class=k>class</span> <span class=nc>User</span><span class=p>(</span><span class=n>name</span><span class=p>:</span> <span class=n>String</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>constructor</span><span class=p>(</span><span class=n>name</span><span class=p>:</span> <span class=n>String</span><span class=p>,</span> <span class=n>count</span><span class=p>:</span> <span class=n>Int</span><span class=p>):</span> <span class=k>this</span><span class=p>(</span><span class=n>name</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div></li></ul><h3 id=42-클래스를-재사용하는-상속>4.2 클래스를 재사용하는 상속<a hidden class=anchor aria-hidden=true href=#42-클래스를-재사용하는-상속>#</a></h3><h5 id=상속과-생성자>상속과 생성자<a hidden class=anchor aria-hidden=true href=#상속과-생성자>#</a></h5><ul><li>상위 클래스의 생성자를 어떻게든 호출해야한다.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-kt data-lang=kt><span class=line><span class=cl><span class=k>open</span> <span class=k>class</span> <span class=nc>Super</span><span class=p>(</span><span class=n>name</span><span class=p>:</span> <span class=n>String</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>Sub</span><span class=p>(</span><span class=n>name</span><span class=p>:</span> <span class=n>String</span><span class=p>):</span> <span class=n>Super</span><span class=p>(</span><span class=n>name</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h4 id=오버라이딩>오버라이딩<a hidden class=anchor aria-hidden=true href=#오버라이딩>#</a></h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-kt data-lang=kt><span class=line><span class=cl><span class=k>open</span> <span class=k>class</span> <span class=nc>Super</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>open</span> <span class=k>var</span> <span class=py>someData</span> <span class=p>=</span> <span class=m>10</span>
+</span></span><span class=line><span class=cl>  <span class=k>open</span> <span class=k>fun</span> <span class=nf>someFun</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>println</span><span class=p>(</span><span class=s2>&#34;I am super class function: </span><span class=si>$someData</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>Sub</span><span class=p>:</span> <span class=n>Super</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>override</span> <span class=k>var</span> <span class=py>someData</span> <span class=p>=</span>  <span class=m>20</span>
+</span></span><span class=line><span class=cl>  <span class=k>override</span> <span class=k>fun</span> <span class=nf>someFun</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>println</span><span class=p>(</span><span class=s2>&#34;I am sub class function: </span><span class=si>$someData</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>fun</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>var</span> <span class=py>obj</span> <span class=p>=</span> <span class=n>Sub</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>  <span class=n>obj</span><span class=p>.</span><span class=n>someFun</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// 출력
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=c1>// I am sub class function: 20
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h4 id=접급-제한자>접급 제한자<a hidden class=anchor aria-hidden=true href=#접급-제한자>#</a></h4><p><img loading=lazy src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ99w33l0daUMH7C8akT6XGxUWuE5FZjjcAg&amp;s" alt></p><ul><li>같은 모듈 = Gradle이나 Maven에서 프로젝트 단위 또는 같은 세트 단위</li></ul><h3 id=43-코틀린-클래스의-종류>4.3 코틀린 클래스의 종류<a hidden class=anchor aria-hidden=true href=#43-코틀린-클래스의-종류>#</a></h3><h4 id=데이터-클래스>데이터 클래스<a hidden class=anchor aria-hidden=true href=#데이터-클래스>#</a></h4><ul><li>VO(Value Object) 클래스를 편리하게 이용할 수 있게 해줌</li><li>var, val 키워드를 사용해 멤버변수로 만들어야 의미가 있음</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-kt data-lang=kt><span class=line><span class=cl><span class=k>data</span> <span class=k>class</span> <span class=nc>DataClass</span><span class=p>(</span><span class=k>val</span> <span class=py>Name</span><span class=p>:</span> <span class=n>String</span><span class=p>,</span> <span class=k>val</span> <span class=py>email</span><span class=p>:</span> <span class=n>String</span><span class=p>,</span> <span class=k>val</span> <span class=py>age</span><span class=p>:</span> <span class=n>Int</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>일반 클래스는 equals() 함수 사용시 객체 자체를 비교하지만 데이터 클래스는 객체의 데이터를 비교함</li><li>멤버 변수나 함수를 선언할수도 있으나 equals() 함수는 주 생성자에 선언한 멤버 변수의 데이터만 비교함</li><li>toString() 함수는 데이터의 객체를 출력함</li></ul><h4 id=오브젝트-클래스--익명-클래스>오브젝트 클래스 = 익명 클래스<a hidden class=anchor aria-hidden=true href=#오브젝트-클래스--익명-클래스>#</a></h4><ul><li>타입을 지정하지 않으면 Any 타입이 되어 오류남</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-kt data-lang=kt><span class=line><span class=cl><span class=k>var</span> <span class=py>obj</span> <span class=p>=</span> <span class=k>object</span> <span class=err>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>var</span> <span class=py>data</span> <span class=p>=</span> <span class=m>10</span>
+</span></span><span class=line><span class=cl>  <span class=k>fun</span> <span class=nf>some</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>println</span><span class=p>(</span><span class=s2>&#34;data: </span><span class=si>$data</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>fun</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=n>obj</span><span class=p>.</span><span class=k>data</span> <span class=p>=</span> <span class=m>20</span> <span class=c1>//오류
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=n>obj</span><span class=p>.</span><span class=n>some</span><span class=p>()</span>    <span class=c1>// 오류
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>아래와 같이 클래스 또는 인터페이스를 타입으로 지정해야 함</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-gdscript3 data-lang=gdscript3><span class=line><span class=cl><span class=n>open</span> <span class=k>class</span> <span class=n>Super</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=n>open</span> <span class=k>var</span> <span class=n>data</span> <span class=o>=</span> <span class=mi>10</span>
+</span></span><span class=line><span class=cl>  <span class=n>open</span> <span class=n>fun</span> <span class=n>some</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>println</span><span class=p>(</span><span class=s2>&#34;I am super some() : $data&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>val</span> <span class=n>obj</span> <span class=o>=</span> <span class=n>object</span><span class=p>:</span> <span class=n>Super</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=n>override</span> <span class=k>var</span> <span class=n>data</span> <span class=o>=</span> <span class=mi>20</span>
+</span></span><span class=line><span class=cl>  <span class=n>override</span> <span class=k>var</span> <span class=n>some</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>printLn</span><span class=p>(</span><span class=s2>&#34;I am object some() : $data&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>fun</span> <span class=n>main</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=n>obj</span><span class=o>.</span><span class=n>data</span> <span class=o>=</span> <span class=mi>30</span> <span class=o>//</span> <span class=err>성공</span>
+</span></span><span class=line><span class=cl>  <span class=n>obj</span><span class=o>.</span><span class=n>some</span><span class=p>()</span>    <span class=o>//</span> <span class=err>성공</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h4 id=컴패니언-클래스>컴패니언 클래스<a hidden class=anchor aria-hidden=true href=#컴패니언-클래스>#</a></h4><ul><li>static 대체</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-kt data-lang=kt><span class=line><span class=cl><span class=k>class</span> <span class=nc>MyClass</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>companion</span> <span class=k>object</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>var</span> <span class=py>data</span> <span class=p>=</span> <span class=m>10</span>
+</span></span><span class=line><span class=cl>    <span class=k>fun</span> <span class=nf>some</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=n>println</span><span class=p>(</span><span class=k>data</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>fun</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nc>MyClass</span><span class=p>.</span><span class=k>data</span> <span class=p>=</span> <span class=m>20</span>
+</span></span><span class=line><span class=cl>  <span class=nc>MyClass</span><span class=p>.</span><span class=n>some</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div></div><footer class=post-footer><ul class=post-tags><li><a href=https://jaejin0me.github.io/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%95%B1/>안드로이드 앱</a></li><li><a href=https://jaejin0me.github.io/tags/android-application/>Android Application</a></li></ul></footer><script src=https://utteranc.es/client.js repo=jaejin0me/blog_comment issue-term=title label=comment theme=github-light crossorigin=anonymous async></script></article></main><footer class=footer><span>Jaejin Jang</span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>
