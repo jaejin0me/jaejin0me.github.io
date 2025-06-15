@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>안드로이드 앱 on Jaejin's blog</title><link>https://jaejin0me.github.io/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%95%B1/</link><description>Recent content in 안드로이드 앱 on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Sun, 15 Jun 2025 01:27:00 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%95%B1/index.xml" rel="self" type="application/rss+xml"/><item><title>안드로이드 앱 프로그래밍 with 코틀린 - 4. 코틀린 객체지향 프로그래밍</title><link>https://jaejin0me.github.io/post/20250615/</link><pubDate>Sun, 15 Jun 2025 01:27:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20250615/</guid><description>&lt;h2 id="4-코틀린-객체지향-프로그래밍">4. 코틀린 객체지향 프로그래밍&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>안드로이드 앱 on Jaejin's blog</title><link>https://jaejin0me.github.io/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%95%B1/</link><description>Recent content in 안드로이드 앱 on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Sun, 15 Jun 2025 16:10:00 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%95%B1/index.xml" rel="self" type="application/rss+xml"/><item><title>안드로이드 앱 프로그래밍 with 코틀린 - 5. 코틀린의 유용한 기법</title><link>https://jaejin0me.github.io/post/20250615_2/</link><pubDate>Sun, 15 Jun 2025 16:10:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20250615_2/</guid><description>&lt;h2 id="5-코틀린의-유용한-기법">5. 코틀린의 유용한 기법&lt;/h2>
+&lt;h3 id="51-람다-함수와-고차-함수">5.1 람다 함수와 고차 함수&lt;/h3>
+&lt;h4 id="람다-함수">람다 함수&lt;/h4>
+&lt;ul>
+&lt;li>익명 함수 정의 기법&lt;/li>
+&lt;li>필요시 참고하는 것이 나음, 내용이 너무 자잘하다&lt;/li>
+&lt;/ul>
+&lt;h4 id="고차-함수">고차 함수&lt;/h4>
+&lt;ul>
+&lt;li>함수를 매개 변수나 반환값으로 사용&lt;/li>
+&lt;/ul>
+&lt;h3 id="52-널-안정성">5.2 널 안정성&lt;/h3>
+&lt;ul>
+&lt;li>엘비스 연산자 ?:
+&lt;ul>
+&lt;li>변수가 null 일 때 대입해야 하는 값이나 실행해야 하는 구문&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>예외 발생 !!
+&lt;ul>
+&lt;li>필요에 따라 null인 경우 exception을 발생해야 할 때&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>안드로이드 앱 프로그래밍 with 코틀린 - 4. 코틀린 객체지향 프로그래밍</title><link>https://jaejin0me.github.io/post/20250615/</link><pubDate>Sun, 15 Jun 2025 01:27:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20250615/</guid><description>&lt;h2 id="4-코틀린-객체지향-프로그래밍">4. 코틀린 객체지향 프로그래밍&lt;/h2>
 &lt;h3 id="41-클래스와-생성자">4.1 클래스와 생성자&lt;/h3>
 &lt;ul>
 &lt;li>클래스 선언만 하는 것도 가능&lt;/li>
