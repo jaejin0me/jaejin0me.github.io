@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on Jaejin's blog</title><link>https://jaejin0me.github.io/post/</link><description>Recent content in Posts on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Sun, 15 Jun 2025 16:10:00 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>안드로이드 앱 프로그래밍 with 코틀린 - 5. 코틀린의 유용한 기법</title><link>https://jaejin0me.github.io/post/20250615_2/</link><pubDate>Sun, 15 Jun 2025 16:10:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20250615_2/</guid><description>&lt;h2 id="5-코틀린의-유용한-기법">5. 코틀린의 유용한 기법&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on Jaejin's blog</title><link>https://jaejin0me.github.io/post/</link><description>Recent content in Posts on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Tue, 05 Aug 2025 23:34:00 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>CPPG 개인정보관리사 시험</title><link>https://jaejin0me.github.io/post/20250805/</link><pubDate>Tue, 05 Aug 2025 23:34:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20250805/</guid><description>&lt;p>이번 달에 있는 CPPG 시험을 준비하고 있습니다.&lt;br>
+공공기관을 몇 년째 다니다 보니 좀 무료해서 외부 평가할 수 있는 자격증을 찾고 있던 와중에&lt;br>
+ISMS-P라는 자격증을 알게 되었습니다.&lt;br>
+하지만 해당 시험에 응시하려면 개인정보 관련 경력이 필요한데, 저는 없습니다 ㅜ
+CPPG로 해당 경력을 대체할 수 있다고 해서 따려고 합니다.&lt;/p></description></item><item><title>행동은 불안을 이긴다 - 롭 다이얼</title><link>https://jaejin0me.github.io/post/20250616/</link><pubDate>Mon, 16 Jun 2025 18:40:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20250616/</guid><description>&lt;ul>
+&lt;li>동기부여가 필요해서 오랜만에 자기 개발서를 읽었습니다.&lt;/li>
+&lt;li>이따금씩 읽는 건 괜찮네요.&lt;/li>
+&lt;li>제가 느낀 바는 3개입니다.&lt;/li>
+&lt;/ul>
+&lt;h4 id="1-일단-움직여라">1. 일단 움직여라.&lt;/h4>
+&lt;h4 id="2-지속할-수-있는-시스템을-고민하라">2. 지속할 수 있는 시스템을 고민하라.&lt;/h4>
+&lt;h4 id="3-이-여정에-끝은-없다-그러니-과정에서-재미를-찾아라">3. 이 여정에 끝은 없다. 그러니 과정에서 재미를 찾아라.&lt;/h4></description></item><item><title>안드로이드 앱 프로그래밍 with 코틀린 - 5. 코틀린의 유용한 기법</title><link>https://jaejin0me.github.io/post/20250615_2/</link><pubDate>Sun, 15 Jun 2025 16:10:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20250615_2/</guid><description>&lt;h2 id="5-코틀린의-유용한-기법">5. 코틀린의 유용한 기법&lt;/h2>
 &lt;h3 id="51-람다-함수와-고차-함수">5.1 람다 함수와 고차 함수&lt;/h3>
 &lt;h4 id="람다-함수">람다 함수&lt;/h4>
 &lt;ul>
