@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on Jaejin's blog</title><link>https://jaejin0me.github.io/post/</link><description>Recent content in Posts on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Wed, 24 Dec 2025 23:20:00 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>2025 진주마라톤 - 하프 참가 후기</title><link>https://jaejin0me.github.io/post/20251224_2/</link><pubDate>Wed, 24 Dec 2025 23:20:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20251224_2/</guid><description>&lt;p>21일 일요일에 35회 진주마라톤을 참가했습니다.&lt;br>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on Jaejin's blog</title><link>https://jaejin0me.github.io/post/</link><description>Recent content in Posts on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Wed, 07 Jan 2026 21:40:00 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Grid 월드에서의 반복적 정책평가</title><link>https://jaejin0me.github.io/post/20260107/</link><pubDate>Wed, 07 Jan 2026 21:40:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20260107/</guid><description>&lt;ul>
+&lt;li>정책평가는 정책π 가 고정된 상태에서 상태가치함수 V(s)를 계산하는 것입니다.&lt;/li>
+&lt;li>그리고 이 과정을 V(s) 변화량이 아주 작아질 때까지 반복하는 것입니다.&lt;/li>
+&lt;li>V(s)의 값이 대칭적으로 나와야 하는데.. 왜 다르게 나오는지 모르겠네요. 문제가 있는 것 같은데 나중에 찾으면 고칠게요&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img loading="lazy" src="https://jaejin0me.github.io/20260107_statVal.png" alt="" />
+&lt;/p></description></item><item><title>2025 진주마라톤 - 하프 참가 후기</title><link>https://jaejin0me.github.io/post/20251224_2/</link><pubDate>Wed, 24 Dec 2025 23:20:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20251224_2/</guid><description>&lt;p>21일 일요일에 35회 진주마라톤을 참가했습니다.&lt;br>
 너무 추워요..&lt;/p>
 &lt;p>근 1년 만에 하프를 뛰었는데, 확실히 작년 보다 기량이 늘었다는 걸 느꼈습니다.&lt;br>
 2시간 페이스 그룹에서 뛰다가 체력이 남을 것 같아서&lt;br>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Machine Learning on Jaejin's blog</title><link>https://jaejin0me.github.io/tags/machine-learning/</link><description>Recent content in Machine Learning on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Wed, 07 Jan 2026 21:40:00 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml"/><item><title>Grid 월드에서의 반복적 정책평가</title><link>https://jaejin0me.github.io/post/20260107/</link><pubDate>Wed, 07 Jan 2026 21:40:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20260107/</guid><description>&lt;ul>
+&lt;li>정책평가는 정책π 가 고정된 상태에서 상태가치함수 V(s)를 계산하는 것입니다.&lt;/li>
+&lt;li>그리고 이 과정을 V(s) 변화량이 아주 작아질 때까지 반복하는 것입니다.&lt;/li>
+&lt;li>V(s)의 값이 대칭적으로 나와야 하는데.. 왜 다르게 나오는지 모르겠네요. 문제가 있는 것 같은데 나중에 찾으면 고칠게요&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img loading="lazy" src="https://jaejin0me.github.io/20260107_statVal.png" alt="" />
+&lt;/p></description></item></channel></rss>
