@@ -1,8 +1,6 @@
 backend:
-  name: github
-  repo: jaejin0me/jaejin0me.github.io
+  name: git-gateway
   branch: master
-  base_url: https://monumental-smakager-d78339.netlify.app
 
 media_folder: static/uploads
 public_folder: /uploads
