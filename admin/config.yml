@@ -1,0 +1,27 @@
+backend:
+  name: github
+  repo: jaejin0me/jaejin0me.github.io
+  branch: master
+  base_url: https://monumental-smakager-d78339.netlify.app
+
+media_folder: static/uploads
+public_folder: /uploads
+
+locale: ko
+
+collections:
+  - name: post
+    label: Posts
+    folder: content/post
+    create: true
+    slug: "{{year}}{{month}}{{day}}"
+    fields:
+      - { label: "제목", name: title, widget: string }
+      - { label: "작성일", name: date, widget: datetime, format: "YYYY-MM-DDTHH:mm:ssZ", time_format: "HH:mm:ss", date_format: "YYYY-MM-DD" }
+      - { label: "태그", name: tags, widget: list, default: [] }
+      - { label: "카테고리", name: categories, widget: list, default: [] }
+      - { label: "작성자", name: author, widget: string, default: "Jaejin Jang" }
+      - { label: "초안", name: draft, widget: boolean, default: false, required: false }
+      - { label: "MathJax", name: mathjax, widget: boolean, default: false, required: false }
+      - { label: "목차", name: showToc, widget: boolean, default: false, required: false }
+      - { label: "내용", name: body, widget: markdown }
