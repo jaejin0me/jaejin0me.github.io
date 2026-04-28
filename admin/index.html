@@ -24,7 +24,7 @@
         reader.onload = async (ev) => {
           const base64 = ev.target.result.split(',')[1];
 
-          const userData = localStorage.getItem('netlify-cms-user');
+          const userData = localStorage.getItem('decap-cms-user');
           if (!userData) return console.error('토큰 없음');
           const token = JSON.parse(userData).token;
 
