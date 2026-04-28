@@ -8,5 +8,48 @@
 <body>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script src="https://unpkg.com/decap-cms@3.12.2/dist/decap-cms.js"></script>
+  <script>
+    document.addEventListener('paste', async (e) => {
+      const items = e.clipboardData?.items;
+      if (!items) return;
+
+      for (const item of items) {
+        if (!item.type.startsWith('image/')) continue;
+
+        e.preventDefault();
+        const file = item.getAsFile();
+        const filename = `pasted-${Date.now()}.png`;
+
+        const reader = new FileReader();
+        reader.onload = async (ev) => {
+          const base64 = ev.target.result.split(',')[1];
+
+          const userData = localStorage.getItem('netlify-cms-user');
+          if (!userData) return console.error('토큰 없음');
+          const token = JSON.parse(userData).token;
+
+          await fetch(`https://api.github.com/repos/jaejin0me/jaejin0me.github.io/contents/static/images/${filename}`, {
+            method: 'PUT',
+            headers: {
+              Authorization: `token ${token}`,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              message: `chore: 이미지 업로드 ${filename}`,
+              content: base64
+            })
+          });
+
+          const cm = document.querySelector('.CodeMirror')?.CodeMirror;
+          if (cm) {
+            cm.replaceSelection(`![image](/images/${filename})`);
+          } else {
+            console.error('CodeMirror 에디터를 찾을 수 없음');
+          }
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
 </body>
 </html>
