@@ -1,4 +1,115 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>일기장 on Jaejin's blog</title><link>https://jaejin0me.github.io/categories/%EC%9D%BC%EA%B8%B0%EC%9E%A5/</link><description>Recent content in 일기장 on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Mon, 04 May 2026 00:00:00 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/categories/%EC%9D%BC%EA%B8%B0%EC%9E%A5/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo로 운영하는 Github pages에 Decap CMS(Netlify CMS) 붙이기</title><link>https://jaejin0me.github.io/post/20260504/</link><pubDate>Mon, 04 May 2026 00:00:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20260504/</guid><description>&lt;p>Hugo로 운영하는 github pages는 글쓰기가 불편합니다.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>일기장 on Jaejin's blog</title><link>https://jaejin0me.github.io/categories/%EC%9D%BC%EA%B8%B0%EC%9E%A5/</link><description>Recent content in 일기장 on Jaejin's blog</description><generator>Hugo -- gohugo.io</generator><language>ko</language><copyright>Jaejin Jang</copyright><lastBuildDate>Wed, 20 May 2026 23:00:00 +0900</lastBuildDate><atom:link href="https://jaejin0me.github.io/categories/%EC%9D%BC%EA%B8%B0%EC%9E%A5/index.xml" rel="self" type="application/rss+xml"/><item><title>2026.05.20 끄적끄적</title><link>https://jaejin0me.github.io/post/20260520_3/</link><pubDate>Wed, 20 May 2026 23:00:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20260520_3/</guid><description>&lt;p>한 주 동안 보고 듣고 기록한 것들 끄적끄적&lt;/p>
+&lt;h4 id="ai는-답이-없는-문제는-대체할-수-없다">AI는 답이 없는 문제는 대체할 수 없다&lt;/h4>
+&lt;h4 id="삶의-문제-분류-관점">삶의 문제 분류 관점&lt;/h4>
+&lt;ul>
+&lt;li>어렵지만 해결가능한 복잡한 문제
+&lt;ul>
+&lt;li>수학, 코딩 등 답이 있는 문제&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>지속적 또는 평생 경영해야 할 복합적인 문제
+&lt;ul>
+&lt;li>애초에 정답이 없어 해결이 불가능하기에 계속 관리해 나가야 하는 것들&lt;/li>
+&lt;li>신념, 가치관, 신뢰, 사람과의 관계 등&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>운동 루틴 V1.5</title><link>https://jaejin0me.github.io/post/20260520_2/</link><pubDate>Wed, 20 May 2026 20:50:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20260520_2/</guid><description>&lt;hr>
+&lt;h1 id="-운동-종목-정리">🏋️ 운동 종목 정리&lt;/h1>
+&lt;ul>
+&lt;li>아래의 운동들 중에서 컨디션, 시간, 목적에 맞게 골라서 운동하고 있습니다.&lt;/li>
+&lt;li>요즘에는 점심시간에 20~30분 운동하는 거에 맛 들려서, 간단한 도구를 이용해 할 수 있는 종목들 슈퍼세트를 구성해 자주 수행하고 있습니다.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>운동&lt;/th>
+&lt;th>분류&lt;/th>
+&lt;th>주요 목적&lt;/th>
+&lt;th>세트 × 횟수&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>스쿼트&lt;/td>
+&lt;td>하체/후면사슬&lt;/td>
+&lt;td>대퇴사두·둔근·코어 복합 근력&lt;/td>
+&lt;td>3–4 × 5–8 (근력) / 3 × 10–15 (근비대)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>데드리프트&lt;/td>
+&lt;td>하체/후면사슬&lt;/td>
+&lt;td>후면사슬(햄스트링·둔근·척추기립근) 전체 강화&lt;/td>
+&lt;td>3–5 × 3–5 (근력) / 3 × 6–8 (근비대)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>불가리안 스플릿 스쿼트&lt;/td>
+&lt;td>하체/후면사슬&lt;/td>
+&lt;td>단측 하체 균형·안정성·대퇴사두&lt;/td>
+&lt;td>3 × 8–12 (각 다리)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>원레그 스티프 데드리프트&lt;/td>
+&lt;td>하체/후면사슬&lt;/td>
+&lt;td>단측 햄스트링·둔근·고관절 안정성&lt;/td>
+&lt;td>3 × 8–12 (각 다리)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>풀업&lt;/td>
+&lt;td>상체 당기기&lt;/td>
+&lt;td>광배근·이두·전완 수직 당기기 근력&lt;/td>
+&lt;td>3–4 × 최대 or 가중 5–8&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>인버티드 로우&lt;/td>
+&lt;td>상체 당기기&lt;/td>
+&lt;td>중·하승모근·능형근 수평 당기기·자세 교정&lt;/td>
+&lt;td>3 × 10–15&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>페이스풀&lt;/td>
+&lt;td>상체 당기기 / 부상 예방&lt;/td>
+&lt;td>후면 삼각근·외회전근 강화·어깨 건강&lt;/td>
+&lt;td>3 × 15–20 (가벼운 무게)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>푸시업&lt;/td>
+&lt;td>상체 밀기&lt;/td>
+&lt;td>대흉근·삼두·전거근 수평 밀기&lt;/td>
+&lt;td>3 × 10–20 (or 최대)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>데드버그&lt;/td>
+&lt;td>코어&lt;/td>
+&lt;td>복횡근 활성화·요추 안정화&lt;/td>
+&lt;td>3 × 8–10 (각 측)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>버드독&lt;/td>
+&lt;td>코어&lt;/td>
+&lt;td>척추 중립 유지·글루트-코어 협응&lt;/td>
+&lt;td>3 × 8–10 (각 측)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>코펜하겐 플랭크&lt;/td>
+&lt;td>코어&lt;/td>
+&lt;td>내전근·측면 코어·고관절 안정성&lt;/td>
+&lt;td>3 × 10–20초 (각 측)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>토 올리기&lt;/td>
+&lt;td>부상 예방&lt;/td>
+&lt;td>전경골근 강화·발목 배측굴곡 개선&lt;/td>
+&lt;td>3 × 20–30&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>터키쉬 겟업&lt;/td>
+&lt;td>부상 예방&lt;/td>
+&lt;td>전신 안정성·어깨 패킹·고관절 이동성&lt;/td>
+&lt;td>2–3 × 3–5 (각 측, 천천히)&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Hugo로 운영하는 Github pages에 Decap CMS(Netlify CMS) 붙이기</title><link>https://jaejin0me.github.io/post/20260504/</link><pubDate>Mon, 04 May 2026 00:00:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20260504/</guid><description>&lt;p>Hugo로 운영하는 github pages는 글쓰기가 불편합니다.&lt;/p>
 &lt;p>github에서 바로 포스트를 작성하여 커밋할 수도 있지만,&lt;br>
 작성된 마크다운 파일의 프리뷰를 보려면 로컬에서 실행을 해봐야 하기 때문에 결국에는 해당 저장소를 clone 해야 합니다.&lt;/p></description></item><item><title>YouTube MP3 Extractor 라는 웹서비스를 만드려고 했었다</title><link>https://jaejin0me.github.io/post/20260501_2/</link><pubDate>Fri, 01 May 2026 23:11:00 +0900</pubDate><guid>https://jaejin0me.github.io/post/20260501_2/</guid><description>&lt;p>&lt;a href="https://jaejin0me.github.io/post/20260216/">샥즈 오픈스윔 프로&lt;/a>를 구매하면서 mp3 파일이 필요하게 되어&lt;br>
 유튜브에서 노래 다운받을 수 있는 사이트를 만들겠다고 했었습니다.&lt;/p>
